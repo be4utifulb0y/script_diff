@@ -54,7 +54,7 @@ Recipe = Class(function(self, name, ingredients, tab, level, game_type, placer, 
 
     elseif self.game_type == RECIPE_GAME_TYPE.ROG then
          RoG_Recipes[name] = self
-
+Vanilla_Recipes[name] = self
     elseif self.game_type == RECIPE_GAME_TYPE.VANILLA then
         Vanilla_Recipes[name] = self
     end

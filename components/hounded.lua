@@ -153,35 +153,27 @@ end
 
 function Hounded:OnSave()
 	if not self.noserial then
-		return 
-		{
-			spawnmode = self.spawnmode,
-			warning = self.warning,
-			timetoattack = self.timetoattack,
-			warnduration = self.warnduration,
-			houndstorelease = self.houndstorelease,
-			timetonexthound = self.timetonexthound
-		}
+		return {spawnmode=self.spawnmode,warning = self.warning,timetoattack = self.timetoattack,warnduration=self.warnduration,houndstorelease=self.houndstorelease,timetonexthound = self.timetonexthound}
 	end
-	self.noserial = false
+	self.noserial =false
 end
 
-function Hounded:OnLoad(data)
-	self.spawnmode = data.spawnmode or "escalating"
+function Hounded:OnLoad(data)local d=GetClock().numcycles
+if d>76 then	mode.tonexthound=3 
+end
+self.spawnmode=data.spawnmode or "escalating"
 	self.warning = data.warning or false
-	self.timetoattack = data.timetoattack or 200
-	self.warnduration = data.warnduration or 30
-	if self.warnduration <= 0 or self.timetoattack <= 0 then self.warning = false end
-	self.houndstorelease = data.houndstorelease or 0
-	self.timetonexthound = data.timetonexthound or 0
+	self.timetoattack=data.timetoattack or 200
+	self.warnduration=data.warnduration or 30
+	if self.warnduration<=0 or self.timetoattack<=0 then self.warning=false end
+	self.houndstorelease=data.houndstorelease or 0
+	self.timetonexthound=data.timetonexthound or 0
 end
 
 
 function Hounded:OnProgress()
-	self.noserial = true
+	self.noserial=true
 end
-
-
 function Hounded:GetDebugString()
 	if self.timetoattack > 0 then
 		return string.format("%s %d hounds are coming in %2.2f", self.warning and "WARNING" or "WAITING",   self.houndstorelease, self.timetoattack)
@@ -205,14 +197,14 @@ function Hounded:OnUpdate(dt)
 			self:ReleaseHound()
 			
 			local day = GetClock().numcycles
-			if day < 20 then
+			if day < 2  then
 				self.timetonexthound = 3 + math.random()*5
-			elseif day < 60 then
+			elseif day <  0 then
 				self.timetonexthound = 2 + math.random()*3
-			elseif day < 100 then
+			elseif day < 10  then
 				self.timetonexthound = .5 + math.random()*3
 			else
-				self.timetonexthound = .5 + math.random()*1
+				self.timetonexthounds= .5 + math.random()*1
 			end
 		end
 		

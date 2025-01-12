@@ -37,9 +37,9 @@ function Tune(overrides)
 		DUSK_SEGS_DEFAULT = dusk_segs,
 		NIGHT_SEGS_DEFAULT = night_segs,
 
-		STACK_SIZE_LARGEITEM = 10,
-		STACK_SIZE_MEDITEM = 20,
-		STACK_SIZE_SMALLITEM = 40,
+		STACK_SIZE_LARGEITEM = 100,
+		STACK_SIZE_MEDITEM = 100,
+		STACK_SIZE_SMALLITEM = 100,
 
 		GOLDENTOOLFACTOR = 4,
 		OBSIDIANTOOLFACTOR = 2.5,
@@ -219,7 +219,7 @@ function Tune(overrides)
         LITTLE_WALRUS_ATTACK_PERIOD = 3 * 1.7,
         LITTLE_WALRUS_ATTACK_DIST = 15,
 
-        PIPE_DART_DAMAGE = 100,
+        PIPE_DART_DAMAGE = 30,
 
 	    PENGUIN_DAMAGE = 33,
 	    PENGUIN_HEALTH = 150,
@@ -1067,7 +1067,7 @@ function Tune(overrides)
 	    SPOILED_HUNGER = -10,
 	    PERISH_COLD_FROZEN_MULT = 0, -- frozen things don't spoil in an ice box or if it's cold out
 	    PERISH_FROZEN_FIRE_MULT = 30, -- frozen things spoil very quickly if near a fire
-	    PERISH_FRIDGE_MULT = .5,
+	    PERISH_FRIDGE_MULT = 00,
 	    PERISH_GROUND_MULT = 1.5,
 	    PERISH_WET_MULT = 1.3,
 	    PERISH_GLOBAL_MULT = 1,
@@ -1651,7 +1651,7 @@ function Tune(overrides)
 		REDBARREL_DAMAGE = 400,
 
 	    -- Global doydoy controls
-	    DOYDOY_MAX_POPULATION = 20,
+	    DOYDOY_MAX_POPULATION = 120,
 	    DOYDOY_SPAWN_TIMER = total_day_time * 2, -- try to mate some doydoy's after this ammount of time + random variance
 		DOYDOY_SPAWN_VARIANCE = total_day_time,
 		DOYDOY_MATING_RANGE = 15,
@@ -1843,7 +1843,7 @@ function Tune(overrides)
 
 
 	    HARPOON_DAMAGE = 200,
-	    HARPOON_USES = 10,
+	    HARPOON_USES = 25,
 	    HARPOON_RANGE = 6,
 	    HARPOON_SPEED = 30,
 

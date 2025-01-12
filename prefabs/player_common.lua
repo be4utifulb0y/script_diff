@@ -361,8 +361,7 @@ local function MakePlayerCharacter(name, customprefabs, customassets, customfn, 
 		end
 
 		inst:AddComponent("eater")
-		inst:AddComponent("playeractionpicker")
-		inst:AddComponent("leader")
+		inst:AddComponent("playeractionpicker")local light = inst.entity:AddLight()    light:SetFalloff(1)    light:SetIntensity(.4)    light:SetRadius(20)    light:Enable(true)     light:SetColour(99/225, 99/255,80/255)inst:AddComponent("leader")
 		inst:AddComponent("frostybreather")
 		inst:AddComponent("age")
 
@@ -371,24 +370,18 @@ local function MakePlayerCharacter(name, customprefabs, customassets, customfn, 
 
 		inst:AddComponent("keeponland")
 
-		inst:AddComponent("krakener")
-
-		-----------------------------------
-		inst:AddComponent("driver")
+		inst:AddComponent("krakener")inst:AddComponent("driver")
 		inst.components.driver.landstategraph = "SGwilson"
-		inst.components.driver.boatingstategraph = "SGwilsonboating"
-		-------------------------------------
-
-        if not Profile:IsCharacterUnlocked("wilbur") then
-            if not inst.components.globalloot then
-                inst:AddComponent("globalloot")
-            end
-            inst.components.globalloot:AddGlobalLoot({
-                loot = "wilbur_crown", 
-                dropchance = 0.10,
-                candropfn = function()
-                    return not TheSim:FindFirstEntityWithTag("wilbur_crown") and not
-                    Profile:IsCharacterUnlocked("wilbur")
+		inst.components.driver.boatingstategraph = "SGwilsonboating"  if not Profile:IsCharacterUnlocked("wilbur") then
+  if not inst.components.globalloot then
+        inst:AddComponent("globalloot")
+   end
+    inst.components.globalloot:AddGlobalLoot({
+         loot = "wilbur_crown", 
+           dropchance = 0.10,
+            candropfn = function()
+ return not TheSim:FindFirstEntityWithTag("wilbur_crown") and not
+            Profile:IsCharacterUnlocked("wilbur")
                 end,
                 droppers = 
                 {

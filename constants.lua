@@ -157,10 +157,6 @@ CONTROL_MAP_ZOOM_OUT = 61
 CONTROL_OPEN_DEBUG_MENU = 62
 
 CONTROL_TOGGLE_BROADCASTING = 63
-CONTROL_SCROLLBACK = 64
-CONTROL_SCROLLFWD = 65
-
-CONTROL_REBUILD_LAST_RECIPE = 66
 
 CONTROL_CUSTOM_START = 100
 
@@ -674,6 +670,7 @@ RECIPETABS=
     MAGIC = {str = "MAGIC", sort=9, icon = "tab_arcane.tex"},
     DRESS = {str = "DRESS", sort=10, icon = "tab_dress.tex"},
     ANCIENT = {str = "ANCIENT", sort = 10, icon = "tab_crafting_table.tex"},
+    SHOP = {str="SHOP", sort = 11, icon = "tab_gemology.tex"},
     OBSIDIAN = {str = "OBSIDIAN", sort = 11, icon = "tab_obsidian.tex"}   
 }
 

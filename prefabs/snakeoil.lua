@@ -19,12 +19,8 @@ local function fn(Sim)
     inst:AddComponent("inspectable")
 
     inst:AddComponent("inventoryitem")
+inst:AddComponent("poisonhealer") --�տտտտտտտտտտտտտտտտտտտտտտտտտտտտտտտտտտտտտտտտտտտտտտ�99p965u6u6u659p9p9p9p87o67i76u65ju6u6u6uj646
 
-    inst:AddComponent("fuel")
-    inst.components.fuel.fuelvalue = 0
-
-    inst:AddComponent("poisonhealer")
-    inst.components.poisonhealer.enabled = false
 
     return inst
 end

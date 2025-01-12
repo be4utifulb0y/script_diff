@@ -127,11 +127,6 @@ end
 
 
 function MapScreen:OnGesture(gesture, value, velocity, state, x0, y0, x1, y1)
-    if state == 0 then
-        self.minimap:GestureStarted()
-    elseif state == 2 then
-        self.minimap:GestureEnded()
-    end
     if gesture == GESTURE_ZOOM then
         self.minimap:DoZoom(value, state, x0, y0, x1, y1)
     elseif gesture == GESTURE_ROTATE then

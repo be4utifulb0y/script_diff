@@ -61,7 +61,7 @@ local NewIntegratedGameScreen = Class(Screen, function(self, target_mode, slotnu
   
   	local menu_ypos = 30
   	local menuitems = {}
-  	if IsDLCInstalled(REIGN_OF_GIANTS) then
+  	if true then --000000000000000000000000
 		local dlc_buttons = {}
 
 		if target_mode == "survival" then 
@@ -276,7 +276,7 @@ function NewIntegratedGameScreen:GetHelpText()
 end
 
 function NewIntegratedGameScreen:MakeReignOfGiantsButton()
-	self.RoG = IsDLCInstalled(REIGN_OF_GIANTS)
+	self.RoG = true--0000000000000000000000000
 	--self.prevworldcustom = true
 
 	self.RoGbutton = self:AddChild(Widget("option"))
@@ -311,7 +311,7 @@ function NewIntegratedGameScreen:MakeReignOfGiantsButton()
 		if Widget.OnControl(self.RoGbutton, control, down) then return true end
 		if control == CONTROL_ACCEPT and not down then
 			TheFrontEnd:GetSound():PlaySound("dontstarve/HUD/click_move")
-			self.RoG = not self.RoG
+			--000000000000000000000
 			if self.RoG then
 				self.RoGbutton.enable()
 			else

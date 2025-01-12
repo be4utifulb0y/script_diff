@@ -41,17 +41,15 @@ local function fn(Sim)
     inst.AnimState:SetBank("backpack1")
     inst.AnimState:SetBuild("krampus_sack")
     inst.AnimState:PlayAnimation("anim")
-
-    MakeInventoryFloatable(inst, "idle_water", "anim")
-    
-    inst:AddComponent("inspectable")
-    
-    inst:AddComponent("inventoryitem")
-    inst.components.inventoryitem.cangoincontainer = false
+MakeInventoryFloatable(inst, "idle_water", "anim")
+inst:AddComponent("inspectable")
+inst:AddTag("fridge")
+   inst:AddComponent("inventoryitem")
+     inst.components.inventoryitem.cangoincontainer = true
     inst.components.inventoryitem.foleysound = "dontstarve/movement/foley/krampuspack"
 
     inst:AddComponent("equippable")
-    inst.components.equippable.equipslot = EQUIPSLOTS.BODY
+    inst.components.equippable.equipslot = EQUIPSLOTS.BACK
     
     inst.components.equippable:SetOnEquip( onequip )
     inst.components.equippable:SetOnUnequip( onunequip )

@@ -555,7 +555,7 @@ local anims =
 }
 
 function MainScreen:OnUpdate(dt)
-	if TheSim:ShouldPlayIntroMovie() then
+	if PLATFORM == "PS4" and TheSim:ShouldPlayIntroMovie() then
 		TheFrontEnd:PushScreen( MovieDialog("movies/forbidden_knowledge.mp4", function() TheFrontEnd:GetSound():PlaySound("dontstarve_DLC002/music/music_FE","FEMusic") end ) )
         self.music_playing = true
 	elseif not self.music_playing then

@@ -1125,7 +1125,7 @@ local states=
 
             TimeEvent(10*FRAMES, function(inst)
                 if inst.prefab == "woodie" then
-                    if (TheInput:IsControlPressed(CONTROL_PRIMARY) or TheInput:IsControlPressed(CONTROL_ACTION) or TheInput:IsControlPressed(CONTROL_CONTROLLER_ACTION) or TheInput:IsTouchDown()) and 
+                    if (TheInput:IsControlPressed(CONTROL_PRIMARY) or TheInput:IsControlPressed(CONTROL_ACTION) or TheInput:IsControlPressed(CONTROL_CONTROLLER_ACTION)) or TheInput:IsTouchDown() and 
                         inst.sg.statemem.action and 
                         inst.sg.statemem.action:IsValid() and 
                         inst.sg.statemem.action.target and 
@@ -1154,7 +1154,7 @@ local states=
             
             TimeEvent(14*FRAMES, function(inst)
                 if inst.prefab ~= "woodie" and
-                    (TheInput:IsMouseDown(MOUSEBUTTON_LEFT) or TheInput:IsControlPressed(CONTROL_ACTION) or TheInput:IsControlPressed(CONTROL_CONTROLLER_ACTION) or TheInput:IsTouchDown()) and 
+                    (TheInput:IsMouseDown(MOUSEBUTTON_LEFT) or TheInput:IsControlPressed(CONTROL_ACTION) or TheInput:IsControlPressed(CONTROL_CONTROLLER_ACTION)) or TheInput:IsTouchDown() and 
                     inst.sg.statemem.action and 
                     inst.sg.statemem.action:IsValid() and 
                     inst.sg.statemem.action.target and 

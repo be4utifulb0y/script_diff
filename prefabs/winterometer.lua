@@ -5,9 +5,6 @@ local function CheckTemp(inst)
 	    if not inst.task then
 		    inst.task = inst:DoPeriodicTask(1, CheckTemp)
 		end
-		if inst:HasTag("flooded") then 
-			inst.AnimState:SetPercent("meter", math.random())
-		else 
 			local temp = GetSeasonManager() and GetSeasonManager():GetCurrentTemperature() or 30
 			local high_temp = TUNING.OVERHEAT_TEMP
 			local low_temp = 0
@@ -15,30 +12,19 @@ local function CheckTemp(inst)
 			temp = math.min( math.max(low_temp, temp), high_temp)
 			local percent = (temp + low_temp) / (high_temp - low_temp)
 			inst.AnimState:SetPercent("meter", 1-percent)
-		end 
+
 	end
 end
 
 local function onhammered(inst, worker)
-	if inst:HasTag("fire") and inst.components.burnable then
-		inst.components.burnable:Extinguish()
-	end
+
 	inst.components.lootdropper:DropLoot()
 	SpawnPrefab("collapse_small").Transform:SetPosition(inst.Transform:GetWorldPosition())
 	inst.SoundEmitter:PlaySound("dontstarve/common/destroy_wood")
 	inst:Remove()
 end
 
-local function onhit(inst, worker)
-	if not inst:HasTag("burnt") then
-	    if inst.task then
-	        inst.task:Cancel()
-	        inst.task = nil
-	    end
-		inst.AnimState:PlayAnimation("hit")
-		--the global animover handler will restart the check task
-	end
-end
+
 
 local function onbuilt(inst)
     if inst.task then
@@ -46,8 +32,7 @@ local function onbuilt(inst)
         inst.task = nil
     end
 	inst.AnimState:PlayAnimation("place")
-	inst.SoundEmitter:PlaySound("dontstarve/common/craftable/winter_meter")
-	--the global animover handler will restart the check task
+
 end
 
 local assets = 
@@ -60,23 +45,20 @@ local prefabs =
 	"collapse_small",
 }
 
-local function makeburnt(inst)
-	if inst.task then
-		inst.task:Cancel()
-		inst.task = nil
+
+
+local function itemtest(inst, item, slot)
+	if item.prefab == "goldnugget" then
+		return true
 	end
+	return false
 end
 
-local function onsave(inst, data)
-	if inst:HasTag("burnt") or inst:HasTag("fire") then
-        data.burnt = true
-    end
-end
+local slotpos = {}
 
-local function onload(inst, data)
-	if data and data.burnt then
-        inst.components.burnable.onburnt(inst)
-    end
+for y = 0, 2 do
+	table.insert(slotpos, Vector3(-162, -y*75 + 75 ,0))
+	table.insert(slotpos, Vector3(-162 +75, -y*75 + 75 ,0))
 end
 
 local function fn(Sim)
@@ -96,30 +78,38 @@ local function fn(Sim)
 
 	inst:AddComponent("inspectable")
 	
+    inst:AddComponent("container")
+    inst.components.container:SetNumSlots(#slotpos)
+    inst.components.container.widgetslotpos = slotpos
+    inst.components.container.widgetanimbank = "ui_icepack_2x3"
+    inst.components.container.widgetanimbuild = "ui_icepack_2x3"
+    inst.components.container.widgetpos = Vector3(0,200,0) 
+    inst.components.container.side_align_tip = 160
+    inst.components.container.itemtestfn = itemtest
+
+	inst:ListenForEvent( "daytime", function()
+		local num_found = 0
+		for k,v in pairs(inst.components.container.slots) do
+			num_found = num_found + v.components.stackable:StackSize()
+		end
+		local Interests = math.floor(num_found/100*3)
+		for k = 1, Interests do
+			inst.components.container:ConsumeByName("goldnugget", -1)
+        end
+	end, GetWorld())   
 	inst:AddComponent("lootdropper")
 	inst:AddComponent("workable")
 	inst.components.workable:SetWorkAction(ACTIONS.HAMMER)
 	inst.components.workable:SetWorkLeft(4)
 	inst.components.workable:SetOnFinishCallback(onhammered)
-	inst.components.workable:SetOnWorkCallback(onhit)		
-	MakeSnowCovered(inst, .01)
 	
 	CheckTemp(inst)
 
 	inst:ListenForEvent("onbuilt", onbuilt)
 	inst:ListenForEvent("animover", CheckTemp)
 
-	inst:AddTag("structure")
-	MakeSmallBurnable(inst, nil, nil, true)
-	MakeSmallPropagator(inst)
-	inst.OnSave = onsave
-	inst.OnLoad = onload
-	inst:ListenForEvent("burntup", makeburnt)
+inst:AddTag("structure")--000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 
-	inst:AddComponent("floodable")
-	inst.components.floodable.floodEffect = "shock_machines_fx"
-	inst.components.floodable.floodSound = "dontstarve_DLC002/creatures/jellyfish/electric_land"
-	
 	return inst
 end
 return Prefab( "common/objects/winterometer", fn, assets, prefabs),

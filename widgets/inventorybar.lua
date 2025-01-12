@@ -1,4 +1,8 @@
 require "class"
+table.insert(EQUIPSLOTS,"BACK")
+EQUIPSLOTS.BACK="back"
+table.insert(EQUIPSLOTS,"NECK")
+EQUIPSLOTS.NECK="neck"
 local InvSlot = require "widgets/invslot"
 local TileBG = require "widgets/tilebg"
 local Image = require "widgets/image"
@@ -24,7 +28,7 @@ local SCROLL_LIMIT_START = 430
 local SCROLL_LIMIT_END = -345
 local SCROLL_DRAG_LIMIT_START = 303
 local SCROLL_DRAG_LIMIT_END = -185
-local SCROLL_HOLD_MAX_TIME = 0.2
+local SCROLL_HOLD_MAX_TIME = 0.1
 
 local inv_offset = 8
 if TheSim:IsiPhone() then
@@ -38,7 +42,7 @@ local Inv = Class(Widget, function(self, owner)
     self.owner = owner
 
 	self.out_pos = Vector3(0,W+50,0)
-	self.in_pos = Vector3(0,W*2.0,0)
+	self.in_pos = Vector3(0,W*1.5,0)
 
 	self.base_scale = .6
 	self.selected_scale = .9
@@ -98,7 +102,8 @@ local Inv = Class(Widget, function(self, owner)
 	self:AddEquipSlot(EQUIPSLOTS.HANDS, HUD_ATLAS, "equip_slot.tex")
 	self:AddEquipSlot(EQUIPSLOTS.BODY, HUD_ATLAS, "equip_slot_body.tex")
 	self:AddEquipSlot(EQUIPSLOTS.HEAD, HUD_ATLAS, "equip_slot_head.tex")
-
+	self:AddEquipSlot(EQUIPSLOTS.BACK, HUD_ATLAS, "equip_slot_body.tex")
+    self:AddEquipSlot(EQUIPSLOTS.NECK, HUD_ATLAS, "equip_slot_body.tex")
     self.inst:ListenForEvent("builditem", function(inst, data) self:OnBuild() end, self.owner)
     self.inst:ListenForEvent("itemget", function(inst, data) self:OnItemGet(data.item, self.inv[data.slot], data.src_pos) end, self.owner)
     self.inst:ListenForEvent("equip", function(inst, data) self:OnItemEquip(data.item, data.eslot) end, self.owner)
@@ -115,7 +120,7 @@ local Inv = Class(Widget, function(self, owner)
 	self.openhint = self:AddChild(Text(UIFONT, 52))
 	self.openhint:SetRegionSize(300, 60)
 	self.openhint:SetHAlign(ANCHOR_LEFT)
-	self.openhint:SetPosition(940, 70 + inv_offset, 0)
+	self.openhint:SetPosition(940, 70, 0)
 	
     self.hint_update_check = HINT_UPDATE_INTERVAL
     
@@ -279,9 +284,9 @@ function Inv:Rebuild()
 
 	--self.bg:Flow(total_w+60, 256, true)
 	
-  if do_integrated_backpack then
+	if do_integrated_backpack then
 		self.bg:SetPosition(Vector3(0,-24,0))
-    self.bgcover:SetPosition(Vector3(0, -135, 0))
+	    self.bgcover:SetPosition(Vector3(0, -135, 0))
 		self.toprow:SetPosition(Vector3(0,W/2 + YSEP/2,0))
 		self.bottomrow:SetPosition(Vector3(0,-W/2 - YSEP/2,0))
 		self.root:MoveTo(self.out_pos, self.in_pos, .5)
@@ -345,12 +350,12 @@ function Inv:OnUpdate(dt)
 		self:Refresh()
 	end
 
-	if IPHONE_VERSION and not TheInput:ControllerAttached()then
+	if IPHONE_VERSION then
 		self:UpdateScrolling(dt)
 	end
 
 	if self.open and TheInput:ControllerAttached() then
-		--SetPause(true, "inv")
+		SetPause(true, "inv")
 	end
 
 
@@ -597,10 +602,7 @@ function Inv:GetCursorItem()
 end
 
 function Inv:OnControl(control, down)
-	if IPHONE_VERSION and not TheInput:ControllerAttached() then
-        if GetPlayer().components.playercontroller:GetActiveInventoryObject() then
-            GetPlayer().components.playercontroller:ResetActiveInventoryTile()
-        end
+	if IPHONE_VERSION then
 		if not self.open and down then
 			self:OpenPhoneInventory()
 			return
@@ -624,14 +626,13 @@ function Inv:OnControl(control, down)
 
 	if Inv._base.OnControl(self, control, down) then return true end
 	
-	--[[if not down then
+	if not down then
 		local inventory = GetPlayer().components.inventory
 		local activeitem = inventory:GetActiveItem()
 		if activeitem then
 			inventory:ReturnActiveItem()
 		end
-	end]]
-
+	end
 	
 	if self.open then
 		if not down then 
@@ -674,62 +675,21 @@ end
 
 function Inv:OpenControllerInventory()
 	if not self.open then
-        self.owner.HUD.isLastOpenInventory = true
-        GetPlayer().components.talker:ShutUp()
+		self.owner.HUD.controls:SetDark(true)
+		SetPause(true, "inv")
+		self.open = true
 
-        GetPlayer().HUD:CloseCrafting()
-        self:HideHUD()
+		self:UpdateCursor()
+		self:ScaleTo(self.base_scale,self.selected_scale,.2)
 
-        self.owner.HUD.controls:SetDark(true)
-        SetPause(true, "inv")
-        self.owner.components.playercontroller.comesFromInventory = true
-        self.open = true
-        self.controller_open = true
+		local bp = self.owner.HUD:GetFirstOpenContainerWidget()
+		if bp and bp.scalewithinventory then
+			self.owner.HUD:GetFirstOpenContainerWidget():ScaleTo(self.base_scale,self.selected_scale,.2)
+		end
 
-        --self:ScaleTo(self.base_scale,self.selected_scale_controller,.2)
-
-        for k,v in pairs(self.owner.components.inventory.itemslots) do
-            if v then
-                local tile = self.inv[k].tile
-                if tile then
-                    tile:MakeNumbersSmall()
-                end
-            end
-        end
-
-        for k,v in pairs(self.owner.components.inventory.equipslots) do
-            if v then
-                local tile = self.equip[k].tile
-                if tile then
-                    tile:MakeNumbersSmall()
-                end
-            end
-        end
-
-        local new_backpack = self.owner.components.inventory.overflow
-        if new_backpack then
-            local num = new_backpack.components.container.numslots
-            for k = 1, num do
-                local tile = self.backpackinv[k].tile
-                if tile then
-                    tile:MakeNumbersSmall()
-                end
-            end
-        end
-
-        TheFrontEnd:LockFocus(true)
-        self:SetFocus()
-
-    end
-end
-
-function Inv:CloseInventory()
-    if self.phone_open then
-        self:ClosePhoneInventory()
-    end
-    if self.controller_open then
-        self:CloseControllerInventory()
-    end
+		TheFrontEnd:LockFocus(true)
+		self:SetFocus()
+	end
 end
 
 function Inv:OpenPhoneInventory()
@@ -742,7 +702,7 @@ function Inv:OpenPhoneInventory()
             self.disableChildFocus = true
         end
 
-		GetPlayer().HUD:CloseCrafting()
+		GetPlayer().HUD:ClosePhoneCrafting()
 		self:HideHUD()
 		
 		self.owner.HUD.controls:SetDark(true)
@@ -763,7 +723,7 @@ function Inv:OpenPhoneInventory()
         self.scrollX = -(scaledDist - dist)
         self.scrollX = math.max(SCROLL_LIMIT_END, self.scrollX)
         self.scrollX = math.min(SCROLL_LIMIT_START, self.scrollX)
-        self:MoveTo(self:GetPosition(), self:GetPosition() + Vector3(self.scrollX, 0, 0), .2, function() self.open = true self.phone_open = true self.opening = false end)
+        self:MoveTo(self:GetPosition(), self:GetPosition() + Vector3(self.scrollX, 0, 0), .2, function() self.open = true self.opening = false end)
 
         self.baseScroll = self.scrollX
 
@@ -806,44 +766,41 @@ function Inv:ClosePhoneInventory()
 		self.owner.HUD.controls:SetDark(false)
 		SetPause(false)
 		self.open = false
-        self.phone_open = false
         self.opening = true
 
         self:ScaleTo(self.selected_scale, self.base_scale,.1)
 
-        self.owner.components.playercontroller.comesFromInventory = false
-
         local pos = self:GetPosition()
         self:MoveTo(pos, Vector3(self.originalX, pos.y, pos.z), .1, function() self.opening = false end)
 	
-  --       for k,v in pairs(self.owner.components.inventory.itemslots) do
-		-- 	if v then
-		-- 		local tile = self.inv[k].tile
-		-- 		if tile then
-		-- 			tile:MakeNumbersBig()
-		-- 		end
-		-- 	end
-		-- end
+        for k,v in pairs(self.owner.components.inventory.itemslots) do
+			if v then
+				local tile = self.inv[k].tile
+				if tile then
+					tile:MakeNumbersBig()
+				end
+			end
+		end
 		
-		-- for k,v in pairs(self.owner.components.inventory.equipslots) do
-		-- 	if v then
-		-- 		local tile = self.equip[k].tile
-		-- 		if tile then
-		-- 			tile:MakeNumbersBig()
-		-- 		end
-		-- 	end
-		-- end
+		for k,v in pairs(self.owner.components.inventory.equipslots) do
+			if v then
+				local tile = self.equip[k].tile
+				if tile then
+					tile:MakeNumbersBig()
+				end
+			end
+		end
 
-		-- local new_backpack = self.owner.components.inventory.overflow
-		-- if new_backpack then
-		-- 	local num = new_backpack.components.container.numslots
-		-- 	for k = 1, num do
-		-- 		local tile = self.backpackinv[k].tile
-		-- 		if tile then
-		-- 			tile:MakeNumbersBig()
-		-- 		end
-		-- 	end
-		-- end
+		local new_backpack = self.owner.components.inventory.overflow
+		if new_backpack then
+			local num = new_backpack.components.container.numslots
+			for k = 1, num do
+				local tile = self.backpackinv[k].tile
+				if tile then
+					tile:MakeNumbersBig()
+				end
+			end
+		end
 	end
 end
 
@@ -856,54 +813,27 @@ function Inv:OnDisable()
 end
 
 function Inv:CloseControllerInventory()
-	print("closeinv dlc")
-    if self.open then
-        self.disableChildFocus = true
+	if self.open then
+		self.open = false
+		SetPause(false)
+		self.owner.HUD.controls:SetDark(false)
+		self.owner.components.inventory:ReturnActiveItem()
+		
+		self:UpdateCursor()
 
-        self:ShowHUD()
-        self.owner.HUD.controls:SetDark(false)
-        SetPause(false)
-        self.open = false
-        self.controller_open = false
-        --self.opening = true
+		if self.active_slot then
+			self.active_slot:DeHighlight()
+		end
 
-        --self:ScaleTo(self.selected_scale_controller, self.base_scale,.1)
+		self:ScaleTo(self.selected_scale, self.base_scale,.1)
 
-        --local pos = self:GetPosition()
-        --self:MoveTo(pos, Vector3(self.originalX, pos.y, pos.z), .1, function() self.opening = false end)
+		local bp = self.owner.HUD:GetFirstOpenContainerWidget()
+		if bp and bp.scalewithinventory then
+			self.owner.HUD:GetFirstOpenContainerWidget():ScaleTo(self.selected_scale,self.base_scale,.1)
+		end
 
-        for k,v in pairs(self.owner.components.inventory.itemslots) do
-            if v then
-                local tile = self.inv[k].tile
-                if tile then
-                    tile:MakeNumbersBig()
-                end
-            end
-        end
-
-        for k,v in pairs(self.owner.components.inventory.equipslots) do
-            if v then
-                local tile = self.equip[k].tile
-                if tile then
-                    tile:MakeNumbersBig()
-                end
-            end
-        end
-
-        local new_backpack = self.owner.components.inventory.overflow
-        if new_backpack then
-            local num = new_backpack.components.container.numslots
-            for k = 1, num do
-                local tile = self.backpackinv[k].tile
-                if tile then
-                    tile:MakeNumbersBig()
-                end
-            end
-        end
-
-        TheFrontEnd:LockFocus(false)
-
-    end
+		TheFrontEnd:LockFocus(false)
+	end
 end
 
 function Inv:GetDescriptionString(item)
@@ -1405,13 +1335,9 @@ end
 function Inv:ShowHUD()
     self.owner.HUD.controls:ShowActionControls()
     self.owner.HUD.controls:ShowRecordControls()
-    if not TheInput:ControllerAttached() then
-        self.owner.HUD.controls.mapcontrols:Show()
-    end
+    self.owner.HUD.controls.mapcontrols:Show()
     self.owner.HUD.controls.crafttabs:Show() -- TODO: Change to "MoveTo()"
     self.owner.HUD.controls:ShowVirtualStick()
-    -- [blit-vicent] fix issue phone version when dragging object from inventory moves virtual stick
-    self.owner.HUD.controls.virtualstick:ResetStick()
 end
 
 function Inv:HideHUD()

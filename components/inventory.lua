@@ -225,7 +225,9 @@ function Inventory:ApplyDamage(damage, attacker, weapon)
             end
         end
     end
-    
+local a=GetPlayer().damage_a or 0
+if a>damage then return damage end
+damage=damage-a
     return damage
 end
 

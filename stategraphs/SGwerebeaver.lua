@@ -85,7 +85,7 @@ local states=
         
         events=
         {
-            EventHandler("animover", function(inst) TheCamera:SetDefault() inst.sg:GoToState("idle") end ),
+            EventHandler("animover", function(inst) TheCamera:SetDistance(30) inst.sg:GoToState("idle") end ),
         },        
     },    
 

@@ -14,7 +14,7 @@ local Builder = Class(function(self, inst)
     self.custom_tabs = {}
     self.ingredientmod = 1
     self.jellybrainhat = false
-    self.lastRecipe = nil
+    
 end)
 
 function Builder:ActivateCurrentResearchMachine()
@@ -435,31 +435,6 @@ function Builder:MakeRecipe(recipe, pt, rot, onsuccess)
     return false
 end
 
-function Builder:CanRebuildLastRecipe()
-    if not self then
-        return false
-    end
-    
-    if not self.lastRecipe then
-        return false
-    end
-    
-    local baseBuildReqs = self.lastRecipe and self:CanBuild(self.lastRecipe.name)
-    
-    if self.lastRecipe.placer then
-        return baseBuildReqs and self:CanBuildAtPoint(Point(self.inst.Transform:GetWorldPosition()), self.lastRecipe)
-    else
-        return baseBuildReqs
-    end
-end
-
-function Builder:RebuildLastRecipe()
-    if not self then return end
-    if self:CanRebuildLastRecipe() then
-        self:MakeRecipe(self.lastRecipe)
-    end
-end
-
 function Builder:DoBuild(recname, pt, rotation)
     local recipe = GetRecipe(recname)
     local buffered = self:IsBuildBuffered(recname)
@@ -475,8 +450,6 @@ function Builder:DoBuild(recname, pt, rotation)
         	wetLevel = self:GetIngredientWetness(mats) or 0
 			self:RemoveIngredients(mats)
 		end
-  
-        self.lastRecipe = recipe
 		
         local prod = SpawnPrefab(recipe.product)
         if prod then

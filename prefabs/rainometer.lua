@@ -15,22 +15,10 @@ local function CheckRain(inst)
 	    if not inst.task then
 		    inst.task = inst:DoPeriodicTask(1, CheckRain)
 		end
-		if inst:HasTag("flooded") then 
-			inst.AnimState:SetPercent("meter", math.random())
-		else 
-			inst.AnimState:SetPercent("meter", GetSeasonManager():GetPOP())
-		end 
+		inst.AnimState:SetPercent("meter", GetSeasonManager():GetPOP())
 	end
 end
 
-local function onhit(inst, worker)
-    if inst.task then
-        inst.task:Cancel()
-        inst.task = nil
-    end
-	inst.AnimState:PlayAnimation("hit")
-	--the global animover handler will restart the check task
-end
 
 
 local assets = 
@@ -49,28 +37,8 @@ local function onbuilt(inst)
         inst.task = nil
     end
 	inst.AnimState:PlayAnimation("place")
-	inst.SoundEmitter:PlaySound("dontstarve/common/craftable/rain_meter")
-	--the global animover handler will restart the check task
 end
 
-local function makeburnt(inst)
-	if inst.task then
-		inst.task:Cancel()
-		inst.task = nil
-	end
-end
-
-local function onsave(inst, data)
-	if inst:HasTag("burnt") or inst:HasTag("fire") then
-        data.burnt = true
-    end
-end
-
-local function onload(inst, data)
-	if data and data.burnt then
-        inst.components.burnable.onburnt(inst)
-    end
-end
 
 local function fn(Sim)
 	local inst = CreateEntity()
@@ -81,12 +49,30 @@ local function fn(Sim)
 	local minimap = inst.entity:AddMiniMapEntity()
 	minimap:SetIcon( "rainometer.png" )
     
+    inst:AddComponent("container")
+    inst.components.container:SetNumSlots(4)
+    local slotpos = {	Vector3(0,64+32+8+4,0) , Vector3(0,32+4,0) ,Vector3(0,-(32+4),0) , Vector3(0,-(64+32+8+4),0)}
+    inst.components.container.widgetslotpos = slotpos
+    inst.components.container.widgetanimbank = "ui_cookpot_1x4"
+    inst.components.container.widgetanimbuild = "ui_cookpot_1x4"
+    inst.components.container.widgetpos = Vector3(180,20,0)
+    inst.components.container.side_align_tip = 100
+	                                            
+	local widgetbuttoninfo = {
+	text = "Delete",
+	position = Vector3(0, -165, 0),
+	fn = function(inst)
+	inst.components.container:DestroyContents()
+	inst.SoundEmitter:PlaySound("dontstarve/common/destroy_stone")
+    end }
+	inst.components.container.widgetbuttoninfo = widgetbuttoninfo
+
 	MakeObstaclePhysics(inst, .4)
-    
+
 	anim:SetBank("rain_meter")
 	anim:SetBuild("rain_meter")
 	anim:SetPercent("meter", 0)
-
+	inst:AddTag("spoiler")
 	inst:AddComponent("inspectable")
 	
 	inst:AddComponent("lootdropper")
@@ -94,23 +80,14 @@ local function fn(Sim)
 	inst.components.workable:SetWorkAction(ACTIONS.HAMMER)
 	inst.components.workable:SetWorkLeft(4)
 	inst.components.workable:SetOnFinishCallback(onhammered)
-	inst.components.workable:SetOnWorkCallback(onhit)		
+	                        
 	MakeSnowCovered(inst, .01)
 	inst:ListenForEvent("onbuilt", onbuilt)
 	inst:ListenForEvent("animover", CheckRain)
-
-	inst:AddComponent("floodable")
-	inst.components.floodable.floodEffect = "shock_machines_fx"
-	inst.components.floodable.floodSound = "dontstarve_DLC002/creatures/jellyfish/electric_land"
-
+	
 	CheckRain(inst)
 
-	inst:AddTag("structure")
-	MakeMediumBurnable(inst, nil, nil, true)
-	MakeSmallPropagator(inst)
-	inst.OnSave = onsave
-	inst.OnLoad = onload
-	inst:ListenForEvent("burntup", makeburnt)
+	inst:AddTag("structure")--0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 	
 	return inst
 end

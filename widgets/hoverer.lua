@@ -72,6 +72,8 @@ local HoverText = Class(Widget, function(self, owner)
     self.projY = nil
     self.projZ = nil
 
+    self.actionControlsAction = 0
+
     self.delayTimer = 2.0
     self.inDelay = false
 
@@ -94,7 +96,7 @@ function HoverText:OnUpdate(dt)
         if not TheInput:IsTouchDown() then
             self.inDelay = false
         end
-        if self.owner and self.owner.components and self.owner.components.playercontroller and self.owner.components.playercontroller.directwalking then
+        if self.actionControlsAction > 0 or (self.owner and self.owner.components and self.owner.components.playercontroller and self.owner.components.playercontroller.directwalking) then
             return
         end
         if self.inMenu then
@@ -598,6 +600,7 @@ function HoverText:DoMenu()
 end
 
 function HoverText:EndMenu()
+    print("EndMenu")
     self.highlightedAction = -1
     --self.inMenu = false
     self.onEnd = true

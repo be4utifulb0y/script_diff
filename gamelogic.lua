@@ -124,7 +124,7 @@ local function LoadAssets(asset_set)
 				print("\tLoad FE")
 				TheSim:LoadPrefabs(FRONTEND_PREFABS)
 				print("\tLoad FE: done")		
-                ModManager:RegisterPrefabs()
+                --ModManager:RegisterPrefabs()
 				-- mark the FE assets so only them are kept in memory when returning
 			end
 		else
@@ -139,7 +139,7 @@ local function LoadAssets(asset_set)
 --				TheSim:LoadPrefabs(BACKEND_PREFABS)
 				TheSim:LoadPrefabs(RECIPE_PREFABS)
 				print ("\tLOAD BE: done")
-                ModManager:RegisterPrefabs()
+                --ModManager:RegisterPrefabs()
 			end
 		end
 
@@ -275,25 +275,23 @@ local function HandleDeathCleanup(wilson, data)
     local game_time = GetClock():ToMetricsString()
 
     if SaveGameIndex:GetCurrentMode() == "survival" or SaveGameIndex:GetCurrentMode() == "cave" or SaveGameIndex:GetCurrentMode() == "volcano" or SaveGameIndex:GetCurrentMode() == "shipwrecked" then
-	    local playtime = GetTimePlaying()
-	    playtime = math.floor(playtime*1000)
-	    SetTimingStat("time", "scenario", playtime)
-	    SendTrackingStats()
-	    local days_survived, start_xp, reward_xp, new_xp, capped = CalculatePlayerRewards(wilson)
-	    
-	    ProfileStatsSet("xp_gain", reward_xp)
-	    ProfileStatsSet("xp_total", new_xp)
-	    SubmitCompletedLevel() --close off the instance
-
-	    wilson.components.health.invincible = true
-
-	    wilson.profile:Save(function()
-		    SaveGameIndex:EraseCurrent(function() 
-				    scheduler:ExecuteInTime(3, function() 
-						TheFrontEnd:PushScreen(DeathScreen(days_survived, start_xp, nil, capped))
-					end)
-		    	end)
-		    end)
+StartNextInstance({reset_action=RESET_ACTION.LOAD_SLOT, save_slot = SaveGameIndex:GetCurrentSaveSlot()}, true)
+--local playtime = GetTimePlaying()
+--playtime = math.floor(playtime*1000)
+--SetTimingStat("time", "scenario", playtime)
+--SendTrackingStats()
+--local days_survived, start_xp, reward_xp, new_xp, capped = CalculatePlayerRewards(wilson)
+--ProfileStatsSet("xp_gain", reward_xp)
+--ProfileStatsSet("xp_total", new_xp)
+--SubmitCompletedLevel() --close off the instance
+--wilson.components.health.invincible = true
+--wilson.profile:Save(function()
+--SaveGameIndex:EraseCurrent(function() 
+--scheduler:ExecuteInTime(3, function() 
+--TheFrontEnd:PushScreen(DeathScreen(days_survived, start_xp, nil, capped))
+--end)
+--end)
+--end)
 	elseif SaveGameIndex:GetCurrentMode() == "adventure" then
 
 		SaveGameIndex:OnFailAdventure(function()

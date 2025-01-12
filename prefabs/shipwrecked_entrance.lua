@@ -82,14 +82,15 @@ local function fn(Sim)
 
     inst:AddTag("shipwrecked_portal")
 
-    --inst:AddComponent("inspectable")
+      inst:AddComponent("inspectable")
 
 	inst.no_wet_prefix = true
 
-	--inst:AddComponent("activatable")
-    --inst.components.activatable.OnActivate = OnActivate
-    --inst.components.activatable.inactive = true
-	--inst.components.activatable.quickaction = true
+	  inst:AddComponent("activatable")
+      inst.components.activatable.OnActivate = OnActivate
+      inst.components.activatable.inactive = true
+	  inst.components.activatable.quickaction = true
+
 	
 	--this is a hack to make sure these don't show up in adventure mode
 	if SaveGameIndex:GetCurrentMode() == "adventure" then

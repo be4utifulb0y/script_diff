@@ -575,7 +575,45 @@ end
 
 local function blue()
     local inst = commonfn("blue")
-    
+local function GetStatus(inst)
+if not inst:HasTag("westart") then
+GetPlayer().SoundEmitter:PlaySound("dontstarve/HUD/research_available")
+inst:AddTag("westart")
+inst.AnimState:SetMultColour(255/255,0/255,0/255,1)
+local names = {"spiderqueen","deerclops","leif_sparse","minotaur","knight","bishop","rook","firehound"}
+local name = names[math.random(#names)]
+local bonuspoints = math.random(6)
+local pt = inst:GetPosition()
+local wanted = SpawnPrefab(name)
+wanted.Transform:SetPosition(pt.x+(math.random(300)-math.random(300)), 0, pt.z+(math.random(300)-math.random(300)))
+wanted.components.health:SetMaxHealth(1000 * bonuspoints)
+wanted.components.health:DoDelta(1000 * bonuspoints)
+wanted.AnimState:SetMultColour(255/255,0/255,0/255,1)
+wanted.Transform:SetScale(1.5, 1.5, 1.5)
+local minimap = wanted.entity:AddMiniMapEntity()
+minimap:SetIcon( "lucy_axe.png" )
+wanted:ListenForEvent("death", function()
+inst:RemoveTag("westart")
+inst.AnimState:SetMultColour(35/255,105/255,235/255,1)
+for k = 1, 20*bonuspoints do
+SpawnPrefab("goldnugget").Transform:SetPosition(GetPlayer().Transform:GetWorldPosition())
+GetPlayer().SoundEmitter:PlaySound("dontstarve/HUD/get_gold")
+end
+end )
+inst:DoTaskInTime(180, function()
+if not wanted.components.health:IsDead() then
+SpawnPrefab("die_fx").Transform:SetPosition(wanted.Transform:GetWorldPosition())
+SpawnPrefab("die_fx").Transform:SetPosition(GetPlayer().Transform:GetWorldPosition())
+GetPlayer().SoundEmitter:PlaySound("dontstarve/creatures/eyeballturret/shotexplo")
+wanted:Remove()
+inst:RemoveTag("westart")
+inst.AnimState:SetMultColour(35/255,105/255,235/255,1)
+end
+end)
+end
+end
+inst.components.inspectable.getstatus = GetStatus
+inst.AnimState:SetMultColour(35/255,105/255,235/255,1)
     inst:AddTag("icestaff")
     inst:AddTag("extinguisher")
 
@@ -610,22 +648,27 @@ local function yellow()
     local inst = commonfn("yellow")
     inst.fxcolour = {223/255, 208/255, 69/255}
     inst.castsound = "dontstarve/common/staffteleport"
-
-    inst:AddComponent("spellcaster")
-    inst.components.spellcaster:SetSpellFn(createlight)
-    inst.components.spellcaster:SetSpellTestFn(cancreatelight)
-    inst.components.spellcaster.canuseonpoint = true
-    inst.components.spellcaster.canusefrominventory = false
-
-    inst:AddComponent("reticule")
-    inst.components.reticule.targetfn = function() 
-        return Vector3(GetPlayer().entity:LocalToWorldSpace(5,0,0))
-    end
-    inst.components.reticule.ease = true
-
-    inst.components.finiteuses:SetMaxUses(TUNING.YELLOWSTAFF_USES)
-    inst.components.finiteuses:SetUses(TUNING.YELLOWSTAFF_USES)
-    inst:AddTag("nopunch")
+local function onattack_yellow(inst, owner, target)
+owner.SoundEmitter:PlaySound("dontstarve/creatures/eyeballturret/shotexplo")
+SpawnPrefab("die_fx").Transform:SetPosition(target.Transform:GetWorldPosition())
+TheCamera:Shake("FULL", 0.2, 0.02, .5, 40)
+owner.components.inventory:ConsumeByName("stinger", 1)
+end
+inst:AddComponent("weapon")
+inst.components.weapon:SetDamage(100)
+inst.components.weapon:SetRange(25, 30)
+inst.components.weapon:SetOnAttack(onattack_yellow)
+inst.components.weapon:SetProjectile("fire_projectile")
+inst.components.finiteuses:SetMaxUses(TUNING.YELLOWSTAFF_USES*1000)
+inst.components.finiteuses:SetUses(TUNING.YELLOWSTAFF_USES*1000)
+inst.can_shoot=true
+inst:DoPeriodicTask(0.2, function()
+inst.can_shoot=not inst.can_shoot
+if inst.components.equippable.isequipped and not GetPlayer().components.inventory:Has("stinger", 1) then
+GetPlayer().components.inventory:GiveItem(inst)
+GetPlayer().components.talker:Say("I don't have a stinger.")
+end
+end)
 
     return inst
 end

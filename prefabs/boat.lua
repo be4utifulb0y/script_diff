@@ -570,19 +570,10 @@ local function deploytest(inst, pt)
     -- 				and inst.components.inventoryitem.owner.components.driver and inst.components.inventoryitem.owner.components.driver.driving
 
 
-    local x, y, z = pt:Get()
     if boating then
-        local minBuffer = 2
-        local testTile = ground.Map:GetTileAtPoint(x + minBuffer, y, z)
-        onWater = ground.Map:IsWater(testTile) and onWater
-        testTile = ground.Map:GetTileAtPoint(x - minBuffer, y, z)
-        onWater = ground.Map:IsWater(testTile) and onWater
-        testTile = ground.Map:GetTileAtPoint(x, y, z + minBuffer)
-        onWater = ground.Map:IsWater(testTile) and onWater
-        testTile = ground.Map:GetTileAtPoint(x, y, z - minBuffer)
-        onWater = ground.Map:IsWater(testTile) and onWater
     	return onWater
 	else
+    	local x, y, z = pt:Get()
 		local testTile = inst:GetCurrentTileType(x, y, z)--ground.Map:GetTileAtPoint(x , y, z)
 		local isShore = ground.Map:IsShore(testTile) --testTile == GROUND.OCEAN_SHORE --ground.Map:IsWater(testTile)
 

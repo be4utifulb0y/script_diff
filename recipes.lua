@@ -191,10 +191,10 @@ Recipe("armorcactus", {Ingredient("needlespear", 3), Ingredient("armorwood", 1)}
 
 Recipe("footballhat", {Ingredient("pigskin", 1), Ingredient("rope", 1)}, RECIPETABS.WAR,  TECH.SCIENCE_TWO)
 Recipe("oxhat", {Ingredient("ox_horn", 1), Ingredient("seashell", 4), Ingredient("rope", 1)}, RECIPETABS.WAR,  TECH.SCIENCE_TWO, RECIPE_GAME_TYPE.SHIPWRECKED)
-Recipe("blowdart_pipe", {Ingredient("cutreeds", 2),Ingredient("houndstooth", 1),Ingredient("feather_robin_winter", 1) }, RECIPETABS.WAR,  TECH.SCIENCE_ONE)
-Recipe("blowdart_sleep", {Ingredient("cutreeds", 2),Ingredient("stinger", 1),Ingredient("feather_crow", 1) }, RECIPETABS.WAR,  TECH.SCIENCE_ONE)
-Recipe("blowdart_fire", {Ingredient("cutreeds", 2),Ingredient("charcoal", 1),Ingredient("feather_robin", 1) }, RECIPETABS.WAR,  TECH.SCIENCE_ONE)
-Recipe("blowdart_poison", {Ingredient("cutreeds", 2),Ingredient("venomgland", 1),Ingredient("feather_crow", 1) }, RECIPETABS.WAR,  TECH.SCIENCE_ONE, RECIPE_GAME_TYPE.SHIPWRECKED)
+Recipe("blowdart_pipe",{Ingredient("cutreeds",2),Ingredient("houndstooth",1),Ingredient("feather_robin_winter",30) },RECIPETABS.WAR,TECH.SCIENCE_ONE)
+Recipe("blowdart_sleep",{Ingredient("cutreeds",2),Ingredient("stinger",1),Ingredient("feather_crow",30) },RECIPETABS.WAR,TECH.SCIENCE_ONE)
+Recipe("blowdart_fire",{Ingredient("cutreeds",2),Ingredient("charcoal",1),Ingredient("feather_robin",30) },RECIPETABS.WAR,TECH.SCIENCE_ONE)
+Recipe("blowdart_poison",{Ingredient("cutreeds",2),Ingredient("venomgland",1),Ingredient("feather_crow",30) },RECIPETABS.WAR,TECH.SCIENCE_ONE,RECIPE_GAME_TYPE.SHIPWRECKED)
 Recipe("boomerang", {Ingredient("boards", 1),Ingredient("silk", 1),Ingredient("charcoal", 1)}, RECIPETABS.WAR,  TECH.SCIENCE_TWO)
 Recipe("beemine", {Ingredient("boards", 1),Ingredient("bee", 4),Ingredient("flint", 1) }, RECIPETABS.WAR,  TECH.SCIENCE_ONE)
 Recipe("trap_teeth", {Ingredient("log", 1),Ingredient("rope", 1),Ingredient("houndstooth", 1)}, RECIPETABS.WAR,  TECH.SCIENCE_TWO)
@@ -248,7 +248,27 @@ Recipe("armor_windbreaker", {Ingredient("blubber", 2), Ingredient("fabric", 1), 
 Recipe("gashat", {Ingredient("messagebottleempty", 2), Ingredient("coral", 3), Ingredient("jellyfish", 1)}, RECIPETABS.DRESS,  TECH.SCIENCE_TWO, RECIPE_GAME_TYPE.SHIPWRECKED)
 Recipe("aerodynamichat", {Ingredient("shark_fin", 1), Ingredient("vine", 2), Ingredient("coconut", 1)}, RECIPETABS.DRESS,  TECH.SCIENCE_TWO, RECIPE_GAME_TYPE.SHIPWRECKED)
 ----GEMS----
-
+----SHOP----
+Recipe("harpoon",{Ingredient("goldnugget",20)},RECIPETABS.SHOP,TECH.NONE,nil,nil,nil,1)
+Recipe("trident",{Ingredient("goldnugget",15)},RECIPETABS.SHOP,TECH.NONE,nil,nil,nil,1)
+Recipe("rawling",{Ingredient("goldnugget",30)},RECIPETABS.SHOP,TECH.NONE,nil,nil,nil,1)
+Recipe("EARRING",{Ingredient("goldnugget",10)},RECIPETABS.SHOP,TECH.NONE,nil,nil,nil,1)
+Recipe("krampus_sack",{Ingredient("goldnugget",30)},RECIPETABS.SHOP,TECH.NONE,nil,nil,nil,1)
+Recipe("snakeoil",{Ingredient("goldnugget", 5)},RECIPETABS.SHOP,TECH.NONE,nil,nil,nil,1)
+Recipe("lureplantbulb",{Ingredient("goldnugget",10)},RECIPETABS.SHOP,TECH.NONE,nil,nil,nil,1)
+Recipe("taffy",{Ingredient("goldnugget",10)},RECIPETABS.SHOP,TECH.NONE,nil,nil,nil,1)
+Recipe("pumpkincookie",{Ingredient("goldnugget",10)},RECIPETABS.SHOP,TECH.NONE,nil,nil,nil,1)
+Recipe("kabobs",{Ingredient("goldnugget",10)},RECIPETABS.SHOP,TECH.NONE,nil,nil,nil,1)
+Recipe("powcake",{Ingredient("goldnugget",10)},RECIPETABS.SHOP,TECH.NONE,nil,nil,nil,1)
+Recipe("devtool"     ,{Ingredient("goldnugget",50)},RECIPETABS.SHOP,TECH.NONE,nil,nil,nil,1)
+Recipe("trident"   ,{Ingredient("goldnugget",50)},RECIPETABS.SHOP,TECH.NONE,nil,nil,nil,1)
+Recipe("meatballs",{Ingredient("goldnugget",10)},RECIPETABS.SHOP,TECH.NONE,nil,nil,nil,1)
+Recipe("icecream",{Ingredient("goldnugget",10)},RECIPETABS.SHOP,TECH.NONE,nil,nil,nil,1)
+Recipe("freshfruitcrepes",{Ingredient("goldnugget",10)},RECIPETABS.SHOP,TECH.NONE,nil,nil,nil,1)
+Recipe("sweetpotatosouffle",{Ingredient("goldnugget",10)},RECIPETABS.SHOP,TECH.NONE,nil,nil,nil,1)
+Recipe("sharkfinsoup",{Ingredient("goldnugget",10)},RECIPETABS.SHOP,TECH.NONE,nil,nil,nil,1)
+Recipe("lobsterdinner",{Ingredient("goldnugget",10)},RECIPETABS.SHOP,TECH.NONE,nil,nil,nil,1)
+Recipe("bananapop",{Ingredient("goldnugget",10)},RECIPETABS.SHOP,TECH.NONE,nil,nil,nil,1)--00000000000000000000000000000000000000
 ----ANCIENT----
 Recipe("thulecite", {Ingredient("thulecite_pieces", 6)}, RECIPETABS.ANCIENT, TECH.ANCIENT_TWO, RECIPE_GAME_TYPE.VANILLA, nil, nil, true)
 
@@ -273,7 +293,7 @@ Recipe("eyeturret_item", {Ingredient("deerclops_eyeball", 1), Ingredient("minota
 
 
 if ACCOMPLISHMENTS_ENABLED then
-	Recipe("accomplishment_shrine", {Ingredient("goldnugget", 10), Ingredient("cutstone", 1), Ingredient("gears", 6)}, RECIPETABS.SCIENCE, TECH.SCIENCE_TWO, RECIPE_GAME_TYPE.COMMON, "accomplishment_shrine_placer")
+	Recipe("accomplishment_shrine", {Ingredient("goldnugget", 10), Ingredient("cutstone", 1), Ingredient("gears", 6)}, RECIPETABS.SCIENCE, TECH.SCIENCE_TWO, RECIPE_GAME_TYPE.COMMON)
 end
 
 ----NAUTICAL----

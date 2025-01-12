@@ -129,37 +129,36 @@ local function fn(Sim)
 	--add waves
 	local waves = inst.entity:AddWaveComponent()
 	waves:SetRegionSize( 40, 20 )
-    if TheSim:IsUnsupportedDevice() then
-        waves:SetRegionNumWaves( 6 )
-    else
+    --if TheSim:IsUnsupportedDevice() then
+        --waves:SetRegionNumWaves( 6 )
+    --else
         waves:SetRegionNumWaves( 8 )
-    end
-	waves:SetWaveTexture( "images/wave_ios.tex" )
+    --end
+	waves:SetWaveTexture( "images/wave_ios.tex" )    
 
-	-- See source\game\components\WaveRegion.h
-	waves:SetWaveEffect( "shaders/waves.ksh" ) -- texture.ksh
-	--waves:SetWaveEffect( "shaders/texture.ksh" ) -- 
-	if PLATFORM == "iOS" or PLATFORM == "Android" then
-		waves:SetWaveSize( 2048, 2048 )
-    else
+ -- See source\game\components\WaveRegion.h
+	waves:SetWaveEffect( "shaders/waves.ksh" ) 
+--waves:SetWaveEffect( "shaders/texture.ksh" ) --000
+--if PLATFORM == "iOS" then
+--waves:SetWaveSize( 2048, 2048 )
+  --else
     	waves:SetWaveSize( 2048, 512 )
-    end
+  --end
 
     inst:AddComponent("clock")
 	inst:AddComponent("seasonmanager")
 	inst:DoTaskInTime(0, function(inst) inst.components.seasonmanager:SetOverworld() end)
     inst:AddComponent("flowerspawner")
-    inst:AddComponent("lureplantspawner")
-    inst:AddComponent("birdspawner")
-    inst:AddComponent("butterflyspawner")
-	inst:AddComponent("hounded")
-	inst:AddComponent("hunter")
-
-	inst:AddComponent("basehassler")
-
-	local is_rog = IsDLCInstalled(REIGN_OF_GIANTS)
-	if is_rog then
-		inst:AddComponent("worlddeciduoustreeupdater")
+   inst:AddComponent("lureplantspawner")
+inst:AddComponent("birdspawner")
+inst:AddComponent("butterflyspawner")
+inst:AddComponent("hounded")
+inst:AddComponent("hunter")
+inst:AddComponent("basehassler")
+local is_rog = IsDLCInstalled(REIGN_OF_GIANTS)
+local is_rog = true
+if is_rog then
+inst:AddComponent("worlddeciduoustreeupdater")
 		
 		local hasslers = require("basehasslers")
 		for k,v in pairs(hasslers) do

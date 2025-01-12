@@ -67,7 +67,7 @@ local function fn(Sim)
     inst:AddComponent("inspectable")
 
     inst:AddComponent("inventoryitem")
-    inst.components.inventoryitem.cangoincontainer = false
+    inst.components.inventoryitem.cangoincontainer = true
     inst.components.inventoryitem.foleysound = "dontstarve_DLC002/common/foley/pirate_booty_pack"
 
     MakeInventoryFloatable(inst, "idle_water", "anim")

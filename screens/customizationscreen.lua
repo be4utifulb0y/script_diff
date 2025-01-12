@@ -34,19 +34,14 @@ local CustomizationScreen = Class(Screen, function(self, profile, cb, defaults, 
 	--if #options == 0 or self.RoGEnabled ~= RoGEnabled then
 		self.RoGEnabled = RoGEnabled
 
-		if merge_options then
-			if SaveGameIndex:IsModeShipwrecked() then
+
 				if self.RoGEnabled then
 					customise = require("map/customise_rog")
 				else
-					customise = require("map/customise_base")
-				end
-			else
+
 				customise = require("map/customise")
-			end
-		else
-			customise = require("map/customise")
-		end
+			end--000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
 		
 		options = {}
 		local numgroup = 1
@@ -91,25 +86,12 @@ local CustomizationScreen = Class(Screen, function(self, profile, cb, defaults, 
 	
     self.bg = self:AddChild(Image("images/ui.xml", "bg_plain.tex"))
 
-    if merge_options then
-    	if SaveGameIndex:IsModeShipwrecked() then
-	    	if self.RoGEnabled and IsDLCInstalled(REIGN_OF_GIANTS) then
+    if self.RoGEnabled then
 	    		self.bg:SetTint(BGCOLOURS.PURPLE[1],BGCOLOURS.PURPLE[2],BGCOLOURS.PURPLE[3], 1)
 	    	else
-	    		self.bg:SetTint(BGCOLOURS.RED[1],BGCOLOURS.RED[2],BGCOLOURS.RED[3], 1)
-	    	end
-	    else
+
 	    	self.bg:SetTint(BGCOLOURS.TEAL[1],BGCOLOURS.TEAL[2],BGCOLOURS.TEAL[3], 1)
-	    end
-    else
-	    if IsDLCEnabled(REIGN_OF_GIANTS) and not IsDLCEnabled(CAPY_DLC) then
-	   	    self.bg:SetTint(BGCOLOURS.PURPLE[1],BGCOLOURS.PURPLE[2],BGCOLOURS.PURPLE[3], 1)
-		elseif IsDLCEnabled(CAPY_DLC) then
-			self.bg:SetTint(BGCOLOURS.TEAL[1],BGCOLOURS.TEAL[2],BGCOLOURS.TEAL[3], 1)
-	   	else
-	   		self.bg:SetTint(BGCOLOURS.RED[1],BGCOLOURS.RED[2],BGCOLOURS.RED[3], 1)
-	   	end
-	end
+	    end--00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 
     self.bg:SetVRegPoint(ANCHOR_MIDDLE)
     self.bg:SetHRegPoint(ANCHOR_MIDDLE)
@@ -171,14 +153,15 @@ local CustomizationScreen = Class(Screen, function(self, profile, cb, defaults, 
 
 	local levelpresets = levels.sandbox_levels
 
-	if merge_options then
-		if not SaveGameIndex:IsModeShipwrecked() then
+if IsDLCEnabled(REIGN_OF_GIANTS) or IsDLCEnabled(CAPY_DLC) then
+      if self.RoGEnabled then
+        levelpresets = levels.sandbox_levels
+      else
 			levelpresets = levels.shipwrecked_levels
 		end
 	else
-		if IsDLCEnabled(CAPY_DLC) then
-			levelpresets = levels.shipwrecked_levels
-		end
+      levelpresets = levels.sandbox_levels
+
 	end
 
 

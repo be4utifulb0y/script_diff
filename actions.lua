@@ -41,10 +41,10 @@ ACTIONS=
 	TALKTO = Action(3, true),
 	WALKTO = Action(-4),
 	BAIT = Action(),
-	CHECKTRAP = Action(3),
-	BUILD = Action(),
-	PLANT = Action(),
-	PLANTONGROWABLE = Action(),
+	CHECKTRAP=Action(3),
+	BUILD = Action(0,true),
+	PLANT=Action(),
+	PLANTONGROWABLE=Action(),
 	HARVEST = Action(), 
 	GOHOME = Action(),
 	SLEEPIN = Action(),
@@ -500,11 +500,9 @@ end
 
 ACTIONS.DEPLOY_AT_RANGE.fn = ACTIONS.DEPLOY.fn 
 
+
 ACTIONS.DEPLOY_AT_RANGE.strfn = ACTIONS.DEPLOY.strfn
 
-ACTIONS.TOGGLE_DEPLOY_MODE.fn = function(act)
-    GetPlayer().components.playercontroller:SetActiveInventoryTile(act.deploy)
-end
 
 ACTIONS.TOGGLE_DEPLOY_MODE.strfn = function(act)
 	if act.invobject and act.invobject:HasTag("groundtile") then

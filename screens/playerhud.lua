@@ -128,9 +128,9 @@ function PlayerHud:OnGainFocus()
 	
 	if self.controls then
 		self.controls:SetHUDSize()
-        --self.controls:ShowActionControls()
+        self.controls:ShowActionControls()
         self.controls:ShowRecordControls()
-        if not self:IsInventoryOpen() then
+        if not self:IsPhoneControllerInventoryOpen() then
             self.controls:ShowVirtualStick()
         end
 		if controller then
@@ -306,46 +306,7 @@ function PlayerHud:OnUpdate(dt)
 	self:UpdateClouds(dt)
 	--self:UpdateOceanFog(dt)
 	self:UpdateSmoke(dt)
-  
-  -- [vicent] we always run this to show/hide the VirtualStick if the controller is connected/disconnected
-	-- we use a "member" variable to avoid more expensive table checks inside ShowVirtualStick
-	if self.controls then
-		local isControllerAttached = TheInput:ControllerAttached()
-		if self.isControllerAttached ~= isControllerAttached then
-			self.isControllerAttached = isControllerAttached
-			self.controls:ShowVirtualStick()
-			if isControllerAttached then
-				self.controls.mapcontrols:Hide()
-                self.controls.mapcontrols:Disable()
-                if IPHONE_VERSION then
-                    self.controls.crafttabs.originalY = -5
-                    self:ShowControllerCrafting()
-                else
-                    -- [marc] change way to show the backpack
-                    self.controls.inv.rebuild_pending = true
-                    if self.owner.components.inventory.overflow then
-                        local backpack = self.owner.components.inventory.overflow
-                        backpack.components.container:Close(self.owner)
-                    end
-                end
-			else
-				self.controls.mapcontrols:Show()
-                self.controls.mapcontrols:Enable()
-                if IPHONE_VERSION then
-                    self.controls.crafttabs.originalY = 25
-                    self:ShowControllerCrafting()
-                else
-                    -- [marc] change way to show the backpack
-                    self.controls.inv.rebuild_pending = true
-                    if self.owner.components.inventory.overflow then
-                        local backpack = self.owner.components.inventory.overflow
-                        backpack.components.container:Open(self.owner)
-                    end
-                end
-			end
-		end
-	end
-
+	
 	if Profile and self.vig then
 		if RENDER_QUALITY.LOW == Profile:GetRenderQuality() or TheConfig:IsEnabled("hide_vignette") then
 			self.vig:Hide()
@@ -361,7 +322,7 @@ function PlayerHud:HideControllerCrafting()
 end
 
 function PlayerHud:ShowControllerCrafting()
-	self.controls.crafttabs:MoveTo(self.controls.crafttabs:GetPosition(), Vector3(0,self.controls.crafttabs.originalY,0), .25)
+	self.controls.crafttabs:MoveTo(self.controls.crafttabs:GetPosition(), Vector3(0,0,0), .25)
 end
 
 
@@ -374,13 +335,6 @@ function PlayerHud:OpenControllerInventory()
 	self.controls:ShowStatusNumbers()
 
 	self.owner.components.playercontroller:OnUpdate(0)
-end
-
-function PlayerHud:CloseInventory()
-  TheFrontEnd:GetSound():PlaySound("dontstarve/HUD/craft_close")
-  self.controls:HideStatusNumbers()
-  self:ShowControllerCrafting()
-  self.controls.inv:CloseInventory()
 end
 
 function PlayerHud:CloseControllerInventory()
@@ -397,16 +351,20 @@ function PlayerHud:ClosePhoneInventory()
     self.controls.inv:ClosePhoneInventory()
 end
 
-function PlayerHud:IsPhoneControllerInventoryOpen()
-  return self.controls and self.controls.inv.phone_open
-end
-
 function PlayerHud:IsControllerInventoryOpen()
-    return self.controls and self.controls.inv.controller_open
+	return false--self.controls and self.controls.inv.open
 end
 
-function PlayerHud:IsInventoryOpen()
-  return self.controls and self.controls.inv.open
+function PlayerHud:IsPhoneControllerInventoryOpen()
+    return self.controls and self.controls.inv.open
+end
+
+function PlayerHud:IsCraftingOpen()
+    return self.controls ~= nil and self.controls.crafttabs:IsCraftingOpen()
+end
+
+function PlayerHud:IsPhoneControllerInventoryOpen()
+    return self.controls and self.controls.inv.open
 end
 
 function PlayerHud:OpenControllerCrafting()
@@ -418,16 +376,6 @@ function PlayerHud:OpenControllerCrafting()
 	self.owner.components.locomotor:Stop()
 	--self.owner.components.playercontroller.draggingonground = false
 	--self.owner.components.playercontroller.startdragtime = nil
-end
-
-function PlayerHud:CloseCrafting()
-  TheFrontEnd:GetSound():PlaySound("dontstarve/HUD/craft_close")
-  if self:IsControllerCraftingOpen() then
-      self.controls.crafttabs:CloseControllerCrafting()
-      self.controls.inv:Enable()
-  elseif self:IsPhoneControllerCraftingOpen() then
-      self.controls.crafttabs:ClosePhoneCraftTabs()
-  end
 end
 
 function PlayerHud:CloseControllerCrafting()
@@ -446,11 +394,7 @@ function PlayerHud:IsControllerCraftingOpen()
 end
 
 function PlayerHud:IsPhoneControllerCraftingOpen()
-    return self.controls and self.controls.crafttabs.phonecraftingopen
-end
-
-function PlayerHud:IsCraftingOpen()
-  return self.controls and self.controls.crafttabs.open
+    return self.controls and self.controls.crafttabs.open
 end
 
 function PlayerHud:OnControl(control, down)
@@ -473,27 +417,27 @@ function PlayerHud:OnControl(control, down)
 	end
 	
 	if not down and control == CONTROL_CANCEL then
-		if self:IsCraftingOpen() then
-			self:CloseCrafting()
+		if self:IsControllerCraftingOpen() then
+			self:CloseControllerCrafting()
 		end
 
-		if self:IsInventoryOpen() then
-			self:CloseInventory()
+		if self:IsControllerInventoryOpen() then
+			self:CloseControllerInventory()
 		end
 	end
 
 	
 	if down and control == CONTROL_OPEN_CRAFTING then
-		if self:IsCraftingOpen() then
-			self:CloseCrafting()
+		if self:IsControllerCraftingOpen() then
+			self:CloseControllerCrafting()
 		elseif not self.owner:HasTag("beaver") then
 			self:OpenControllerCrafting()
 		end
 	end
 
 	if down and control == CONTROL_OPEN_INVENTORY then
-		if self:IsInventoryOpen() then
-			self:CloseInventory()
+		if self:IsControllerInventoryOpen() then
+			self:CloseControllerInventory()
 		elseif not self.owner:HasTag("beaver") then
 			self:OpenControllerInventory()
 		end

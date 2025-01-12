@@ -168,8 +168,8 @@ end
 
 local slotpos = {}
 
-for y = 2, 0, -1 do
-	for x = 0, 2 do
+for y = 4, 0, -1 do
+for x = 0, 13 do
 		table.insert(slotpos, Vector3(80*x-80*2+80, 80*y-80*2+80,0))
 	end
 end
@@ -205,9 +205,9 @@ local function chest(style, aquatic)
 		inst.components.container.onclosefn = onclose
 		
 		inst.components.container.widgetslotpos = slotpos
-		inst.components.container.widgetanimbank = "ui_chest_3x3"
-		inst.components.container.widgetanimbuild = "ui_chest_3x3"
-		inst.components.container.widgetpos = Vector3(-125,125,0)
+--inst.components.container.widgetanimbank = "ui_chest_3x3"
+--inst.components.container.widgetanimbuild = "ui_chest_3x3"
+		inst.components.container.widgetpos = Vector3(-345,150,0)
 		inst.components.container.side_align_tip = 160
 		
 		if style ~= "octopus_chest" then

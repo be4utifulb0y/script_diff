@@ -122,14 +122,10 @@ if PLATFORM == "PS4" then
 end
 
 if PLATFORM == "iOS" then
-    table.insert(assets, Asset("ATLAS", "images/ios_controllers.xml"))
-    table.insert(assets, Asset("IMAGE", "images/ios_controllers.tex"))
     table.insert(assets, Asset("ATLAS", "images/ios_gestures.xml"))
     table.insert(assets, Asset("IMAGE", "images/ios_gestures.tex"))
     table.insert(assets, Asset("ATLAS", "images/ios_rateus.xml"))
     table.insert(assets, Asset("IMAGE", "images/ios_rateus.tex"))
-    table.insert(assets, Asset("ATLAS", "images/rebuild.xml"))
-    table.insert(assets, Asset("IMAGE", "images/rebuild.tex"))
 end
 
 require "fonts"

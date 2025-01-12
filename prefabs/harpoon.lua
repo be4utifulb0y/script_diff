@@ -15,43 +15,37 @@ local function onfinished(inst)
 end
 
 local function onequip(inst, owner) 
-	owner.AnimState:OverrideSymbol("swap_object", "swap_harpoon", "swap_object")
-	owner.AnimState:Show("ARM_carry") 
-	owner.AnimState:Hide("ARM_normal") 
+owner.AnimState:OverrideSymbol("swap_object", "swap_harpoon", "swap_object")
+owner.AnimState:Show("ARM_carry") 
+owner.AnimState:Hide("ARM_normal") 
 end
-
 local function onunequip(inst, owner) 
-	owner.AnimState:ClearOverrideSymbol("swap_object")
-	owner.AnimState:Hide("ARM_carry") 
-	owner.AnimState:Show("ARM_normal") 
+owner.AnimState:ClearOverrideSymbol("swap_object")
+owner.AnimState:Hide("ARM_carry") 
+owner.AnimState:Show("ARM_normal") 
 end
-
 local function onhit(inst, attacker, target)
-	inst.AnimState:SetOrientation(ANIM_ORIENTATION.Default)
-	inst.AnimState:PlayAnimation("idle")
-	
-	local impactfx = SpawnPrefab("impact")
-	if impactfx and attacker then
-		local follower = impactfx.entity:AddFollower()
-		follower:FollowSymbol(target.GUID, target.components.combat.hiteffectsymbol, 0, 0, 0 )
-		impactfx:FacePoint(attacker.Transform:GetWorldPosition())
-	end
+inst.AnimState:SetOrientation(ANIM_ORIENTATION.Default)
+inst.AnimState:PlayAnimation("idle")
+local impactfx=SpawnPrefab("impact")
+if impactfx and attacker then
+local follower=impactfx.entity:AddFollower()
+follower:FollowSymbol(target.GUID, target.components.combat.hiteffectsymbol, 0, 0, 0 )
+impactfx:FacePoint(attacker.Transform:GetWorldPosition())
+attacker.components.inventory:Equip(inst)
 end
-
+end
 local function thrownfn(inst)
-	inst.AnimState:PlayAnimation("thrown")
+inst.AnimState:PlayAnimation("thrown")
 end
-
 local function onthrown(inst, data)
-	inst.AnimState:SetOrientation(ANIM_ORIENTATION.OnGround)
+inst.AnimState:SetOrientation(ANIM_ORIENTATION.OnGround)
 end
-
-
 local function fn()
-	local inst = CreateEntity()
-	local trans = inst.entity:AddTransform()
-	inst.entity:AddAnimState()
-	inst.entity:AddSoundEmitter()
+local inst = CreateEntity()
+local trans = inst.entity:AddTransform()
+inst.entity:AddAnimState()
+inst.entity:AddSoundEmitter()
 
 	MakeInventoryPhysics(inst)
 	MakeInventoryFloatable(inst, "idle_water", "idle")

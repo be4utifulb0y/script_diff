@@ -31,15 +31,10 @@ local MapWidget = Class(Widget, function(self)
 	self:StartUpdating()
 
 	self.baseZoom = nil
- 
-     -- the touch start call is forcibly called on children by widget.lua, so no need for another handler
-    --self.touchstarthandler = TheInput:AddTouchStartHandler(function(id, x, y) self:OnTouchStart(id, x, y) end)
-    self.touchendhandler = TheInput:AddTouchEndHandler(function(id) self:OnTouchEnd(id) end)
-    self.touchmovehandler = TheInput:AddTouchMoveHandler(function(id, x, y) self:OnTouchMove(id, x, y) end)
-    self.numTouches = 0
-    self.firstTouchId = -10
 
-    self.inGesture = false
+
+	self.inGesture = false
+
 end)
 
 
@@ -49,13 +44,13 @@ end
 
 function MapWidget:OnZoomIn(  )
 	if self.shown then
-		self.minimap:Zoom(self.minimap:GetZoom() -1 )
+		self.minimap:Zoom( -1 )
 	end
 end
 
 function MapWidget:OnZoomOut( )
 	if self.shown and self.minimap:GetZoom() < 20 then
-		self.minimap:Zoom(self.minimap:GetZoom()+ 1 )
+		self.minimap:Zoom( 1 )
 	end
 end
 
@@ -65,20 +60,19 @@ function MapWidget:Distance(x0, y0, x1, y1)
 end
 
 function MapWidget:DoZoom( scale, state, x0, y0, x1, y1 )
-    if self.shown then
+	if self.shown then
         if state == 0 then
-            self.baseZoom = self.minimap:GetZoom()
-            self.baseX0 = x0
-            self.baseY0 = y0
-            self.baseX1 = x1
-            self.baseY1 = y1
-        end
-        if self.baseZoom then
-    local w = RESOLUTION_X
-    local h = RESOLUTION_Y
+			self.baseZoom = self.minimap:GetZoom()
+			self.baseX0 = x0
+			self.baseY0 = y0
+			self.baseX1 = x1
+			self.baseY1 = y1
+		end
+		if self.baseZoom then
+			local w,h = TheSim:GetScreenSize()
             local pos0 = TheInput:GetScreenPosition()
             pos0.x = x0
-            pos0.y = y0
+			pos0.y = y0
             pos0.x = pos0.x - w*0.5
             pos0.y = pos0.y - h*0.5
             pos0 = pos0 * 0.22
@@ -86,7 +80,7 @@ function MapWidget:DoZoom( scale, state, x0, y0, x1, y1 )
 
             local pos1 = TheInput:GetScreenPosition()
             pos1.x = x1
-            pos1.y = y1
+			pos1.y = y1
             pos1.x = pos1.x - w*0.5
             pos1.y = pos1.y - h*0.5
             pos1 = pos1 * 0.22
@@ -106,31 +100,30 @@ function MapWidget:DoZoom( scale, state, x0, y0, x1, y1 )
             self.minimap:Offset(fPos.x, -fPos.y)
 
             self.baseX0 = x0
-            self.baseY0 = y0
-            self.baseX1 = x1
-            self.baseY1 = y1
-        end
-        if state == 2 then
-            self.baseZoom = nil
-            self.inGesture = false
-        end
-    end
+			self.baseY0 = y0
+			self.baseX1 = x1
+			self.baseY1 = y1
+		end
+		if state == 2 then
+			self.baseZoom = nil
+			self.inGesture = false
+		end
+	end
 end
 
 function MapWidget:SetRotation( rotation, state, x0, y0, x1, y1 )
-    if self.shown then
-        if state == 0 then
-            self.baseRX0 = x0
-            self.baseRY0 = y0
-            self.baseRX1 = x1
-            self.baseRY1 = y1
-        end
+	if self.shown then
+		if state == 0 then
+			self.baseRX0 = x0
+			self.baseRY0 = y0
+			self.baseRX1 = x1
+			self.baseRY1 = y1
+		end
 
-    local w = RESOLUTION_X
-    local h = RESOLUTION_Y
+        local w,h = TheSim:GetScreenSize()
         local pos0 = TheInput:GetScreenPosition()
         pos0.x = x0
-        pos0.y = y0
+		pos0.y = y0
         pos0.x = pos0.x - w*0.5
         pos0.y = pos0.y - h*0.5
         pos0 = pos0 * 0.22
@@ -138,7 +131,7 @@ function MapWidget:SetRotation( rotation, state, x0, y0, x1, y1 )
 
         local pos1 = TheInput:GetScreenPosition()
         pos1.x = x1
-        pos1.y = y1
+		pos1.y = y1
         pos1.x = pos1.x - w*0.5
         pos1.y = pos1.y - h*0.5
         pos1 = pos1 * 0.22
@@ -154,112 +147,57 @@ function MapWidget:SetRotation( rotation, state, x0, y0, x1, y1 )
         fPos = pos0+fPos
 
         self.minimap:Offset(-fPos.x, fPos.y)
-        local rot = self.minimap:GetRotation()
-        local factor = 0.5
-        if PLATFORM == "iOS" then
-            if(TheSim:IsiPad3() or IPHONE_VERSION or TheSim:IsUnsupportedDevice()) then
-                factor = 1
-            end
-        end
-        
-        if PLATFORM == "Android" then
-            if IPHONE_VERSION then
-                factor = 1
-            end
-        end
-             
-        self.minimap:SetRotation( rot + rotation*factor )
+		local rot = self.minimap:GetRotation()
+		local factor = 0.5
+        if(TheSim:IsiPad3() or IPHONE_VERSION or TheSim:IsUnsupportedDevice()) then
+			factor = 1
+		end
+			 
+		self.minimap:SetRotation( rot + rotation*factor )
         self.minimap:Offset(fPos.x, -fPos.y)
 
         self.baseRX0 = x0
-        self.baseRY0 = y0
-        self.baseRX1 = x1
-        self.baseRY1 = y1
-    end
+		self.baseRY0 = y0
+		self.baseRX1 = x1
+		self.baseRY1 = y1
+	end
 end
-
 
 function MapWidget:UpdateTexture()
-    local handle = self.minimap:GetTextureHandle()
-    self:SetTextureHandle( handle )
+	local handle = self.minimap:GetTextureHandle()
+	self:SetTextureHandle( handle )
 end
 
-function MapWidget:GestureStarted()
-    self.inGesture = true
-end
-
-function MapWidget:GestureEnded()
-    self.inGesture = false
-    self.numTouches = 0
-end
-
--- gestures are considered for OnTouchStart but not OnTouchEnd, so numTouches may increase to infinity.
-    -- therefore we must set numTouches to 0 on GestureEnded
-function MapWidget:OnTouchStart(id, x, y)
-    if self.numTouches == 0 then
-        self.firstTouchId = id
-        self.lastpos = Vector3(x, y, 0)
-    end
-    self.numTouches = self.numTouches + 1
-end
-
-function MapWidget:OnTouchEnd(id)
-    self.numTouches = self.numTouches - 1
-    if self.numTouches < 0 then self.numTouches = 0 end
-    if self.numTouches == 0 then
-        self.lastpos = nil
-        self.firstTouchId = -10
-    end
-end
-
-function MapWidget:OnTouchMove(id, x, y)
-    if self.inGesture then
-        return
-    end
-
-    if id == self.firstTouchId then
-        local pos = Vector3(x, y, 0)
-        if self.lastpos then
-            local scaleX = 0.1
-            local scaleY = 0.1
-            local dx = scaleX * ( pos.x - self.lastpos.x )
-            local dy = scaleY * ( pos.y - self.lastpos.y )
-            self.minimap:Offset( dx, dy )
-        end
-        self.lastpos = pos
-    end
-end
-
--- this function/class handles single taps and mapscreen.lua handles gestures, for some reason
 function MapWidget:OnUpdate(dt)
 
-    if not self.shown then return end
-    
-    --print("num touches: ", self.numTouches)
-
-    --don't scroll the screen as if a touch move when releasing 1 finger after gesture
-    if self.numTouches == 0 then
-        self.inGesture = false
-    end
-
-    -- this is only for controllers?
-    if TheInput:IsControlPressed(CONTROL_PRIMARY) then
-        local pos = TheInput:GetScreenPosition()
-        self:OnTouchMove(self.firstTouchId, pos.x, pos.y)
-    end
+	if not self.shown then return end
+	
+	if (TheInput:IsControlPressed(CONTROL_PRIMARY) or TheInput:IsTouchDown()) and true then
+		local pos = TheInput:GetScreenPosition()
+		if self.lastpos then
+			local scaleX = 0.22
+			local scaleY = 0.22
+			local dx = scaleX * ( pos.x - self.lastpos.x )
+			local dy = scaleY * ( pos.y - self.lastpos.y )
+			self.minimap:Offset( dx, dy )
+		end
+		
+		self.lastpos = pos
+	else
+		self.lastpos = nil
+	end
 end
 
 function MapWidget:Offset(dx,dy)
-    self.minimap:Offset(dx,dy)
+	self.minimap:Offset(dx,dy)
 end
 
 
 function MapWidget:OnShow()
-    self.minimap:ResetOffset()
+	self.minimap:ResetOffset()
 end
 
 function MapWidget:OnHide()
-    self.lastpos = nil
+	self.lastpos = nil
 end
-
 return MapWidget

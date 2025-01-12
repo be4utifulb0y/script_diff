@@ -204,12 +204,12 @@ local function fn(Sim)
 	end
 
 	inst.FocusMinimap = function(inst, bottle)
-    	local px, py, pz = GetPlayer().Transform:GetLocalPosition()
+    	local px, py, pz = GetPlayer().Transform:GetWorldPosition()
     	local x, y, z = inst.Transform:GetLocalPosition()
     	local minimap = GetWorld().minimap.MiniMap
 		print("Find treasure on minimap (" .. x .. ", "  .. z .. ")")
     	GetPlayer().HUD.controls:ToggleMap()
-    	minimap:Focus(2 * (x - px), 2 * (z - pz), -minimap:GetZoom()) --Zoom in all the way
+    	minimap:Focus(x - px, z - pz, -minimap:GetZoom()) --Zoom in all the way		
 	end
 
 	inst.OnSave = onsave

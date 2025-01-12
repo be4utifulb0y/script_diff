@@ -33,33 +33,32 @@ function FollowCamera:SetDefault()
         self.distancetarget = 30
     end
 
-    self.mindist = 15
-    self.maxdist = 50 --40
+    --self.mindist = 15
+    --self.maxdist = 50 --40
    
-    if(IPHONE_VERSION) then
-        self.maxdist = 35 --40
-    end
-    
-    self.mindistpitch = 30
-    self.maxdistpitch = 60--60 
-    self.paused = false
-    self.shake = nil
-    self.controllable = true
-    self.cutscene = false
-
-
-    if GetWorld() and GetWorld():IsCave() then
-        self.mindist = 15
-        self.maxdist = 35
-        self.mindistpitch = 25
-        self.maxdistpitch = 40
-        self.distancetarget = 25
-    end
-
-    if self.target then
-        self:SetTarget(self.target)
-    end
-
+    --if(IPHONE_VERSION) then
+     --self.maxdist = 35 --40
+--end
+--self.mindistpitch = 30
+--self.maxdistpitch = 60--60 
+self.paused = false
+self.shake = nil
+self.controllable = true
+self.cutscene = false
+if GetWorld() and GetWorld():IsCave() then
+--self.mindist = 15
+--self.maxdist = 35
+--self.mindistpitch = 25
+--self.maxdistpitch = 40
+self.distancetarget = 25
+end
+if self.target then
+self:SetTarget(self.target)
+end
+self.maxdist = 150
+self.mindist = 5
+self.mindistpitch = 20
+self.maxdistpitch = 120
 end
 
 function FollowCamera:GetRightVec()

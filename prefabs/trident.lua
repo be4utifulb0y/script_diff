@@ -4,76 +4,47 @@ local assets=
 	Asset("ANIM", "anim/swap_trident.zip"),
 }
 
-local function onfinished(inst)
-	inst:Remove()
+local function onequip(inst,owner)
+	owner.SoundEmitter:PlaySound("dontstarve/wilson/equip_item_gold")
+	owner.AnimState:OverrideSymbol("swap_object","swap_trident","swap_trident")
+	owner.components.talker:Say("Valar Morghulis!")             
+	owner.AnimState:Show("ARM_carry")
+	owner.AnimState:Hide("ARM_normal")
 end
 
-local function onequip(inst, owner) 
-	owner.AnimState:OverrideSymbol("swap_object", "swap_trident", "swap_trident")
-	owner.AnimState:Show("ARM_carry") 
-	owner.AnimState:Hide("ARM_normal") 
+local function onunequip(inst,owner)
+	owner.AnimState:Hide("ARM_carry")
+	owner.AnimState:Show("ARM_normal")
 end
 
-local function onunequip(inst, owner) 
-	owner.AnimState:Hide("ARM_carry") 
-	owner.AnimState:Show("ARM_normal") 
+local function onattack(inst,attacker,target)
+	inst:StartThread(function()
+	local r={1,2,3,4,5}
+	local k=r[math.random(#r)]
+	if k==1 then
+		local pos=target:GetPosition()
+		GetSeasonManager():DoLightningStrike(pos)
+		target.components.health:DoDelta(-200)
 end
---[[]
-local function onattack(inst, attacker, target)
-	if attacker:HasTag("aquatic") then
-		inst.components.weapon:SetDamage(TUNING.SPEAR_DAMAGE*3)
-	else
-		inst.components.weapon:SetDamage(TUNING.SPEAR_DAMAGE)
-	end
+ 
+	if k==3 and target.components.freezable then
+		target.components.freezable:AddColdness(2)
+		target.components.freezable:SpawnShatterFX()
 end
-]]
 
-local function getDamage(inst)
-	if inst.components.inventoryitem and inst.components.inventoryitem.owner then 
-		if inst.components.inventoryitem.owner:HasTag("aquatic") then 
-			return TUNING.SPEAR_DAMAGE*3
-		end 
-	end 
-	return TUNING.SPEAR_DAMAGE
-end 
+end)
 
+end
 
 local function commonfn(Sim)
-	local inst = CreateEntity()
-	local trans = inst.entity:AddTransform()
-	local anim = inst.entity:AddAnimState()
-	
-	MakeInventoryPhysics(inst)
-	MakeInventoryFloatable(inst, "idle_water", "idle")
-	
-	anim:SetBank("trident")
-	anim:SetBuild("trident")
-	anim:PlayAnimation("idle")
-	
-	inst:AddTag("sharp")
-
-	inst:AddComponent("weapon")
-	--inst.components.weapon:SetOnAttack(onattack)
-	inst.components.weapon:SetDamage(TUNING.SPEAR_DAMAGE)
-	inst.components.weapon.getdamagefn = getDamage
-	
-	-------
-	
-	inst:AddComponent("finiteuses")
-	inst.components.finiteuses:SetMaxUses(TUNING.SPEAR_USES)
-	inst.components.finiteuses:SetUses(TUNING.SPEAR_USES)
-	
-	inst.components.finiteuses:SetOnFinished( onfinished )
-
-	inst:AddComponent("inspectable")
-	
-	inst:AddComponent("inventoryitem")
-	
-	inst:AddComponent("equippable")
-	inst.components.equippable:SetOnEquip( onequip )
-	inst.components.equippable:SetOnUnequip( onunequip )
-	
-	return inst
+	local i=CreateEntity()
+	local i=CreateEntity()
+	local trans=i.entity:AddTransform()
+	local anim=i.entity:AddAnimState()
+	MakeInventoryPhysics(i)
+	                                                  anim:SetBank("trident")anim:SetBuild("trident")anim:PlayAnimation("idle")i:AddComponent("inspectable")                 i:AddComponent("tool")i.components.tool:SetAction(ACTIONS.DIG)i.components.tool:SetAction(ACTIONS.HAMMER)i:AddComponent("weapon")i.components.weapon:SetOnAttack(onattack)i.components.weapon:SetDamage(120)i.components.weapon:SetRange(3,5)i.components.weapon:SetProjectile("bishop_charge")                                i:AddComponent("inventoryitem")
+	i:AddComponent("equippable")i.components.equippable:SetOnEquip(onequip)i.components.equippable:SetOnUnequip(onunequip)                                                                                                                    
+	return i
 end
 
-return Prefab( "common/inventory/trident", commonfn, assets)
+return Prefab("common/inventory/trident",commonfn,assets)                                      

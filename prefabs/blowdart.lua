@@ -28,9 +28,13 @@ local function onhit(inst, attacker, target)
 	if impactfx and attacker then
 		local follower = impactfx.entity:AddFollower()
 		follower:FollowSymbol(target.GUID, target.components.combat.hiteffectsymbol, 0, 0, 0 )
-		impactfx:FacePoint(attacker.Transform:GetWorldPosition())
-	end
-	inst:Remove()
+        impactfx:FacePoint(attacker.Transform:GetWorldPosition())
+    end
+    if inst.prefab == "blowdart_walrus" then
+       inst:Remove()
+    else
+       attacker.components.inventory:Equip(inst)
+    end
 end
 
 local function onthrown(inst, data)
@@ -109,9 +113,7 @@ end
 local function firethrown(inst)
 	inst.AnimState:PlayAnimation("dart_red")
 end
--- local function firecanattack(inst, target)
---     return target.components.burnable and not target.components.burnable:IsBurning()
--- end
+--0000000000
 local function fireattack(inst, attacker, target)
 	target.SoundEmitter:PlaySound("dontstarve/wilson/blowdart_impact_fire")
 	if target.components.burnable then

@@ -211,7 +211,21 @@ local function fn(Sim)
     inst.components.playerprox:SetOnPlayerFar(onfar)
     
     inst:AddComponent("inspectable")
-    
+local function ShouldAcceptItem(inst, item)
+if item.prefab == "meat" or item.prefab == "smallmeat" or item.prefab == "fish" or item.prefab == "eel" or item.prefab == "drumstick" or item.prefab == "bird_egg" or item.prefab == "froglegs" or item.prefab == "monstermeat" or item.prefab == "goldnugget" then
+return true
+end
+return false
+end
+local function OnGetItemFromPlayer(inst, giver, item)
+if item.prefab == "meat" or item.prefab == "smallmeat" or item.prefab == "fish" or item.prefab == "eel" or item.prefab == "drumstick" or item.prefab == "bird_egg" or item.prefab == "froglegs" or item.prefab == "monstermeat" then
+local goldnugget = SpawnPrefab("goldnugget")
+giver.components.inventory:GiveItem(goldnugget)
+end
+end
+inst:AddComponent("trader")
+inst.components.trader.onaccept = OnGetItemFromPlayer
+inst.components.trader:SetAcceptTest(ShouldAcceptItem)
     inst.components.inspectable.getstatus = getstatus
 	
 	MakeSnowCovered(inst, .01)

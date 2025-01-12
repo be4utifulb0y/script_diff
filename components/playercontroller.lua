@@ -76,7 +76,8 @@ local PlayerController = Class(function(self, inst)
     self.RMBaction = nil
 
     self.mousetimeout = 10
-    self.deploy_mode = false
+    self.time_direct_walking = 0
+    self.deploy_mode = not TheInput:ControllerAttached()
 	self.active_inventory_tile = nil
     self.last_clicked_slot = nil
 	--TheInput:AddMoveHandler(function(x,y) self.using_mouse = true self.mousetimeout = 3 end)
@@ -87,8 +88,6 @@ local PlayerController = Class(function(self, inst)
 	self.updateTextsTime = 0.0
     self.touchStartedOnUI = false
     self.comesFromInventory = false
-    self.IsTouchOnVirtualStick = false
-    self.currentAction = 0
 end)
 
 function PlayerController:OnBuild()
@@ -145,8 +144,6 @@ function PlayerController:OnControl(control, down)
 					self:DoControllerAction()
 				elseif control == CONTROL_CONTROLLER_ATTACK then
 					self:DoControllerAttack()
-                elseif control == CONTROL_REBUILD_LAST_RECIPE then
-                    self:DoRebuildLastRecipe()
 				end
 				
 				local inv_obj = self:GetCursorInventoryObject()
@@ -193,20 +190,15 @@ function PlayerController:GetCursorInventoryObject()
 end
 
 function PlayerController:GetActiveInventoryObject()
-    if self.active_inventory_tile and self.active_inventory_tile.item and self.active_inventory_tile.item.components.deployable and self.active_inventory_tile.item:HasTag("INLIMBO") then
-        return self.active_inventory_tile.item
-    end
-end
-
-function PlayerController:ResetActiveInventoryTile()
-    self.active_inventory_tile = nil
-end
-
-function PlayerController:SetActiveInventoryTile(tile)
-    self.active_inventory_tile = tile
+	if self.plant_mode then
+		if self.active_inventory_tile and self.active_inventory_tile.item and self.active_inventory_tile.item:HasTag("INLIMBO") then
+			return self.active_inventory_tile.item
+		end
+	end
 end
 
 function PlayerController:DoControllerAction()
+	self.time_direct_walking = 0
 	if self.placer then
 		if self.placer.components.placer.can_build then
 			self.inst.components.builder:MakeRecipe(self.placer_recipe, Vector3(self.placer.Transform:GetWorldPosition()), self.placer:GetRotation())
@@ -215,7 +207,9 @@ function PlayerController:DoControllerAction()
 	elseif self.deployplacer then
 		if self.deployplacer.components.placer.can_build then
 			local act = self.deployplacer.components.placer:GetDeployAction()
-            act.distance = 1
+			if act.distance < 1 then 
+				act.distance = 1
+			end 
 			self:DoAction(act)
 		end
 	elseif self.controller_target then
@@ -224,6 +218,7 @@ function PlayerController:DoControllerAction()
 end
 
 function PlayerController:DoControllerAltAction()
+	self.time_direct_walking = 0
 	
 	if self.placer_recipe then 
 		self:CancelPlacement()
@@ -247,13 +242,10 @@ function PlayerController:DoControllerAltAction()
 	end
 end
 
-function PlayerController:DoRebuildLastRecipe()
-    if self.inst.components.builder then
-        self.inst.components.builder:RebuildLastRecipe()
-    end
-end
 
 function PlayerController:DoControllerAttack()
+	self.time_direct_walking = 0
+
 	local attack_target = self.controller_attack_target
 
 	if attack_target and self.inst.components.combat.target ~= attack_target then
@@ -323,7 +315,7 @@ function PlayerController:CancelPlacement()
 end
 
 function PlayerController:CancelDeployPlacement()
-	self.deploy_mode = false
+	self.deploy_mode = not TheInput:ControllerAttached()
 	if self.deployplacer then
 		self.deployplacer:Remove()
 		self.deployplacer = nil
@@ -337,6 +329,10 @@ function PlayerController:StartBuildPlacementMode(recipe, testfn)
 		self.placer = nil
 	end
 	self.placer = SpawnPrefab(recipe.placer)
+    if Profile:GetVirtualStickEnabled() then
+        self.inst.HUD.controls:HideVirtualStick()
+        self.inst.HUD.controls.KeepVSHidden = true
+    end
 	self.placer.components.placer:SetBuilder(self.inst, recipe)
 	self.placer.components.placer.testfn = testfn
 end
@@ -446,18 +442,6 @@ function PlayerController:GetActionButtonAction()
 			end
 		end
 			
-        --building
-        if self.placer then
-            if self.placer.components.placer.can_build and self.placer_recipe then
-                if self.inst.components.builder:IsBuildBuffered(self.placer_recipe.name) or self.inst.components.builder:CanBuild(self.placer_recipe.name) then
-                    return BufferedAction(self.inst, nil, ACTIONS.BUILD, nil, Vector3(self.placer.Transform:GetWorldPosition()), self.placer_recipe.name, 1)
-                end
-            end
-        elseif self.deployplacer then
-            if self.deployplacer.components.placer.can_build then
-                return BufferedAction(self.builder, nil, ACTIONS.DEPLOY, self.invobject, Vector3(self.inst.Transform:GetWorldPosition()))
-            end
-        end
 		
 		--catching
 		local rad = 8
@@ -530,12 +514,6 @@ function PlayerController:DoActionButton()
 			self.inst.components.builder:MakeRecipe(self.placer_recipe, Vector3(self.placer.Transform:GetWorldPosition()), self.placer:GetRotation())
 			return true
 		end
-    elseif self.deployplacer then
-        if self.deployplacer.components.placer.can_build then
-            self.inst:ClearBufferedAction()
-            self.deployplacer.components.placer:DoPlace(nil, nil, true)
-            return true
-        end
 	else
 		local ba = self:GetActionButtonAction()
 		if ba then
@@ -613,6 +591,12 @@ function PlayerController:OnUpdate(dt)
         self.updateTextsTime = 0.0
     end
 
+	if self.plant_mode then
+		if not self:GetActiveInventoryObject() then
+			self:CancelPlantMode()
+		end
+	end
+
     local new_highlight = nil
     if controller_mode then
     	self:UpdateControllerInteractionTarget(dt)
@@ -625,9 +609,11 @@ function PlayerController:OnUpdate(dt)
     end
 
     local actioncontrols = self.inst.HUD.controls.actioncontrols
-    local pressingActionControlButton = actioncontrols.currentActiveAction > 0
-    if not TheInput:IsTouchDown() or pressingActionControlButton then
-        new_highlight = nil
+    if PLATFORM == "iOS" or PLATFORM == "Android" then
+    	local pos = TheInput:GetScreenPosition()
+    	if not TheInput:IsTouchDown() or actioncontrols:GetActionIndex(pos.x, pos.y) > 0 then
+    		new_highlight = nil
+    	end
     end
 
     if new_highlight ~= self.highlight_guy then
@@ -666,12 +652,7 @@ function PlayerController:OnUpdate(dt)
 		end
 	end
 	
-	
-	-- hack so that the wall placer doesn't show when you are in fact going to repair instead.
-	local hidePlacer = false
-	if self.RMBaction and self.RMBaction.action.id == "REPAIR" then
-		hidePlacer = true
-	end
+
 		
 	local placer_item = nil
 	if controller_mode then
@@ -681,10 +662,6 @@ function PlayerController:OnUpdate(dt)
 	else
 		placer_item = active_item
 	end
- 
-    if placer_item and not controller_mode then
-        self.deploy_mode = true
-    end
 	
 	local show_deploy_placer = placer_item and ( placer_item.components.deployable and self.deploy_mode ) and self.placer == nil 
 	
@@ -767,7 +744,7 @@ function PlayerController:OnUpdate(dt)
 	end
 ]]
 
-	if not self.inst.sg:HasStateTag("busy") and not pressingActionControlButton then
+	if not self.inst.sg:HasStateTag("busy") then
 		
 		if self.draggingonground and not Profile:GetVirtualStickEnabled() then
 			local pt = TheInput:GetWorldPosition()
@@ -793,7 +770,7 @@ function PlayerController:OnUpdate(dt)
 		end
 	end
 	
-	if not self.inst.sg:HasStateTag("busy") then
+	if not self.inst.sg:HasStateTag("busy") and not self.directwalking then
 		if TheInput:IsControlPressed(CONTROL_ATTACK) then
 			self:OnControl(CONTROL_ATTACK, true)
 		elseif TheInput:IsControlPressed(CONTROL_CONTROLLER_ATTACK) then
@@ -1078,17 +1055,25 @@ function PlayerController:UpdateNearTexts()
 	local nearby_ents = TheSim:FindEntities(x,y,z, rad)
 	
 	local i = 1
-  if not TheInput:ControllerAttached() then
-    for k,v in ipairs(nearby_ents) do
-      local lmb, rmb = self:GetSceneItemControllerAction(v)
+	for k,v in ipairs(nearby_ents) do
+		local lmb, rmb = self:GetSceneItemControllerAction(v)
 
-      if not v:IsInLimbo() and (v.components.pickable or v.components.inventoryitem or v.components.inspectable) and v.entity:IsVisible() and v.entity:IsValid() and not v:IsAsleep() and (lmb or rmb) then
-        self.inst.HUD.controls.nearTexts[i]:SetTarget(v)
-        self.inst.HUD.controls.nearTexts[i].text:SetString(v.name)
-        i = i+1
-      end
-      if i > self.inst.HUD.controls.maxNearObjects then return end
-    end
+		if not v:IsInLimbo() and (v.components.pickable or v.components.inventoryitem or v.components.inspectable) and v.entity:IsVisible() and v.entity:IsValid() and not v:IsAsleep() and (lmb or rmb) then
+			self.inst.HUD.controls.nearTexts[i]:SetTarget(v)
+			self.inst.HUD.controls.nearTexts[i].text:SetString(v.name)
+i = i+1
+elseif v ~= self.inst and
+v:IsValid() and 
+not v:IsInLimbo() and
+not (v.sg and v.sg:HasStateTag("invisible")) and
+v.components.health and not v.components.health:IsDead() and 
+v.components.combat and v.components.combat:CanBeAttacked(self.inst) then
+  self.inst.HUD.controls.nearTexts[i]:SetTarget(v)
+self.inst.HUD.controls.nearTexts[i].text:SetString(v.name.."\nG:["..math.ceil(v.components.combat.defaultdamage).."]\nX:["..math.ceil(v.components.health.currenthealth).."]")
+  self.inst.HUD.controls.nearTexts[i].text:SetSize(20)
+			i = i+1
+		end
+		if i > self.inst.HUD.controls.maxNearObjects then return end
 	end
 	for index=i,self.inst.HUD.controls.maxNearObjects do
 		self.inst.HUD.controls.nearTexts[index].text:SetString("")
@@ -1098,56 +1083,33 @@ function PlayerController:UpdateNearTexts()
 end
 
 function PlayerController:DoDirectWalking(dt)
-	if Profile:GetVirtualStickEnabled() then
-        local dir = self:GetWorldControllerVector()
-        if dir then
-            local ang = -math.atan2(dir.z, dir.x)/DEGREES
 
-            self.inst:ClearBufferedAction()
-            self.inst.components.locomotor:SetBufferedAction(nil)
-            self.inst.components.locomotor:RunInDirection(ang)
+	local dir = self:GetWorldControllerVector()
+	if dir then
+		local ang = -math.atan2(dir.z, dir.x)/DEGREES
 
-            self.directwalking = true
-        else
-            if self.directwalking then
-                self.inst.components.locomotor:Stop()
-                self.directwalking = false
-            end
-        end
-    else
-        local xwalk = TheInput:GetAnalogControlValue(CONTROL_MOVE_RIGHT) - TheInput:GetAnalogControlValue(CONTROL_MOVE_LEFT)
-        local ywalk = TheInput:GetAnalogControlValue(CONTROL_MOVE_UP) - TheInput:GetAnalogControlValue(CONTROL_MOVE_DOWN)
-        local deadzone = .3
-        local maxthrottle = .9
-        if math.abs(xwalk) < deadzone and math.abs(ywalk) < deadzone then xwalk = 0 ywalk = 0 end
+		self.inst:ClearBufferedAction()
+		self.inst.components.locomotor:SetBufferedAction(nil)
+		self.inst.components.locomotor:RunInDirection(ang)
+		if not self.directwalking then
+			self.time_direct_walking = 0
+		end
 
-        local CameraRight = TheCamera:GetRightVec()
-        local CameraDown = TheCamera:GetDownVec()
+		self.directwalking = true
 
-        if xwalk ~= 0 or ywalk ~= 0 then
-            --self.inst.components.inventory:DropActiveItem()
+		self.time_direct_walking = self.time_direct_walking + dt
 
-            local dir = CameraRight * xwalk - CameraDown * ywalk
-            dir = dir:GetNormalized()
-            --local pt = Vector3(self.inst.Transform:GetWorldPosition()) + dir
-            --self.inst.components.locomotor:GoToPoint(pt, nil, true)
-            local ang = -math.atan2(dir.z, dir.x)/DEGREES
-
-            self.inst:ClearBufferedAction()
-            self.inst.components.locomotor:SetBufferedAction(nil)
-            self.inst.components.locomotor:RunInDirection(ang)
-            self.directwalking = true
-
-            if not self.inst.sg:HasStateTag("attack") then
-                self.inst.components.combat:SetTarget(nil)
-            end
-        else
-            if self.directwalking then
-                self.inst.components.locomotor:Stop()
-                self.directwalking = false
-            end
-        end
-    end
+		if self.time_direct_walking > .2 then
+			if not self.inst.sg:HasStateTag("attack") then
+				self.inst.components.combat:SetTarget(nil)
+			end
+		end
+	else
+		if self.directwalking then
+			self.inst.components.locomotor:Stop() --bargle
+			self.directwalking = false
+		end
+	end
 end
 
 function PlayerController:WalkButtonDown()
@@ -1273,8 +1235,7 @@ function PlayerController:OnLeftClick(down)
 	if self.placer_recipe and self.placer then
 		--do the placement
 		if self.placer.components.placer.can_build then
-			local pos = self.placer.components.placer.targetPos or TheInput:GetWorldPosition()
-			self.inst.components.builder:MakeRecipe(self.placer_recipe, pos, self.placer:GetRotation())
+			self.inst.components.builder:MakeRecipe(self.placer_recipe, TheInput:GetWorldPosition(), self.placer:GetRotation())
 			self:CancelPlacement()
 		end
 		return
@@ -1360,16 +1321,8 @@ function PlayerController:OnRightClick(down)
     
 end
 
-function PlayerController:IsVirtualStickTouched()
-    return self.IsTouchOnVirtualStick
-end
-
-function PlayerController:GetCurrentAction()
-    return self.currentAction
-end
 
 function PlayerController:OnTouchStart(id, x, y)
-    self.IsTouchOnVirtualStick = self.inst.HUD.controls.virtualstick:IsTouchPositionOnStick(x,y)
     local hover = self.inst.HUD.controls.hover
     if(hover.inMenu) then
         return
@@ -1377,9 +1330,17 @@ function PlayerController:OnTouchStart(id, x, y)
 
     local actioncontrols = self.inst.HUD.controls.actioncontrols
     local actionIndex = actioncontrols:GetActionIndex(x, y)
-    self.currentAction = actionIndex
+    hover.actionControlsAction = actionIndex
 
     if(actionIndex > 0) then
+    	return
+    end
+
+    if self.plant_mode then
+    	local inst = TheSim:GetEntitiesAtScreenPoint(x, y)[1]
+    	if inst and not inst.Transform then
+        	self:CancelPlantMode()
+        end
     	return
     end
 
@@ -1395,7 +1356,7 @@ function PlayerController:OnTouchStart(id, x, y)
     end
     self.touchStartedOnUI = false
 
-    if self.placer_recipe and self.placer or self.deployplacer then
+    if self.placer_recipe and self.placer then
         return
     end
 
@@ -1430,7 +1391,15 @@ function PlayerController:OnTouchStart(id, x, y)
         end
 
         if firstAction and not secondAction and not attack_target then
-            self:DoAction( firstAction )
+            if Profile:GetVirtualStickEnabled() then
+            	local vstick = self.inst.HUD.controls.virtualstick
+            	vstick:OnUpdate()
+                if not vstick.dragging then
+                    self:DoAction( firstAction )
+                end
+            else
+                self:DoAction( firstAction )
+            end
         else -- Two actions, actions menu
             if firstAction then
                 hover.menuFirstAction = self.LMBaction
@@ -1481,7 +1450,7 @@ function PlayerController:OnTouchMove(id, x, y)
 end
 
 function PlayerController:OnTouchEnd(id)
-    if not self.enabled then return end
+
     local hover = self.inst.HUD.controls.hover
     if(hover.inMenu or self.comesFromInventory) then
         self.comesFromInventory = false
@@ -1498,11 +1467,20 @@ function PlayerController:OnTouchEnd(id)
     	return
     end
 
+    if self.plant_mode and self.deployplacer then
+    	if  self.deployplacer.components.placer.can_build then
+	    	local act = self.deployplacer.components.placer:GetDeployAction()
+			act.distance = 1
+			self:DoAction(act)
+		end
+		return
+	end
+
     if self.draggingonground then
         self.inst.components.locomotor:Stop()
     end
 
-    if self.placer_recipe and self.placer and not self.IsTouchOnVirtualStick then
+    if self.placer_recipe and self.placer then
         --do the placement
         if self.placer.components.placer.can_build then
             self.inst.components.builder:MakeRecipe(self.placer_recipe, TheInput:GetWorldPosition(), self.placer:GetRotation())
@@ -1510,12 +1488,6 @@ function PlayerController:OnTouchEnd(id)
             --self:CancelPlacement()
         end
         return
-    end
-    if self.deployplacer and not self.IsTouchOnVirtualStick and self.active_inventory_tile then
-        if self.deployplacer.components.placer.can_build then
-            self.deployplacer.components.placer:DoPlace(Input:GetWorldPosition())
-            self.inst:ClearBufferedAction()
-        end
     end
 
     local firstAction = self:GetLeftMouseAction()
@@ -1606,7 +1578,13 @@ function PlayerController:DoMenu()
     if hover.highlightedAction == 0 then
         self:DoAction( hover.menuFirstAction )
     elseif hover.highlightedAction == 1 then
-        self:DoAction( hover.menuSecondAction )
+        if hover.menuSecondAction.action == ACTIONS.DEPLOY and false then -- PLANT MODE DISABLED
+        	self.inst.components.inventory:ReturnActiveItem()
+        	self:DoAction( hover.menuSecondAction )
+        	self:StartPlantMode(self.last_clicked_slot.tile)
+        else
+        	self:DoAction( hover.menuSecondAction )
+        end
     elseif hover.highlightedAction == 2 then
         self:DoAction( hover.menuThirdAction )
     else
@@ -1657,10 +1635,6 @@ function PlayerController:OnTapGesture(gesture, x, y)
 end
 
 function PlayerController:OnZoomGesture(value, velocity, state)
-    local actioncontrols = self.inst.HUD.controls.actioncontrols
-    if actioncontrols.currentActiveAction > 0 then
-        return
-    end
     if not IsPaused() then
         if self.inst.components.inventory:GetActiveItem() then
             self.inst.components.inventory:ReturnActiveItem()
@@ -1676,10 +1650,6 @@ function PlayerController:OnZoomGesture(value, velocity, state)
 end
 
 function PlayerController:OnRotationGesture(value, velocity, state)
-    local actioncontrols = self.inst.HUD.controls.actioncontrols
-    if actioncontrols.currentActiveAction > 0 then
-        return
-    end
     if self.inst.components.inventory:GetActiveItem() then
         self.inst.components.inventory:ReturnActiveItem()
     end

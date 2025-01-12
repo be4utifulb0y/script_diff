@@ -157,29 +157,27 @@ local twister =
 {
     prefab = "twister",
     activeseason =  SEASONS.WET,
-    attackduringoffseason = false,
-    playerstring = "ANNOUNCE_DEERCLOPS",
-    attacksperseason = 1,
-    warnsound = "dontstarve_DLC002/creatures/twister/distant",
-    warnduration = 60,
-    minspawnday = TUNING.NO_BOSS_TIME,
+ attackduringoffseason = false,
+playerstring = "ANNOUNCE_DEERCLOPS",
+attacksperseason = 1,
+warnsound = "dontstarve_DLC002/creatures/twister/distant",
+warnduration = 60,
+minspawnday = TUNING.NO_BOSS_TIME,
 }
-
-if SaveGameIndex and not SaveGameIndex:IsModeShipwrecked() then --ROG
-    return
-    {
-        DEERCLOPS = deerclops,
-        BEARGER = bearger,
-        GOOSEMOOSE = goosemoose,
-        DRAGONFLY = dragonfly,
-    }
-end
-
+if SaveGameIndex and not SaveGameIndex:IsModeShipwrecked() then
 return
 {
-    TWISTER = twister,
-    DEERCLOPS = deerclops,
-    BEARGER = bearger,
-    GOOSEMOOSE = goosemoose,
-    DRAGONFLY = dragonfly,
+DEERCLOPS=deerclops,
+BEARGER=bearger,
+GOOSEMOOSE=goosemoose,
+DRAGONFLY=dragonfly,
+}
+end
+return
+{
+TWISTER=twister,
+DEERCLOPS=deerclops,
+BEARGER=bearger,
+GOOSEMOOSE=goosemoose,
+DRAGONFLY=dragonfly,
 }

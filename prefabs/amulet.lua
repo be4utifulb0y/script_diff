@@ -231,7 +231,7 @@ local function commonfn()
     inst:AddComponent("tradable")
 	
     inst:AddComponent("equippable")
-    inst.components.equippable.equipslot = EQUIPSLOTS.BODY
+    inst.components.equippable.equipslot = EQUIPSLOTS.NECK
 	inst.components.equippable.dapperness = TUNING.DAPPERNESS_SMALL    
     
     

@@ -69,46 +69,42 @@ local function OnHit(inst, owner, target)
         impactfx:FacePoint(inst.Transform:GetWorldPosition())
     end
 end
-
-
 local function fn(Sim)
-	local inst = CreateEntity()
-	local trans = inst .entity:AddTransform()
-	local anim = inst.entity:AddAnimState()
-    MakeInventoryPhysics(inst)
-    RemovePhysicsColliders(inst)
-    
-    anim:SetBank("boomerang")
-    anim:SetBuild("boomerang")
-    anim:PlayAnimation("idle")
-    anim:SetRayTestOnBB(true);
-    
-    MakeInventoryFloatable(inst, "idle_water", "idle")
-    
-    inst:AddTag("projectile")
-    inst:AddTag("thrown")
-    
-    inst:AddComponent("weapon")
-    inst.components.weapon:SetDamage(TUNING.BOOMERANG_DAMAGE)
-    inst.components.weapon:SetRange(TUNING.BOOMERANG_DISTANCE, TUNING.BOOMERANG_DISTANCE+2)
-    -------
-    
-    inst:AddComponent("finiteuses")
-    inst.components.finiteuses:SetMaxUses(TUNING.BOOMERANG_USES)
-    inst.components.finiteuses:SetUses(TUNING.BOOMERANG_USES)
-    
-    inst.components.finiteuses:SetOnFinished(OnFinished)
-
-    inst:AddComponent("inspectable")
-    
-    inst:AddComponent("projectile")
-    inst.components.projectile:SetSpeed(10)
-    inst.components.projectile:SetCanCatch(true)
-    inst.components.projectile:SetOnThrownFn(OnThrown)
-    inst.components.projectile:SetOnHitFn(OnHit)
-    inst.components.projectile:SetOnMissFn(ReturnToOwner)
-    inst.components.projectile:SetOnCaughtFn(OnCaught)
-    inst.components.projectile:SetLaunchOffset(Vector3(0, 0.2, 0))
+local inst = CreateEntity()
+local trans = inst .entity:AddTransform()
+local anim = inst.entity:AddAnimState()
+MakeInventoryPhysics(inst)
+RemovePhysicsColliders(inst)
+anim:SetBank("boomerang")
+anim:SetBuild("boomerang")
+anim:PlayAnimation("idle")
+anim:SetRayTestOnBB(true);
+MakeInventoryFloatable(inst, "idle_water", "idle")
+inst:AddTag("projectile")
+inst:AddTag("thrown")
+inst:AddComponent("weapon")
+inst.components.weapon:SetDamage(TUNING.BOOMERANG_DAMAGE)
+inst.components.weapon:SetRange(TUNING.BOOMERANG_DISTANCE, TUNING.BOOMERANG_DISTANCE+2)
+inst:AddComponent("inspectable")
+inst:AddComponent("projectile")
+inst.components.projectile:SetSpeed(10)
+inst.components.projectile:SetCanCatch(true)
+inst.components.projectile:SetOnThrownFn(OnThrown)
+inst.components.projectile:SetOnHitFn(OnHit)
+local oldhit = inst.components.projectile.Hit
+function inst.components.projectile:Hit(target)
+if target == self.owner and target.components.catcher then
+target:PushEvent("catch", {projectile = self.inst}) 
+self.inst:PushEvent("caught", {catcher = target})
+self:Catch(target)
+target.components.catcher:StopWatching(self.inst)
+else
+oldhit(self, target)
+end
+end
+inst.components.projectile:SetOnMissFn(ReturnToOwner)
+inst.components.projectile:SetOnCaughtFn(OnCaught)
+   inst.components.projectile:SetLaunchOffset(Vector3(0, 0.2, 0))
     
     inst:AddComponent("inventoryitem")
     

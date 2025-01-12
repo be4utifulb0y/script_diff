@@ -19,7 +19,8 @@ Input = Class(function(self)
     self.hoverinst = nil
     self.enabledebugtoggle = true
 
-    self.numtouches = 0
+    self.trackingtouch = -1
+    self.starttouchpos = nil
 
 	if PLATFORM == "PS4" then     
         self.mouse_enabled = false
@@ -28,21 +29,23 @@ Input = Class(function(self)
     end
 
     self:DisableAllControllers()
+
+    self.isOnGesture = false
 end)
 
 function Input:DisableAllControllers()
-    for i = 1, TheInputProxy:GetInputDeviceCount() do
-        if TheInputProxy:IsInputDeviceEnabled(i) then
+    for i = 1, TheInputProxy:GetInputDeviceCount() -1 do
+        if TheInputProxy:IsInputDeviceEnabled(i) and TheInputProxy:IsInputDeviceConnected(i) then
             TheInputProxy:EnableInputDevice(i, false)
         end
     end
 end
 
 function Input:EnableAllControllers()
-    for i = 1, TheInputProxy:GetInputDeviceCount() do
-      --if TheInputProxy:IsInputDeviceConnected(i) then
-      TheInputProxy:EnableInputDevice(i, true)
-      --end
+    for i = 1, TheInputProxy:GetInputDeviceCount() -1 do
+        if TheInputProxy:IsInputDeviceConnected(i) then
+            TheInputProxy:EnableInputDevice(i, true)
+        end
     end
 end
 
@@ -52,14 +55,13 @@ end
 
 function Input:GetControllerID()
     local device_id = 0
-    for i = 1, TheInputProxy:GetInputDeviceCount() do
-      if TheInputProxy:GetInputDeviceName(i) == "GameController" and 
-         TheInputProxy:IsInputDeviceEnabled(i) and
-         TheInputProxy:IsInputDeviceConnected(i) then
-        device_id = i
-      end
+    for i = 1, TheInputProxy:GetInputDeviceCount() -1 do
+        if TheInputProxy:IsInputDeviceEnabled(i) and TheInputProxy:IsInputDeviceConnected(i) then
+            device_id = i
+        end
     end
-  return device_id
+
+    return device_id
 end
 
 function Input:ControllerAttached()
@@ -67,18 +69,15 @@ function Input:ControllerAttached()
 		return true	
 	elseif PLATFORM == "NACL" then
 		return false
-  else
+	else
 		--need to take enabled into account
-    for i = 1, TheInputProxy:GetInputDeviceCount() do
-      --print("Blit - Input:ControllerAttached =", TheInputProxy:IsInputDeviceEnabled(i), " - ", TheInputProxy:IsInputDeviceConnected(i))
-      if TheInputProxy:GetInputDeviceName(i) == "GameController" and 
-          TheInputProxy:IsInputDeviceEnabled(i) and
-          TheInputProxy:IsInputDeviceConnected(i) then
-         --print ("DEVICE", i, "of", TheInputProxy:GetInputDeviceCount(), "IS ENABLED")
-        return true
-      end
-    end
-    return false
+        for i = 1, TheInputProxy:GetInputDeviceCount() -1 do
+            if i > 0 and TheInputProxy:IsInputDeviceEnabled(i) and TheInputProxy:IsInputDeviceConnected(i) then
+                --print ("DEVICE", i, "of", TheInputProxy:GetInputDeviceCount(), "IS ENABLED")
+                return true
+            end
+        end
+        return false
 	end
 end
 
@@ -89,29 +88,28 @@ function Input:ControllerConnected()
 		return false
 	else
 		--need to take enabled into account
-    for i = 1, TheInputProxy:GetInputDeviceCount() do
-      if TheInputProxy:GetInputDeviceName(i) == "GameController" and 
-         TheInputProxy:IsInputDeviceConnected(i) then
-        --print ("DEVICE", i, "of", TheInputProxy:GetInputDeviceCount(),  TheInputProxy:GetInputDeviceName(i),  "IS CONNECTED")
-        return true
-      end
-    end
-    return false
+        for i = 1, TheInputProxy:GetInputDeviceCount() -1 do
+            if i > 0 and TheInputProxy:IsInputDeviceConnected(i) then
+                --print ("DEVICE", i, "of", TheInputProxy:GetInputDeviceCount(), "IS CONNECTED")
+                return true
+            end
+        end
+        return false
 	end
 end
 
 
 -- Get a list of connected input devices and their ids
 function Input:GetInputDevices()
-  local numDevices = TheInputProxy:GetInputDeviceCount()
-  local devices = {}
-  for i = 1, numDevices do
-    if TheInputProxy:IsInputDeviceConnected(i) then
-      local device_type = TheInputProxy:GetInputDeviceType(i)
-      table.insert(devices, {text=STRINGS.UI.CONTROLSSCREEN.INPUT_NAMES[device_type+1], data=i})
+    local numDevices = TheInputProxy:GetInputDeviceCount()
+    local devices = {}
+    for i = 0, numDevices - 1 do
+        if TheInputProxy:IsInputDeviceConnected(i) then
+            local device_type = TheInputProxy:GetInputDeviceType(i)
+            table.insert(devices, {text=STRINGS.UI.CONTROLSSCREEN.INPUT_NAMES[device_type+1], data=i})
+        end
     end
-  end
-  return devices
+    return devices
 end
 
 
@@ -189,7 +187,7 @@ end
 function Input:OnControl(control, digitalvalue, analogvalue)
     
     if (control == CONTROL_PRIMARY or control == CONTROL_SECONDARY) and not self.mouse_enabled then return end
-    if not Profile:IsToggleControllerEnabled() then return end
+    
     if not TheFrontEnd:OnControl(control, digitalvalue) then
         self.oncontrol:HandleEvent(control, digitalvalue, analogvalue)
         self.oncontrol:HandleEvent("oncontrol", control, digitalvalue, analogvalue)
@@ -224,29 +222,52 @@ function Input:OnText(text)
 end
 
 function Input:OnTouchStart(id,x,y)
+    self.starttouchpos = {x, y}
     TheFrontEnd:OnTouchStart(id,x,y)
-    self.ontouch:HandleEvent("touchstart", id, x, y)
-    self.numtouches = self.numtouches + 1
+
+    if (self.trackingtouch == -1) then
+--      print("self.ontouchstart:HandleEvent called")
+        self.trackingtouch = id
+        self.ontouch:HandleEvent("touchstart", id, x, y)
+    end
 end
 
 function Input:OnTouchMove(id,x,y)
-    self.ontouch:HandleEvent("touchmove", id, x, y)
-    TheFrontEnd:OnTouchMove(id,x,y)
+--  if (self.trackingtouch == id) then
+        self.ontouch:HandleEvent("touchmove", id, x, y)
+--  else
+        TheFrontEnd:OnTouchMove(id,x,y)
+--  end
 end
 
 function Input:OnTouchEnd(id)
-    TheFrontEnd:OnTouchEnd(id)
-    self.ontouch:HandleEvent("touchend", id)
-    self.numtouches = self.numtouches - 1
+--  if (self.trackingtouch == id) then
+--      print("EventTouch ended");
+        self.trackingtouch = -1
+        TheFrontEnd:OnTouchEnd(id)
+        self.ontouch:HandleEvent("touchend", id)
+        self.starttouchpos = nil
+--  else
+        --TheFrontEnd:OnTouchEnd(id)
+        self.isOnGesture = false
+--  end
 end
 
 function Input:OnTouchCancel(id)
-    TheFrontEnd:OnTouchCancel(id)
-    self.ontouch:HandleEvent("touchcancel", id)
-    self.numtouches = self.numtouches - 1
+--  if (self.trackingtouch == id) then
+--      print("EventTouch cancelled");
+        self.trackingtouch = -1;
+        TheFrontEnd:OnTouchCancel(id)
+        self.ontouch:HandleEvent("touchcancel", id)
+        self.starttouchpos = nil
+--  else
+        --TheFrontEnd:OnTouchCancel(id)
+        self.isOnGesture = false
+--  end
 end
 
 function Input:OnGesture(gesture, value, velocity, state, x0, y0, x1, y1)
+    self.isOnGesture = true
     self.ongesture:HandleEvent(gesture, value, velocity, state, x0, y0, x1, y1)
     TheFrontEnd:OnGesture(gesture, value, velocity, state, x0, y0, x1, y1)
 end
@@ -318,7 +339,7 @@ function Input:IsKeyDown(key)
 end
 
 function Input:IsTouchDown()
-    return self.numtouches > 0
+    return self.trackingtouch ~= -1
 end
 
 function Input:IsOnGesture()
@@ -326,20 +347,10 @@ function Input:IsOnGesture()
 end
 
 function Input:IsControlPressed(control)
-    if not Profile:IsToggleControllerEnabled() then
-        return false
-    end
-    if self.controlDisabled then
-        return false
-    end
     return TheSim:GetDigitalControl(control)
 end
 
 function Input:GetAnalogControlValue(control)
-    if not Profile:IsToggleControllerEnabled() then return 0 end
-    if self.controlDisabled then
-        return 0
-    end
     return TheSim:GetAnalogControl(control)
 end
 
@@ -380,11 +391,6 @@ function Input:OnUpdate()
 			self.hoverinst = inst
 		end
 	end
-end
-
-
-function Input:OnAndroidBackButton()
-    TheFrontEnd:ManageAndroidBack()
 end
 
 
@@ -433,7 +439,16 @@ function Input:GetControlIsMouseWheel(controlId)
     return localized == stringtable[1003] or localized == stringtable[1004]
 end
 
-function Input:GetTouchYOffset()
+function Input:GetTouchYOffset() 
+    if GetPlayer() and IPHONE_VERSION then
+        if GetPlayer().components.inventory:GetActiveItem() then
+            return DRAG_Y_OFFSET
+        elseif GetPlayer().components.playercontroller.placer then
+            return PLACE_Y_OFFSET
+        end
+        return 0
+    end
+
     return 0
 end
 
@@ -480,28 +495,19 @@ function OnInputKey(key, is_up)
 end
 
 function OnInputText(text)
-    TheInput:OnText(text)
+	TheInput:OnText(text)
 end
 
 function OnGesture(gesture, value, velocity, state, x0, y0, x1, y1)
-    if not TheInput:ControllerAttached() then
-       TheInput:OnGesture(gesture, value, velocity, state, x0, y0, x1, y1)
-    end
+    TheInput:OnGesture(gesture, value, velocity, state, x0, y0, x1, y1)
 end
 
 function OnTapGesture(gesture, x, y)
-    if not TheInput:ControllerAttached() then
-        TheInput:OnTapGesture(gesture, x, y)
-    end
+    TheInput:OnTapGesture(gesture, x, y)
 end
 
 function OnControlMapped(deviceId, controlId, inputId, hasChanged)
     TheInput:OnControlMapped(deviceId, controlId, inputId, hasChanged)
-end
-
-
-function OnAndroidBackButton()
-    TheInput:OnAndroidBackButton()
 end
 
 

@@ -150,6 +150,14 @@ function MakeWallType(data)
 				end
 			end
 
+			local playerPos = GetPlayer():GetPosition()
+			local xDiff = playerPos.x - pt.x 
+			local zDiff = playerPos.z - pt.z 
+			local dsq = xDiff * xDiff + zDiff * zDiff
+			if dsq < .5 then 
+				return false 
+			end 
+
 			return true
 
 		end
@@ -259,7 +267,7 @@ function MakeWallType(data)
 		inst:AddComponent("deployable")
 		inst.components.deployable.ondeploy = ondeploywall
 		inst.components.deployable.test = test_wall
-		--inst.components.deployable.min_spacing = 0
+		inst.components.deployable.min_spacing = 0
 		inst.components.deployable.placer = "wall_"..data.name.."_placer"
 		inst.components.deployable:SetQuantizeFunction(quantizeposition)
 		if data.name == "limestone" or data.name == "enforcedlimestone" then
@@ -307,7 +315,15 @@ function MakeWallType(data)
 	local function onremoveentity(inst)
 		clearobstacle(inst)
 	end
+	local function turnon(inst)
+		inst.components.machine.ison = true
+		clearobstacle(inst)
+	end
 
+	local function turnoff(inst)
+		inst.components.machine.ison=false
+		makeobstacle(inst)
+	end
 	local function fn(Sim)
 		local inst = CreateEntity()
 		local trans = inst.entity:AddTransform()
@@ -376,7 +392,9 @@ function MakeWallType(data)
 		inst.components.workable:SetWorkLeft(3)
 		inst.components.workable:SetOnFinishCallback(onhammered)
 		inst.components.workable:SetOnWorkCallback(onhit) 
-
+inst:AddComponent("machine")
+		inst.components.machine.turnonfn=turnon
+		inst.components.machine.turnofffn=turnoff
 		if data.windblown_speed and data.windblown_fall_chance and data.windblown_damage then
 		    inst:AddComponent("blowinwindgust")
 		    inst.components.blowinwindgust:SetWindSpeedThreshold(data.windblown_speed)

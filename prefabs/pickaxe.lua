@@ -39,8 +39,8 @@ local function fn(Sim)
 	
 	-----
 	inst:AddComponent("tool")
-	inst.components.tool:SetAction(ACTIONS.MINE)
-	-------
+     inst.components.tool:SetAction(ACTIONS.MINE, 5)
+	
 	inst:AddComponent("finiteuses")
 	
 	inst.components.finiteuses:SetMaxUses(TUNING.PICKAXE_USES)

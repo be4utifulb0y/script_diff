@@ -15,9 +15,9 @@ local prefabs =
 
 local levels = 
 {
-    { amount=6, idle="honey3", hit="hit_honey3" },
-    { amount=3, idle="honey2", hit="hit_honey2" },
-    { amount=1, idle="honey1", hit="hit_honey1" },
+    { amount=60, idle="honey3", hit="hit_honey3" },
+    { amount=30, idle="honey2", hit="hit_honey2" },
+    { amount=10, idle="honey1", hit="hit_honey1" },
     { amount=0, idle="bees_loop", hit="hit_idle" },
 }
 
@@ -25,7 +25,7 @@ local function StartSpawningFn(inst)
 	local fn = function(world)
 		if not inst:HasTag("burnt") then
 		    if inst.components.harvestable and inst.components.harvestable.growtime and not world.components.seasonmanager:IsWinter() then
-		        inst.components.harvestable:StartGrowing()
+		     inst.components.harvestable:StartGrowing()
 		    end
 			if inst.components.childspawner and not world.components.seasonmanager:IsWinter() and not world.components.seasonmanager:IsWetSeason() then
 				inst.components.childspawner:StartSpawning()
@@ -94,7 +94,7 @@ local function onharvest(inst, picker)
 	if not inst:HasTag("burnt") then
 	    updatelevel(inst)
 		if inst.components.childspawner and not GetSeasonManager():IsWinter() then
-		    inst.components.childspawner:ReleaseAllChildren(picker)
+		  --inst.components.childspawner:ReleaseAllChildren(picker)
 		end
 	end
 end

@@ -14,9 +14,8 @@ local function default_test(inst, pt)
 	local tiletype = GetGroundTypeAtPosition(pt)
 	local ground_OK = tiletype ~= GROUND.IMPASSABLE
 	if ground_OK then
-        local touchingVirtualStick = GetPlayer().components.playercontroller:IsVirtualStickTouched()
 		local MouseCharacter = TheInput:GetWorldEntityUnderMouse()
-		if MouseCharacter and not MouseCharacter:HasTag("player") and not touchingVirtualStick then
+		if MouseCharacter and not MouseCharacter:HasTag("player") then
 			return false
 		end
 	    local ents = TheSim:FindEntities(pt.x,pt.y,pt.z, 4, nil, notags) -- or we could include a flag to the search?
@@ -46,11 +45,12 @@ function Deployable:GetQuantizedPosition(pt)
 end 
 
 function Deployable:CanDeploy(pt)
-	if self.test then
-		return self.test(self.inst, pt)
-	else
-		return default_test(self.inst, pt)
-	end
+   -- return self.test and self.test(self.inst, pt) or default_test(self.inst, pt) --DH: Doing it this way falls back on default test if self.test returns false, that can't be right?
+    if self.test then 
+   		return self.test(self.inst, pt)
+   	else 
+   		return default_test(self.inst, pt)
+   	end 
 end
 
 function Deployable:Deploy(pt, deployer)
