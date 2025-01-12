@@ -1,0 +1,1800 @@
+return 
+{
+    ACTIONFAIL =
+    {
+        SHAVE =
+        {
+            GENERIC = "안 하는 것이 낫겠습니다.",
+            NOBITS = "이미 매끄럽습니다.",
+            AWAKEBEEFALO = "반대할 것 같습니다.",
+        },
+        READ =
+        {
+            GENERIC = "다른 것을 해야 합니다.",
+            NOBIRDS = "새들이 이 날씨를 좋아하지 않습니다.",
+        },
+        REPAIRBOAT =
+        {
+            GENERIC = "최고 상태입니다!",
+        },
+        STORE =
+        {
+            GENERIC = "안타깝지만 가득 찼습니다.",
+            NOTALLOWED = "넌센스입니다.",
+        },
+        COOK =
+        {
+            GENERIC = "나중에 하겠습니다. 여성이 나이 들었다고 다 요리를 좋아하는 것은 아닙니다.",
+            TOOFAR = "도달할 수 없습니다.",
+        },
+        WRITE =
+        {
+            GENERIC = "차라리 제 책을 쓰겠습니다.",
+        },
+        RUMMAGE =
+        {   
+            GENERIC = "지금은 다른 것에 집중하고 있습니다.",  
+        },
+        CHANGEIN =
+        {
+            GENERIC = "이미 지성적으로 보인다고 생각합니다.",
+            BURNING = "더 이상 옷을 갈아입을 수 있습니다. 다 탔습니다.",
+        },
+        GIVE =
+        {
+            DEAD = "낭비입니다.",
+            SLEEPING = "자고 있습니다.",
+            BUSY = "다 된 후 다시 시도하겠습니다.",
+        },
+        TEACH =
+        {
+            KNOWN = "제발. 이 지식은 애들 수준입니다.",
+            CANTLEARN = "제가 이해할 수 없는 지식... 흥미롭습니다!",
+        },
+    },
+    ACTIONFAIL_GENERIC = "제가 할 수 없습니다.",
+    DESCRIBE_TOODARK = "어두워서 안 보입니다.",
+    DESCRIBE_SMOLDERING = "열 때문에 곧 발화할 것 같습니다.",
+    DESCRIBE_GENERIC = "드문 경우입니다. 이것이 무엇인지 모르겠습니다.",
+    ANNOUNCE_MAGIC_FAIL = "이 세계와 조화를 이루지 못합니다.",
+    BATTLECRY =
+    {
+        GENERIC = "전투!",
+        PIG = "역겨운 동물!",
+        PREY = "포기하십시오.",
+        SPIDER = "예절을 지키십시오!",
+        SPIDER_WARRIOR = "노인을 공경하십시오!",
+    },
+
+    COMBAT_QUIT =
+    {
+        GENERIC = "끝났습니다.",
+        PIG = "저런.",
+        PREY = "상황을 다시 평가해 봐야겠습니다.",
+        SPIDER = "더 조사해봐야겠습니다!",
+        SPIDER_WARRIOR = "계획을 다시 짜야겠습니다!",
+    },
+    ANNOUNCE_EAT =
+    {
+        GENERIC = "냠!",
+        SPOILED = "부분적으로 부패했습니다.", 
+        STALE = "최적의 신선함이 아니었습니다.",
+        PAINFUL = "이를 섭취하지 말았어야 했습니다.",
+        INVALID = "이것은 섭취할 수 없습니다.",
+        YUCKY = "이것을 먹는 것은 권장되지 않습니다.",
+    },
+    ANNOUNCE_NOWARDROBEONFIRE = "보다시피 타고 있습니다.",
+    ANNOUNCE_WORMS = "끔찍한 것이 머리를 들려고 합니다.",
+    ANNOUNCE_CANFIX = "\n수리할 수 있을 것 같습니다.",
+    ANNOUNCE_ADVENTUREFAIL = "실패를 통해 배워야 합니다.",
+    ANNOUNCE_COLD = "주위 온도가 낮습니다.",
+    ANNOUNCE_HOT = "주위 온도가 너무 높습니다.",
+    ANNOUNCE_HUNGRY = "사서는 음식이 필요합니다.",
+    ANNOUNCE_TORCH_OUT = "빛이 더 필요합니다.",
+    ANNOUNCE_FAN_OUT = "약한 장치가 손상되었습니다.",
+    ANNOUNCE_COMPASS_OUT = "나침반의 자성이 사라졌습니다.",
+    ANNOUNCE_DUSK = "곧 밤이 될 것입니다.",
+
+    ANNOUNCE_CHARLIE_ATTACK = "앗! 누구 감히?!",
+    ANNOUNCE_CHARLIE = "소리가 들리지 않았습니까?",
+    ANNOUNCE_BOOMERANG = "돌아오는 시점을 오판했습니다.",
+    ANNOUNCE_HOUNDS = "무언가가 접근하고 있습니다.",
+
+    ANNOUNCE_NOSLEEPONFIRE = "잘 수 있어도 온도가 위험하게 높습니다.",
+    ANNOUNCE_NODANGERSIESTA = "위험하면 누울 수 없습니다!",
+    ANNOUNCE_NONIGHTSIESTA = "어디에 누워도 잘 수 없습니다.",
+    ANNOUNCE_NONIGHTSIESTA_CAVE = "이 동굴에서는 쉴 수 없습니다.",
+    ANNOUNCE_NOHUNGERSIESTA = "배고파서 쉬는 것이 더 어렵습니다!",
+    ANNOUNCE_SHELTER = "아, 좋은 휴식처입니다.",
+    ANNOUNCE_BURNT = "적어도 1도입니다!",
+    ANNOUNCE_TOOL_SLIP = "악력에 문제가 있습니다!",
+    ANNOUNCE_DAMP = "물의 수준이 상승하고 있습니다.",
+    ANNOUNCE_WET = "신체의 습도 포화 상태 무엇일지 궁금합니다.",
+    ANNOUNCE_WETTER = "많이 젖었습니다!",
+    ANNOUNCE_SOAKED = "제대로 젖었습니다.",
+    ANNOUNCE_OTHER_WORLD_PLANT = "이 환경은 이 식물이 자랄 수 있는 기본 조건이 아닙니다.",
+
+    ANNOUNCE_PECKED = "지금 멈추십시오!",
+
+    ANNOUNCE_ENTER_LIGHT = "볼 수 있을 정도로 밝습니다.",
+    ANNOUNCE_ENTER_DARK = "어둠 속입니다.",
+    ANNOUNCE_INV_FULL = "더 휴대할 수 없습니다.",
+    ANNOUNCE_CRAFTING_FAIL = "지금은 만들 수 없습니다.",
+
+    ANNOUNCE_WORMHOLE = "세부적인 생물학 학습입니다!",
+
+    ANNOUNCE_HUNT_LOST_TRAIL = "흔적을 더 이상 분간할 수 없습니다.",
+    ANNOUNCE_HUNT_LOST_TRAIL_SPRING = "비 때문에 흔적이 지워졌습니다.",
+    ANNOUNCE_HUNT_BEAST_NEARBY = "이 흔적을 보니 최근에 활동이 있었던 것입니다.",
+    ANNOUNCE_ACCOMPLISHMENT= "안됐습니다!",
+    ANNOUNCE_ACCOMPLISHMENT_DONE = "완료했습니다!",
+
+    ANNOUNCE_TRAP_WENT_OFF = "앗!",
+    ANNOUNCE_QUAKE = "진동입니다! 리히터 스케일 진도가 최소 7도입니다.",
+    ANNOUNCE_NODANGERSLEEP = "위험하지 않아도 전 잘 못 잡니다!",
+    ANNOUNCE_UNIMPLEMENTED = "쯧, 아직 준비되지 않았습니다.",
+    ANNOUNCE_NOHUNGERSLEEP = "굶지 않아도 잘 못 잡니다!",
+    ANNOUNCE_FREEDOM = "자유입니다! 좋은 책을 찾은 다음에 침대에 누워야겠습니다.",
+    ANNOUNCE_RESEARCH = "어떠한 정보도 버릴 수 없습니다. 아무리 사소해도.",
+    ANNOUNCE_NO_TRAP = "확실합니다!",
+    ANNOUNCE_HIGHRESEARCH = "아니, 매우 흥미롭습니다!",
+    ANNOUNCE_THORNS = "가시가 많은 구조물입니다!",
+    ANNOUNCE_NODAYSLEEP_CAVE = "동굴이라고 해서 자는 것이 더 쉽지는 않습니다.",
+    ANNOUNCE_BEES = "불쾌하게 쏘는 것들!",
+    ANNOUNCE_KNOCKEDOUT = "휴식을 위한 한 가지 방법입니다.",
+    ANNOUNCE_LOWRESEARCH = "좋은 자원은 아니지만 유용한 부분이 있었습니다.",
+    ANNOUNCE_DEERCLOPS = "큰 소리였습니다!",
+    ANNOUNCE_MOSQUITOS = "저주 받을 흡혈귀!",
+    ANNOUNCE_NODAYSLEEP = "낮은 커녕 밤에도 잘 자지 못합니다.", 
+    ANNOUNCE_INSUFFICIENTFERTILIZER = "분변이 더 필요한 것 같습니다.",
+    ANNOUNCE_LIGHTNING_DAMAGE_AVOIDED = "비전도성 의류라 좋습니다!",
+    ANNOUNCE_TOOMANYBIRDS = "새가 이렇게 많으면 작동하지 않습니다.",
+    ANNOUNCE_WAYTOOMANYBIRDS = "하늘에 새가 뜨지 않았습니다.",
+    ANNOUNCE_MESSAGEBOTTLE =
+    {
+        "읽기 어려운 악필입니다.",
+    },
+    ANNOUNCE_BOAT_DAMAGED = "선박이 손상되고 있습니다!",
+    ANNOUNCE_BOAT_SINKING = "배가 가라앉고 있습니다.",
+    ANNOUNCE_BOAT_SINKING_IMMINENT = "해변으로 가야겠습니다! 지금!",
+    ANNOUNCE_CRAB_ESCAPE = "영리한 갑각류입니다!",
+    ANNOUNCE_MAPWRAP_LOSECONTROL = "이동한 결과가 무엇인지 모르겠습니다.",
+    ANNOUNCE_MAPWRAP_RETURN = "확인되었습니다! 이 세계는 둥급니다.",
+    ANNOUNCE_MAPWRAP_WARN = "안개가 신비를 짙게 감싸고 있습니다. 호호!",
+    ANNOUNCE_MORETREASURE = "이런, 보물이 잔뜩 있습니다!",
+    ANNOUNCE_OTHER_WORLD_TREASURE = "이 좌표는 이 세계에 대한 것이 아닙니다.",
+    ANNOUNCE_SHARX = "하운두스 셀라치! 흥미로우면서 성가신 존재입니다.",
+    ANNOUNCE_TRAWL_FULL = "어망에 더 들어갈 공간이 없습니다.",
+    ANNOUNCE_TREASURE = "황금을 보십시오!",
+    ANNOUNCE_VOLCANO_ERUPT = "지구의 맨틀이 교반되고 있습니다!",
+    ANNOUNCE_WAVE_BOOST = "주요 대양 진동입니다!",
+    ANNOUNCE_WHALE_HUNT_BEAST_NEARBY = "거품 뒤에 무엇이 있습니까?!",
+    ANNOUNCE_WHALE_HUNT_LOST_TRAIL = "흠, 동물이 심해로 후퇴했습니다.",
+    ANNOUNCE_WHALE_HUNT_LOST_TRAIL_SPRING = "거친 물 속에서 흔적을 놓쳤습니다!",
+
+    DESCRIBE=
+    {
+        BABYOX = "잘 생긴 꼬마 신사군요!",
+        GLOMMER = "기괴한 곤충 표본입니다.",
+        GLOMMERFLOWER = 
+        {
+            GENERIC = "끈적한 물질이 뚝뚝 떨어집니다.",
+            DEAD = "회색으로 변색되었지만 여전히 떨어뜨리고 있습니다.",
+        },
+        GLOMMERWINGS = "이상한 표본의 날개입니다.",
+        GLOMMERFUEL = "꽤 불안해 보입니다.",
+        BELL = "조용히 하십시오! 여기는 도서관입니다!",
+        STATUEGLOMMER = 
+        {   
+            GENERIC = "석화된 것입니까?",
+            EMPTY = "아니, 그냥 조각상입니다.",
+        },
+        WEBBERSKULL = "무척 기이한 두개골입니다.",
+        
+        MOONROCKNUGGET = "달이 있다는 증거? 흥미롭습니다.",
+        ROCK_MOON = "달이 있다는 증거? 흥미롭습니다.",
+        MOLE =
+        {
+            HELD = "제 주머니가 자연적인 서식지라고 생각하지는 않습니다.",
+            UNDERGROUND = "무언가가 저 아래를 터널로 뚫고 있습니다.",
+            ABOVEGROUND = "아, 탈피다에입니다!",
+        },
+        MOLEHILL = "터널 시스템이 광대합니다!",
+        MOLEHAT = "아하, 다른 동물의 코를 통해 보는 것입니다!",
+        NIGHTSTICK = "비너스를 위해 이름이 지어졌는지 궁금합니다.",
+        RABBITHOUSE=
+        {
+            GENERIC = "안타깝지만 당근처럼 보이게 칠한 것뿐입니다.",
+            BURNT = "당근처럼 타지 않았습니다.",
+        },
+        TURF_DECIDUOUS = "지면. 밟는 것입니다.",
+        TURF_SANDY = "The ground. You step on it.",
+        TURF_BADLANDS = "지면. 밟는 것입니다.",
+        BEARGER = "개아목인데... 그 이상은 모르겠습니다.",
+        BEARGERVEST = "뭐였는지 모르겠지만 가죽으로 훌륭한 의류를 만들 수 있습니다.",
+        ICEPACK = "완벽하게 단열되었습니다.",
+        BEARGER_FUR = "이런! 두껍습니다.",
+        FURTUFT = "곰오소리의 모피입니다.",
+        BIGFOOT = "선사의 생명체!",
+        BONESHARD = "알차게 살다 간 삶의 잔재입니다.",
+        BUZZARD = "물론 카타르테스입니다.",
+        CACTUS = 
+        {
+            GENERIC = "어린 공선인장입니다.",
+            PICKED = "절박한 시기에는 절박한 수단을 동원합니다.",
+        },
+        CACTUS_MEAT_COOKED = "다행히 가시가 없습니다.",
+        CACTUS_MEAT = "잘 준비되었는지 모르겠습니다.",
+        CACTUS_FLOWER = "버로우스를 상기시킵니다. 도서관에서 인기있었던 것입니다.",
+        COLDFIRE =
+        {
+            GENERIC = "이상한 마법 불 구덩이입니다.",
+            OUT = "다시 불붙일 수 있습니다.",
+            EMBERS = "불이 거의 스스로 꺼졌습니다.",
+            LOW = "불에 연료가 더 필요합니다.",
+            NORMAL = "전혀 평범하지 않은 불입니다.",
+            HIGH = "불이 무척 빠르게 타고 있습니다.",
+        },
+        CATCOON = "살쾡이의 일종입니다. 말쑥하게 생겼습니다.",
+        CATCOONDEN = 
+        {
+            GENERIC = "소굴로서 사용할 수 있는 훌륭한 구멍입니다.",
+            EMPTY = "다 쓰고 남은 것으로 보입니다.",
+        },
+        CATCOONHAT = "크로케츠의 것과는 다르지만 이것으로 만족해야겠습니다.",
+        COONTAIL = "유연한 몸통 부속지.",
+        LAVA_POND_ROCK = "최근에 냉각된 화성암입니다. 위험합니다.",
+        LAVA_POND_ROCK2 = "최근에 냉각된 화성암입니다. 위험합니다.",
+        LAVA_POND_ROCK3 = "최근에 냉각된 화성암입니다. 위험합니다.",
+        LAVA_POND_ROCK4 = "최근에 냉각된 화성암입니다. 위험합니다.",
+        LAVA_POND_ROCK5 = "최근에 냉각된 화성암입니다. 위험합니다.",
+        LAVA_POND_ROCK6 = "최근에 냉각된 화성암입니다. 위험합니다.",
+        LAVA_POND_ROCK7 = "최근에 냉각된 화성암입니다. 위험합니다.",
+        COOKPOT =
+        {
+            COOKING_LONG = "준비되기 전에 잘라내어야 할 부분이 있습니다.",
+            COOKING_SHORT = "거의 다 됐습니다!",
+            DONE = "만찬 시간!",
+            EMPTY = "요리하지 않을 때는 버려진 것처럼 보입니다.",
+            BURNT = "이제 정말 무용지물입니다.",
+        },
+        EYEBRELLAHAT =  "각막이 물을 뛰어나게 차단하는 효과가 있을 것입니다.",
+        ARMORDRAGONFLY = "불꽃 같은 방어구!",
+        DRAGON_SCALES = "곤충의 비늘입니까? 들어본 적이 없습니다!",
+        DRAGONFLYCHEST = "비늘! 비늘이 최고입니다!",
+        DECIDUOUSTREE = 
+        {
+            GENERIC = "참나무목에 속합니다. 완전히 성장하면 과일을 맺습니다.",
+            CHOPPED = "수확했습니다.",
+            BURNING = "나무가 불타고 있습니다.",
+            BURNT = "탄화된 나무입니다.",
+            POISON = "본 적이 없는 나무입니다!",
+        },
+        ACORN_COOKED = "요리하여 독을 제거했습니다.",
+        BIRCHNUTDRAKE = "도망갑니다!",
+        FARMPLOT =
+        {
+            GENERIC = "경작한 작은 땅뙈기입니다.",
+            GROWING = "식물이 땅에서 미네랄을 추출하고 있습니다.",
+            NEEDSFERTILIZER = "영양이 부족해서 불모의 토양이 되었습니다.",
+            BURNT = "농작물이 다시 자라지 않을 것입니다.",
+        },
+        COLDFIREPIT =
+        {
+            GENERIC = "불 구덩이입니다. 차갑습니다.",
+            OUT = "다시 불붙일 수 있습니다.",
+            EMBERS = "불이 거의 스스로 꺼졌습니다.",
+            LOW = "어떤 연료가 쓰이는지는 몰라도 불에 연료가 더 필요합니다.",
+            NORMAL = "불입니다. 특정한 종류입니다.",
+            HIGH = "불이 무척 빠르게 타고 있습니다.",
+        },
+        FIRESUPPRESSOR = 
+        {   
+            ON = "얼음 발사!",
+            OFF = "볼 것이 없거든.",
+            LOWFUEL = "연료가 낮아지고 있습니다.",
+        },
+        ICEHAT = "완벽한 얼음 입방체입니다.",
+        LIGHTNINGGOAT = 
+        {
+            GENERIC = "전기를 좋아하는 카프라 아이가그루스의 일종입니다.",
+            CHARGED = "아주 열심입니다.",
+        },
+        LIGHTNINGGOATHORN = "뿔 안에 자연스럽지 않은 무언가가 있을 것입니다.",
+        GOATMILK = "감질납니다!",
+        MEATRACK =
+        {
+            GENERIC = "고기를 탈수할 수 있습니다.",
+            DRYING = "건조 과정은 느립니다.",
+            DRYINGINRAIN = "비가 건조 과정을 임시적으로 중지시켰습니다.",
+            DONE = "절차를 완료했습니다.",
+            BURNT = "안정적으로 보이지 않습니다.",
+        },
+        MERMHEAD = 
+        {
+            GENERIC = "부패하는 것인지 발효하는 것인지 불확실합니다.",
+            BURNT = "지금은 부패도 발효도 아닙니다.",
+        },
+        MERMHOUSE = 
+        {
+            GENERIC = "물론 황폐합니다.",
+            BURNT = "황폐한 정도 이상입니다.",
+        },
+        FLOWERSALAD = "영양이 많습니다!",
+        ICECREAM = "책과 아이스크림 한 사발이면 행복합니다.",
+        WATERMELONICLE = "수박이 얼음 격자 안에 완전히 들어있습니다.",
+        TRAILMIX = "음, 천연 식품!",
+        HOTCHILI = "고추는 저에게 소화 불량을 일으킵니다.",
+        GUACAMOLE = "도서관에서 과학의 날에는 언제나 과카몰레를 만들었습니다.",
+        MOOSE = "알세스 카나덴시스라고 이름을 짓겠습니다.",
+        MOOSEEGG = "경이롭습니다!",
+        BANANAPOP = "신선하지 않습니까?",
+        BISQUE = "정말 필요했던 것입니다.",
+        CEVICHE = "소스가 더 있으면 좋겠습니다.",
+        SEAFOODGUMBO = "심장의 통증이 이미 느껴집니다!",
+        SURFNTURF = "완벽한 요리입니다.",
+        SHARKFINSOUP = "이것을 만들기 위해 위태로운 생태계에 혼란을 일으킨 것 같습니다.",
+        LOBSTERDINNER = "무척 데카당스합니다.",
+        LOBSTERBISQUE = "진짜 요리의 맛을 거의 잊을 뻔했습니다.",
+        JELLYOPOP = "유년기가 떠오릅니다.",
+        MOSSLING = "대략 제가 기대한 것으로 보입니다.",
+        FEATHERFAN = "이는 꽤 큰 공기흐름을 유도할 것입니다!",
+        TROPICALFAN = "공기역학의 원칙은 경이롭습니다.",
+        MINIFAN = "굉장한 공기역학적 원칙이 적용되었습니다.",
+        GOOSE_FEATHER = "부드러운 솜털입니다! 잘 수 있다면 좋겠다는 생각이 들게 만듭니다.",
+        STAFF_TORNADO = "풍향계를 무기로 쓰는 것은 처음 봅니다.",
+        PIGHEAD = 
+        {   
+            GENERIC = "쯧쯧. 막대에 머리가 꽂혀 있습니다.",
+            BURNT = "막대에 달린 머리가 타고 남은 잔재입니다. 쯧!",
+        },
+        PIGHOUSE =
+        {
+            GENERIC = "돼지 생물체의 건축 양식이 무미건조합니다.",
+            FULL = "안에서 무엇을 하는지 궁금합니다.",
+            LIGHTSOUT = "꽤 무례했습니다.",
+            BURNT = "집에 화재 예방 체계가 없습니다.",
+        },
+        FERTILIZER = "동물 배설물 한 통. 코를 찌릅니다.",
+        RAINOMETER = 
+        {   
+            GENERIC = "행동하기 전에 측정해야 합니다.",
+            BURNT = "껍데기만 남아서 더 이상 측정할 수 없습니다.",
+        },
+        RAINCOAT = "전혀 미세 구멍이 없습니다.",
+        RAINHAT = "머리카락이 젖는 것은 싫습니다.",
+        RESEARCHLAB = 
+        {   
+            GENERIC = "연구 스테이션입니다. 새로운 것을 배울 수 있습니다.",
+            BURNT = "탄화된 연구 스테이션으로는 아무 것도 배울 수 없습니다.",
+        },
+        RESEARCHLAB2 = 
+        {
+            GENERIC = "연구 스테이션입니다. 새로운 것을 배울 수 있습니다.",
+            BURNT = "탄화된 연구 스테이션으로는 아무 것도 배울 수 없습니다.",
+        },
+        RESEARCHLAB3 = 
+        {
+            GENERIC = "과도하게 한 것 같습니다.",
+            BURNT = "전조입니다.",
+        },
+        RESEARCHLAB4 = 
+        {
+            GENERIC = "모자가 공기에서 에너지를 수집하는 것 같습니다.",
+            BURNT = "이제는 에너지를 수집하지 못할 것입니다.",
+        },
+        RESURRECTIONSTATUE = 
+        {
+            GENERIC = "무척 이교적입니다.",
+            BURNT = "사그라졌습니다.",
+        },
+        ROCK_ICE = 
+        {
+            GENERIC = "밀도가 극히 높은 작은 얼음 덩어리입니다.",
+            MELTED = "작은 크기 때문에 녹은 것 같습니다.",
+        },
+        ROCK_ICE_MELTED = "작은 크기 때문에 녹은 것 같습니다.",
+        ICE = "물의 고체 상태입니다.",
+        REFLECTIVEVEST = "약간 시원하게 해줄 것입니다.",
+        HAWAIIANSHIRT = "저는 트위드를 선호합니다.",
+        TENT = 
+        {
+            GENERIC = "저 안에서 자면 목이 뻣뻣해질 것입니다.",
+            BURNT = "어차피 별로 도움되지 않았습니다.",
+        },
+        SIESTAHUT = 
+        {
+            GENERIC = "저는 지면이 아닌 침대에서도 숙면을 취하지 못합니다.",
+            BURNT = "어차피 별로 도움되지 않았습니다.",
+        },
+        TRANSISTOR = "첨단 기술로 보입니다.",
+        TREASURECHEST = 
+        {
+            GENERIC = "보관용 궤짝입니다.",
+            BURNT = "보관용 궤짝이 타고 남은 것입니다.",
+        },
+        TUMBLEWEED = "건조한 식물 모음 덩어리입니다.",
+        GRASS_UMBRELLA = "약간의 보호 기능을 제공하는 섬세한 파라솔입니다.",
+        PALMLEAF_UMBRELLA = "약간의 보호 기능을 제공하는 잎 파라솔입니다.",
+        UNIMPLEMENTED = "공사 중입니다.",
+        WALL_HAY = 
+        {   
+            GENERIC = "저 벽을 신뢰할 수 없습니다.",
+            BURNT = "신뢰하지 않은 것이 바른 판단이었습니다.",
+        },
+        WALL_WOOD = 
+        {
+            GENERIC = "조금 보호해 줍니다.",
+            BURNT = "불에 약했습니다.",
+        },
+        WARDROBE = 
+        {
+            GENERIC = "유명한 책을 생각하게 합니다.",
+            BURNING = "흠, 무척 다른 유명한 책을 생각나게 합니다.",
+            BURNT = "옷장이었습니다.",
+        },
+        WARG = "That Canis will never be domesticated.",
+        WATERMELON = "키트룰루스 라나투스.",
+        WATERMELON_COOKED = "훌륭하게 구웠습니다.",
+        WATERMELONHAT = "수박으로 할 수 있는 것 한 가지입니다.",
+        WINTEROMETER = 
+        {
+            GENERIC = "행동하기 전에 측정해야 합니다.",
+            BURNT = "껍데기만 남아서 더 이상 측정할 수 없습니다.",
+        },
+        HOMESIGN =
+        {
+            GENERIC = "길 안내입니다. \"자신의 위치.\"",
+            UNWRITTEN = "방향을 알려줄 기회입니다.",
+            BURNT = "지금은 안내해주지 못합니다.",
+        },
+        BEEBOX =
+        {
+            READY = "꿀을 채취할 수 있습니다.",
+            GENERIC = "엉성한 양봉장입니다.",
+            FULLHONEY = "꿀을 채취할 수 있습니다.",
+            NOHONEY = "꿀이 없습니다.",
+            SOMEHONEY = "수확 준비가 되지 않았습니다.",
+            BURNT = "불쌍한 벌!",
+        },
+        LIVINGTREE = "특별한 나무입니다.",
+        ICESTAFF = "얼음을 발사하는 장치입니다.",
+        WORMLIGHT = "생각했던 것보다 부드럽습니다.",
+        WORMLIGHT_LESSER = "순수히 채소입니다.",
+        WORM =
+        {
+            PLANT = "아귀를 생각나게 합니다.",
+            DIRT = "그것으로부터 멀리 떨어져 있는 것이 좋습니다.",
+            WORM = "벌레 공격!",
+        },
+        WORMLIGHT_PLANT = "아귀를 생각나게 합니다.",
+        EEL = "장어입니다.",
+        EEL_COOKED = "요리한 장어입니다.",
+        UNAGI = "장어를 요리하는 일반적인 방법입니다.",
+        EYETURRET = "두 짐승의 마력이 툴레사이트로 집중되었습니다.",
+        EYETURRET_ITEM = "이것은 배치해야 합니다.",
+        MINOTAURHORN = "신기하게 큰 뿔입니다. 악몽이 성장을 촉진했는지도 모르겠습니다.",
+        MINOTAURCHEST = "대단한 궤짝입니다.",
+        THULECITE_PIECES = "합쳐서 더 큰 조각을 만들 수 있습니다.",
+        POND_ALGAE = "이 조류는 광합성이 아닌 것이 다행입니다.",
+        GREENSTAFF = "물체의 시간을 되돌리는 것으로 보입니다.",
+        POTTEDFERN = "화분에 넣은 식물입니다.",
+
+        BOOK_BIRDS = "삭제판이지만, 제가 좋아하는 메가스코프스 케니코티를 포함하고 있습니다.",
+        BOOK_TENTACLES = "내려놓기 어렵습니다. 몰입하게 만드는 내용입니다.",
+        BOOK_GARDENING = "살아있는 식물을 도와주기 위해 절 도와주는 죽은 식물의 묶음입니다.",
+        BOOK_SLEEP = "책 형태의 따뜻한 유액.",
+        BOOK_BRIMSTONE = "문제 있을까?",
+
+        SLURPER = "공생의 전형적인 예입니다.",
+		SLURPER_PELT = "무언가에 유용할 수 있겠습니다.",
+        SLURPERPELT = "무언가에 유용할 수 있겠습니다.",
+		ARMORSLURPER = "혐오스럽고 마법적인 의복입니다.",
+        ORANGEAMULET = "사용할 때마다 보석이 흐려집니다.",
+        YELLOWSTAFF = "다행히 별이 관리할 수 있는 정도의 크기입니다.",
+        YELLOWGEM = "어쩌면 황수정과 유사한 것 같습니다.",
+        ORANGEGEM = "스페사르타이트 가닛 같습니다.",
+        TELEBASE = 
+        {
+            VALID = "준비된 것으로 보입니다.",
+            GEMS = "아직 동력이 없습니다.",
+        },
+        GEMSOCKET = 
+        {
+            VALID = "이상한 효과입니다.",
+            GEMS = "보석을 고정합니다.",
+        },
+        STAFFLIGHT = "더 큰 지팡이라면 더 큰 별을 소환할지도 모르겠습니다.",
+
+        ANCIENT_ALTAR = "오래 전에 죽은 신의 기념비입니다.",
+        ANCIENT_ALTAR_BROKEN = "부품이 없습니다.",
+        ANCIENT_STATUE = "세계와 신비로운 연관된 것 같습니다.",
+        LICHEN = "공생체입니다! 진균류와 파이코바이온틱 박테리아입니다.",
+		CUTLICHEN = "이것은 오래 지속되지 않을 것입니다.",
+
+        CAVE_BANANA = "모두 유전적으로 동일합니다.",
+        CAVE_BANANA_COOKED = "조금 더 낫습니다.",
+        CAVE_BANANA_BURNT = "이것을 수리할 수 있을 것 같지는 않습니다.",
+        CAVE_BANANA_TREE = "씨가 싱크홀 안으로 떨어진 것 같습니다.",
+        ROCKY = "갑각이 바위로 만들어졌습니다.",
+
+        BLUEAMULET = "접촉하는 모든 것에서 에너지를 흡수하는 것으로 보입니다.",
+        PURPLEAMULET = "뭔가 부르는 것이 거의 느껴집니다.",
+        TELESTAFF = "보석이 악몽 연료를 집중시키는 것으로 보입니다.",
+        MONKEY = "강한 냄새를 만들어냅니다.",
+        MONKEYBARREL = "여러 영장류의 집으로 보입니다.",
+
+        HOUNDSTOOTH="칼슘과 유황으로 만들어졌습니다.",
+        ARMORSNURTLESHELL="꽤 공간이 큽니다.",
+        BAT="비행 포유 동물입니다.",
+        BATWING="먹는 것이 가능합니다.",
+        BATWING_COOKED="먹는 것이 가능합니다.",
+        BATCAVE = "이 구석은 주거 공간입니다.",
+        BEDROLL_FURRY="저는 땅에서 자지 않습니다.",
+        BUNNYMAN="지성이 있는 토끼목 동물입니다.",
+        FLOWER_CAVE="독서가 가능한 빛입니다.",
+        FLOWER_CAVE_DOUBLE="독서가 가능한 빛입니다.",
+        FLOWER_CAVE_TRIPLE="독서가 가능한 빛입니다.",
+        GUANO="또 다른 물질대사의 부산물입니다.",
+        LANTERN="연료 충전이 가능한 광원입니다.",
+        LIGHTBULB="이것이 동물입니까, 야채입니까?",
+        MANRABBIT_TAIL="꼬리로 균형을 잡습니다.",
+        MUSHTREE_TALL=
+        {
+            GENERIC = "A tree with a fungal parasite.",
+            BLOOM = "Apparently it's the breeding season for this species.",
+        },
+        MUSHTREE_MEDIUM=
+        {
+            GENERIC = "A red variety of Mycena luxaeterna.",
+            BLOOM = "The smell is used to ward off predators.",
+        },
+        MUSHTREE_SMALL=
+        {
+            GENERIC = "My word! A huge Mycena silvaelucens.",
+            BLOOM = "The light is caused by a chemical reaction.",
+        },
+        MUSHTREE_TALL_WEBBED = "공생 관계입니다.",
+        SPORE_TALL = "유전자 정보 전달자입니다.",
+        SPORE_MEDIUM = "유전 정보 전달자입니다.",
+        SPORE_SMALL = "유전 정보 전달자입니다.",
+        SPORE_TALL_INV = "저는 유전자 정보 전달자의 전달자입니다.",
+        SPORE_MEDIUM_INV = "저는 유전자 정보 전달자의 전달자입니다.",
+        SPORE_SMALL_INV = "저는 유전자 정보 전달자의 전달자입니다.",
+        MUSHTREE_TALL  ="진균류 기생균이 있는 나무입니다.",
+        MUSHTREE_MEDIUM="적색인 미세나 룩사에테르나입니다.",
+        MUSHTREE_SMALL ="어머나! 거대한 미케나 실야이루켄스입니다.",
+        SLURTLE= "광물질을 먹는 복족류입니다.",
+        SLURTLE_SHELLPIECES= "부러진 조각입니다.",
+        SLURTLEHAT= "보호해 줍니다.",
+        SLURTLEHOLE= "복족류 포드입니다.",
+        SLURTLESLIME= "어떠한 이유로인지 점액이 폭발성입니다.",
+        SNURTLE= "희귀한 복족류입니다.",
+        SPIDER_HIDER= "갑각이 두꺼운 거미류입니다.",
+        SPIDER_SPITTER= "발사체를 쏘는 거미류입니다.",
+        SPIDERHOLE= "거미 횡행의 출처입니다.",
+        SPIDERHOLE_ROCK ="거미 횡행의 출처입니다.",
+        STALAGMITE= "이상한 바위 형상입니다.",
+        STALAGMITE_FULL= "이상한 바위 형상입니다.",
+        STALAGMITE_LOW= "이상한 바위 형상입니다.",
+        STALAGMITE_MED= "이상한 바위 형상입니다.",
+		STALAGMITE_TALL= "또 하나의 석순입니다.",
+		STALAGMITE_TALL_FULL= "또 하나의 석순입니다.",
+		STALAGMITE_TALL_LOW= "또 하나의 석순입니다.",
+		STALAGMITE_TALL_MED= "또 하나의 석순입니다.",
+
+        TURF_DESERTDIRT = "The ground. You step on it.",
+        TURF_FUNGUS_GREEN = "The ground. You step on it.",
+        TURF_FUNGUS_RED = "The ground. You step on it.",
+        TURF_CARPETFLOOR = "지면. 밟는 것입니다.",
+        TURF_CHECKERFLOOR = "지면. 밟는 것입니다.",
+        TURF_DIRT = "지면. 밟는 것입니다.",
+        TURF_FOREST = "지면. 밟는 것입니다.",
+        TURF_GRASS = "지면. 밟는 것입니다.",
+        TURF_MARSH = "지면. 밟는 것입니다.",
+        TURF_ROAD = "지면. 밟는 것입니다.",
+        TURF_ROCKY = "지면. 밟는 것입니다.",
+        TURF_SAVANNA = "지면. 밟는 것입니다.",
+        TURF_WOODFLOOR = "지면. 밟는 것입니다.",
+
+        TURF_CAVE="지면. 밟는 것입니다.",
+        TURF_FUNGUS="지면. 밟는 것입니다.",
+        TURF_SINKHOLE="지면. 밟는 것입니다.",
+        TURF_UNDERROCK="지면. 밟는 것입니다.",
+        TURF_MUD="지면. 밟는 것입니다.",
+        TURF_DRAGONFLY = "이 물질은 자연의 내화 요소를 가지고 있습니다.",
+
+        BATBAT = "흥미롭습니다. 이 무기는 살아있는 것으로 보입니다.",
+        LUREPLANT = "식물 침입종입니다.",
+        LUREPLANTBULB = "이제 식물을 원하는 대로 이동할 수 있습니다.",
+        EYEPLANT = "더 큰 식물이 조종하는 것 같습니다.",
+        PLANTMEAT = "식물이 고기 물질을 생산했습니다.",
+        PLANTMEAT_COOKED = "지금 먹어서 나아진 느낌이 듭니다.",
+        CAVE_FERN = "아름다운 장식용 식물입니다.",
+        FOLIAGE = "영양가가 조금 있을지도 모르겠습니다.",
+        FOOTBALLHAT = "완전 접촉 활동을 위한 방어구.",
+
+        POWCAKE = "농경 산업 단지의 최고 업적.",
+        CAVE_ENTRANCE = "바위 배치가 의도적으로 보입니다.",
+        CAVE_ENTRANCE_RUINS = "통로가 막혔습니다.",
+
+        CAVE_ENTRANCE_OPEN = 
+        {
+            GENERIC = "제가 더 준비가 되었을 때 하겠습니다.",
+            OPEN = "지하 세계가 기다리고 있습니다.",
+        },
+        CAVE_EXIT = 
+        {
+            GENERIC = "나중에.",
+            OPEN = "신선한 공기를 마시기 위해 올라가야겠습니다.",
+        },
+
+		BOOMERANG = "납작한 날개입니다.",
+		SPOILED_FOOD = "박테리아가 많습니다.",
+		ICEBOX = "조잡한 열교환기입니다.",
+		MAXWELLPHONOGRAPH = "동력원이 없는 것으로 보입니다.",
+		PIGGUARD = "전사 계급입니다.",
+		
+		DIVININGROD = 
+		{
+		    GENERIC = "마법기술 유도 장치입니다.",
+		    COLD = "다이얼이 약하게 움직이고 있습니다.",
+		    WARM = "분명히 올바른 방향으로 가고 있습니다.",
+		    WARMER = "가까워지는 것 같습니다.",
+		    HOT = "왔습니다!",
+		},
+		DIVININGRODSTART = "이 지팡이가 유용할 지도 모릅니다!",
+        DRAGONFLY = "쌍시류의 신비한 변종입니다.",
+        
+        LAVASPIT = 
+        {
+            HOT = "침이 녹은 용암과 유사합니다.",
+            COOL = "차가워져서 거의 현무암 같습니다.",
+        },
+        LAVA_POND = "녹은 돌입니다. 가까이 가지 않는 것이 좋습니다.",
+        LAVAE = "용파리 애벌레입니다.",
+        LAVAE_PET = 
+        {
+            STARVING = "이 동물은 즉시 영양이 필요합니다!",
+            HUNGRY = "배고픈 짐승입니다.",
+            CONTENT = "꽤 매력적이라는 것을 인정해야겠습니다.",
+            GENERIC = "건강한 용파리 애벌레입니다.",
+        },
+        LAVAE_EGG = 
+        {
+            GENERIC = "대형 다량난황 알입니다.",
+        },
+        LAVAE_EGG_CRACKED =
+        {
+            COLD = "알 온도가 최적이 아닙니다.",
+            COMFY = "알이 부화하기에 적합한 온도입니다.",
+        },
+        LAVAE_TOOTH = "새끼 파충류가 알에서 나오기 위해 사용하는 알의 이빨입니다.",
+
+        DRAGONFRUIT = "히로케레우스 운다투스 또는 피타하야 블란카입니다.",
+        DRAGONFRUIT_COOKED = "잘 요리한 피타하야 블란카입니다.",
+        DRAGONFRUIT_SEEDS = "굉장히 순한 히로세레우스 운다투스의 씨입니다.",
+        DRAGONPIE = "저는 과일 파이를 좋아합니다.",
+        DRUMSTICK = "가금의 다리입니다.",
+        DRUMSTICK_COOKED = "딱히 건강에 좋지는 않지만 맛있습니다!",
+        DURIAN = "아하, 두리오 지베티누스. 정말 악취가 심합니다.",
+        DURIAN_COOKED = "요리가 냄새를 더 좋게 만들지 않았습니다.",
+        DURIAN_SEEDS = "두리오 지베티누스의 종자도 약간 냄새가 납니다.",
+        EARMUFFSHAT = "불쌍한 레포리다에입니다. 적어도 귀는 춥지 않을 것입니다.",
+        EGGPLANT = "나이트셰이드, 그 중에서도 솔라눔 메론게나.",
+        EGGPLANT_COOKED = "요리한 가지입니다.",
+        EGGPLANT_SEEDS = "가지 종자입니다.",
+        WAFFLES = "만나서 반갑습니다, 와플.",
+		
+		WALL_WOOD_ITEM = "배치 가능한 울타리입니다.",
+		WALL_STONE_ITEM = "왜 이것을 많이 휴대할 수 있는지 잘 모르겠습니다.",
+		WALL_RUINS_ITEM = "주머니 안이 더 큰 것 같습니다.",
+		WALL_HAY_ITEM = "건초 꾸러미입니다.",
+		WALL_STONE = "보안이 꽤 뛰어납니다.",
+		WALL_RUINS = "매우 튼튼한 벽입니다.",
+        WALL_MOONROCK = "일 마무리가 잘 되었습니다.",
+        WALL_MOONROCK_ITEM = "주머니에 잘 들어갑니다.",
+        ADVENTURE_PORTAL = "이것은 근본적인 물리 법칙을 위반합니다.",
+		
+        BIRDCAGE = 
+        {
+			GENERIC = "안전하게 조류 표본을 포함할 수 있습니다.",
+            OCCUPIED = "가뒀습니다.",
+            SLEEPING = "쉿!",
+            HUNGRY = "배고파지고 있습니다.",
+            STARVING = "영양이 불충분해 보입니다.",
+            DEAD = "굶주린 것으로 나타납니다.",
+            SKELETON = "뼈를 연구할 수 있을 것 같습니다.",
+        },
+        MEAT = "원래라면 이를 날것으로 먹지 않습니다.",
+        SMALLMEAT = "작은 날고기입니다.",
+        COOKEDSMALLMEAT = "요리하면 조금 더 맛있습니다.",
+        MONSTERMEAT = "섭취하면 위험할 것입니다.",
+        MONSTERLASAGNA = "라자냐든 아니든, 섭취하면 위험할 것입니다.",
+        COOKEDMEAT = "요리하면 조금 더 맛있습니다.",
+        MEATBALLS = "가공육 더미입니다. 안에 뭐가 들었는지 어떻게 알겠습니다.",
+        UMBRELLA = "젖지 않게 해주는 간단한 기구입니다.",
+        PERD = "더러운 멜레아그리스, 내 베리에 손대지 마십시오!",
+        TURKEYDINNER = "훌륭한 구이입니다.",
+        COOKEDMONSTERMEAT = "아직도 약간 독성이 있습니다.",
+        MAXWELL = "아주 무례한 신사입니다.",
+        TENTACLE = "두려운 존재가 진흙 안에서 기다리고 있습니다.",
+        TENTACLESPIKE = "뾰족한 끝으로 절대 잡지 않습니다.",
+        TENTACLESPOTS = "흐음, 생식기.",
+        TENTACLE_PILLAR = "위보다는 아래에 많이 있습니다!",
+        TENTACLE_PILLAR_HOLE = "전부 연결된 것으로 보입니다.",
+        TENTACLE_PILLAR_ARM = "작은 두려운 존재가 진흙 안에서 기다리고 있습니다.",
+        TENTACLE_GARDEN = "어떻게 번식할지 궁금합니다.",
+        BEEFALO =
+        {
+            GENERIC = "거의 보스 타우루스처럼 보입니다.",
+            FOLLOWER = "저를 따라 오는 것으로 보입니다.",
+            NAKED = "추워 보인다.",
+            SLEEPING = "자고 있습니다.",
+        },
+        BABYBEEFALO = "조그만 얼굴을 보세요! (에헴!)",
+        MANDRAKE =
+        {
+			GENERIC = "만드라고라 오피키나룸.",
+			PICKED = "만드라고라 오피키나룸. 그런데 얼굴이 있습니다.",
+			DEAD = "만드라고라 오피키나룸. 사망했습니다.",
+        },
+        COOKEDMANDRAKE = "만드라고라 오피키나룸, 발견이라는 명목 하에 요리하였습니다.",
+        MANDRAKESOUP = "만드라고라 오피키나룸, 발견이라는 명목 하에 수프로 요리했습니다.",
+		KRAMPUS = "신화에 등장하는 휴일 괴물입니다.",
+		KRAMPUS_SACK = "밖보다 안이 더 큰 것 같습니다.",
+        PINECONE = 
+        {
+            GENERIC = "침엽수 씨가 성숙한 구과 안에 들어있습니다.",
+            PLANTED = "침엽수 씨가 성숙기에 접어들고 있습니다.",
+        },
+        ARMORWOOD = "통나무 부분으로 만든 조악한 플레이트 메일입니다.",
+		ARMOR_SANITY = "보호 장막으로서, 받은 공격을 다른 차원으로 전송합니다.",
+        ASH =
+        {
+            GENERIC = "불탄 다음에 남은 액체가 아닌 찌꺼기입니다.",
+            REMAINS_GLOMMERFLOWER = "꽃이 완전히 탄 것으로 보입니다.",
+            REMAINS_EYE_BONE = "눈뼈가 완전히 탄 것으로 보입니다.",
+            REMAINS_THINGIE = "원래는 무슨 사물이었겠지만 지금은 잿더미일 뿐입니다.",
+        },
+        SPAT = "사납게 생긴 오비스 채립스입니다.",
+        SPEAR = "고대 무기 기술.",
+        STRAWHAT = "이는 태양을 어느 정도 차단해 줄 것입니다.",
+        STUFFEDEGGPLANT = "가지를 요리하고 다른 식재료와 함께 쌌습니다.",
+        BEEFALOHAT = "모자가 흉측합니다.",
+        TOPHAT = "부르주아 의류입니다.",
+        FLOWERHAT = "경축용입니다.",
+        BUSHHAT = "카무플라주",
+        ROPE = "짧고 강한 삼 밧줄입니다.",
+        LOG = "An axial section of tree trunk.",
+        LOG =
+        {
+            BURNING = "An axial section of tree trunk. On fire.",
+            GENERIC = "An axial section of tree trunk.",
+        },
+        LIVINGLOG = "이 통나무는 특별합니다.",
+        LOCKEDWES = "조각상이 불쌍한 사내를 가두어 두고 있습니다.",
+        TWIGS = "작은 잔가지입니다.",
+        CARROT = "다우쿠스 카로타. 식용이고 맛좋습니다.",
+        CARROT_COOKED = "다우쿠스 카로타를 완벽하게 구웠습니다.",
+        CARROT_PLANTED = "다우쿠스 카로타는 뿌리 채소입니다.",
+        CARROT_SEEDS = "다우쿠스 카로타의 종자입니다.",
+        BERRIES = "제가 보기엔 백량금 장과류입니다.",
+        BERRIES_COOKED = "만약을 위해 아르디시아 크레나타를 준비했습니다.",
+        CUTSTONE = "연마한 바위 판입니다.",
+        SEEDS = "식별 불가능한 씨 한 줌.",
+        SEEDS_COOKED = "토스트한 배아기 식물 별미!",
+        SILK = "거미에서 배출된 단백질 섬유입니다.",
+		SPIDERGLAND = "이 분비 기관은 약간 독한 독액을 분비합니다.",
+        BOARDS = "거칠게 잘라 만든 목판입니다.",
+        BONESTEW = "어머니께서 만들던 수준은 아니지만 냄새가 좋습니다!",
+        MAXWELLTHRONE = "아주 위협적인 의자입니다.",
+        MAXWELLLOCK = "이제 열쇠만 있으면 됩니다.",
+        MAXWELLLIGHT = "마법 같습니다!",
+        FEM_PUPPET = "불쌍한 소녀.",
+        MALE_PUPPET = "불쌍한 소년.",
+        ROBOT_PUPPET = "가엽습니다.",
+        
+		NITRE = "일명 초석입니다.",
+		GUNPOWDER = "지식이 힘입니다!",
+		BIRD_EGG = "수정되지 않았습니다.",
+		BIRD_EGG_COOKED = "토스트가 있다면 좋겠습니다.",
+		ROTTENEGG = "식욕을 떨어뜨립니다.",
+		HAMBAT = "이것이 자원을 가장 유용하게 사용하는 방법인지는 잘 모르겠습니다.",
+
+        TRAP_TEETH = "겉에 개의 소화액이 얇은 막을 형성하고 있습니다.",
+        TRAP_TEETH_MAXWELL = "저를 속이려는 얕은 꾀입니다.",
+        RABBIT = 
+        {
+            GENERIC = "토끼목 포유 동물의 일종입니다. 그런데 뿔이 있습니다.",
+            HELD = "귀엽고 작은 뿔이 달린 토끼목 포유 동물입니다.",
+        },
+		ROCK_LIGHT =
+		{
+			GENERIC = "덮여진 용암 구덩이입니다.",
+            OUT = "이제 화성암 덮개만 남았습니다.",
+            LOW = "냉각 절차가 시작되었습니다.",
+            NORMAL = "만지면 너무 뜨겁습니다.",
+		},
+        ROCK = "대형 퇴적암입니다.",
+        PIGKING = "마을의 지도자로 보입니다.",
+        RATATOUILLE = "니스식이고 영양가가 높습니다!",
+        RESURRECTIONSTONE = "돌이 재생 능력을 보유하고 있습니다.",
+        ROBIN =
+        {
+            GENERIC = "카디날리스! 아름다운 깃털입니다.",
+            HELD = "이 작은 동물이 제 친구가 되어줄 것입니다.",
+        },
+        ROBIN_WINTER =
+        {
+            GENERIC = "카디날리스의 겨울 외피입니까? 정말 색다릅니다!",
+            HELD = "무척 섬세합니다.",
+        },
+        AXE = "이중 경사면이 레버에 부착되어 있습니다.",
+		HAMMER = "노동자의 도구입니다.",
+        PHLEGM = "응결된 점액이 점성을 유지하고 있습니다.",
+        PICKAXE = "바위를 쪼는 특수한 도끼입니다.",
+        SEWING_KIT = "가사를 위한 간단한 도구입니다.",
+        SHOVEL = "삽입니다. 본 적이 있지 않습니까?",
+		PITCHFORK = "흙을 헐겁게 하는 데 효과적인 설계입니다.",
+        ROCKS = "다양한 돌 한 줌.",
+        FIRESTAFF = "화염을 발사하는 장치입니다.",
+        FISH = "제가 보기에는 흰살 물고기입니다.",
+        FISHINGROD = "낚시에 대하여 다 읽어 봤으니까 쉬울 겁니다.",
+        FISHSTICKS = "타르타르소스만 주면 전 대만족입니다.",
+        FISHTACOS = "생선에 향신료를 치는 것이 좋습니다.",
+        FISH_COOKED = "훌륭하게 구웠습니다.",
+        FISH_MED = "측은합니다.",
+        FISH_MED_COOKED = "훌륭하게 구웠습니다.",
+        FLINT = "석영의 단단한 단괴입니다.",
+        AMULET = "다른 시대의 유물입니다.",
+        RAZOR = "개인 위생 장치입니다.",
+        POMEGRANATE = "푸니카 그라나툼. 수분이 많고, 달고, 조금 십니다.",
+        POMEGRANATE_COOKED = "푸니카 그라나툼은 데우면 무척 좋습니다.",
+        POMEGRANATE_SEEDS = "푸니카 그라나툼 종자를 가종피에서 분리했습니다.",
+		POND = "작지만 깊은 민물 연못입니다.",
+        LEIF = "저도... 잘 모르겠습니다.",
+        LEIF_SPARSE = "저도... 잘 모르겠습니다.",
+        SPIDERQUEEN = "집단지성의 중심입니다.",
+        PIGGYBACK = "필요하니까 씁니다.",
+        BLOWDART_FIRE = "즉석 발화 장치.",
+        BLOWDART_SLEEP = "즉석 마취 장치.",
+        BLOWDART_PIPE = "즉석 미사일 장치.",
+        SPIDERHAT = "이것으로 거미들을 염력 조종할 수 있을 것입니다.",
+		EARMUFFHAT = "단열 효과가 가장 뛰어난 부분만 썼습니다.",
+        WETGOOP = "안 돼. 안 돼. 이건 안 됩니다.",
+        WHIP = "통증을 이용하여 복종하게 만드는 것입니다.",
+        WINTERHAT = "제가 직접 짰습니다.",
+        NIGHTMAREFUEL = "외부 원형질 잔류물.",
+        NIGHTLIGHT = "기묘하게 발광성입니다.",
+        NIGHTSWORD = "초차원적 무기입니다.",
+        ARMORMARBLE = "흥미로운 재료 선택입니다.",
+        ARMORGRASS = "레이어를 충분히 겹치면 의외로 효과적입니다.",
+        BLUEPRINT = "상세 기술 도면입니다.",
+        BELL_BLUEPRINT = "상세 기술 도면입니다.",
+        MAXWELLHEAD = "안 그랬으면 좋겠습니다.",
+
+		WALRUSHAT = "과거의 지인을 잊어야 하겠습니까?",
+        WALRUS = "오도베누스 로스마루스. 게일 종입니다.",
+        WALRUS_CAMP = 
+        {
+            GENERIC = "임시 거처입니다.",
+            EMPTY = "지금은 다 떠났습니다.",
+        },
+        LITTLE_WALRUS = "어린 것은 그리 폭력적이지 않습니다.",
+        WALRUS_TUSK = "조각세공품을 만드는 데 유용해 보입니다.",
+
+        WARG = "저 개속 동물은 절대로 길들일 수 없습니다.",
+
+        SPIDERDEN = "신기합니다. 이 거미는 공동의 서식처를 가지고 있습니다.",
+        RABBITHOLE = 
+        {
+            GENERIC = "작은 동물 굴로 보입니다.",
+            SPRING = "지금 작은 동물이 안에 있다면 좋겠습니다!",
+        },
+        FIREFLIES = 
+        {
+            GENERIC = "접근하면 흩어집니다.",
+            HELD = "생체발광 속성이 유용할지도 모릅니다.",
+        },
+        CORN = "제아 메이스, 뛰어난 주요 식품입니다.",
+        CORN_COOKED = "튀긴 옥수수입니다!",
+        CORN_SEEDS = "이 옥수수 종자는 여러 기후에서 성장할 것입니다.",
+        CROW = 
+        {
+            GENERIC = "코르부스 브라키린초스.",
+            HELD = "완벽한 견본입니다.",
+        },
+        GHOST = "분명히 날조입니다. 신빙성 없습니다.",
+        CUTGRASS = "자른 풀입니다.",
+        CUTREEDS = "자른 골풀입니다.",
+        PEROGIES = "아주 맛없는 만두입니다.",
+        PETALS = "기쁘게 포푸리를 만들었습니다.",
+        PETALS_EVIL = "흥미롭지만 꽃잎 자체가 생각하는 것으로 보입니다.",        
+        FLOWER = "들꽃입니다. 이 종에 대해서는 잘 알지 못합니다.",
+        FLOWER_EVIL = "이렇게 강렬한 오라를 가진 꽃은 자주 보기 어렵습니다.",
+        FLOWER_WITHERED = "이 꽃은 성장의 필수 요소가 없습니다.",
+        GOLDENAXE = "금속 중에서 가장 연하지만 절단 효과가 어떨지 보겠습니다.",
+        GOLDENPICKAXE = "금속 중에서 가장 연하지만 채굴 효과가 어떨지 보겠습니다.",
+        GOLDENPITCHFORK = "금속 중에서 가장 연하지만 경작 성능은 어떨지 보겠습니다.",
+        GOLDENSHOVEL = "금속 중에서 가장 연하지만 굴착 효과가 어떨지 보겠습니다.",
+        GOLDNUGGET = "작은 금 덩어리. 원자 번호 79.",
+        POOP = "소량의 동물 배설물. 무척 향기롭습니다.",
+        PUMPKIN = "쿠쿠르비타 페포.",
+        PUMPKINCOOKIE = "맛있는 호박 비스킷입니다!",
+        PUMPKIN_COOKED = "요리한 쿠쿠르비타 페포. 끈적끈적하고 맛있습니다.",
+        PUMPKIN_LANTERN = "쿠쿠르비타 페포를 조각하는 것은 좋은 소일거리입니다.",
+        PUMPKIN_SEEDS = "페피타스.",
+        TORCH = "즉석 휴대 광원입니다.",
+        TRAP = "막대와 바구니로 구성된 단순한 덫입니다.",
+        BEEFALOWOOL = "고기물소에서 나온 긴 털입니다.",
+        BUGNET = "곤충학자의 도구입니다.",
+        PANFLUTE = "화성으로 공명하는 속이 빈 갈대입니다.",
+        ONEMANBAND = "기존의 파이프와 작은 북에 비하여 큰 개선입니다.",
+        BIRDTRAP = "간단한 새덫입니다.",
+        GEARS = "다양한 이와 바퀴입니다.",
+        STATUEHARP = "단순한 조각상입니다.",
+        STATUEMAXWELL = "저를 여기에 가둔 남자의 모습입니다.",
+        SKELETON = "아주 잘 보존된 인체 해골입니다.",
+        SKELETON_PLAYER = "대단한 표본입니다!",
+
+
+        RED_MUSHROOM =
+        {
+            GENERIC = "버섯입니다.",
+            PICKED = "다시 과일을 맺으려면 수분이 필요합니다.",
+            INGROUND = "이 시간에는 수면 상태입니다.",
+        },
+        GREEN_MUSHROOM = 
+        {
+            GENERIC = "버섯입니다.",
+            PICKED = "다시 과일을 맺으려면 수분이 필요합니다.",
+            INGROUND = "이 시간에는 수면 상태입니다.",
+        },
+
+        BLUE_MUSHROOM = 
+        {
+            GENERIC = "버섯입니다.",
+            PICKED = "다시 과일을 맺으려면 수분이 필요합니다.",
+            INGROUND = "이 시간에는 수면 상태입니다.",
+        },
+
+        RED_CAP = "빨간색은 대체로 독성을 표시합니다.",
+        GREEN_CAP = "먹을 수 있지만, 제 정신을 유지하기 어려울 것 같습니다.",
+        BLUE_CAP = "약용 효과가 있는 것 같습니다.",
+        RED_CAP_COOKED = "화학 작용으로 변형되었습니다.",
+        GREEN_CAP_COOKED = "화학 작용으로 변형되었습니다.",
+        BLUE_CAP_COOKED = "화학 작용으로 변형되었습니다.",
+
+        MOOSE_NESTING_GROUND = "언젠가는 교미 습성을 연구해보겠습니다.",
+
+        BEE = 
+        {
+            GENERIC = "아피스 멜리페라. 꽤 큽니다!",
+            HELD = "기쁘지 않은 모양입니다.",
+        },
+        KILLERBEE = 
+        {
+            GENERIC = "특히 독성이 강합니다.",
+            HELD = "기쁘지 않은 모양입니다.",
+        },
+		MOSQUITO = 
+		{
+			GENERIC = "목마른 암컷 하에마고구스 포식자입니다.",
+			HELD = "안전하게 보관했습니다.",
+		},
+        MOSQUITOSACK = "쿨리키다에의 위로서 혈액이 가득 들어있습니다.",
+        BEEHAT = "적합한 보호 장구는 필수적입니다!",
+        BEEHIVE = "벌의 천연 거주 공간입니다.",
+        BEEMINE = "안토필라가 가득 찬 위험한 기뢰입니다.",
+        BEEMINE_MAXWELL = "쿨리키다이가 가득 찬 위험한 기뢰입니다.",
+        HONEY = "달게 만든 식물 화밀입니다.",
+        HONEYCOMB = "꿀을 보관하는 밀랍입니다.",
+        HONEYHAM = "이 햄에 넣은 감미료는 꿀 뿐입니다.",
+        HONEYNUGGETS = "한 입 크기로 달게 만든 고기입니다!",
+        HORN = "탁월한 표본입니다! 고기물소가 거의 들릴 정도입니다.",
+        STINGER = "뾰족한 끝으로 집중됩니다.",
+
+        SPIDER = 
+        {
+            GENERIC = "커다란 육식 거미 종입니다.",
+            SLEEPING = "야생인 것으로 보입니다.",
+            DEAD = "사망했습니다.",
+        },
+
+        SPIDER_WARRIOR = 
+        {
+            GENERIC = "전사 계급으로 보입니다.",
+            SLEEPING = "응당한 휴식으로 보입니다.",
+            DEAD = "여왕을 위해 목숨을 바쳤습니다.",
+        },
+        BISHOP_CHARGE_HIT = "으악!",
+        BERRYBUSH = 
+        {
+            GENERIC = "아르디시아 크레나타 떨기입니다.",
+            PICKED = "베리가 느리게 다시 자라고 있습니다.",
+            BARREN = "중재가 필요합니다.",
+            WITHERED = "아르디시아 크레나타는 극심한 열에 잘 견디지 못합니다.",
+        },
+
+		DUG_GRASS = "성장하려면 토양이 필요합니다.",
+		DUG_SAPLING = "성장하려면 토양이 필요합니다.",
+		DUG_BERRYBUSH = "성장하려면 토양이 필요합니다.",
+        DUG_MARSH_BUSH = "성장하려면 토양이 필요합니다.",
+
+        SAPLING = 
+        {
+            GENERIC = "작은 나무입니다.",
+            WITHERED = "열 때문에 죽었습니다.",
+            PICKED = "이상합니다. 그것으로 죽을 줄 알았습니다.",
+            BURNING = "연소!",
+        },
+        GRASS = 
+        {
+            GENERIC = "그라미노이드 줄기 묶음.",
+            PICKED = "다시 성장할 것이라고 생각합니다.",
+            BARREN = "똥이 필요해.",
+            WITHERED = "이 뜨거운 기후에서 생존할 수 없습니다.",
+            BURNING = "연소!",
+        },
+        REEDS = 
+        {
+            GENERIC = "준카케아이 그라미노이드 집단입니다.",
+            PICKED = "다시 성장할 것입니다.",
+            BURNING = "연소!",
+        },
+        RELIC = 
+        {
+            GENERIC = "An artifact of this extinct civilization.",
+            BROKEN = "Just broken stone.",
+        },
+        RUBBLE = "접착제가 필요할 것 같습니다!",
+
+        PLANT_NORMAL = 
+        {
+            GENERIC = "풀... 입니다. 특정한 종류입니다.",
+            READY = "이제 성숙해 보입니다.",
+            GROWING = "아직 수확 준비가 되지 않았습니다.",
+            WITHERED = "열을 견디지 못했습니다.",
+        },
+
+        MOUND = 
+        {
+            GENERIC ="매장한 무더기입니다.",
+            DUG = "욕보인 매장한 무더기입니다.",
+        },
+        PIGMAN =
+        {
+            GENERIC = "약간 지능적인 이족 보행 돼지입니다.",
+            FOLLOWER = "저와 유대 관계를 맺은 것으로 보입니다.",
+            DEAD = "더 많이 있으니까 걱정하지 않아도 됩니다.",
+			WEREPIG = "인간형 돼지입니다.",
+            GUARD = "수호자로 보입니다.",
+        },
+
+        SPIDEREGGSACK = "휴대성이 뛰어난 거미 알 주머니입니다.",
+		TELEPORTATO_RING = "합금과 배선의 원환체입니다.",
+		TELEPORTATO_BOX = "전기 축전 조절 장치.",
+		TELEPORTATO_CRANK = "기본적인 기계 원칙이 적용됩니다.",
+		TELEPORTATO_POTATO = "완전 유기물이거나 완전 무기물도 아닙니다!",
+		TELEPORTATO_BASE =
+        {
+			GENERIC = "이 룬스톤은 고유한 기하학적 속성을 지니고 있습니다!",
+			PARTIAL = "장치가 일부 완성되었습니다.",
+			LOCKED = "이 장치는 활성화해야 합니다.",
+			ACTIVE = "이 기계는 세계 사이를 여행하는 데 사용할 수 있습니다.",
+		},
+        BEARDHAIR = "인간의 안면 체모입니다.",
+        BUTTERFLY = 
+        {
+            GENERIC = "다채로운 인시목입니다.",
+            HELD = "포착했습니다.",
+        },
+        BUTTERFLYWINGS = "포착한 나비의 날개입니다.",
+        BUTTERFLYMUFFIN = "나비로 뛰어난 머핀을 구울 수 있다는 것을 누가 알았겠습니까?",
+        BUTTER = "인시목 지질?",
+
+        ACORN = 
+        {
+            GENERIC = "낙엽성 종자가 과피 안에 들어있습니다.",
+            PLANTED = "낙엽성 종자가 성숙해지고 있습니다.",
+        },
+        EVERGREEN = 
+        {
+            GENERIC = "일반 침엽수입니다.",
+            CHOPPED = "수확했습니다.",
+            BURNING = "나무가 불타고 있습니다.",
+            BURNT = "탄화된 나무입니다.",
+        },
+
+        EVERGREEN_SPARSE = 
+        {
+            GENERIC = "이 속은 생식 능력이 없습니다.",
+            CHOPPED = "수확했습니다.",
+            BURNING = "나무가 불타고 있습니다.",
+            BURNT = "탄화된 나무입니다.",
+        },
+
+        FIREPIT = 
+        {
+            GENERIC = "불 구덩이입니다.",
+            OUT = "다시 불붙일 수 있습니다.",
+            EMBERS = "불이 거의 스스로 꺼졌습니다.",
+            LOW = "불에 연료가 더 필요합니다.",
+            NORMAL = "무척이나 평범한 불입니다.",
+            HIGH = "불이 무척 빠르게 타고 있습니다.",
+        },
+		HEATROCK = 
+        {
+            FROZEN = "온도가 영하입니다.",
+			COLD = "약간 차갑습니다.",
+			GENERIC = "온도가 아주 뜨거운 수준이 아닙니다.",
+            WARM = "열 에너지를 보존합니다. 조금만.",
+            HOT = "하지만 열과 빛이 날 정도로 따뜻합니다!",
+		},
+
+        CAMPFIRE = 
+        {
+            GENERIC = "모닥불입니다.",
+            OUT = "다시 불붙일 수 있습니다.",
+            EMBERS = "불이 거의 스스로 꺼졌습니다.",
+            LOW = "불에 연료가 더 필요합니다.",
+            NORMAL = "무척이나 평범한 불입니다.",
+            HIGH = "불이 무척 빠르게 타고 있습니다.",
+        },
+
+        FEATHERHAT = "최고 수준의 의류는 아니지만 새를 속일 수 있을 것입니다.",
+        FEATHER_CROW = "코르부스의 깃털입니다.",
+        FEATHER_ROBIN = "카디날리스 깃털입니다.",
+        FEATHER_ROBIN_WINTER = "카디날리스의 깃털 같지만 흰색입니다.",
+
+        TRINKET_1 = "멋진 병 세척 도구입니다! 안타깝지만 다 녹았습니다.",
+        TRINKET_10 = "아직 필요 없습니다. 저도 이가 아직 남았습니다.",
+        TRINKET_11 = "그 심술궂은 로봇의 크기 비례 복제입니다.",
+        TRINKET_12 = "근육형 누수 검출기로서 흡습성 물체 근처에 있었습니다.",
+        TRINKET_2 = "가짜 막형 악기입니다.",
+        TRINKET_3 = "아, 저는 음유 시인을 좋아합니다.",
+        TRINKET_4 = "무척이나 신기한 것입니다.",
+        TRINKET_5 = "이 우주선은 열 제어 기능이 불충분합니다.",
+        TRINKET_6 = "엉킨 철사인데, 쓸 데가 없습니다.",
+        TRINKET_7 = "책은 제 손으로 읽겠습니다.",
+        TRINKET_8 = "제 욕조가 생각납니다. 오랫동안 물에 몸을 담그고 싶습니다.",
+        TRINKET_9 = "흠, 지금은 떨어진 단추가 없습니다.",
+		SKULLCHEST = "두개와 유사한 용기입니다.",
+		PANDORASCHEST = "다른 인공물을 포함할지도 모르는 인공물입니다.",
+
+        BEDROLL_STRAW = "저는 땅에서 자지 않습니다.",
+        CHARCOAL = "거의 탄소와 재입니다.",
+        MARSH_PLANT = "늪에서 사는 뿌리줄기입니다.",
+        MARSH_BUSH = 
+        {
+            GENERIC = "나무딸기 모음입니다.",
+            PICKED = "나무딸기를 따는 것은 위험합니다.",
+            BURNING = "연소!",
+        },
+        PAPYRUS = "셀룰로오스와 리그닌의 얇은 막.",
+        MARSH_TREE = 
+        {
+            GENERIC = "만갈 리조포라입니다.",
+            CHOPPED = "쓰러뜨렸습니다.",
+            BURNING = "연소!",
+            BURNT = "탄소화한 맹그로브입니다."
+        },
+        FROG = 
+        {
+            SLEEPING = "자고 있습니다.",
+            DEAD = "어떤 국가에서 별미라고 합니다.",
+            GENERIC = "양서류 사지 동물입니다.",
+        },
+        FROGGLEBUNWICH = "일반적으로 샌드위치로 내놓는 음식은 아니지만 먹어보겠습니다!",
+        FROGLEGS = "아직도 조금 꿈틀거립니다.",
+        FROGLEGS_COOKED = "치킨 윙 같습니다.",
+        FRUITMEDLEY = "훌륭한 모듬 과일입니다!",
+		WORMHOLE = 
+        {
+			GENERIC = "메가드릴라케아 오라두오스가 자고 있습니다.",
+			OPEN = "신속한 소화를 위해 동심원의 이빨을 가지고 있습니다.",
+		},
+        WORMHOLE_LIMITED = "It will only last a few trips.",
+
+        CHESSJUNK1 = "시계 장치 쓰레기입니다.",
+        CHESSJUNK2 = "시계 장치 쓰레기입니다.",
+        CHESSJUNK3 = "시계 장치 쓰레기입니다.",
+
+        CHESTER = "운동성 보관용 궤짝입니다.",
+        CHESTER_EYEBONE = 
+        {
+            GENERIC = "오쿨루스 미스테리움입니다.",
+            WAITING = "오쿨루스가 비활성 상태입니다.",
+        },
+
+        TALLBIRD = "마그너스 아비스, 성장체입니다.",
+        SMALLBIRD = 
+        {
+            GENERIC = "꽤 작은 조류 표본입니다.",
+            HUNGRY = "영양이 필요합니다.",
+            STARVING = "영양이 없다면 분명히 죽을 것입니다.",
+        },
+
+        TEENBIRD = 
+        {
+            GENERIC = "젊은 새입니다.",
+            HUNGRY = "목소리를 작게 낮추십시오.",
+            STARVING = "아주 못된 새입니다!",
+        },
+
+        TALLBIRDEGG = "부화할 필요가 있습니다.",
+        TALLBIRDEGG_COOKED = "콜레스테롤이 많습니다.",
+        TALLBIRDEGG_CRACKED = 
+        {
+            GENERIC = "개발이 진행 중입니다.",
+            HOT = "극도의 기온에 노출되면 사망할 수 있습니다.",
+            COLD = "냉기로 죽을 수 있습니다!",
+            SHORT = "이제 곧 노고의 결실을 거둘 것입니다.",
+            LONG = "바라보고 있는 냄비는 절대 끓지 않습니다.",
+        },
+        TALLBIRDNEST =
+        {
+            GENERIC = "굉장한 마그누스 아비스 알입니다!",
+            PICKED = "둥지가 비어있습니다. 곧 주기가 다시 시작될 것입니다.",
+        },
+
+        ANIMAL_TRACK = "동물 활동의 흔적입니다. 이동 중입니다.",
+        DIRTPILE = "비위생적입니다!",
+        KOALEFANT_SUMMER = "코알레판타 프로보스키데아.",
+        KOALEFANT_WINTER = "두꺼운 겨울용 털가죽을 쓴 코알레판타 프로보스키데아입니다.",
+        TRUNK_SUMMER = "실용적인 코입니다.",
+		TRUNK_WINTER = "가죽과 털의 표본입니다.",
+        TRUNK_COOKED = "먹음직스럽지 않지만 단백질 함량이 높습니다.",
+        TRUNKVEST_SUMMER = "내구성이 뛰어난 외투입니다.",
+		TRUNKVEST_WINTER = "기후에 대한 충분한 보호입니다.",
+        
+        DEADLYFEAST = "먹기에 좋은 상태인지 모르겠습니다.",
+        DEERCLOPS = "로라시아상목!",
+        REDGEM = "따뜻합니다.",
+        BLUEGEM = "차갑습니다.",
+        PURPLEGEM = "이상한 오라가 나옵니다.",
+        HOUND = "저 개는 길들여지지 않았습니다.",
+        FIREHOUND = "저 개는 다른 것들보다 더 위험해 보입니다.",
+        ICEHOUND = "이상하고 차가운 짐승입니다.",
+        HOUNDBONE = "카니스 루푸스의 내골격인데, 잘 아는 분야는 아닙니다.",
+        PENGUIN = "품격이 있는 새입니다.",
+        DEERCLOPS_EYEBALL = "업적을 달성한 희미한 느낌이 듭니다.",
+        DEPLETED_GRASS =
+        {
+            GENERIC = "그라미노이드 덤불입니다.",
+        },
+        BASALT = "고밀도 재료입니다!",
+        HOUNDMOUND = "골질이 불길합니다.",
+        MERM = "물고기 양족 동물!",
+        MINERHAT = "뛰어난 독서등으로 사용할 수 있습니다.",
+        KNIGHT = "자동마입니다.",
+        BISHOP = "시계 장치 성직자입니다.",
+        ROOK = "시계 장치 성입니다.",
+        JAMMYPRESERVES = "이 잼을 바를 토스트가 있으면 좋겠습니다. 어쩔 수 없겠습니다.",
+        KABOBS = "막대에 달린 고기. 다음에는 어떤 것을 만들 것 같습니까?",
+
+        INSANITYROCK = 
+        {
+            INACTIVE = "작은 피라미드로 보입니다.",
+            ACTIVE = "착시가 일어나고 있습니다.",
+        },
+        SANITYROCK = 
+        {
+            INACTIVE = "흙에 잠긴 것으로 보입니다.",
+            ACTIVE = "신기합니다. 나중에 이 표식을 연구해야겠습니다.",
+        },
+        PIGTORCH = "어떻게 연료를 추가할지 궁금합니다.",
+        PIGSKIN = "조금 지능적인 이족 보행 돼지의 둔부입니다.",
+        WASPHIVE = "거리를 벌려야겠습니다.",
+        MARBLEPILLAR = "로마 장인의 손길이 느껴집니다. 대단합니다.",
+        MARBLETREE = "굉장합니다. 완전히 대리석으로 만들어진 나무입니다.",
+        MARBLE = "조각상 같은 바위입니다.",
+        SUNKBOAT = "난파선인데 쓸모없어 보입니다.",
+        SWEATERVEST = "품위있으면서 박식하다라는 느낌의 조끼입니다.",
+        TAFFY = "사탕류를 안 좋아하지만... 이것저것 따질 때가 아닙니다.",
+        SMALLMEAT_DRIED = "소듐 함량이 높습니다.",
+        MEAT_DRIED = "짜지만 만족스럽습니다.",
+        MONSTERMEAT_DRIED = "짜지만 만족스럽습니다.",
+        BACKPACK = "여기에 많은 책을 넣을 수 있습니다.",
+        BACONEGGS = "배에 통증이 있습니다. 청색 알과 베이컨!",
+        BANDAGE = "약용 붕대.",
+		HEALINGSALVE = "자연의 소독제입니다.",
+		CANE = "저는 보행 지팡이 수집가가 아닙니다.",
+		LIGHTNING_ROD = 
+		{
+		    GENERIC = "고도의 전도성을 띕니다!",
+		    CHARGED = "방사상 전기 에너지!",
+		},
+ 
+        ARMORRUINS = "단단한 툴레사이트 방어구입니다.",
+        BISHOP_NIGHTMARE = "흥분될 정도로 복잡한 기술입니다.",
+        GREENAMULET = "저것이 무엇인지 모르겠습니다.",
+        GREENGEM = "크로뮴 불순물이 보석을 녹색으로 착색했습니다.",
+        KNIGHT_NIGHTMARE = "악몽 연료가 가득한 주위가 프로그래밍을 손상시킨 것 같습니다.",
+        MINOTAUR = "물러서라, 짐승!",
+        MULTITOOL_AXE_PICKAXE = "활용도가 뛰어납니다. 도끼와 곡괭이로 사용할 수 있습니다.",
+        NIGHTMARELIGHT = "고대인은 악몽 연료로 모든 것을 동력화한 것 같습니다.",
+        NIGHTMARE_TIMEPIECE =
+        {
+            WARN = "낮은 수준이지만 외부 원형질을 포함하는 증기가 늘어나고 있습니다.",  --Before nightmare
+            WAXING = "외부 원형질 잔류물 수준이 증가하고 있습니다.", --Nightmare Phase first 33%
+            STEADY = "외부 원형질 잔류물이 최고 수준입니다.", --Nightmare 33% - 66%
+            WANING = "외부 원형질 잔류물 수준이 높지만 감소하고 있습니다.", --Nightmare 66% +
+            DAWN = "외부 원형질 잔류물 증기가 매우 적습니다.", --After nightmare
+            CALM = "외부 원형질 잔류물이 최저 수준입니다.",  --calm phase
+            NOMAGIC = "외부 원형질 증기가 여기에 있는 것 같지 않습니다.", --Place with no nightmare cycle.
+        },
+        ORANGESTAFF = "짧은 거리에서 유용합니다.",   --Teleports player.
+        ROOK_NIGHTMARE = "언제든지 부서질 것 같습니다.",
+        RELIC = "A relic of an ancient civilization long dead the the ravages of time.",  --Fixed relic
+        RUINS_RUBBLE = "약간 노력하면 작동시킬 수 있습니다.",   --Broken relic
+        RUINS_BAT = "이것으로 타격할 수 있습니다.",
+        RUINSHAT = "제 취향에 비해서는 저속하지만 유용해 보입니다.",
+        SPIDER_DROPPER = "이 거미류 종은 동굴 천장 생태계에 적응했습니다.", --White spider that comes from the roof
+        THULECITE = "외부 원형질 잔류물을 배출하는 흥미로운 지오사이트입니다.",
+        YELLOWAMULET = "이 호부는 530 중간대의 나노미터 파장으로 빛나고 있습니다.",    --Emits light, player walks faster.
+        ACCOMPLISHMENT_SHRINE = "작동하고 싶은 충동이 자꾸만 일어납니다.",        
+
+        WHALE_WHITE = "백경! 이것에 대한 책이 있다면 좋겠습니다!",
+
+        AERODYNAMICHAT = "선사시대의 모습이 약간 느껴집니다.",
+        ANTIVENOM = "내용물이 유용한 해독제가 될 수 있습니다.",
+        ARMORCACTUS = "선인장 사이에 숨을 수 있습니다.",
+        ARMORLIMESTONE = "대양 바닥의 뼈 부스러기들로 만든 갑옷입니다.",
+        ARMOROBSIDIAN = "날카로우니 조심해야 합니다!",
+        ARMORSEASHELL = "독을 가지고 물어도 병드는 것을 방지합니다.",
+        ARMOR_LIFEJACKET = "안전 제일!",
+        ARMOR_SNAKESKIN = "동물의 영감을 받은 우비입니다.",
+        ARMOR_WINDBREAKER = "핑크는 선호하는 색이 아닙니다.",
+        ARMOUREDBOAT = "강한 선박입니다.",
+        BALLPHIN = "귀여운 고래류입니다!",
+        BAMBOO = "장력이 높은 유용한 재료입니다.",
+        BAMBOOTREE =
+        {
+            BURNT = "불쌍합니다.",
+            CHOPPED = "얼마나 빨리 재생하는지 보겠습니까?",
+            GENERIC = "대나무는 세계에서 가장 빨리 자라는 식물 중 하나입니다.",
+        },
+        BERMUDATRIANGLE = "초자연적 현상은 믿지 않습니다.",
+        BIGFISHINGROD = "수중 먹이 사슬에 진입할 수 있습니다.",
+        BIOLUMINESCENCE = "경이롭고 아름다운 해양생물학.",
+        BLOWDART_FLUP = "이 형태의 플럽을 선호합니다.",
+        BLOWDART_POISON = "적의 내부부터 파괴하는 것입니다.",
+        BLUBBER = "부유하는 지질 물질입니다.",
+        BLUBBERSUIT = "살이 많이 붙어서 어머니가 좋아하실 겁니다!",
+        BOAT = "이 선박은 어디에서 왔습니까?",
+        BOATCANNON = "해양 전투용으로 추측됩니다.",
+        BOATREPAIRKIT = "수상 이동 장치의 수명을 연장합니다.",
+        BOAT_LANTERN = "대양의 밤을 밝히는 빛입니다.",
+        BOAT_TORCH = "야간에 해양 생물을 관찰하는 데 좋습니다.",
+        BOOK_METEOR = "거대한 비!",
+        BOTTLELANTERN = "휴대용 빛입니다.",
+        BRAINJELLYHAT = "총명한 아이디어가 미래를 만듭니다!",
+        BUOY = "바다에서 안심시켜 줍니다, 그렇지 않습니까?",
+        BURIEDTREASURE = "호기심에 이끌렸습니다!",
+        BUSH_VINE =
+        {
+            BURNT = "탄 물질입니다.",
+            CHOPPED = "시간이 지나면 줄기가 자랄 것입니다.",
+            GENERIC = "덩굴 식물입니다.",
+        },
+        CAPTAINHAT = "진짜 여자 선장의 모자입니다.",
+        CARGOBOAT = "책을 몇 권 더 실을 수 있습니다.",
+        CHIMINEA = "기민한 기후학자가 발명했습니다!",
+        CLOTHSAIL = "유기적인 이동 형태입니다.",
+        COCONADE =
+        {
+            BURNING = "폭발 카운트다운!",
+            GENERIC = "폭발은 약간 성가십니다.",
+        },
+        COCONUT = 
+        {
+            GENERIC = "아레카케아에의 종자. 거대합니다!",
+            PLANTED = "아레카케아에가 뿌리를 내렸습니다.",
+        },
+        COCONUT_COOKED = "코코넛의 과육, 매우 맛있습니다.",
+        COCONUT_HALVED = "방어를 뚫었습니다.",
+        COFFEE = "저는 커피와 책을 좋아합니다.",
+        COFFEEBEANS = "카페인 함량이 높습니다.",
+        COFFEEBEANS_COOKED = "구운 냄새가 향긋합니다.",
+        COFFEEBOT = "커피를 만듭니다.",
+        COFFEEBUSH =
+        {
+            BARREN = "현재는 개화하고 있지 않습니다.",
+            GENERIC = "커피속입니다.",
+            PICKED = "콩을 잠시 동안 수확할 수 없습니다.",
+            WITHERED = "커피 식물을 재배하기엔 너무 뜨겁습니다.",
+        },
+        COMPASS =
+        {
+            E = "동.",
+            GENERIC = "좌표를 알 수 없습니다.",
+            N = "북.",
+            NE = "북동.",
+            NW = "북서.",
+            S = "남.",
+            SE = "남동.",
+            SW = "남서.",
+            W = "서.",
+        },
+        CORAL = "탄산칼슘 덩어리입니다.",
+        CORALREEF = "해양 무척추동물은 귀엽습니다!",
+        CORAL_BRAIN = "독창적입니다!",
+        CORAL_BRAIN_ROCK = "산호 뇌입니다.",
+        CRAB =
+        {
+            GENERIC = "게토끼는 비정상적으로 두꺼운 외골격을 가지고 있습니다.",
+            HIDDEN = "집중하십시오, 게토끼 씨!",
+        },
+        CRABHOLE = "땅을 파는 동물이 안에 있습니다.",
+        CRATE = "안에 무엇이 들어있습니까?",
+        CUTLASS = "조심하십시오, 날카롭습니다.",
+        DEAD_SWORDFISH = "이제 덜 사나워 보입니다.",
+        DEPLETED_BAMBOOTREE = "미래의 재성장은 불가능하지 않습니다.",
+        DEPLETED_BUSH_VINE = "미래의 성장이 불가능한 것은 아닙니다.",
+        DEPLETED_GRASS_WATER = "미래의 재성장은 불가능하지 않습니다.",
+        DEVTOOL = "자연 법칙에 어긋납니다!",
+        DEVTOOL_NODEV = "넌센스입니다.",
+        DIVININGRODBASE =
+        {
+            GENERIC = "어떤 기능을 가지고 있습니까?",
+            READY = "열쇠 구멍으로 보입니다...",
+            UNLOCKED = "의지가 있다면 가능합니다!",
+        },
+        DOUBLE_UMBRELLAHAT = "두 계층의 비 막이!",
+        DOYDOY = "재미있는 종입니다!",
+        DOYDOYBABY = "재생이 시작되었습니다.",
+        DOYDOYEGG = "자연은 언제나 방법을 찾아냅니다.",
+        DOYDOYEGG_COOKED = "녹색 알과 햄.",
+        DOYDOYEGG_CRACKED = "궁금합니다...",
+        DOYDOYFEATHER = "깃털입니다.",
+        DOYDOYNEST = "유인 장치입니까?",
+        DRAGOON = "이 도마뱀은 고온을 견딜 수 있습니다.",
+        DRAGOONDEN = "정리하면 좋겠습니다.",
+        DRAGOONEGG = "어떻게 화성암 안에서 살 수 있습니까?",
+        DRAGOONHEART = "해부 완료입니다.",
+        DRAGOONSPIT = "조심하십시오!",
+        DUBLOON = "아하! 해적의 통화입니다.",
+        DUG_BAMBOOTREE = "성장하려면 토양이 필요합니다.",
+        DUG_BUSH_VINE = "성장하려면 토양이 필요합니다.",
+        DUG_COFFEEBUSH = "성장하려면 토양이 필요합니다.",
+        DUG_ELEPHANTCACTUS = "성장하려면 토양이 필요합니다.",
+        EARRING = "제 스타일이 아닙니다.",
+        ELEPHANTCACTUS = "화산 꼭대기의 물기 많은 생물! 몹시 흥미롭습니다.",
+        ELEPHANTCACTUS_ACTIVE = "방어하고 있습니다!",
+		ELEPHANTCACTUS_STUMP = "식물이 동면 중입니다.",
+        FABRIC = "매우 섬세한 직조입니다.",
+        FEATHERSAIL = "깃털 돛입니다.",
+        FISHINHOLE = "수중 변온동물을 감시할 수 있습니다!",
+        FISH_RAW = "냄새나는 생선입니다.",
+        FISH_RAW_SMALL = "어류의 고기입니다.",
+        FISH_RAW_SMALL_COOKED = "영양이 많습니다.",
+        FLAMEGEYSER = "굉장한 광경입니다!",
+        FLOTSAM = "이를 어떻게 회수합니까?",
+        FLUP = "혀를 내밀지 마십시오!",
+        FRESHFRUITCREPES = "손가락이 끈적해질 것입니다.",
+        FROG_POISON = "조심해야 합니다!",
+        GASHAT = "탄산칼슘 주변 공기 입자를 정화합니다.",
+        GOLDENMACHETE = "금속 중에서 가장 연하지만 절단 성능은 어떨지 확인해야 알겠습니다.",
+        GRASS_WATER = "물 아래의 뿌리가 보입니다.",
+        HAIL_ICE = "어떤 폭풍은 멜론 크기의 우박을 만들어냅니다.",
+        HOME = "어떤 서식지가 있습니까?",
+        HOUNDFIRE = "고온! 조심해야 합니다!",
+        ICEMAKER =
+        {
+            HIGH = "얼음이 많이 나옵니다.",
+            LOW = "페이스가 줄어들고 있습니다.",
+            NORMAL = "출력은 정기적입니다.",
+            OUT = "에너지가 없습니다.",
+            VERYLOW = "거의 비었습니다.",
+        },
+        INVENTORYGRAVE = "과거의 탐험가의 주머니입니다.",
+        INVENTORYMOUND = "과거의 탐험가의 주머니입니다.",
+        IRONWIND = "제대로 항해할 수 있겠습니다!",
+        JELLYFISH = "해파리는 가장 오래된 다기관 동물입니다.",
+        JELLYFISH_COOKED = "통제된 화학 반응을 통해 식용으로 만들었습니다.",
+        JELLYFISH_DEAD = "밟지 않는 것이 좋습니다.",
+        JELLYFISH_PLANTED = "폴립입니다.",
+        JELLYJERKY = "창의적인 보존물입니다.",
+        JUNGLETREE =
+        {
+            BURNING = "타고 있습니다.",
+            BURNT = "탄화된 나무입니다.",
+            CHOPPED = "수확했습니다.",
+            GENERIC = "이 종은 매우 높이 자랍니다!",
+        },
+        JUNGLETREESEED =
+        {
+            GENERIC = "물론 씨입니다.",
+            PLANTED = "성장 중입니다.",
+        },
+        KNIGHTBOAT = "신기한 기계 장치 바다 말입니다!",
+        KRAKEN = "문어류는 다양한 방어 전략을 가지고 있습니다.",
+        KRAKENCHEST = "안에 무엇이 있는지 추측할 수 있습니다. 하지만 추측일 뿐입니다.",
+        KRAKEN_TENTACLE = "근육질의 유체를 조심해야 합니다!",
+        LAVAPOOL = "저는 웅덩이에 들어가지 않을 것입니다.",
+        LIMESTONE = "건축에서 일반적으로 사용합니다.",
+        LIMPETROCK =
+        {
+            GENERIC = "이 돌은 다양한 복족류의 집입니다.",
+            PICKED = "달팽이를 이미 수확했습니다.",
+        },
+        LIMPETS = "삿갓조개과입니다.",
+		LIMPETS_COOKED = "요리한 삿갓조개과.",
+        TREEGUARD = "신기합니다... 이족 보행을 하고 있습니다!",
+        LIVINGJUNGLETREE = "최고의 마법 식물학입니다.",
+        LOBSTER = "무척 흥미로운 무척추동물입니다.",
+        LOBSTERHOLE = "절지동물의 집입니다.",
+        LOBSTER_DEAD = "지금 먹어야겠습니다.",
+        LOBSTER_DEAD_COOKED = "식사 준비되었습니다!",
+        LOG =
+        {
+            BURNING = "나무 줄기의 축 방향 단면입니다. 타고 있습니다.",
+            GENERIC = "나무 줄기의 축 방향 단면입니다.",
+        },
+        LOGRAFT = "조잡한 해상 운송 수단입니다.",
+        LUGGAGECHEST = "누군가가 수하물을 분실했습니다.",
+        MACHETE = "수풀을 자르는 데 사용합니다.",
+        MAGIC_SEAL = "어린 물개가 선물을 남겼습니다!",
+        MAGMAROCK = "아래에 무엇이 있는 것이지?",
+        MAGMAROCK_FULL = "아래에 무엇이 있는 것이지?",
+        MAGMAROCK_GOLD = "이 형상은 금맥을 포함합니다.",
+        MAGMAROCK_GOLD_FULL = "이 형상은 금맥을 포함합니다.",
+        MANDRAKE_COOKED = "만드라고라 오피키나룸, 발견이라는 명목 하에 요리하였습니다.",
+        MANGROVETREE = "이 나무 종은 소금에 내성이 있습니다!",
+        MANGROVETREE_BURNT = "지금은 다시 자라지 않을 것입니다.",
+        MARSH_PLANT_TROPICAL = "녹색 식물입니다.",
+        MERMFISHER = "정교한 수확 기술을 가졌습니다.",
+        MERMHOUSE_FISHER = "수륙 양용 집입니다.",
+        MESSAGEBOTTLE = "궁금해졌습니다!",
+        MESSAGEBOTTLEEMPTY = "안에 원고가 있으면 좋겠습니다.",
+        MONKEYBALL = "영장류 미끼입니다.",
+        MONSTERTARTARE = "괴물 고기를 고급스럽게 양념을 묻혔습니다.",
+        MOSQUITOSACK_YELLOW = "치료 재료입니다.",
+        MOSQUITO_POISON = "곤충이 끔찍한 독을 찌릅니다.",
+        MUSSEL = "홍합. 영양분이 많습니다.",
+        MUSSELBOUILLABAISE = "조개 수프입니다.",
+        MUSSEL_COOKED = "껍질은 안 먹는 것입니다.",
+        MUSSEL_FARM =
+        {
+            GENERIC = "여기에서 도달할 수 없습니다.",
+            STICKPLANTED = "이제 기다립니다! 자연이 해결해줄 것입니다.",
+        },
+        MUSSEL_STICK = "연체동물 수확입니다.",
+        MYSTERYMEAT = "토해진 바다 생명체! 저는 사양하겠습니다.",
+        NEEDLESPEAR = "선인장처럼 생각합니다.",
+        OBSIDIAN = "용암의 파생물입니다.",
+        OBSIDIANAXE = "이 도구는 자체적인 열을 발생합니다.",
+        OBSIDIANCOCONADE = "매우 강력한 폭발성 발사체입니다.",
+        OBSIDIANFIREPIT =
+        {
+            GENERIC = "따뜻하게 지내는 데 사용합니다.",
+            OUT = "다시 불붙일 수 있습니다.",
+            EMBERS = "불이 거의 스스로 꺼졌습니다.",
+            LOW = "불에 연료가 더 필요합니다.",
+            NORMAL = "독서등으로서 완벽합니다.",
+            HIGH = "불이 무척 빠르게 타고 있습니다.",
+        },
+        OBSIDIANMACHETE = "이 도구는 자체적인 열을 발생합니다.",
+        OBSIDIANSPEARGUN = "이 도구는 자체적인 열을 발생합니다.",
+        OBSIDIAN_WORKBENCH = "화산 공작에 대하여 배울 수 있는 곳입니다.",
+        OCTOPUSCHEST = "산호초의 기부에 있었던 것으로 보입니다.",
+        OCTOPUSKING = "이 생태계의 중심입니다.",
+        OX = "젖으면 약간 냄새가 납니다.",
+        OXHAT = "단단한 머리 보호구입니다.",
+        OX_FLUTE = "음악이 대자연을 부릅니다.",
+        OX_HORN = "육중한 포유류가 뿔을 떨어뜨렸습니다.",
+        PACKIM = "날개 달린 도제 씨, 안녕하십니까!",
+        PACKIM_FISHBONE = "무슨 물고기입니까?",
+        PALMLEAF = "손바닥에서 떨어졌습니다.",
+        PALMLEAF_HUT = "뜨거운 태양으로부터 시원하게 피할 수 있습니다.",
+        PALMTREE =
+		{
+		    CHOPPED = "수확했습니다.",
+            BURNING = "나무가 불타고 있습니다.",
+            BURNT = "탄화된 나무입니다.",
+			GENERIC = "좋은 책 한 권 갖고 그 아래에 앉고 싶습니다.",
+		},
+        PARROT = "다채로운 열대 조류입니다.",
+        PARROT_PIRATE = "독해 능력이 있는 것 같습니까?",
+        PEACOCK = "성숙 공작입니다.",
+        PEG_LEG = "무기로 사용하는 데 이상한 물체입니다!",
+        PIGTENT = "불결합니다.",
+        PIKE_SKULL = "남은 해골입니다.",
+        PIRATEGHOST = "초자연적 해적 활동입니다.",
+        PIRATEHAT = "로마에 있을 때는!",
+        PIRATEPACK = "보물을 운반하는 케이스입니다.",
+        PIRATIHATITATOR =
+        {
+            BURNT = "이제는 유용하지 않습니다.",
+            GENERIC = "해양 과학이 적용된 연구 기계입니다.",
+        },
+        POISONHOLE = "거리를 두십시오. 공중 독소가 정기적으로 방출되고 있습니다.",
+        PORTAL_SHIPWRECKED = "마법이 느껴집니다.",
+        PRIMEAPE = "매우 교활한 작은 유인원입니다.",
+        PRIMEAPEBARREL = "원숭이 주거지입니다.",
+        RAFT = "대나무로 만들었습니다.",
+		RAWLING = "말이 많습니다.",
+        REDBARREL = "촉발되면 폭발적 화학 반응이 발생합니다.",
+        RELIC =
+        {
+            BROKEN = "고대 유물입니다.",
+            GENERIC = "그림자가 파괴했습니다.",
+        },
+        ROCK_CHARCOAL = "탄소가 풍부한 자원입니다.",
+        ROCK_OBSIDIAN = "정말 단단합니다.",
+        ROWBOAT = "해양 조사 선박입니다.",
+        SAIL = "풍력 이동용입니다.",
+        SAIL_STICK = "폭풍 속에서 제 마음대로 사용할 수 있습니다.",
+        SAND = "언제나 책에 모래가 끼는 것 같습니다.",
+        SANDBAG = "흡수성이 뛰어납니다.",
+        SANDBAGSMALL = "흡수성이 뛰어납니다.",
+        SANDBAGSMALL_ITEM = "홍수 방지 전술입니다.",
+        SANDBAG_ITEM = "홍수 방지 전술입니다.",
+        SANDHILL = "바람이 대표적인 사구 모양을 만들었습니다.",
+        SAND_CASTLE =
+        {
+            GENERIC = "전통 유럽 성의 모형입니다.",
+            SAND = "전통 유럽 성의 모형입니다.",
+        },
+        SEAGULL = "갈매기과 청소 동물입니다.",
+        SEAGULL_WATER = "갈매기과 청소 동물입니다.",
+        SEASACK = "제 책과 비품을 시원하게 유지해줍니다!",
+        SEASHELL = "과거에는 해양 무척추동물의 외피였습니다.",
+        SEASHELL_BEACHED = "조류가 가져온 것!",
+        SEATRAP = "동물의 소굴 근처에 배치합니다.",
+        SEAWEED = "저는 조류학자가 아닙니다.",
+        SEAWEED_COOKED = "단백질을 매우 많이 포함합니다.",
+        SEAWEED_DRIED = "조류를 말렸습니다.",
+        SEAWEED_PLANTED = "해양 조류입니다.",
+        SHADOWSKITTISH_WATER = "초자연적인 형상이 나타나고 있습니다...",
+        SHARKITTEN = "새끼는 무해한 것으로 보입니다. 귀엽기도 합니다.",
+        SHARKITTENSPAWNER =
+        {
+            GENERIC = "공간이 얼마나 깊이 들어가는지 궁금합니다.",
+            INACTIVE = "동면기입니다.",
+        },
+        SHARK_FIN = "등지느러미가 수중 안정 장치 역할을 합니다.",
+        SHARK_GILLS = "지느러미가 물에서 산소를 분리합니다. 생물역학의 경이!",
+        SHARK_TEETHHAT = "이의 관입니다.",
+        SHARX = "목소리를 낮추십시오!",
+        SHIPWRECKED_ENTRANCE = "세계를 초월하는 특별한 배입니다.",
+        SHIPWRECKED_EXIT = "이 열대 패러다이스에서 떠날 시간이 왔습니까?",
+        SLOTMACHINE = "결과는 확률적입니다.",
+        SNAKE = "물러서십시오, 뱀!",
+        SNAKEDEN =
+        {
+            BURNT = "탄 물질입니다.",
+            CHOPPED = "시간이 지나면 줄기가 자랄 것입니다.",
+            GENERIC = "덩굴 식물입니다.",
+        },
+        SNAKEOIL = "이 물질의 유용성은 불확실합니다.",
+        SNAKESKIN = "뱀의 가죽입니다.",
+        SNAKESKINHAT = "방수 모자입니다!",
+        SNAKESKINSAIL = "뱀 가죽으로 만든 돛입니다.",
+        SNAKE_FIRE = "뜨거워!",
+        SNAKE_POISON = "독을 조심해야 합니다.",
+        SOLOFISH = "캐니스 피슈스.",
+        SPEARGUN = "원거리 장치의 장점을 익히 알고 있습니다.",
+        SPEARGUN_POISON = "원거리 독성 장치의 장점을 익히 알고 있습니다.",
+        SPEAR_LAUNCHER = "원거리 장치의 장점을 익히 알고 있습니다.",
+        SPEAR_OBSIDIAN = "이 도구는 자체적인 열을 발생합니다.",
+        SPEAR_POISON = "이제 독으로 공격할 수 있습니다!",
+        SPOILED_FISH = "물고기 물질이 생물 위해 요소가 되고 있습니다.",
+        STUNGRAY = "날개 폭이 대단합니다!",
+        SUNKEN_BOAT =
+        {
+            ABANDONED = "배가 문제가 있었던 것으로 보입니다.",
+            GENERIC = "할 말이 있습니까, 조류상?",
+        },
+        SUNKEN_BOAT_BURNT = "검게 탄 물질만 남았습니다.",
+        SUNKEN_BOAT_TRINKET_1 = "측정 장치입니다.",
+        SUNKEN_BOAT_TRINKET_2 = "귀여운 작은 배입니다.",
+        SUNKEN_BOAT_TRINKET_3 = "잘 사용한 것 같습니다.",
+        SUNKEN_BOAT_TRINKET_4 = "유용한 기계 장치로 보입니다.",
+        SUNKEN_BOAT_TRINKET_5 = "오래된 장화입니다. 다른 짝은 어디에 있습니까?",
+        SUPERTELESCOPE = "새로운 수평선을 발견합니다!",
+        SWEETPOTATOSOUFFLE = "꽤 맛있습니다.",
+        SWEET_POTATO = "쿠마라입니다!",
+        SWEET_POTATO_COOKED = "그릴한 쿠마라입니다.",
+        SWEET_POTATO_PLANTED = "뿌리채소입니다.",
+        SWEET_POTATO_SEEDS = "뿌리채소를 더 재배할 수 있습니다.",
+        SWIMMINGHORROR = "이런, 환각이 보이고 있습니다...",
+        SWORDFISH = "부리를 흥분시키지 마십시오!",
+        TELEPORTATO_SW_BASE = "복원을 위한 초대입니다!",
+        TELEPORTATO_SW_BOX = "어디에 부착됩니까?",
+        TELEPORTATO_SW_CRANK = "스트로 레버입니다.",
+        TELEPORTATO_SW_POTATO = "복잡한 하드웨어입니다...",
+        TELEPORTATO_SW_RING = "볼트를 위한 유기적인 너트?",
+        TELESCOPE = "가시 광선을 수집하여 시력을 증가해줍니다.",
+        THATCHPACK = "여기에 책을 몇 권 보관할 수 있습니다.",
+        TIDALPOOL = "조수 웅덩이는 신기한 미세 생태계입니다!",
+        TIDAL_PLANT = "다세포 진핵생물입니다.",
+        TIGEREYE = "거대한 동물의 시각 렌즈입니다.",
+        TIGERSHARK = "셀라치 펠리다에. 아주 대형입니다!",
+        TOUCAN = "밝은 색의 부리가 특징적인 종입니다.",
+        TRAWLNET = "바다에서 찌꺼기를 수집하는 용입니다.",
+        TRAWLNETDROPPED =
+        {
+            GENERIC = "내용물을 꺼냅니다!",
+            SOON = "잠기고 있습니다.",
+            SOONISH = "조금 있으면 어망이 잠깁니다",
+        },
+        TREASURECHEST_TRAP = "의심스러워 보입니다...",
+        TREECLUMP = "식물상이 무성하게 난 곳입니다.",
+        TRIDENT = "고대 전설의 도구입니다.",
+        TRINKET_13 = "소다 음료수 캔입니다.",
+        TRINKET_14 = "부족의 유물입니다.",
+        TRINKET_15 = "멜로디를 들려줍니다.",
+        TRINKET_16 = "이 비문은 어떤 의미입니까?",
+        TRINKET_17 = "오래된 장화입니다. 다른 짝은 어디에 있습니까?",
+        TRINKET_18 = "표시가 있습니다.",
+        TRINKET_19 = "궁금합니다...",
+        TRINKET_20 = "측정 장치입니다.",
+        TRINKET_21 = "귀여운 작은 배입니다.",
+        TRINKET_22 = "잘 사용한 것 같습니다.",
+        TRINKET_23 = "밟지 마십시오!",
+        TROPICAL_FISH = "알록달록하다.",
+        TUNACAN = "보존된 물고기입니다.",
+        TURBINE_BLADES = "이것으로 무엇을 할 수 있을지 연구해 봐야 알겠습니다!",
+        TURF_SANDY = "지면. 밟는 것입니다.",
+        TURF_ASH = "지면. 밟는 것입니다.",
+        TURF_BEACH = "지면. 밟는 것입니다.",
+        TURF_DESERTDIRT = "지면. 밟는 것입니다.",
+        TURF_FUNGUS_GREEN = "지면. 밟는 것입니다.",
+        TURF_FUNGUS_RED = "지면. 밟는 것입니다.",
+        TURF_JUNGLE = "지면. 밟는 것입니다.",
+        TURF_MAGMAFIELD = "지면. 밟는 것입니다.",
+        TURF_MEADOW = "지면. 밟는 것입니다.",
+        TURF_SNAKESKINFLOOR = "지면. 밟는 것입니다.",
+        TURF_SWAMP = "지면. 밟는 것입니다.",
+        TURF_TIDALMARSH = "지면. 밟는 것입니다.",
+        TURF_VOLCANO = "지면. 밟는 것입니다.",
+        TWISTER = "단호한 에너지의 소용돌이입니다!",
+        TWISTER_SEAL = "어떻게 이런 큰 일을 다 저질렀습니까?",
+        VENOMGLAND = "독 방지를 위한 유용한 물질입니다.",
+        VINE = "평범한 정글 덩굴입니다.",
+        VOLCANO = "최고의 구조지질학적 활동입니다!",
+        VOLCANOSTAFF = "화산의 압력 때문에 떨리는 것이 느껴집니다.",
+        VOLCANO_ALTAR =
+        {
+            GENERIC = "화산의 핵과 연결되어있습니다.",
+            OPEN = "어떤 제물을 제공해야 합니까?",
+        },
+        VOLCANO_ALTAR_BROKEN = "영구하게 정지한 것 같습니다.",
+        VOLCANO_ALTAR_TOWER = "거대한 구조물입니다.",
+        VOLCANO_EXIT = "더 편안한 온도로 돌아옵니다!",
+        VOLCANO_SHRUB = "이 나무는 열 때문에 탔습니다.",
+        WALLYINTRO_DEBRIS = "선박의 잔해입니다.",
+        WALL_LIMESTONE = "보호해줍니다.",
+        WALL_LIMESTONE_ITEM = "석회암을 만들 수 있습니다.",
+        WATERMELON_SEEDS = "심어서 수박을 재배합니다.",
+        WATERYGRAVE = "바다에서 얼마나 오래 표류했는지 알겠습니까?",
+        WHALE_BLUE = "해양 포유류를 사랑합니다!",
+        WHALE_BUBBLES = "커다란 것이 아래에 있습니다.",
+        WHALE_CARCASS_BLUE = "분해가 시작됩니다.",
+        WHALE_CARCASS_WHITE = "아직도 안에 작살이 꽂혀 있습니다.",
+        WHALE_TRACK = "고래류의 길을 따라 가야 합니다!",
+        WILBUR_CROWN = "이것이 누구의 것입니까?",
+        WILBUR_UNLOCK = "원숭이 씨, 도움이 필요합니까?",
+        WILDBORE = "냉혹해 보이는 멧돼지과 돼지입니다.",
+        WILDBOREHEAD = "여기에서 누가 해부한 것 같습니다.",
+        WILDBOREHOUSE = "멧돼지 집입니다.",
+        WIND_CONCH = "대기압을 움직이는 노래입니다.",
+        WOODLEGSBOAT = "해적선입니다.",
+        WOODLEGSHAT = "저보다는 해적에게 어울리겠습니다.",
+        WOODLEGSSAIL = "해적 돛입니다.",
+        WOODLEGS_CAGE = "어떻게 그 안에 들어갔습니까?",
+        WOODLEGS_KEY1 = "해골 열쇠입니다...",
+        WOODLEGS_KEY2 = "이것이 어떤 잠금 장치를 엽니까?",
+        WOODLEGS_KEY3 = "대단한 호기심을 유발하는 열쇠입니다.",
+        WORMHOLE_LIMITED = "그 동물과 관여하고 싶지 않습니다.",
+        WRECK = "이 배는 폭풍에 갇혔습니다. 이제 바다의 소유가 되어버린 배.",
+		CALIFORNIAROLL = "맛있는 마키즈시입니다.",
+    },
+    EAT_FOOD = 
+    {
+        TALLBIRDEGG_CRACKED = "알 덴테.",
+    },
+}

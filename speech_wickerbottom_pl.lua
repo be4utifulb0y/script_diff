@@ -1,0 +1,1800 @@
+return 
+{
+    ACTIONFAIL =
+    {
+        SHAVE =
+        {
+            GENERIC = "Naprawdę wolałabym nie.",
+            NOBITS = "Jest już golutki.",
+            AWAKEBEEFALO = "Myślę, że może mieć coś przeciwko.",
+        },
+        READ =
+        {
+            GENERIC = "Czekają inne zadania.",
+            NOBIRDS = "Ptaki nie przepadają za taką pogodą.",
+        },
+        REPAIRBOAT =
+        {
+            GENERIC = "Jest jak nowa!",
+        },
+        STORE =
+        {
+            GENERIC = "Pełno po brzegi.",
+            NOTALLOWED = "Nonsens.",
+        },
+        COOK =
+        {
+            GENERIC = "Może później. Nie wszystkie starsze panie lubią gotować.",
+            TOOFAR = "Za daleko.",
+        },
+        WRITE =
+        {
+            GENERIC = "Wolę pisać po własnych książkach.",
+        },
+        RUMMAGE =
+        {   
+            GENERIC = "Mam teraz na głowie inne rzeczy.",  
+        },
+        CHANGEIN =
+        {
+            GENERIC = "Już i ta wyglądam całkiem elegancko.",
+            BURNING = "Koniec przebieranek. Szafa poszła z dymem.",
+        },
+        GIVE =
+        {
+            DEAD = "Niepotrzebne marnotrawstwo.",
+            SLEEPING = "Chyba śpi.",
+            BUSY = "Spróbuję jeszcze raz, jak skończy.",
+        },
+        TEACH =
+        {
+            KNOWN = "Błagam, to wiedza na poziomie podstawówki.",
+            CANTLEARN = "Wiedza, której nie jestem w stanie przyswoić. Intrygujące!",
+        },
+    },
+    ACTIONFAIL_GENERIC = "Wygląda na to, że nie mogę tego zrobić.",
+    DESCRIBE_TOODARK = "Nic nie widzę.",
+    DESCRIBE_SMOLDERING = "Zaraz zajmie się ogniem od tego gorąca.",
+    DESCRIBE_GENERIC = "Dziwna sytuacja. Nie wiem, co to takiego.",
+    ANNOUNCE_MAGIC_FAIL = "Nie jest dostrojone do tego świata.",
+    BATTLECRY =
+    {
+        GENERIC = "Do walki!",
+        PIG = "Śmierdzący wieprzu!",
+        PREY = "Po prostu się poddaj.",
+        SPIDER = "Zachowuj się!",
+        SPIDER_WARRIOR = "Szanuj starszych!",
+    },
+
+    COMBAT_QUIT =
+    {
+        GENERIC = "Not to koniec.",
+        PIG = "O rany.",
+        PREY = "Muszę ponownie ocenić sytuację.",
+        SPIDER = "Muszę o tym poczytać!",
+        SPIDER_WARRIOR = "Wracaj do tablicy!",
+    },
+    ANNOUNCE_EAT =
+    {
+        GENERIC = "Mniam!",
+        SPOILED = "Zaczęło się już rozkładać.", 
+        STALE = "To nie było najświeższe.",
+        PAINFUL = "Nie powinnam była tego jeść.",
+        INVALID = "Tego nie można zjeść.",
+        YUCKY = "Nie zalecam tego jeść.",
+    },
+    ANNOUNCE_NOWARDROBEONFIRE = "Ja widać, wszystko płonie.",
+    ANNOUNCE_WORMS = "Coś paskudnego podnosi łeb.",
+    ANNOUNCE_CANFIX = "\nMyślę, że mogłabym to naprawić.",
+    ANNOUNCE_ADVENTUREFAIL = "Musimy się uczyć na własnych błędach.",
+    ANNOUNCE_COLD = "Temperatura otoczenia jest niska.",
+    ANNOUNCE_HOT = "Temperatura otoczenia jest niezwykle wysoka.",
+    ANNOUNCE_HUNGRY = "Bibliotekarka jest głodna.",
+    ANNOUNCE_TORCH_OUT = "Potrzebuję nowego źródła światła.",
+    ANNOUNCE_FAN_OUT = "Delikatne urządzenie, niestety uległo zniszczeniu.",
+    ANNOUNCE_COMPASS_OUT = "Mój kompas się zdemagnetyzował.",
+    ANNOUNCE_DUSK = "Wkrótce nadejdzie noc.",
+
+    ANNOUNCE_CHARLIE_ATTACK = "AUĆ! Kto to?!",
+    ANNOUNCE_CHARLIE = "Co to za dźwięk?",
+    ANNOUNCE_BOOMERANG = "Źle oceniłam czas powrotu.",
+    ANNOUNCE_HOUNDS = "Coś się zbliża.",
+
+    ANNOUNCE_NOSLEEPONFIRE = "Nawet gdybym mogła zasnąć, ta temperatura jest co najmniej niebezpieczna.",
+    ANNOUNCE_NODANGERSIESTA = "Nie mogę się położyć w takiej sytuacji!",
+    ANNOUNCE_NONIGHTSIESTA = "Nie zasnę, gdzie bym się nie położyła.",
+    ANNOUNCE_NONIGHTSIESTA_CAVE = "Nie mogłabym się odprężyć w tych jaskiniach.",
+    ANNOUNCE_NOHUNGERSIESTA = "Głód nie pozwala mi się odprężyć.",
+    ANNOUNCE_SHELTER = "Ach, wyczekane schronienie.",
+    ANNOUNCE_BURNT = "Pierwszy stopień. Co najmniej!",
+    ANNOUNCE_TOOL_SLIP = "Ups!",
+    ANNOUNCE_DAMP = "Poziom wody zaczyna wzrastać.",
+    ANNOUNCE_WET = "Ciekawe jaki jest mój punkt nasycenia...",
+    ANNOUNCE_WETTER = "Mokro, mokro, mokro!",
+    ANNOUNCE_SOAKED = "Za dużo wody.",
+    ANNOUNCE_OTHER_WORLD_PLANT = "To środowisko nie posiada podstawowych cech umożliwiających wzrost roślin.",
+
+    ANNOUNCE_PECKED = "Uspokój się natychmiast!",
+
+    ANNOUNCE_ENTER_LIGHT = "Jest dość jasno, żeby wszystko zobaczyć.",
+    ANNOUNCE_ENTER_DARK = "Ciemność mnie ogarnęła.",
+    ANNOUNCE_INV_FULL = "Więcej już nie uniosę.",
+    ANNOUNCE_CRAFTING_FAIL = "Teraz nie mogę tego zrobić.",
+
+    ANNOUNCE_WORMHOLE = "Wyczerpująca lekcja biologii!",
+
+    ANNOUNCE_HUNT_LOST_TRAIL = "Ślad został całkowicie zatarty.",
+    ANNOUNCE_HUNT_LOST_TRAIL_SPRING = "Wilgoć zatarła ślad.",
+    ANNOUNCE_HUNT_BEAST_NEARBY = "Ten ślad sugeruje, że coś tu niedawno było.",
+    ANNOUNCE_ACCOMPLISHMENT= "Jeszcze się nie udało!",
+    ANNOUNCE_ACCOMPLISHMENT_DONE = "Włożę to do teczki z napisem „ukończone”.",
+
+    ANNOUNCE_TRAP_WENT_OFF = "Ajć!",
+    ANNOUNCE_QUAKE = "Wstrząs! Co najmniej siedem stopniu w skali Richtera.",
+    ANNOUNCE_NODANGERSLEEP = "Ledwie mogę zasnąć, nawet gdy nic mi nie grozi!",
+    ANNOUNCE_UNIMPLEMENTED = "Chyba nie jest jeszcze gotowe.",
+    ANNOUNCE_NOHUNGERSLEEP = "Ledwie mogę zasnąć, nawet gdy nie jestem głodna!",
+    ANNOUNCE_FREEDOM = "Wolność! Znajdę teraz jakąś dobrą książkę i zaszyję się w ciepłym kącie.",
+    ANNOUNCE_RESEARCH = "Żadna wiedza nie powinna się marnować, nawet najbardziej trywialna.",
+    ANNOUNCE_NO_TRAP = "Bułka z masłem!",
+    ANNOUNCE_HIGHRESEARCH = "Hmm, niezwykle interesujące!",
+    ANNOUNCE_THORNS = "Przeklęte kolce!",
+    ANNOUNCE_NODAYSLEEP_CAVE = "W tych jaskiniach wcale mi się łatwiej nie zaśnie.",
+    ANNOUNCE_BEES = "Kłujące paskudy!",
+    ANNOUNCE_KNOCKEDOUT = "Uf... Jest to jakiś sposób na odpoczynek.",
+    ANNOUNCE_LOWRESEARCH = "Niezbyt dobre źródło, ale znalazłam kila przydatnych fragmentów.",
+    ANNOUNCE_DEERCLOPS = "Brzmiało jak coś dużego.",
+    ANNOUNCE_MOSQUITOS = "Przeklęci krwiopijcy!",
+    ANNOUNCE_NODAYSLEEP = "Ledwo mogę zasnąć w nocy, a co dopiero w dzień.", 
+    ANNOUNCE_INSUFFICIENTFERTILIZER = "Jeszcze troszkę „substancji odżywczej”, jak na moje oko.",
+    ANNOUNCE_LIGHTNING_DAMAGE_AVOIDED = "Niebiosom niech będą dzięki za te izolujące ubrania!",
+    ANNOUNCE_TOOMANYBIRDS = "Nie zadziała przy takiej ilości ptaków.",
+    ANNOUNCE_WAYTOOMANYBIRDS = "Niebo jest już wolne od ptaków.",
+    ANNOUNCE_MESSAGEBOTTLE =
+    {
+        "Nieczytelne bazgroły.",
+    },
+    ANNOUNCE_BOAT_DAMAGED = "Moja łódź niszczeje!",
+    ANNOUNCE_BOAT_SINKING = "Wszelkie przesłanki wskazują, że łódź tonie.",
+    ANNOUNCE_BOAT_SINKING_IMMINENT = "Powinnam się chyba skierować w stronę wybrzeża!",
+    ANNOUNCE_CRAB_ESCAPE = "Sprytny skorupiak!",
+    ANNOUNCE_MAPWRAP_LOSECONTROL = "Losy tej wyprawy są niepewne.",
+    ANNOUNCE_MAPWRAP_RETURN = "Potwierdziło się! Świat faktycznie jest okrągły!",
+    ANNOUNCE_MAPWRAP_WARN = "Mieszkańcy mgły otoczeni są całunem tajemnicy.",
+    ANNOUNCE_MORETREASURE = "O raju, za dużo tych skarbów!",
+    ANNOUNCE_OTHER_WORLD_TREASURE = "Te współrzędne nie są z tego świata.",
+    ANNOUNCE_SHARX = "Houndus selachii! Trudny do oswojenia, ale fascynujący.",
+    ANNOUNCE_TRAWL_FULL = "Sieć więcej już nie zmieści.",
+    ANNOUNCE_TREASURE = "Uwaga! Złoto.",
+    ANNOUNCE_VOLCANO_ERUPT = "Ziemska powłoka zaczyna pękać!",
+    ANNOUNCE_WAVE_BOOST = "Silne drgania oceaniczne!",
+    ANNOUNCE_WHALE_HUNT_BEAST_NEARBY = "Cóż się kryje za tymi bąbelkami?",
+    ANNOUNCE_WHALE_HUNT_LOST_TRAIL = "Hmm... Olbrzym odpłynął głębiny.",
+    ANNOUNCE_WHALE_HUNT_LOST_TRAIL_SPRING = "Straciłam trop na tych niespokojnych wodach!",
+
+    DESCRIBE=
+    {
+        BABYOX = "Ależ z ciebie uroczy, mały dżentelmen!",
+        GLOMMER = "Przedziwny przedstawiciel gromady owadów.",
+        GLOMMERFLOWER = 
+        {
+            GENERIC = "Aż kapie z niego jakaś maź.",
+            DEAD = "Zrobił się szary, ale ciągle coś z niego kapie.",
+        },
+        GLOMMERWINGS = "Skrzydła tego przedziwnego stworzenia.",
+        GLOMMERFUEL = "Wygląda dość wybuchowo.",
+        BELL = "Cisza! Jesteśmy w bibliotece!",
+        STATUEGLOMMER = 
+        {   
+            GENERIC = "Spetryfikowany?",
+            EMPTY = "Nie, to tylko posąg.",
+        },
+        WEBBERSKULL = "Przedziwna czaszka.",
+        
+        MOONROCKNUGGET = "Fragment księżycowej powłoki? Interesujące.",
+        ROCK_MOON = "Fragment księżycowej powłoki? Interesujące.",
+        MOLE =
+        {
+            HELD = "Moja kieszeń chyba nie jest jego naturalnym środowiskiem.",
+            UNDERGROUND = "Coś tu chodzi pod ziemią.",
+            ABOVEGROUND = "Ach, toż to Talpidae!",
+        },
+        MOLEHILL = "System tuneli musi być naprawdę rozległy!",
+        MOLEHAT = "Ach, cóż za okazja, by zobaczyć świat... eee... nosem innego stworzenia.",
+        NIGHTSTICK = "Ciekawe, czy ma na imię Wenus.",
+        RABBITHOUSE=
+        {
+            GENERIC = "Niestety, jest tylko tak pomalowana.",
+            BURNT = "Nawet nie paliła się jak marchewka.",
+        },
+        TURF_DECIDUOUS = "Ziemia. Do chodzenia.",
+        TURF_SANDY = "The ground. You step on it.",
+        TURF_BADLANDS = "Ziemia. Do chodzenia.",
+        BEARGER = "Jakiś podrząd psokształtnych.",
+        BEARGERVEST = "Cokolwiek to było, jego skóra jest idealna do noszenia.",
+        ICEPACK = "Doskonale izolowana.",
+        BEARGER_FUR = "O rany! Cudowna grubość.",
+        FURTUFT = "Futro bordźwiedzia.",
+        BIGFOOT = "Prehistoria na moich oczach!",
+        BONESHARD = "Szczątki minionego życia.",
+        BUZZARD = "Z kondorowatych, oczywiście.",
+        CACTUS = 
+        {
+            GENERIC = "Młody kaktus beczkowaty.",
+            PICKED = "Ciężkie czasy, ciężka praca.",
+        },
+        CACTUS_MEAT_COOKED = "Cudownie pozbawiony kolców.",
+        CACTUS_MEAT = "Nie jestem pewne, czy właściwie go przyrządziłam.",
+        CACTUS_FLOWER = "Przypomina mi książkę Burrows. To jedna z moich ulubionych.",
+        COLDFIRE =
+        {
+            GENERIC = "Osobliwe, magiczne ognisko.",
+            OUT = "Mogę je rozpalić ponownie.",
+            EMBERS = "Ogień prawie zgasł.",
+            LOW = "Przydałoby się trochę więcej paliwa.",
+            NORMAL = "Idealnie niezwykły ogień.",
+            HIGH = "Rozmiar tego ognia budzi niepokój.",
+        },
+        CATCOON = "Jakiś gatunek dzikiego kota. Wspaniały okaz.",
+        CATCOONDEN = 
+        {
+            GENERIC = "Idealnie pusty, w sam raz na norę.",
+            EMPTY = "Wygląda na zużytą.",
+        },
+        CATCOONHAT = "Dobrze, że nie jestem uczulona.",
+        COONTAIL = "Giętki, puchaty wyrostek.",
+        LAVA_POND_ROCK = "Niedawno wystygła magmowa skała. Niebezpieczna rzecz.",
+        LAVA_POND_ROCK2 = "Niedawno wystygła magmowa skała. Niebezpieczna rzecz.",
+        LAVA_POND_ROCK3 = "Niedawno wystygła magmowa skała. Niebezpieczna rzecz.",
+        LAVA_POND_ROCK4 = "Niedawno wystygła magmowa skała. Niebezpieczna rzecz.",
+        LAVA_POND_ROCK5 = "Niedawno wystygła magmowa skała. Niebezpieczna rzecz.",
+        LAVA_POND_ROCK6 = "Niedawno wystygła magmowa skała. Niebezpieczna rzecz.",
+        LAVA_POND_ROCK7 = "Niedawno wystygła magmowa skała. Niebezpieczna rzecz.",
+        COOKPOT =
+        {
+            COOKING_LONG = "Jeszcze trochę sobie poczekam.",
+            COOKING_SHORT = "Prawie gotowe!",
+            DONE = "Czas na kolację!",
+            EMPTY = "Wygląda dość nieciekawie, jak niczego nie gotuje.",
+            BURNT = "Kompletnie zrujnowany.",
+        },
+        EYEBRELLAHAT =  "Najwyraźniej rogówka cechuje się doskonałą wodoodpornością.",
+        ARMORDRAGONFLY = "Pancerz pirotechnika!",
+        DRAGON_SCALES = "Łuski z owada? To coś nowego!",
+        DRAGONFLYCHEST = "Łuski! Łuski górą!",
+        DECIDUOUSTREE = 
+        {
+            GENERIC = "Należy do rzędu bukowców. W pełni rozwinięty rodzi owoce.",
+            CHOPPED = "Ścięty w słusznej sprawie.",
+            BURNING = "Drzewo płonie.",
+            BURNT = "Zwęglone drzewo.",
+            POISON = "Takiego drzewa jeszcze nie widziałam!",
+        },
+        ACORN_COOKED = "Wygotowałam z nich całą truciznę.",
+        BIRCHNUTDRAKE = "Uciekaj!",
+        FARMPLOT =
+        {
+            GENERIC = "Małe uprawne poletko.",
+            GROWING = "Rośliny pozyskują z ziemi minerały.",
+            NEEDSFERTILIZER = "Jałowe z powodu braku składników odżywczych.",
+            BURNT = "Nic tu już nie urośnie.",
+        },
+        COLDFIREPIT =
+        {
+            GENERIC = "Ognisko, ale zimne.",
+            OUT = "Mogę je rozpalić ponownie.",
+            EMBERS = "Ogień prawie zgasł.",
+            LOW = "Przydałoby się trochę paliwa, cokolwiek się nadaje.",
+            NORMAL = "Ogień. Tylko trochę inny.",
+            HIGH = "Rozmiar tego ognia budzi niepokój.",
+        },
+        FIRESUPPRESSOR = 
+        {   
+            ON = "Do boju!",
+            OFF = "Nie ma tu nic ciekawego.",
+            LOWFUEL = "Zaczyna brakować paliwa.",
+        },
+        ICEHAT = "Idealna kostka lodu.",
+        LIGHTNINGGOAT = 
+        {
+            GENERIC = "Capra aegagrus. Odmiana przystosowana do życia w środowiskach o wysokim napięciu.",
+            CHARGED = "Aż się pali do życia.",
+        },
+        LIGHTNINGGOATHORN = "Czuję, że w tym rogu kryje się jakaś tajemnica.",
+        GOATMILK = "Może nie być tym, na co wygląda.",
+        MEATRACK =
+        {
+            GENERIC = "Mięso można suszyć.",
+            DRYING = "Suszenie to powolny proces.",
+            DRYINGINRAIN = "Deszcz tymczasowo zatrzymał proces suszenia.",
+            DONE = "Proces zakończony.",
+            BURNT = "Wydaje się trochę niestabilna.",
+        },
+        MERMHEAD = 
+        {
+            GENERIC = "Nie jestem pewna, czy gnije, czy fermentuje.",
+            BURNT = "Teraz ani nie gnije, ani nie fermentuje.",
+        },
+        MERMHOUSE = 
+        {
+            GENERIC = "Bardzo zniszczona.",
+            BURNT = "Dokumentnie zniszczona.",
+        },
+        FLOWERSALAD = "Bogate źródło składników odżywczych.",
+        ICECREAM = "Nie ma to jak książka i pucharek lodów.",
+        WATERMELONICLE = "Arbuz całkowicie zamknięty w lodowej powłoce.",
+        TRAILMIX = "Mmm, kwintesencja zdrowia!",
+        HOTCHILI = "Po chili mam niestrawność.",
+        GUACAMOLE = "Zawsze robiłam guacamole na dzień nauki w bibliotece.",
+        MOOSE = "Nadaję ci nazwę Alces canadensis.",
+        MOOSEEGG = "Ależ cudowny widok!",
+        BANANAPOP = "Odświeżające, nieprawdaż?",
+        BISQUE = "Właśnie tego było mi trzeba.",
+        CEVICHE = "Przydałoby się trochę sosu.",
+        SEAFOODGUMBO = "Już zaczynam mieć zgagę!",
+        SURFNTURF = "Posiłek idealny.",
+        SHARKFINSOUP = "Musiałam zaburzyć delikatny ekosystem, żeby to przyrządzić.",
+        LOBSTERDINNER = "Z lekką nutką dekadencji.",
+        LOBSTERBISQUE = "Prawie zapomniałam, jak smakuje prawdziwe jedzenie.",
+        JELLYOPOP = "Pozwala mi się przenieść do czasów młodości. Tak jakby.",
+        MOSSLING = "Mniej więcej tego się spodziewałam.",
+        FEATHERFAN = "Może wywołać ładny podmuch!",
+        TROPICALFAN = "Jego właściwości aerodynamiczne są wręcz niezwykłe.",
+        MINIFAN = "Jego właściwości aerodynamiczne są wręcz niezwykłe.",
+        GOOSE_FEATHER = "W sam raz na poduszkę. Szkoda, że nie mogę zasnąć.",
+        STAFF_TORNADO = "Nie widziałam jeszcze, żeby używać zjawisk pogodowych jako broni.",
+        PIGHEAD = 
+        {   
+            GENERIC = "Głowa na kiju.",
+            BURNT = "Zwęglone resztki głowy na kiju.",
+        },
+        PIGHOUSE =
+        {
+            GENERIC = "Te świniaki mają bardzo prymitywny gust architektoniczny.",
+            FULL = "Ciekawe, co tam robią.",
+            LIGHTSOUT = "To nie było grzeczne.",
+            BURNT = "Zapomnieli o ochronie przeciwpożarowej.",
+        },
+        FERTILIZER = "Wiadro zwierzęcych odchodów. Ohyda.",
+        RAINOMETER = 
+        {   
+            GENERIC = "Najpierw zmierz, potem działaj.",
+            BURNT = "Nic nie odczytam z tych popiołów.",
+        },
+        RAINCOAT = "Całkowicie nieprzemakalny.",
+        RAINHAT = "Nie cierpię mieć mokrej głowy.",
+        RESEARCHLAB = 
+        {   
+            GENERIC = "Stacja badawcza. Mogę się tu nauczyć nowych rzeczy.",
+            BURNT = "Ze zwęglonej stacji badawczej niczego się nie nauczę.",
+        },
+        RESEARCHLAB2 = 
+        {
+            GENERIC = "Stacja badawcza. Mogę się tu nauczyć nowych rzeczy.",
+            BURNT = "Ze zwęglonej stacji badawczej niczego się nie nauczę.",
+        },
+        RESEARCHLAB3 = 
+        {
+            GENERIC = "Może trochę przesadziłam.",
+            BURNT = "To omen.",
+        },
+        RESEARCHLAB4 = 
+        {
+            GENERIC = "Kapelusz zdaje się gromadzić energię z powietrza.",
+            BURNT = "Teraz już niczego nie zgromadzi.",
+        },
+        RESURRECTIONSTATUE = 
+        {
+            GENERIC = "Pogaństwo!",
+            BURNT = "Został zgładzony.",
+        },
+        ROCK_ICE = 
+        {
+            GENERIC = "Mała bryłka niezwykle gęstego lodu.",
+            MELTED = "Stopniał, prawdopodobnie przez mały rozmiar.",
+        },
+        ROCK_ICE_MELTED = "Stopniał, prawdopodobnie przez mały rozmiar.",
+        ICE = "Woda w stanie stałym.",
+        REFLECTIVEVEST = "Powinna mnie trochę ochłodzić.",
+        HAWAIIANSHIRT = "Wolę tweed.",
+        TENT = 
+        {
+            GENERIC = "Od spania w czymś takim rozbolałaby mnie szyja.",
+            BURNT = "I tak niewiele zbyło z niego pożytku.",
+        },
+        SIESTAHUT = 
+        {
+            GENERIC = "Ledwo mogę zasnąć na łóżku, a co dopiero na ziemi.",
+            BURNT = "I tak niewiele zbyło z niego pożytku.",
+        },
+        TRANSISTOR = "Całkiem zaawansowana technologia.",
+        TREASURECHEST = 
+        {
+            GENERIC = "Skrzynia magazynowa.",
+            BURNT = "Zwęglony szkielet skrzyni magazynowej.",
+        },
+        TUMBLEWEED = "Wysuszone reszki roślin.",
+        GRASS_UMBRELLA = "Naturalna parasolka zapewniające średnią ochronę.",
+        PALMLEAF_UMBRELLA = "Liściasta parasolka zapewnia średnią ochronę.",
+        UNIMPLEMENTED = "W budowie.",
+        WALL_HAY = 
+        {   
+            GENERIC = "Jakoś nie jestem pewna tego muru.",
+            BURNT = "Moje wątpliwości były słuszne.",
+        },
+        WALL_WOOD = 
+        {
+            GENERIC = "To już można nazwać ochroną.",
+            BURNT = "Ogień był jego jedyną słabością.",
+        },
+        WARDROBE = 
+        {
+            GENERIC = "Przypomina mi się taka jedna książka.",
+            BURNING = "Hmm... Teraz przypomina mi się inna książka.",
+            BURNT = "Kiedyś była tu szafa.",
+        },
+        WARG = "That Canis will never be domesticated.",
+        WATERMELON = "Citrullus lanatus.",
+        WATERMELON_COOKED = "Idealnie ugrillowana.",
+        WATERMELONHAT = "Jest to jakiś pomysł na wykorzystanie arbuza.",
+        WINTEROMETER = 
+        {
+            GENERIC = "Najpierw zmierz, potem działaj.",
+            BURNT = "Nic nie odczytam z tych popiołów.",
+        },
+        HOMESIGN =
+        {
+            GENERIC = "Pomoc nawigacyjna. „Tu jesteś”.",
+            UNWRITTEN = "Szansa, żeby komuś pomóc.",
+            BURNT = "Zbyt wiele już nie pomoże.",
+        },
+        BEEBOX =
+        {
+            READY = "Mogę zebrać trochę miodu.",
+            GENERIC = "Prymitywna pasieka.",
+            FULLHONEY = "Mogę zebrać trochę miodu.",
+            NOHONEY = "Nie ma miodu.",
+            SOMEHONEY = "Jeszcze nie jest gotowy.",
+            BURNT = "Biedne pszczoły!",
+        },
+        LIVINGTREE = "To drzewo jest wyjątkowe.",
+        ICESTAFF = "Jakieś ustrojstwo miotające śniegiem.",
+        WORMLIGHT = "Bardzo miękki w dotyku. Bardziej, niż się spodziewałam.",
+        WORMLIGHT_LESSER = "Czyste warzywo.",
+        WORM =
+        {
+            PLANT = "Przypomina trochę żabnicę.",
+            DIRT = "Lepiej trzymać się od tego z daleka.",
+            WORM = "Atak robala!",
+        },
+        WORMLIGHT_PLANT = "Przypomina trochę żabnicę.",
+        EEL = "Tak wygląda węgorz.",
+        EEL_COOKED = "Węgorz poddany obróbce cieplnej.",
+        UNAGI = "Pospolity sposób przyrządzania węgorza.",
+        EYETURRET = "Tulecyt skupił magiczną energię dwóch bestii.",
+        EYETURRET_ITEM = "Muszę ją gdzieś ustawić.",
+        MINOTAURHORN = "Zadziwiająco wielki róg. Ciekawe, czy koszmarna aura pomogła w jego wzroście.",
+        MINOTAURCHEST = "Ta skrzynia jest wręcz fantastyczna.",
+        THULECITE_PIECES = "Można by je połączyć w jeden większy kawałek.",
+        POND_ALGAE = "Dobrze, że te algi nie potrzebują fotosyntezy.",
+        GREENSTAFF = "Zdaje się cofać przedmioty w czasie.",
+        POTTEDFERN = "Kwiatek w doniczce.",
+
+        BOOK_BIRDS = "Okrojona wersja, ale opisuje mojego ulubionego Megascops kennicottii.",
+        BOOK_TENTACLES = "Nie można się od niej oderwać.",
+        BOOK_GARDENING = "Martwe rośliny spięte razem, by pomóc żywym roślinom.",
+        BOOK_SLEEP = "Ciepłe mleko w formie książki.",
+        BOOK_BRIMSTONE = "Czy coś mogłoby pójść nie tak?",
+
+        SLURPER = "Klasyczny przykład symbiozy.",
+		SLURPER_PELT = "Na pewno może się do czegoś przydać.",
+        SLURPERPELT = "Na pewno może się do czegoś przydać.",
+		ARMORSLURPER = "Obrzydliwy, magiczny pancerz.",
+        ORANGEAMULET = "Klejnot blednie z każdym użyciem.",
+        YELLOWSTAFF = "Dobrze, że ta gwiazda ma w miarę wygodny rozmiar.",
+        YELLOWGEM = "Podobny do cytrynu.",
+        ORANGEGEM = "Wygląda jak sepassartyn.",
+        TELEBASE = 
+        {
+            VALID = "Urządzenie jest chyba gotowe.",
+            GEMS = "Chyba nie ma jeszcze zasilania.",
+        },
+        GEMSOCKET = 
+        {
+            VALID = "Przedziwny efekt.",
+            GEMS = "Tutaj osadza się klejnoty.",
+        },
+        STAFFLIGHT = "Możliwe, że większe berło przywołałoby większą gwiazdę.",
+
+        ANCIENT_ALTAR = "Wystawiony na cześć jakiegoś dawno zapomnianego boga.",
+        ANCIENT_ALTAR_BROKEN = "Kilku fragmentów brakuje.",
+        ANCIENT_STATUE = "W jakiś sposób zgrywa się z tym światem.",
+        LICHEN = "Symbiont! Przedziwny sojusz grzybów z bakteriami.",
+		CUTLICHEN = "Długo nie przetrwa.",
+
+        CAVE_BANANA = "Wszystkie są genetycznie identyczne.",
+        CAVE_BANANA_COOKED = "Odrobinę smaczniejszy.",
+        CAVE_BANANA_BURNT = "Nie wydaje mi się, żeby dało się coś z niego odzyskać.",
+        CAVE_BANANA_TREE = "Nasiono na pewno wpadło do zapadliska.",
+        ROCKY = "Ich karapaks zrobiony jest z kamienia.",
+
+        BLUEAMULET = "Klejnot zdaje się wysysać energię ze wszystkiego, czego dotknie.",
+        PURPLEAMULET = "Czuję na skórze, że wysyła jakieś sygnały.",
+        TELESTAFF = "Zdaje się skupiać koszmarne paliwo.",
+        MONKEY = "Wydzielają bardzo nieprzyjemny zapach.",
+        MONKEYBARREL = "Chyba mieszka tu kilka naczelnych.",
+
+        HOUNDSTOOTH="Składa się głównie z wapnia i siarki.",
+        ARMORSNURTLESHELL="Całkiem przestronny.",
+        BAT="Latający ssak.",
+        BATWING="Technicznie rzecz biorąc, są jadalne.",
+        BATWING_COOKED="Technicznie rzecz biorąc, są jadalne.",
+        BATCAVE = "Ta dziura jest czyimś mieszkaniem.",
+        BEDROLL_FURRY="Nie zamierzam spać na ziemi.",
+        BUNNYMAN="Rozumny zajęczak.",
+        FLOWER_CAVE="Można by czytać przy tym świetle.",
+        FLOWER_CAVE_DOUBLE="Można by czytać przy tym świetle.",
+        FLOWER_CAVE_TRIPLE="Można by czytać przy tym świetle.",
+        GUANO="Więcej produktów ubocznych metabolizmu.",
+        LANTERN="Odnawialne źródło światła.",
+        LIGHTBULB="To zwierzę czy warzywo?",
+        MANRABBIT_TAIL="Używają ogonów w celu utrzymania równowagi.",
+        MUSHTREE_TALL=
+        {
+            GENERIC = "A tree with a fungal parasite.",
+            BLOOM = "Apparently it's the breeding season for this species.",
+        },
+        MUSHTREE_MEDIUM=
+        {
+            GENERIC = "A red variety of Mycena luxaeterna.",
+            BLOOM = "The smell is used to ward off predators.",
+        },
+        MUSHTREE_SMALL=
+        {
+            GENERIC = "My word! A huge Mycena silvaelucens.",
+            BLOOM = "The light is caused by a chemical reaction.",
+        },
+        MUSHTREE_TALL_WEBBED = "To chyba jakaś forma symbiozy.",
+        SPORE_TALL = "Nośnik informacji genetycznych.",
+        SPORE_MEDIUM = "Nośnik informacji genetycznych.",
+        SPORE_SMALL = "Nośnik informacji genetycznych.",
+        SPORE_TALL_INV = "Jestem nośnikiem nośnika informacji genetycznych.",
+        SPORE_MEDIUM_INV = "Jestem nośnikiem nośnika informacji genetycznych.",
+        SPORE_SMALL_INV = "Jestem nośnikiem nośnika informacji genetycznych.",
+        MUSHTREE_TALL  ="Drzewo zjadane przez grzybnego pasożyta.",
+        MUSHTREE_MEDIUM="Czerwona odmiana Mycena luxaeterna.",
+        MUSHTREE_SMALL ="O rany! Olbrzymia Mycena silvaelucens.",
+        SLURTLE= "Minerałożerny przedstawiciel brzuchonogów.",
+        SLURTLE_SHELLPIECES= "Odłamki skorupy.",
+        SLURTLEHAT= "Zapewnia ochronę.",
+        SLURTLEHOLE= "Nora brzuchonoga.",
+        SLURTLESLIME= "Z jakiegoś powodu ich śluz jest wybuchowy.",
+        SNURTLE= "Rzadka odmiana brzuchonoga.",
+        SPIDER_HIDER= "Pajęczak o twardym karapaksie.",
+        SPIDER_SPITTER= "Pajęczak plujący pociskami.",
+        SPIDERHOLE= "Źródło pajęczej plagi.",
+        SPIDERHOLE_ROCK ="Źródło pajęczej plagi.",
+        STALAGMITE= "Przedziwna formacja skalna.",
+        STALAGMITE_FULL= "Przedziwna formacja skalna.",
+        STALAGMITE_LOW= "Przedziwna formacja skalna.",
+        STALAGMITE_MED= "Przedziwna formacja skalna.",
+		STALAGMITE_TALL= "Kolejny stalagmit.",
+		STALAGMITE_TALL_FULL= "Kolejny stalagmit.",
+		STALAGMITE_TALL_LOW= "Kolejny stalagmit.",
+		STALAGMITE_TALL_MED= "Kolejny stalagmit.",
+
+        TURF_DESERTDIRT = "The ground. You step on it.",
+        TURF_FUNGUS_GREEN = "The ground. You step on it.",
+        TURF_FUNGUS_RED = "The ground. You step on it.",
+        TURF_CARPETFLOOR = "Ziemia. Do chodzenia.",
+        TURF_CHECKERFLOOR = "Ziemia. Do chodzenia.",
+        TURF_DIRT = "Ziemia. Do chodzenia.",
+        TURF_FOREST = "Ziemia. Do chodzenia.",
+        TURF_GRASS = "Ziemia. Do chodzenia.",
+        TURF_MARSH = "Ziemia. Do chodzenia.",
+        TURF_ROAD = "Ziemia. Do chodzenia.",
+        TURF_ROCKY = "Ziemia. Do chodzenia.",
+        TURF_SAVANNA = "Ziemia. Do chodzenia.",
+        TURF_WOODFLOOR = "Ziemia. Do chodzenia.",
+
+        TURF_CAVE="Ziemia. Do chodzenia.",
+        TURF_FUNGUS="Ziemia. Do chodzenia.",
+        TURF_SINKHOLE="Ziemia. Do chodzenia.",
+        TURF_UNDERROCK="Ziemia. Do chodzenia.",
+        TURF_MUD="Ziemia. Do chodzenia.",
+        TURF_DRAGONFLY = "Substancja przepełniona naturalnym środkiem przeciwogniowym.",
+
+        BATBAT = "Ciekawe. Ta broń wydaje się żyć.",
+        LUREPLANT = "Inwazyjny gatunek roślin.",
+        LUREPLANTBULB = "Teraz mogę go przenieść, gdzie mi się spodoba.",
+        EYEPLANT = "Chyba kontroluje je ten większy kwiat.",
+        PLANTMEAT = "Roślina wytworzyła mięsną substancję.",
+        PLANTMEAT_COOKED = "Teraz łatwiej będzie mi je zjeść.",
+        CAVE_FERN = "Ładny ozdobny kwiatek.",
+        FOLIAGE = "Możliwe, że mają jakieś wartości odżywcze.",
+        FOOTBALLHAT = "Sprzęt ochronny do walki w zwarciu.",
+
+        POWCAKE = "Koronne osiągnięcie konglomeratu rolniczo-przemysłowego.",
+        CAVE_ENTRANCE = "Ktoś chyba specjalnie go tu umieścił.",
+        CAVE_ENTRANCE_RUINS = "Przejście zostało zablokowane.",
+
+        CAVE_ENTRANCE_OPEN = 
+        {
+            GENERIC = "Może kiedyś, jak będę lepiej przygotowana.",
+            OPEN = "Podziemny świat czeka.",
+        },
+        CAVE_EXIT = 
+        {
+            GENERIC = "Może później.",
+            OPEN = "Może powinnam pooddychać trochę świeżym powietrzem.",
+        },
+
+		BOOMERANG = "Płaski obiekt latający.",
+		SPOILED_FOOD = "Sporo tu bakterii.",
+		ICEBOX = "Prymitywna pompa ciepła.",
+		MAXWELLPHONOGRAPH = "Wydaje się nie mieć żadnego źródła zasilania.",
+		PIGGUARD = "Przedstawiciel rodziny wojowników.",
+		
+		DIVININGROD = 
+		{
+		    GENERIC = "Magitechniczne urządzenie naprowadzające.",
+		    COLD = "Wskazówka ledwie drga.",
+		    WARM = "Jestem na właściwym tropie.",
+		    WARMER = "Chyba jestem blisko.",
+		    HOT = "No to jesteśmy!",
+		},
+		DIVININGRODSTART = "Ten kijek może się przydać!",
+        DRAGONFLY = "Jakaś mityczna odmiana muchówki.",
+        
+        LAVASPIT = 
+        {
+            HOT = "Jej ślina jest jak stopiona lawa.",
+            COOL = "Wystygła. Teraz jest jak bazalt.",
+        },
+        LAVA_POND = "Stopiona skała. Lepiej nie podchodzić za blisko.",
+        LAVAE = "To chyba smoczucha w stanie larwalnym.",
+        LAVAE_PET = 
+        {
+            STARVING = "To stworzenie pilnie potrzebuje pożywienia!",
+            HUNGRY = "Chyba jest głodny.",
+            CONTENT = "Muszę przyznać, że jest nawet uroczy.",
+            GENERIC = "Zdrowa larwa smoczuchy.",
+        },
+        LAVAE_EGG = 
+        {
+            GENERIC = "Duże jajo makrolecytalne.",
+        },
+        LAVAE_EGG_CRACKED =
+        {
+            COLD = "Jego temperatura spadła poniże optymalnej.",
+            COMFY = "Jajko ma idealną temperaturę do wyklucia.",
+        },
+        LAVAE_TOOTH = "Ząb, którym mały gad wydostaje się z jaja.",
+
+        DRAGONFRUIT = "Hylocereus undatus albo Pitahaya blanca.",
+        DRAGONFRUIT_COOKED = "Znakomicie przyrządzona Pitahaya blanca.",
+        DRAGONFRUIT_SEEDS = "Nasiona cudownie łagodnego gatunku Hylocereus undatus.",
+        DRAGONPIE = "Lubię owocowe ciasta.",
+        DRUMSTICK = "Drobiowa noga.",
+        DRUMSTICK_COOKED = "Niezbyt zdrowe, ale jakie pyszne!",
+        DURIAN = "Aha! Durio zibethinus. Faktycznie śmierdzi.",
+        DURIAN_COOKED = "Gotowanie zdecydowanie nie rozwiązało problematycznej kwestii zapachu.",
+        DURIAN_SEEDS = "Nawet nasiona Durio zibethinus trochę śmierdzą.",
+        EARMUFFSHAT = "Biedny zajęczak. Ale przynajmniej będzie mi ciepło w uszy.",
+        EGGPLANT = "Psianka, konkretnie Solanum melongena.",
+        EGGPLANT_COOKED = "Oto duszona Solanum melongena.",
+        EGGPLANT_SEEDS = "Nasiona oberżyny.",
+        WAFFLES = "Dobre by były z bitą śmietaną.",
+		
+		WALL_WOOD_ITEM = "Sztachetki do samodzielnego montażu.",
+		WALL_STONE_ITEM = "Nie wiem, po co ich tyle noszę.",
+		WALL_RUINS_ITEM = "Moje kieszenie są chyba większe od wewnątrz.",
+		WALL_HAY_ITEM = "Cześć, sianko.",
+		WALL_STONE = "Całkiem wytrzymały.",
+		WALL_RUINS = "Bardzo wytrzymała ściana.",
+        WALL_MOONROCK = "Znakomita robota.",
+        WALL_MOONROCK_ITEM = "W kieszeni będzie mu wygodnie.",
+        ADVENTURE_PORTAL = "Łamie kilka podstawowych praw fizyki.",
+		
+        BIRDCAGE = 
+        {
+			GENERIC = "Schronienie dla przedstawiciela gromady ptaków.",
+            OCCUPIED = "Uwięziony.",
+            SLEEPING = "Ciii!",
+            HUNGRY = "Robi się głodny.",
+            STARVING = "Chyba jest trochę niedożywiony.",
+            DEAD = "Chyba umarł z głodu.",
+            SKELETON = "Mogłabym przyjrzeć się tym kościom naukowym okiem.",
+        },
+        MEAT = "W normalnych okolicznościach przyrody nie zjadłabym tego na surowo.",
+        SMALLMEAT = "Mały kawałek surowego mięsa.",
+        COOKEDSMALLMEAT = "Upieczone wygląda trochę apetyczniej.",
+        MONSTERMEAT = "Zjedzenie tego może nie być najlepszym pomysłem.",
+        MONSTERLASAGNA = "Lazania czy nie, zjedzenie jej może nie być najlepszym pomysłem.",
+        COOKEDMEAT = "Upieczone wygląda trochę apetyczniej.",
+        MEATBALLS = "Kulki przetworzonego mięsa. Któż raczy wiedzieć, co jest w środku.",
+        UMBRELLA = "Prosty mechanizm przeciwwilgociowy.",
+        PERD = "Paskudny Meleagris! Trzymaj się z dala od moich owoców!",
+        TURKEYDINNER = "Ale piękna pieczeń.",
+        COOKEDMONSTERMEAT = "Wciąż jest odrobię trujące.",
+        MAXWELL = "Co za niegrzeczny człowiek.",
+        TENTACLE = "Koszmar czyhający pod ziemią.",
+        TENTACLESPIKE = "Nigdy nie łap za ostry koniec.",
+        TENTACLESPOTS = "Hmm, organy rozrodcze.",
+        TENTACLE_PILLAR = "Podejrzewam, że tylko część wystaje na powierzchnię.",
+        TENTACLE_PILLAR_HOLE = "Chyba są jakoś połączone.",
+        TENTACLE_PILLAR_ARM = "Mały koszmar czający się w ziemi.",
+        TENTACLE_GARDEN = "Ciekawe, jak się rozmnażają.",
+        BEEFALO =
+        {
+            GENERIC = "Wygląda prawie jak Bos taurus.",
+            FOLLOWER = "Chyba za mną idzie.",
+            NAKED = "Wygląda na zmarzniętego.",
+            SLEEPING = "Śpi.",
+        },
+        BABYBEEFALO = "Popatrz tylko na tę szeroką mordkę!",
+        MANDRAKE =
+        {
+			GENERIC = "Mandragora officinarum.",
+			PICKED = "Mandragora officinarum. Tyle że ma twarz.",
+			DEAD = "Mandragora officinarum. Nieżyjąca.",
+        },
+        COOKEDMANDRAKE = "Mandragora officinarum, ugotowana w imię nauki.",
+        MANDRAKESOUP = "Mandragora officinarum, ugotowana w imię nauki.",
+		KRAMPUS = "Potwór z mitologii.",
+		KRAMPUS_SACK = "Wewnątrz wydaje się większy.",
+        PINECONE = 
+        {
+            GENERIC = "Nasiona iglaka uwięzione w kłosie zarodnionośnym.",
+            PLANTED = "Nasiona iglaka bliskie stadium dojrzałego.",
+        },
+        ARMORWOOD = "Surowy pancerz stworzony z połączonych ze sobą kawałków drewna.",
+		ARMOR_SANITY = "Ochronna powłoka odbijająca ataki do innego wymiaru.",
+        ASH =
+        {
+            GENERIC = "Niewodna pozostałość po ogniu.",
+            REMAINS_GLOMMERFLOWER = "Kwiat chyba kompletnie spłonął.",
+            REMAINS_EYE_BONE = "Okość chyba kompletnie spłonęła.",
+            REMAINS_THINGIE = "Kiedyś coś tu było. Teraz została jeno kupka popiołu.",
+        },
+        SPAT = "Ovis chalybs. Wygląda na przebiegłego drania.",
+        SPEAR = "Starożytna technologia militarna.",
+        STRAWHAT = "Zapewni trochę ochrony przed słońcem.",
+        STUFFEDEGGPLANT = "Upiekłam bakłażana i wypełniłam go innymi przysmakami.",
+        BEEFALOHAT = "Ta czapka jest obrzydliwa.",
+        TOPHAT = "Jaki wytworny.",
+        FLOWERHAT = "Na powitanie wiosny.",
+        BUSHHAT = "Kamuflaż.",
+        ROPE = "Krótki kawałek mocnej konopnej liny.",
+        LOG = "An axial section of tree trunk.",
+        LOG =
+        {
+            BURNING = "An axial section of tree trunk. On fire.",
+            GENERIC = "An axial section of tree trunk.",
+        },
+        LIVINGLOG = "Ta kłoda jest wyjątkowa.",
+        LOCKEDWES = "Biedaczek. Więżą go te posągi.",
+        TWIGS = "Kilka małych gałązek.",
+        CARROT = "Daucus carota. Jadalna i pyszna.",
+        CARROT_COOKED = "Daucus carota, idealnie upieczona.",
+        CARROT_PLANTED = "Daucus carota to warzywo z rodziny selerowatych.",
+        CARROT_SEEDS = "Nasiona Daucus carota.",
+        BERRIES = "Ribes spicatum. Chyba.",
+        BERRIES_COOKED = "Pieczone Ribes spicatum. Tak na wszelki wypadek.",
+        CUTSTONE = "Wygładzone kamienne bloki.",
+        SEEDS = "Garść niezidentyfikowanych nasion.",
+        SEEDS_COOKED = "Przysmak z prażonych embrionów roślin!",
+        SILK = "Włókno proteinowe pozyskane z pajęczaka.",
+		SPIDERGLAND = "Tajemnicą tego gruczołu jest delikatnie toksyczny jad.",
+        BOARDS = "Niedbale oheblowane deski.",
+        BONESTEW = "Nie takie pyszne, jak mama robiła, ale pachnie niesamowicie!",
+        MAXWELLTHRONE = "Przerażające krzesło.",
+        MAXWELLLOCK = "Potrzeba jeszcze tylko klucza.",
+        MAXWELLLIGHT = "Magiczny blask!",
+        FEM_PUPPET = "Biedna dziewczyna.",
+        MALE_PUPPET = "Biedaczek.",
+        ROBOT_PUPPET = "Biedne dziecko.",
+        
+		NITRE = "Znany też jako saletra potasowa.",
+		GUNPOWDER = "Wiedza to potęga!",
+		BIRD_EGG = "Niezapłodnione.",
+		BIRD_EGG_COOKED = "Brakuje tylko tostów.",
+		ROTTENEGG = "Co najmniej nieapetyczne.",
+		HAMBAT = "Nie jestem pewna, czy to było optymalne rozwiązanie.",
+
+        TRAP_TEETH = "Jest pokryta cienką warstewką psich enzymów trawiennych.",
+        TRAP_TEETH_MAXWELL = "Ktoś próbuje mnie w żałosny sposób przechytrzyć.",
+        RABBIT = 
+        {
+            GENERIC = "Jakiś zajęczak. Rogaty.",
+            HELD = "Słodki, rogaty zajęczak.",
+        },
+		ROCK_LIGHT =
+		{
+			GENERIC = "Zasklepione magmowe źródło.",
+            OUT = "Zwykła powłoka z magmowej skały.",
+            LOW = "Proces ochładzania rozpoczęty.",
+            NORMAL = "Zdecydowanie za gorący, żeby go dotknąć.",
+		},
+        ROCK = "Duży głaz narzutowy.",
+        PIGKING = "Chyba jest sołtysem tej wioski.",
+        RATATOUILLE = "Bardzo pożywne!",
+        RESURRECTIONSTONE = "Kamień o właściwościach regeneracyjnych.",
+        ROBIN =
+        {
+            GENERIC = "Cardinalis! Pięknie upierzony.",
+            HELD = "Będzie moim przyjacielem.",
+        },
+        ROBIN_WINTER =
+        {
+            GENERIC = "Zimowe okrycie dla kardynała? Przedziwne!",
+            HELD = "Jest taki delikatny.",
+        },
+        AXE = "Równia podwójnie pochyła przymocowana do dźwigni.",
+		HAMMER = "Narzędzie dla robotnika.",
+        PHLEGM = "Zakrzepły śluz zachowuje klejącą fakturę.",
+        PICKAXE = "Specjalna siekiera do rozbijania kamieni.",
+        SEWING_KIT = "Proste narzędzie do prac domowych.",
+        SHOVEL = "Łopata. To chyba nie pierwsza, którą widzisz?",
+		PITCHFORK = "Zostały zaprojektowane tak, by skutecznie poluzowywać ziemię.",
+        ROCKS = "Garść różnych kamieni.",
+        FIRESTAFF = "Jakieś ustrojstwo plujące ogniem.",
+        FISH = "Jakiś rodzaj siei.",
+        FISHINGROD = "Czytałam wszystko o wędkarstwie. Powinno pójść gładko.",
+        FISHSTICKS = "Dajcie mi trochę sosu tatarskiego i będę w siódmym niebie.",
+        FISHTACOS = "To jest to! Ryby lubię z przyprawami.",
+        FISH_COOKED = "Idealnie ugrillowana.",
+        FISH_MED = "A to szkoda.",
+        FISH_MED_COOKED = "Idealnie ugrillowana.",
+        FLINT = "Twardy odłamek kwarcu.",
+        AMULET = "Relikt z innych czasów.",
+        RAZOR = "Artykuł higieny osobistej.",
+        POMEGRANATE = "Granat właściwy. Wilgotny, słodki, odrobinę cierpki.",
+        POMEGRANATE_COOKED = "Granat właściwy. Bardzo pyszny na ciepło.",
+        POMEGRANATE_SEEDS = "Nasiona Punica granatum oddzielone od osnówki.",
+		POND = "Mały, ale głęboki staw.",
+        LEIF = "Nie wiem nawet, co o tym myśleć.",
+        LEIF_SPARSE = "Nie wiem nawet, co o tym myśleć.",
+        SPIDERQUEEN = "To zdaje się główny ośrodek inteligencji rozproszonej.",
+        PIGGYBACK = "Tylko matka zdolna jest pokochać taką twarz.",
+        BLOWDART_FIRE = "Improwizowane urządzenie zapalające.",
+        BLOWDART_SLEEP = "Improwizowane urządzenie uspokajające.",
+        BLOWDART_PIPE = "Improwizowana wyrzutnia pocisków.",
+        SPIDERHAT = "Powinna mi dać kontrolę nad pajęczymi umysłami.",
+		EARMUFFHAT = "Wykonane wyłącznie z najlepiej izolujących elementów.",
+        WETGOOP = "O nie, nie, nie. Nie ma mowy.",
+        WHIP = "Narzędzie do wprowadzania dyscypliny.",
+        WINTERHAT = "Zrobiłam ją na drutach.",
+        NIGHTMAREFUEL = "Ektoplazmatyczna substancja.",
+        NIGHTLIGHT = "Świeci w zadziwiający sposób.",
+        NIGHTSWORD = "Oręż międzywymiarowy.",
+        ARMORMARBLE = "Interesujący dobór materiałów.",
+        ARMORGRASS = "Przy odpowiedniej liczbie warstw jest nawet skuteczny.",
+        BLUEPRINT = "Szczegółowy rysunek techniczny.",
+        BELL_BLUEPRINT = "Szczegółowy rysunek techniczny.",
+        MAXWELLHEAD = "Wolałabym, żeby tego nie robił.",
+
+		WALRUSHAT = "Czyżby nic nie zostało z naszej starej przyjaźni?",
+        WALRUS = "Odobenus rosmarus. Odmiana galicyjska.",
+        WALRUS_CAMP = 
+        {
+            GENERIC = "Jakieś tymczasowe siedlisko.",
+            EMPTY = "Wygląda na opuszczone.",
+        },
+        LITTLE_WALRUS = "Młode nie są agresywne.",
+        WALRUS_TUSK = "Nadałby się na różne ozdoby.",
+
+        WARG = "Przedstawiciel gatunku canis. Raczej nie do oswojenia.",
+
+        SPIDERDEN = "Fascynujące. Te pająki mają wspólne legowisko.",
+        RABBITHOLE = 
+        {
+            GENERIC = "Wygląda jak mała zwierzęca nora.",
+            SPRING = "Mam nadzieję, że nic mu się tam nie stało.",
+        },
+        FIREFLIES = 
+        {
+            GENERIC = "Uciekają, gdy podchodzę.",
+            HELD = "Ich bioluminescencyjne właściwości mogą okazać się przydatne.",
+        },
+        CORN = "Zea mays, znakomity przysmak.",
+        CORN_COOKED = "Prażona kukurydza!",
+        CORN_SEEDS = "Nasiona Zea mays. Rośnie w wielu klimatach.",
+        CROW = 
+        {
+            GENERIC = "Corvus corax.",
+            HELD = "Niezwykły gatunek.",
+        },
+        GHOST = "To jakieś oszustwo. Nie wierzę w to.",
+        CUTGRASS = "Obcięta kępka trawy.",
+        CUTREEDS = "Wycięte trawska.",
+        PEROGIES = "Cudownie mdłe kluski.",
+        PETALS = "Zrobiłam znakomite potpourri.",
+        PETALS_EVIL = "Dziwne. Te płatki zdają się posiadać własną świadomość.",        
+        FLOWER = "Jakiś polny kwiat. Nie znam tego gatunku.",
+        FLOWER_EVIL = "Rzadko można znaleźć kwiaty o tak potężnej aurze.",
+        FLOWER_WITHERED = "Brakuje mu składników niezbędnych do wzrostu.",
+        GOLDENAXE = "Najłatwiej formowalny z metali. Zobaczmy, jak sobie radzi z rąbaniem.",
+        GOLDENPICKAXE = "Najłatwiej formowalny z metali. Zobaczmy, jak sobie radzi z kopaniem.",
+        GOLDENPITCHFORK = "Najłatwiej formowalny z metali. Zobaczmy, jak sobie radzi z przerzucaniem ziemi.",
+        GOLDENSHOVEL = "Najłatwiej formowalny z metali. Zobaczmy, jak sobie radzi z kopaniem.",
+        GOLDNUGGET = "Mała bryłka złota. Liczba atomowa 79.",
+        POOP = "Słuszna ilość zwierzęcych odchodów. Zniewalający zapach.",
+        PUMPKIN = "Cucurbita pepo.",
+        PUMPKINCOOKIE = "Dyniowe ciasteczka. Pycha!",
+        PUMPKIN_COOKED = "Pieczona Cucurbita pepo. Miękka i pyszna.",
+        PUMPKIN_LANTERN = "Rzeźbienie w Cucurbita pepo bardzo odpręża.",
+        PUMPKIN_SEEDS = "Pepitas.",
+        TORCH = "Improwizowana latarka.",
+        TRAP = "Prosta pułapka z kijka i koszyka.",
+        BEEFALOWOOL = "Długie włosie wołka.",
+        BUGNET = "Przyrząd dla entomologów.",
+        PANFLUTE = "Harmonijnie rezonujące źdźbła tataraku.",
+        ONEMANBAND = "Imponujący postęp w stosunku do tradycyjnej fujarki i tamburyna.",
+        BIRDTRAP = "Prosta pułapka na ptaki.",
+        GEARS = "Różne trybiki i zębatki.",
+        STATUEHARP = "Prosty posążek.",
+        STATUEMAXWELL = "Wizerunek faceta, który mnie tu uwięził.",
+        SKELETON = "Zadziwiająco dobrze zachowany ludzki szkielet.",
+        SKELETON_PLAYER = "Ależ z nas fascynujący gatunek.",
+
+
+        RED_MUSHROOM =
+        {
+            GENERIC = "Grzyb.",
+            PICKED = "Potrzebuje wody, żeby znowu zaowocować.",
+            INGROUND = "O tej porze dnia jest w stanie uśpienia.",
+        },
+        GREEN_MUSHROOM = 
+        {
+            GENERIC = "Grzyb.",
+            PICKED = "Potrzebuje wody, żeby znowu zaowocować.",
+            INGROUND = "O tej porze dnia jest w stanie uśpienia.",
+        },
+
+        BLUE_MUSHROOM = 
+        {
+            GENERIC = "Grzyb.",
+            PICKED = "Potrzebuje wody, żeby znowu zaowocować.",
+            INGROUND = "O tej porze dnia jest w stanie uśpienia.",
+        },
+
+        RED_CAP = "Czerwony z reguły oznacza truciznę.",
+        GREEN_CAP = "Wydaje się jadalny, ale zjedzenie go nie wydaje się do końca rozsądnym pomysłem.",
+        BLUE_CAP = "Wydaje się, że ma właściwości lecznicze.",
+        RED_CAP_COOKED = "Chemia go odmieniła.",
+        GREEN_CAP_COOKED = "Chemia go odmieniła.",
+        BLUE_CAP_COOKED = "Chemia go odmieniła.",
+
+        MOOSE_NESTING_GROUND = "Chciałabym kiedyś zbadać ich zwyczaje godowe.",
+
+        BEE = 
+        {
+            GENERIC = "Apis mellifera. Całkiem spora!",
+            HELD = "Nie jest zachwycony.",
+        },
+        KILLERBEE = 
+        {
+            GENERIC = "Wyjątkowo jadowity.",
+            HELD = "Nie jest zachwycony.",
+        },
+		MOSQUITO = 
+		{
+			GENERIC = "Głodna samica Haemagogus devorator.",
+			HELD = "Zabezpieczony.",
+		},
+        MOSQUITOSACK = "Żołądek komarowatych, całkowicie wypełniony krwią.",
+        BEEHAT = "Odpowiedni sprzęt ochronny to podstawa!",
+        BEEHIVE = "Naturalne pszczelnie mieszkanie.",
+        BEEMINE = "Niebezpieczna mina pełna pszczół.",
+        BEEMINE_MAXWELL = "Niebezpieczna mina pełna bzyczących owadów z rodzaju Apis.",
+        HONEY = "Słodki nektar kwiatów.",
+        HONEYCOMB = "Wosk pszczeli do przechowywania miodu.",
+        HONEYHAM = "Miód jest jedynym słodzikiem w tym daniu.",
+        HONEYNUGGETS = "Słodkie mięso w poręcznych kawałkach.",
+        HORN = "Cóż za niezwykły gatunek! Prawie słyszę wołka.",
+        STINGER = "Zwęża się na końcu w ostrą szpilkę.",
+
+        SPIDER = 
+        {
+            GENERIC = "Duży, drapieżny gatunek pajęczaka.",
+            SLEEPING = "Zdaje się, że są aktywne nocą.",
+            DEAD = "Nie żyje.",
+        },
+
+        SPIDER_WARRIOR = 
+        {
+            GENERIC = "Należy chyba do klasy wojowników.",
+            SLEEPING = "Zasłużony odpoczynek.",
+            DEAD = "Oddał życie za swą królową.",
+        },
+        BISHOP_CHARGE_HIT = "Auć!",
+        BERRYBUSH = 
+        {
+            GENERIC = "Krzak Ribes spicatum.",
+            PICKED = "Porzeczki odrastają. Bardzo powoli.",
+            BARREN = "Będzie trzeba mu pomóc.",
+            WITHERED = "Ribes spicatum źle znosi wysokie temperatury.",
+        },
+
+		DUG_GRASS = "Potrzebuje ziemi.",
+		DUG_SAPLING = "Potrzebuje ziemi.",
+		DUG_BERRYBUSH = "Potrzebuje ziemi.",
+        DUG_MARSH_BUSH = "Potrzebuje ziemi.",
+
+        SAPLING = 
+        {
+            GENERIC = "Małe drzewko.",
+            WITHERED = "Ciepło dało się jej we znaki.",
+            PICKED = "Dziwne. Myślałam, że to ją zabije.",
+            BURNING = "Zapłon!",
+        },
+        GRASS = 
+        {
+            GENERIC = "Kępka łodyg roślin wiechlinowatych.",
+            PICKED = "Myślę, że odrośnie.",
+            BARREN = "Potrzebuje nawozu.",
+            WITHERED = "Nie przetrwa w takim gorącym klimacie.",
+            BURNING = "Zapłon!",
+        },
+        REEDS = 
+        {
+            GENERIC = "Kępka soczystych Acorus calamus.",
+            PICKED = "Chyba powinny odrosnąć.",
+            BURNING = "Zapłon!",
+        },
+        RELIC = 
+        {
+            GENERIC = "An artifact of this extinct civilization.",
+            BROKEN = "Just broken stone.",
+        },
+        RUBBLE = "Przydałoby się trochę kleju.",
+
+        PLANT_NORMAL = 
+        {
+            GENERIC = "To jest... roślina. Jakaś.",
+            READY = "Teraz wygląda na dojrzałą.",
+            GROWING = "Za wcześnie na zbiory.",
+            WITHERED = "Nie zdołała przetrwać gorąca.",
+        },
+
+        MOUND = 
+        {
+            GENERIC ="Grobowiec.",
+            DUG = "Zdewastowany grobowiec.",
+        },
+        PIGMAN =
+        {
+            GENERIC = "Quasi-inteligentna dwunożna świnia.",
+            FOLLOWER = "Chyba łączy go ze mną jakaś więź.",
+            DEAD = "Nie ma się co martwić. Na pewno jest juch dużo więcej.",
+			WEREPIG = "Jakaś krzyżówka z wilkołakiem.",
+            GUARD = "To chyba strażnik.",
+        },
+
+        SPIDEREGGSACK = "Przenośne jaja pająków.",
+		TELEPORTATO_RING = "Metalowy okablowany torus.",
+		TELEPORTATO_BOX = "Regulator ładunków elektrycznych.",
+		TELEPORTATO_CRANK = "Działa według podstawowych zasad mechaniki.",
+		TELEPORTATO_POTATO = "Trochę organiczne, trochę nieorganiczne!",
+		TELEPORTATO_BASE =
+        {
+			GENERIC = "Kamień runiczny o niezwykłych właściwościach geometrycznych!",
+			PARTIAL = "Urządzenie nie jest jeszcze gotowe.",
+			LOCKED = "Trzeba to jakoś aktywować.",
+			ACTIVE = "Może służyć do podróżowania pomiędzy światami.",
+		},
+        BEARDHAIR = "Ludzki zarost.",
+        BUTTERFLY = 
+        {
+            GENERIC = "Kolorowy łuskoskrzydlak.",
+            HELD = "Złapany.",
+        },
+        BUTTERFLYWINGS = "Skrzydła schwytanego motyla.",
+        BUTTERFLYMUFFIN = "Kto by pomyślał, że motyle tak dobrze pasują do ciasta?",
+        BUTTER = "Lepidopterous lipids?",
+
+        ACORN = 
+        {
+            GENERIC = "Nasiona liściastego drzewa ukryte w miąższu.",
+            PLANTED = "Nasiona liściastego drzewa bliskie dorosłości.",
+        },
+        EVERGREEN = 
+        {
+            GENERIC = "Ogólnie pojęte drzewo iglaste.",
+            CHOPPED = "Ścięty w słusznej sprawie.",
+            BURNING = "Drzewo płonie.",
+            BURNT = "Zwęglone drzewo.",
+        },
+
+        EVERGREEN_SPARSE = 
+        {
+            GENERIC = "Brakuje mu zdolności reprodukcyjnych.",
+            CHOPPED = "Ścięty w słusznej sprawie.",
+            BURNING = "Drzewo płonie.",
+            BURNT = "Zwęglone drzewo.",
+        },
+
+        FIREPIT = 
+        {
+            GENERIC = "Palenisko.",
+            OUT = "Mogę je rozpalić ponownie.",
+            EMBERS = "Ogień prawie zgasł.",
+            LOW = "Przydałoby się trochę więcej paliwa.",
+            NORMAL = "Idealnie zrównoważony ogień.",
+            HIGH = "Rozmiar tego ognia budzi niepokój.",
+        },
+		HEATROCK = 
+        {
+            FROZEN = "Jego temperatura spadła poniżej zera.",
+			COLD = "Jest troszkę zimny.",
+			GENERIC = "W tak zwanej temperaturze pokojowej.",
+            WARM = "Jest troszkę ciepły.",
+            HOT = "Jest dość gorący, by oddawać ciepło i światło!",
+		},
+
+        CAMPFIRE = 
+        {
+            GENERIC = "Ognisko.",
+            OUT = "Mogę je rozpalić ponownie.",
+            EMBERS = "Ogień prawie zgasł.",
+            LOW = "Przydałoby się trochę więcej paliwa.",
+            NORMAL = "Idealnie zrównoważony ogień.",
+            HIGH = "Rozmiar tego ognia budzi niepokój.",
+        },
+
+        FEATHERHAT = "Niezbyt wyszukany, ale może jakiś ptak się nabierze.",
+        FEATHER_CROW = "Pióro gatunku Corvus corax.",
+        FEATHER_ROBIN = "Pióro ptaka z rodzaju Cardinalis.",
+        FEATHER_ROBIN_WINTER = "Wygląda jak pióro ptaka z rodzaju Cardinalis, tyle że białe.",
+
+        TRINKET_1 = "Ale piękny zestaw do czyszczenia butelek. Szkoda, że się stopiły.",
+        TRINKET_10 = "Na razie nie są mi potrzebne. Mam jeszcze kilka zębów.",
+        TRINKET_11 = "Miniaturowa replika tego wrednego robota.",
+        TRINKET_12 = "Umięśniony hydrostat, który spędził za dużo czasu obok czegoś higroskopijnego.",
+        TRINKET_2 = "Udawany membranofon.",
+        TRINKET_3 = "Och, uwielbiam Barda.",
+        TRINKET_4 = "Ale uroczy człowieczek.",
+        TRINKET_5 = "Chyba zepsuły jej się czujniki temperatury.",
+        TRINKET_6 = "Zaplątane kable. Do niczego się nie przydadzą.",
+        TRINKET_7 = "Wolę spędzać czas na czytaniu książek.",
+        TRINKET_8 = "Przypomina mi się moja wanna. Chętnie bym się wymoczyła.",
+        TRINKET_9 = "Hmm, chyba akurat nie brakuje mi guzików.",
+		SKULLCHEST = "Pojemnik przypominający czaszkę.",
+		PANDORASCHEST = "Artefakt, który może skrywać inne artefakty.",
+
+        BEDROLL_STRAW = "Nie zamierzam spać na ziemi.",
+        CHARCOAL = "Głównie węgiel i popiół.",
+        MARSH_PLANT = "Bagienne kłącze.",
+        MARSH_BUSH = 
+        {
+            GENERIC = "Kępka cierni.",
+            PICKED = "Dotykanie cierni jest niebezpieczne.",
+            BURNING = "Zapłon!",
+        },
+        PAPYRUS = "Cienki arkusz celulozy i ligniny.",
+        MARSH_TREE = 
+        {
+            GENERIC = "Rhizophora mangle.",
+            CHOPPED = "Powalone.",
+            BURNING = "Zapłon!",
+            BURNT = "Zwęglony namorzyn."
+        },
+        FROG = 
+        {
+            SLEEPING = "Śpi.",
+            DEAD = "W niektórych krajach są przysmakiem.",
+            GENERIC = "Czworonożny płaz.",
+        },
+        FROGGLEBUNWICH = "Raczej nie serwuje się ich z bułką, ale spróbuję!",
+        FROGLEGS = "Jeszcze się ruszają.",
+        FROGLEGS_COOKED = "Całkiem podobne do skrzydełek kurczaka.",
+        FRUITMEDLEY = "Szeroki wybór owoców!",
+		WORMHOLE = 
+        {
+			GENERIC = "Śpiąca Megadrilacea oraduos.",
+			OPEN = "Koncentryczne koła najeżone zębami ułatwiają błyskawiczne połykanie.",
+		},
+        WORMHOLE_LIMITED = "It will only last a few trips.",
+
+        CHESSJUNK1 = "Mechaniczny śmieć.",
+        CHESSJUNK2 = "Mechaniczny śmieć.",
+        CHESSJUNK3 = "Mechaniczny śmieć.",
+
+        CHESTER = "Mobilna skrzynka magazynowa.",
+        CHESTER_EYEBONE = 
+        {
+            GENERIC = "Oculus mysterium.",
+            WAITING = "Oculus śpi.",
+        },
+
+        TALLBIRD = "Magnus avis. W pełni rozwinięty.",
+        SMALLBIRD = 
+        {
+            GENERIC = "Raczej niewielki przedstawiciel gromady ptaków.",
+            HUNGRY = "Potrzebuje jedzenia.",
+            STARVING = "Bez jedzenia niechybnie zdechnie.",
+        },
+
+        TEENBIRD = 
+        {
+            GENERIC = "Młody przedstawiciel gromady ptaków.",
+            HUNGRY = "Proszę o ciszę.",
+            STARVING = "Niegrzeczny ptak!",
+        },
+
+        TALLBIRDEGG = "Wymaga inkubacji.",
+        TALLBIRDEGG_COOKED = "Pełne cholesterolu.",
+        TALLBIRDEGG_CRACKED = 
+        {
+            GENERIC = "Wydaje się rozwijać prawidłowo.",
+            HOT = "Ekstremalne temperatury mogą doprowadzić go do śmierci.",
+            COLD = "Zdechniesz z wyziębienia!",
+            SHORT = "Wkrótce zbierzemy owoce naszej pracy.",
+            LONG = "Woda się nie zagotuje, jak będziesz na nią patrzeć.",
+        },
+        TALLBIRDNEST =
+        {
+            GENERIC = "Ależ olbrzymie jajo gatunku Magnus avis!",
+            PICKED = "Gniazdo jest puste. Wkrótce cykl rozpocznie się ponownie.",
+        },
+
+        ANIMAL_TRACK = "Oznaka zwierzęcej aktywności. Prowadzi w dal.",
+        DIRTPILE = "To niehigieniczne!",
+        KOALEFANT_SUMMER = "Koalefanta proboscidea.",
+        KOALEFANT_WINTER = "Koalefanta proboscidea w grubej zimowej sierści.",
+        TRUNK_SUMMER = "Użyteczny narząd powonienia.",
+		TRUNK_WINTER = "Sama skóra i futro.",
+        TRUNK_COOKED = "Trudna do przełknięcia, ale bogata w białko.",
+        TRUNKVEST_SUMMER = "Solidne okrycie zewnętrzne.",
+		TRUNKVEST_WINTER = "Doskonale chroni przed żywiołami.",
+        
+        DEADLYFEAST = "Nie jestem pewna, czy to się nadaje do jedzenia.",
+        DEERCLOPS = "Laurasiatheria!",
+        REDGEM = "Jest ciepły.",
+        BLUEGEM = "Zimny.",
+        PURPLEGEM = "Otacza go przedziwna aura.",
+        HOUND = "Ten pies nie jest udomowiony.",
+        FIREHOUND = "Ten ogar jest bardziej niebezpieczny od innych.",
+        ICEHOUND = "Ale dziwna, mroźna bestia.",
+        HOUNDBONE = "Endoszkielet Canis lupus. Zdecydowanie nie familiaris.",
+        PENGUIN = "Ptak z klasą.",
+        DEERCLOPS_EYEBALL = "Czuję, że dokonałam czegoś wielkiego.",
+        DEPLETED_GRASS =
+        {
+            GENERIC = "Kępka wiechlinowatych.",
+        },
+        BASALT = "Niesamowicie twardy!",
+        HOUNDMOUND = "Te kości nie wróżą nic dobrego.",
+        MERM = "Dwunożna ryba!",
+        MINERHAT = "Doskonała do czytania.",
+        KNIGHT = "Zautomatyzowany koń.",
+        BISHOP = "Mechaniczny posłaniec.",
+        ROOK = "Mechaniczna wieża.",
+        JAMMYPRESERVES = "Przydałby się tost do tego dżemu. Ech...",
+        KABOBS = "Mięso na patyku. Co jeszcze przyjdzie mi do głowy?",
+
+        INSANITYROCK = 
+        {
+            INACTIVE = "Miniaturowa piramida.",
+            ACTIVE = "Chyba mi się coś przywidziało.",
+        },
+        SANITYROCK = 
+        {
+            INACTIVE = "Chyba zapadł się pod ziemię.",
+            ACTIVE = "Fascynujące. Będę musiała dobrze zbadać te znaki.",
+        },
+        PIGTORCH = "Ciekawe, co ją zasila.",
+        PIGSKIN = "Skóra quasi-inteligentnej dwunożnej świni.",
+        WASPHIVE = "Lepiej trzymać się z daleka.",
+        MARBLEPILLAR = "Widać rękę rzymskich rzemieślników. Niesamowite.",
+        MARBLETREE = "Niesamowite. Drzewo wykonane w całości z marmuru.",
+        MARBLE = "Posągowy kamień.",
+        SUNKBOAT = "Wrak łodzi. Raczej do niczego się już nie nada.",
+        SWEATERVEST = "Dla osoby eleganckiej, ale oczytanej.",
+        TAFFY = "Nie jestem miłośniczką słodyczy, ale... na trudne czasy...",
+        SMALLMEAT_DRIED = "Ma bardzo dużo sodu.",
+        MEAT_DRIED = "Słone, ale całkiem dobre.",
+        MONSTERMEAT_DRIED = "Słone, ale całkiem dobre.",
+        BACKPACK = "Zmieściłoby się w nim sporo książek.",
+        BACONEGGS = "Żołądek mnie boli. Niebieskie jajka i boczek!",
+        BANDAGE = "Medyczne łachmany.",
+		HEALINGSALVE = "Naturalny środek dezynfekujący.",
+		CANE = "Nie jestem jeszcze taka stara.",
+		LIGHTNING_ROD = 
+		{
+		    GENERIC = "Doskonale przewodzi prąd!",
+		    CHARGED = "Promieniuje wręcz energią elektryczną!",
+		},
+ 
+        ARMORRUINS = "Twardy pancerz z tulecytu.",
+        BISHOP_NIGHTMARE = "Niezwykle zaawansowana technologia.",
+        GREENAMULET = "Nie wiem, co to takiego.",
+        GREENGEM = "Domieszka chromu nadała mu zielony kolor.",
+        KNIGHT_NIGHTMARE = "Koszmarne środowisko najwyraźniej wpłynęło na jego oprogramowanie.",
+        MINOTAUR = "Odejdź, bestio!",
+        MULTITOOL_AXE_PICKAXE = "Całkiem użyteczna rzecz. Może być zarówno siekierą, jak i toporem.",
+        NIGHTMARELIGHT = "Pradawni używali koszmarnego paliwa praktycznie do wszystkiego.",
+        NIGHTMARE_TIMEPIECE =
+        {
+            WARN = "Poziom oparów ektoplazmatycznej substancji jest niski, ale zaczyna rosnąć.",  --Before nightmare
+            WAXING = "Poziom ektoplazmatycznej substancji zaczyna rosnąć.", --Nightmare Phase first 33%
+            STEADY = "Poziom oparów ektoplazmatycznej substancji jest najwyższy.", --Nightmare 33% - 66%
+            WANING = "Poziom oparów ektoplazmatycznej substancji jest wysoki, ale zdaje się spadać.", --Nightmare 66% +
+            DAWN = "Poziom oparów ektoplazmatycznej substancji jest bardzo niski.", --After nightmare
+            CALM = "Poziom oparów ektoplazmatycznej substancji jest najniższy.",  --calm phase
+            NOMAGIC = "Nie ma tu żadnych ektoplazmatycznych oparów.", --Place with no nightmare cycle.
+        },
+        ORANGESTAFF = "Przydatny na krótkich dystansach.",   --Teleports player.
+        ROOK_NIGHTMARE = "Wygląda, jakby się miała zaraz rozpaść.",
+        RELIC = "A relic of an ancient civilization long dead the the ravages of time.",  --Fixed relic
+        RUINS_RUBBLE = "Wystarczy odrobina uczciwej pracy i można by to przywrócić do stanu używalności.",   --Broken relic
+        RUINS_BAT = "Można tym komuś porządnie przywalić.",
+        RUINSHAT = "Trochę wieśniacki, jak na mój gust, ale może się przydać.",
+        SPIDER_DROPPER = "Ach, gatunek pajęczaka przystosowany do życia na skalnych sufitach.", --White spider that comes from the roof
+        THULECITE = "Interesująca, ektoplazmatyczna substancja, prawdopodobnie z domieszką kalcytu.",
+        YELLOWAMULET = "Świeci światłem od długości fal 530 nanometrów.",    --Emits light, player walks faster.
+        ACCOMPLISHMENT_SHRINE = "Mam nieodpartą ochotę aktywować ją jeszcze raz. I jeszcze raz, i jeszcze raz.",        
+
+        WHALE_WHITE = "Biały wieloryb! Szkoda, że nie ma żadnych książek na ten temat!",
+
+        AERODYNAMICHAT = "Wygląda dość prehistorycznie.",
+        ANTIVENOM = "Będzie z niego znakomite lekarstwo.",
+        ARMORCACTUS = "Mogę wmieszać się niezauważenie w tłum kaktusów.",
+        ARMORLIMESTONE = "Pancerz z fragmentów kości zalegających na dnie oceanu.",
+        ARMOROBSIDIAN = "Ostrożnie, jest ostry!",
+        ARMORSEASHELL = "Chroni przed jadowitymi ukąszeniami.",
+        ARMOR_LIFEJACKET = "Najważniejsze jest bezpieczeństwo!",
+        ARMOR_SNAKESKIN = "Ubranie przeciwdeszczowe inspirowane naturą.",
+        ARMOR_WINDBREAKER = "Róż to nie do końca mój kolor.",
+        ARMOUREDBOAT = "Potężna łajba.",
+        BALLPHIN = "Uroczy przedstawiciel rzędu waleni!",
+        BAMBOO = "Użyteczny i wytrzymały materiał.",
+        BAMBOOTREE =
+        {
+            BURNT = "Szkoda.",
+            CHOPPED = "Sprawdzimy, jak szybko odrasta?",
+            GENERIC = "Bambus jest jedną z najszybciej rosnących roślin na świecie.",
+        },
+        BERMUDATRIANGLE = "Nie wierzę w zjawiska nadprzyrodzone.",
+        BIGFISHINGROD = "Umożliwia dostęp do morskiego łańcucha pokarmowego.",
+        BIOLUMINESCENCE = "Fascynujący i piękny okaz wodnej flory.",
+        BLOWDART_FLUP = "Wolę go w tej formie.",
+        BLOWDART_POISON = "Pozwala zniszczyć rywali od środka.",
+        BLUBBER = "Pływająca substancja wysokolipidowa.",
+        BLUBBERSUIT = "Mama byłaby dumna. Jeszcze nigdy nie miałem tyle tłuszczyku!",
+        BOAT = "Skąd się wzięła ta łódź?",
+        BOATCANNON = "Do walki na morzu, jak się domyślam.",
+        BOATREPAIRKIT = "Wydłuża żywot jednostek wodnych.",
+        BOAT_LANTERN = "Mobilna latarnia morska.",
+        BOAT_TORCH = "Doskonała do obserwacji nocnego życia w oceanach.",
+        BOOK_METEOR = "Deszczus magmus!",
+        BOTTLELANTERN = "Przenośne źródło światła.",
+        BRAINJELLYHAT = "Jasne umysły kształtują przyszłość!",
+        BUOY = "Mała ostoja pośrodku morza.",
+        BURIEDTREASURE = "Ciekawość wygrywa...",
+        BUSH_VINE =
+        {
+            BURNT = "Zwęglona materia.",
+            CHOPPED = "Łodygi z czasem odrosną.",
+            GENERIC = "Roślina pnąca.",
+        },
+        CAPTAINHAT = "Kapelusz prawdziwej pani kapitan.",
+        CARGOBOAT = "Zmieszczę kilka dodatkowych książek.",
+        CHIMINEA = "Wynalazek bystrego meteorologa!",
+        CLOTHSAIL = "Organiczny środek transportu.",
+        COCONADE =
+        {
+            BURNING = "Odliczanie do zapłonu!",
+            GENERIC = "Materiały wybuchowe są dla mnie odrobinę niepokojące.",
+        },
+        COCONUT = 
+        {
+            GENERIC = "Nasiono arekowatych. Olbrzymie!",
+            PLANTED = "Źródło arekowatości.",
+        },
+        COCONUT_COOKED = "Mięso kokosa. Całkiem pyszne.",
+        COCONUT_HALVED = "Udało mi się przedrzeć przez jego zewnętrzne systemy obronne.",
+        COFFEE = "Lubię sobie czasem usiąść przy kawie z książką.",
+        COFFEEBEANS = "Bogate w kofeinę.",
+        COFFEEBEANS_COOKED = "Ach, prażone pachną niesamowicie.",
+        COFFEEBOT = "Produkuje kawę.",
+        COFFEEBUSH =
+        {
+            BARREN = "Nie kwitnie o tej porze.",
+            GENERIC = "Coffea.",
+            PICKED = "Kawał czasu musi minąć, zanim odrosną.",
+            WITHERED = "Za gorąco dla kawy.",
+        },
+        COMPASS =
+        {
+            E = "Wschód",
+            GENERIC = "Współrzędne pozostają nieznane.",
+            N = "Północ",
+            NE = "Północny wschód",
+            NW = "Północny zachód",
+            S = "Południe",
+            SE = "Południowy wschód",
+            SW = "Południowy zachód",
+            W = "Zachód",
+        },
+        CORAL = "Odrobina węglanu wapnia.",
+        CORALREEF = "Uwielbiam morskie bezkręgowce!",
+        CORAL_BRAIN = "Genialne!",
+        CORAL_BRAIN_ROCK = "Mussidae rozumus.",
+        CRAB =
+        {
+            GENERIC = "Krabliki mają niezwykle twardy egzoszkielet!",
+            HIDDEN = "Krablik, do tablicy!",
+        },
+        CRABHOLE = "Mieszkanie podziemnego skorupiaka.",
+        CRATE = "Ciekawe, co jest w środku?",
+        CUTLASS = "Ostrożnie, jest ostry!",
+        DEAD_SWORDFISH = "Teraz wygląda odrobinę łagodniej.",
+        DEPLETED_BAMBOOTREE = "Niewykluczone, że jeszcze odrośnie.",
+        DEPLETED_BUSH_VINE = "Niewykluczone, że jeszcze odrośnie.",
+        DEPLETED_GRASS_WATER = "Niewykluczone, że jeszcze odrośnie.",
+        DEVTOOL = "Przedziwna rzecz!",
+        DEVTOOL_NODEV = "Co to za nonsens?",
+        DIVININGRODBASE =
+        {
+            GENERIC = "Do czego to służy?",
+            READY = "To chyba dziurka od klucza...",
+            UNLOCKED = "Dla chcącego...",
+        },
+        DOUBLE_UMBRELLAHAT = "Podwójna ochrona!",
+        DOYDOY = "Cóż za fascynujący gatunek!",
+        DOYDOYBABY = "Proces reprodukcji rozpoczęty.",
+        DOYDOYEGG = "Przyroda zawsze sobie poradzi.",
+        DOYDOYEGG_COOKED = "Zielone jaja z szynką.",
+        DOYDOYEGG_CRACKED = "Jestem taka ciekawa...",
+        DOYDOYFEATHER = "Odrobina upierzenia.",
+        DOYDOYNEST = "To jakiś wabik?",
+        DRAGOON = "Te gady potrafią wytrzymać olbrzymie temperatury.",
+        DRAGOONDEN = "Przydałoby się trochę ogarnąć ten bałagan.",
+        DRAGOONEGG = "Cóż może mieszkać w tej magmowej skale?",
+        DRAGOONHEART = "Preparacja zakończona powodzeniem.",
+        DRAGOONSPIT = "Uważaj, co robisz!",
+        DUBLOON = "Aha! Piracka waluta.",
+        DUG_BAMBOOTREE = "Potrzebuje ziemi.",
+        DUG_BUSH_VINE = "Potrzebuje ziemi.",
+        DUG_COFFEEBUSH = "Potrzebuje ziemi.",
+        DUG_ELEPHANTCACTUS = "Potrzebuje ziemi.",
+        EARRING = "Nie moje klimaty.",
+        ELEPHANTCACTUS = "Sukulent na szczycie wulkanu. Interesujące.",
+        ELEPHANTCACTUS_ACTIVE = "Systemy obronne aktywne!",
+		ELEPHANTCACTUS_STUMP = "Rozpoczął już sen zimowy.",
+        FABRIC = "Bardzo ładny splot.",
+        FEATHERSAIL = "Pierzasty żagiel.",
+        FISHINHOLE = "Widzę pod powierzchnią wodne stworzenia ektotermiczne!",
+        FISH_RAW = "Wonny płat rybiego mięsa.",
+        FISH_RAW_SMALL = "Rybie mięsko.",
+        FISH_RAW_SMALL_COOKED = "Niezwykle pożywny.",
+        FLAMEGEYSER = "Cóż za piękne widowisko!",
+        FLOTSAM = "Jak się do nich dostać...?",
+        FLUP = "Zachowaj ten jęzor dla siebie!",
+        FRESHFRUITCREPES = "Piątek dzisiaj?",
+        FROG_POISON = "Uwaga!",
+        GASHAT = "Węglan wapnia oczyszcza cząsteczki powietrza.",
+        GOLDENMACHETE = "Najłatwiej formowalny z metali. Zobaczmy, jak sobie radzi z cięciem.",
+        GRASS_WATER = "Widzę pod wodą korzenie.",
+        HAIL_ICE = "Bywały takie burze z gradem wielkości kurzych jaj.",
+        HOME = "Cóż to za habitat?",
+        HOUNDFIRE = "Wysokie temperatury! Zachowaj ostrożność!",
+        ICEMAKER =
+        {
+            HIGH = "Lodowe szaleństwo!",
+            LOW = "Tempo spada.",
+            NORMAL = "Wydajność na standardowym poziomie.",
+            OUT = "Skończyło się paliwo.",
+            VERYLOW = "Już prawie koniec.",
+        },
+        INVENTORYGRAVE = "Pamiątki z innej wyprawy.",
+        INVENTORYMOUND = "Pamiątki z innej wyprawy.",
+        IRONWIND = "To się nazywa żeglowanie!",
+        JELLYFISH = "Meduza, najstarszy z organizmów wieloorganowych.",
+        JELLYFISH_COOKED = "Dzięki kontrolowanej reakcji chemicznej nadaje się teraz do spożycia.",
+        JELLYFISH_DEAD = "Muszę uważać, żeby na nią nie nadepnąć.",
+        JELLYFISH_PLANTED = "Galaretka.",
+        JELLYJERKY = "Cóż za nietuzinkowy pomysł.",
+        JUNGLETREE =
+        {
+            BURNING = "Płonie!",
+            BURNT = "Zwęglone drzewo.",
+            CHOPPED = "Ścięty w słusznej sprawie.",
+            GENERIC = "Wyrasta do wielkich rozmiarów!",
+        },
+        JUNGLETREESEED =
+        {
+            GENERIC = "Dzieci drzewa.",
+            PLANTED = "Dobrze mu tutaj.",
+        },
+        KNIGHTBOAT = "Przedziwny, mechaniczny konik morski!",
+        KRAKEN = "Ośmiornice dysponują licznymi strategiami obronnymi.",
+        KRAKENCHEST = "Mogłabym spróbować wywnioskować, co jest w środku, ale będzie to jedynie przypuszczenie.",
+        KRAKEN_TENTACLE = "Uwaga na umięśnione hydrostaty!",
+        LAVAPOOL = "Nie zamierzam brodzić w tym basenie.",
+        LIMESTONE = "Powszechnie wykorzystywany w architekturze.",
+        LIMPETROCK =
+        {
+            GENERIC = "Ta skała jest domem dla licznych brzuchonogów.",
+            PICKED = "Ślimaki zostały już zebrane.",
+        },
+        LIMPETS = "Patella vulgata.",
+		LIMPETS_COOKED = "Pieczona Patella vulgata.",
+        TREEGUARD = "Fascynujące... zamienił się w dwunoga!",
+        LIVINGJUNGLETREE = "Magia botaniczna w najwyżej w formie!",
+        LOBSTER = "Niezwykły skorupiak.",
+        LOBSTERHOLE = "Schronienie skorupiaka.",
+        LOBSTER_DEAD = "Teraz mogę go równie dobrze zjeść.",
+        LOBSTER_DEAD_COOKED = "Obiad podano!",
+        LOG =
+        {
+            BURNING = "Fragment pnia, ścięty w poprzek słojów. W dodatku płonie.",
+            GENERIC = "Fragment pnia, ścięty w poprzek słojów.",
+        },
+        LOGRAFT = "Prymitywna jednostka wodna.",
+        LUGGAGECHEST = "Ktoś zgubił bagaż.",
+        MACHETE = "Służy do przedzierania się przez zarośla.",
+        MAGIC_SEAL = "Mała foka coś nam zostawiła!",
+        MAGMAROCK = "Cóż się tam kryje?",
+        MAGMAROCK_FULL = "Cóż się tam kryje?",
+        MAGMAROCK_GOLD = "Formacja skalna zawierająca złote samorodki.",
+        MAGMAROCK_GOLD_FULL = "Formacja skalna zawierająca złote samorodki.",
+        MANDRAKE_COOKED = "Mandragora officinarum, ugotowana w imię nauki.",
+        MANGROVETREE = "Gatunek drzewa tolerujący słoną wodę!",
+        MANGROVETREE_BURNT = "W takim stanie już nie odrośnie.",
+        MARSH_PLANT_TROPICAL = "Drzewus zielonus.",
+        MERMFISHER = "Cechuje go zadziwiająca biegłość w poławianiu ryb.",
+        MERMHOUSE_FISHER = "Pewnie mieszka w niej córka rybaka.",
+        MESSAGEBOTTLE = "Jestem zaintrygowana!",
+        MESSAGEBOTTLEEMPTY = "Lubię, jak w środku jest jakiś manuskrypt.",
+        MONKEYBALL = "Naczelna zabawka.",
+        MONSTERTARTARE = "Potworne mięso w ładnym ubraniu.",
+        MOSQUITOSACK_YELLOW = "Substancja lecznicza.",
+        MOSQUITO_POISON = "Jego żądło wstrzykuje paskudną truciznę.",
+        MUSSEL = "Małżus mokrus. Bardzo pożywnus.",
+        MUSSELBOUILLABAISE = "Zupa małżowa.",
+        MUSSEL_COOKED = "Muszelki nie jemu!",
+        MUSSEL_FARM =
+        {
+            GENERIC = "Stąd niestety nie sięgnę.",
+            STICKPLANTED = "No to czekamy! Przyroda podąży swoją ścieżką.",
+        },
+        MUSSEL_STICK = "Do poławiania mięczaków.",
+        MYSTERYMEAT = "Niezidentyfikowane coś wyrzucone przez morze. Ja podziękuję.",
+        NEEDLESPEAR = "Myśl jak kaktus.",
+        OBSIDIAN = "Pochodna lawy.",
+        OBSIDIANAXE = "Generuje swoje własne ciepło.",
+        OBSIDIANCOCONADE = "Potężny wybuchowy pocisk.",
+        OBSIDIANFIREPIT =
+        {
+            GENERIC = "Pozwala się ogrzać.",
+            OUT = "Mogę je rozpalić ponownie.",
+            EMBERS = "Ogień prawie zgasł.",
+            LOW = "Przydałoby się trochę więcej paliwa.",
+            NORMAL = "Idealne światło do czytania.",
+            HIGH = "Rozmiar tego ognia budzi niepokój.",
+        },
+        OBSIDIANMACHETE = "Generuje swoje własne ciepło.",
+        OBSIDIANSPEARGUN = "Generuje swoje własne ciepło.",
+        OBSIDIAN_WORKBENCH = "Tutaj mogę nauczyć się wulkanicznego rzemiosła.",
+        OCTOPUSCHEST = "Chyba leżała na samym dnie rafy.",
+        OCTOPUSKING = "Oto centrum całego ekosystemu.",
+        OX = "Trochę śmierdzą, gdy są mokre.",
+        OXHAT = "Porządna osłona głowy.",
+        OX_FLUTE = "Jej dźwięki pobudzają Matkę Naturę.",
+        OX_HORN = "Róg ospałego ssaka.",
+        PACKIM = "Witaj, pierzasty przyjacielu!",
+        PACKIM_FISHBONE = "Ciekawe, co to za gatunek.",
+        PALMLEAF = "Spadł z palmy.",
+        PALMLEAF_HUT = "Odpoczynek od nieubłagalnego spojrzenia słońca.",
+        PALMTREE =
+		{
+		    CHOPPED = "Ścięty w słusznej sprawie.",
+            BURNING = "Drzewo płonie.",
+            BURNT = "Zwęglone drzewo.",
+			GENERIC = "Lubię sobie czasem usiąść pod palmą z dobrą książką.",
+		},
+        PARROT = "Kolorowy tropikalny ptak.",
+        PARROT_PIRATE = "Ciekawe, czy umie czytać.",
+        PEACOCK = "Pavo cristatus.",
+        PEG_LEG = "Nie znałam jeszcze takiego typu broni...",
+        PIGTENT = "Obrzydliwy.",
+        PIKE_SKULL = "Szczątki szkieletu.",
+        PIRATEGHOST = "Pirackie zjawisko paranormalne.",
+        PIRATEHAT = "Kiedy wpadniesz między wrony...",
+        PIRATEPACK = "Skrzynia na skarby.",
+        PIRATIHATITATOR =
+        {
+            BURNT = "Teraz na niewiele się już przyda.",
+            GENERIC = "Maszyna naukowa zasilana morską myślą techniczną.",
+        },
+        POISONHOLE = "Muszę trzymać się z daleka. Dziura uwalnia chmury toksyn w równych odstępach czasu.",
+        PORTAL_SHIPWRECKED = "Wyczuwam tu magię.",
+        PRIMEAPE = "Te małe mały są niezwykle bystre.",
+        PRIMEAPEBARREL = "Małpie siedlisko.",
+        RAFT = "Jedno z wielu zastosowań bambusa.",
+		RAWLING = "Pan Gadulski.",
+        REDBARREL = "Wystarczy iskra, żeby uruchomić wybuchową reakcję chemiczną.",
+        RELIC =
+        {
+            BROKEN = "Pradawne artefakty.",
+            GENERIC = "Z pewnością zniszczone przez cienie.",
+        },
+        ROCK_CHARCOAL = "Bogate źródło węgla.",
+        ROCK_OBSIDIAN = "Twardy orzech do zgryzienia.",
+        ROWBOAT = "Moja jednostka do badań morskich.",
+        SAIL = "Umożliwia podróż wiatrową.",
+        SAIL_STICK = "Może się przydać w czasie sztormu.",
+        SAND = "Zawsze jakoś znajdzie drogę do moich książek.",
+        SANDBAG = "Doskonały pochłaniacz wilgoci.",
+        SANDBAGSMALL = "Doskonały pochłaniacz wilgoci.",
+        SANDBAGSMALL_ITEM = "Środki ochrony przeciwpowodziowej.",
+        SANDBAG_ITEM = "Środki ochrony przeciwpowodziowej.",
+        SANDHILL = "To wiatr odpowiada za znany wszystkim kształt wydm.",
+        SAND_CASTLE =
+        {
+            GENERIC = "Stylizowany na tradycyjną europejską warownię.",
+            SAND = "Stylizowany na tradycyjną europejską warownię.",
+        },
+        SEAGULL = "Padlinożerca z rodziny Laridae ptakus.",
+        SEAGULL_WATER = "Padlinożerca z rodziny Laridae ptakus.",
+        SEASACK = "Chroni moje książki i zapasy!",
+        SEASHELL = "Była kiedyś pancerzem pewnego bezkręgowca.",
+        SEASHELL_BEACHED = "Cóż nam fala dziś przyniosła?",
+        SEATRAP = "Trzeba ją rozstawić w okolicach leża.",
+        SEAWEED = "Przyznaję, że algologia nie należy do moich specjalności.",
+        SEAWEED_COOKED = "Bogate w białko.",
+        SEAWEED_DRIED = "Wysuszyłam algi.",
+        SEAWEED_PLANTED = "Morskie algi.",
+        SHADOWSKITTISH_WATER = "Zaczynają się tworzyć nadprzyrodzone zjawiska...",
+        SHARKITTEN = "Młode wydają się raczej niegroźne. I urocze.",
+        SHARKITTENSPAWNER =
+        {
+            GENERIC = "Ciekawe, jak głęboko sięgają tunele.",
+            INACTIVE = "Sezon zimowego snu.",
+        },
+        SHARK_FIN = "Płetwa grzbietowa pełni funkcję stabilizatora.",
+        SHARK_GILLS = "Skrzela odfiltrowują tlen z wody. Ach, potęga biomechaniki!",
+        SHARK_TEETHHAT = "Zębata korona.",
+        SHARX = "Cicho!",
+        SHIPWRECKED_ENTRANCE = "Specjalny okręt kursujący pomiędzy światami.",
+        SHIPWRECKED_EXIT = "Czas opuścić ten tropikalny raj?",
+        SLOTMACHINE = "Powiedziałabym, że wynik jest bardzo niepewny.",
+        SNAKE = "Trzymaj się z daleka, gadzie!",
+        SNAKEDEN =
+        {
+            BURNT = "Zwęglona materia.",
+            CHOPPED = "Łodygi z czasem odrosną.",
+            GENERIC = "Roślina pnąca.",
+        },
+        SNAKEOIL = "Przydatność tej substancji nie została jeszcze potwierdzona.",
+        SNAKESKIN = "Warstwa węża.",
+        SNAKESKINHAT = "Kapelusz przeciwdeszczowy!",
+        SNAKESKINSAIL = "Żagiel z wężowej skóry.",
+        SNAKE_FIRE = "Gorąco!",
+        SNAKE_POISON = "Uwaga na jadowite ukąszenia.",
+        SOLOFISH = "Canis rybus.",
+        SPEARGUN = "Doceniam przewagę, jaką daje mi walka na dystans.",
+        SPEARGUN_POISON = "Doceniam przewagę, jaką daje mi trucizna miotana na dystans.",
+        SPEAR_LAUNCHER = "Doceniam przewagę, jaką daje mi walka na dystans.",
+        SPEAR_OBSIDIAN = "Generuje swoje własne ciepło.",
+        SPEAR_POISON = "Teraz mogę rozdawać toksyczne ugryzienia!",
+        SPOILED_FISH = "Zaczyna powoli stanowić zagrożenie biologiczne.",
+        STUNGRAY = "Patrzcie tylko na tę rozpiętość skrzydeł!",
+        SUNKEN_BOAT =
+        {
+            ABANDONED = "Wygląda na to, że tej się nie udało.",
+            GENERIC = "Ileż rzeczy czeka na odkrycia w morskich głębinach...",
+        },
+        SUNKEN_BOAT_BURNT = "Został tylko czarny osad.",
+        SUNKEN_BOAT_TRINKET_1 = "Urządzenie służące do wykonywania pomiarów.",
+        SUNKEN_BOAT_TRINKET_2 = "Mała, urocza łódeczka.",
+        SUNKEN_BOAT_TRINKET_3 = "Chyba używana.",
+        SUNKEN_BOAT_TRINKET_4 = "Wygląda na całkiem użyteczny mechanizm.",
+        SUNKEN_BOAT_TRINKET_5 = "Start but. Ciekawe, co się stało z drugim.",
+        SUPERTELESCOPE = "Odkrywam nowe horyzonty!",
+        SWEETPOTATOSOUFFLE = "Całkiem pyszne.",
+        SWEET_POTATO = "Kumara!",
+        SWEET_POTATO_COOKED = "Grillowana kumara.",
+        SWEET_POTATO_PLANTED = "Warzywny korzonek.",
+        SWEET_POTATO_SEEDS = "Wyhodujemy kolejną bulwę.",
+        SWIMMINGHORROR = "Oj, zaczynam mieć zwidy...",
+        SWORDFISH = "Lepiej nie drażnić miecznika!",
+        TELEPORTATO_SW_BASE = "Zaproszenie do odnowienia!",
+        TELEPORTATO_SW_BOX = "Do czego można to przyczepić...",
+        TELEPORTATO_SW_CRANK = "Słomiana dźwignia?",
+        TELEPORTATO_SW_POTATO = "Przedziwne urządzenie...",
+        TELEPORTATO_SW_RING = "Obrączka olbrzyma?",
+        TELESCOPE = "Zbiera widzialne światło, by poprawić moją zdolność widzenia.",
+        THATCHPACK = "Można w nim przechować kilka dodatkowych książek.",
+        TIDALPOOL = "Baseny pływowe to niezwykle fascynujące ekosystemy!",
+        TIDAL_PLANT = "Eukariont wielokomórkowy.",
+        TIGEREYE = "Aparat wzrokowy wielkiego zwierza.",
+        TIGERSHARK = "Selachii felidae. Bardzo duży osobnik!",
+        TOUCAN = "Gatunek słynący z pięknie ubarwionego dziobu.",
+        TRAWLNET = "Do zbierania śmieci na morzu.",
+        TRAWLNETDROPPED =
+        {
+            GENERIC = "Czas na rozpakowanie!",
+            SOON = "Chyba tonie.",
+            SOONISH = "Sieć zatonie za kilka chwil.",
+        },
+        TREASURECHEST_TRAP = "Wygląda podejrzanie...",
+        TREECLUMP = "Flora rośnie tu bardzo bujnie.",
+        TRIDENT = "Narzędzie z pradawnych legend.",
+        TRINKET_13 = "Puszka napoju gazowanego.",
+        TRINKET_14 = "Artefakt plemienny.",
+        TRINKET_15 = "Lubię instrumenty strunowe.",
+        TRINKET_16 = "Ciekawe, co oznacza ten napis.",
+        TRINKET_17 = "Start but. Ciekawe, co się stało z drugim.",
+        TRINKET_18 = "Cała pokryta jest jakimiś symbolami.",
+        TRINKET_19 = "Interesujące...",
+        TRINKET_20 = "Urządzenie służące do wykonywania pomiarów.",
+        TRINKET_21 = "Mała, urocza łódeczka.",
+        TRINKET_22 = "Chyba używana.",
+        TRINKET_23 = "Musze uważać, żeby jej nie podeptać.",
+        TROPICAL_FISH = "Ale kolorowe.",
+        TUNACAN = "Zakonserwowana ryba.",
+        TURBINE_BLADES = "Muszę się dowiedzieć, co mogę z nią zrobić!",
+        TURF_SANDY = "Ziemia. Do chodzenia.",
+        TURF_ASH = "Ziemia. Do chodzenia.",
+        TURF_BEACH = "Ziemia. Do chodzenia.",
+        TURF_DESERTDIRT = "Ziemia. Do chodzenia.",
+        TURF_FUNGUS_GREEN = "Ziemia. Do chodzenia.",
+        TURF_FUNGUS_RED = "Ziemia. Do chodzenia.",
+        TURF_JUNGLE = "Ziemia. Do chodzenia.",
+        TURF_MAGMAFIELD = "Ziemia. Do chodzenia.",
+        TURF_MEADOW = "Ziemia. Do chodzenia.",
+        TURF_SNAKESKINFLOOR = "Ziemia. Do chodzenia.",
+        TURF_SWAMP = "Ziemia. Do chodzenia.",
+        TURF_TIDALMARSH = "Ziemia. Do chodzenia.",
+        TURF_VOLCANO = "Ziemia. Do chodzenia.",
+        TWISTER = "Wir nieustępliwej energii!",
+        TWISTER_SEAL = "Jakim cudem udało ci się spowodować tyle problemów?",
+        VENOMGLAND = "Substancja na wszelkie zatrucia.",
+        VINE = "Pospolite w dżungli.",
+        VOLCANO = "Aktywność tektoniczna w formie!",
+        VOLCANOSTAFF = "Czuję, jak drży od wulkanicznej energii.",
+        VOLCANO_ALTAR =
+        {
+            GENERIC = "Więź z sercem wulkanu.",
+            OPEN = "Co by tu ofiarować...",
+        },
+        VOLCANO_ALTAR_BROKEN = "Chyba jest trwale niezdolny do pracy.",
+        VOLCANO_ALTAR_TOWER = "Wspaniała budowla.",
+        VOLCANO_EXIT = "Powrót do bardziej ludzkich temperatur!",
+        VOLCANO_SHRUB = "Drzewo zostało spopielone.",
+        WALLYINTRO_DEBRIS = "Pozostałości po nieznanej łodzi.",
+        WALL_LIMESTONE = "Odrobina ochrony.",
+        WALL_LIMESTONE_ITEM = "Do wapiennej zabudowy.",
+        WATERMELON_SEEDS = "Można z nich wyhodować lanatusa.",
+        WATERYGRAVE = "Ciekawe, od jak dawna tak dryfuje...",
+        WHALE_BLUE = "Uwielbiam morskie ssaki!",
+        WHALE_BUBBLES = "Pod powierzchnią czai się coś dużego",
+        WHALE_CARCASS_BLUE = "Rozkład już się rozpoczął.",
+        WHALE_CARCASS_WHITE = "Wciąż tkwi w nim harpun.",
+        WHALE_TRACK = "Podążajmy śladem walenia!",
+        WILBUR_CROWN = "Do kogo to mogło należeć...",
+        WILBUR_UNLOCK = "Przepraszam najmocniej, panie małpo. Potrzebuje pan pomocy?",
+        WILDBORE = "Świniowaty nie wygląda na wesołego.",
+        WILDBOREHEAD = "To się nazywa dekapitacja.",
+        WILDBOREHOUSE = "Dzicze schronienie.",
+        WIND_CONCH = "Pieśń przesuwająca fronty ciśnienia atmosferycznego.",
+        WOODLEGSBOAT = "Piracki okręt.",
+        WOODLEGSHAT = "Lepiej pasowałby jakiemuś piratowi.",
+        WOODLEGSSAIL = "Piracki żagiel.",
+        WOODLEGS_CAGE = "Skąd pan się tu wziął, wymęczony panie?",
+        WOODLEGS_KEY1 = "Klucz z kości...",
+        WOODLEGS_KEY2 = "Tylko gdzie jest zamek?",
+        WOODLEGS_KEY3 = "Przedziwny klucz.",
+        WORMHOLE_LIMITED = "Jakoś nie kusi mnie perspektywa walki z tym stworzeniem.",
+        WRECK = "Tak kończą okręty złapane przez sztorm. Ten jest już własnością morza.",
+		CALIFORNIAROLL = "Pyszne makizushi.",
+    },
+    EAT_FOOD = 
+    {
+        TALLBIRDEGG_CRACKED = "Al dente.",
+    },
+}

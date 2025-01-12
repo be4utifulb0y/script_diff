@@ -1,0 +1,1800 @@
+return 
+{
+    ACTIONFAIL =
+    {
+        SHAVE =
+        {
+            GENERIC = "我真的不想這麼做的。",
+            NOBITS = "已經剃乾淨了，親愛的。",
+            AWAKEBEEFALO = "我覺得他可能會抗議。",
+        },
+        READ =
+        {
+            GENERIC = "還有其他事在等著。",
+            NOBIRDS = "鳥不喜歡這種天氣。",
+        },
+        REPAIRBOAT =
+        {
+            GENERIC = "這艘船狀態一流！",
+        },
+        STORE =
+        {
+            GENERIC = "恐怕它已經裝滿了。",
+            NOTALLOWED = "胡鬧。",
+        },
+        COOK =
+        {
+            GENERIC = "恐怕得過會兒。要知道，不是所有老太太都喜歡烹飪的。",
+            TOOFAR = "離我太遠了。",
+        },
+        WRITE =
+        {
+            GENERIC = "我寧願在自己的書裡寫字。",
+        },
+        RUMMAGE =
+        {   
+            GENERIC = "我現在腦子裡還想著別的事情。",  
+        },
+        CHANGEIN =
+        {
+            GENERIC = "我覺得我看上去已經夠聰明了。",
+            BURNING = "再沒辦法換衣服了。它已經著火了。",
+        },
+        GIVE =
+        {
+            DEAD = "這麼做是一種浪費。",
+            SLEEPING = "它好像睡著了。",
+            BUSY = "等它忙完了，我會再試試的。",
+        },
+        TEACH =
+        {
+            KNOWN = "拜託，這些知識簡直太小兒科了。",
+            CANTLEARN = "一條我領悟不了的知識...有趣！",
+        },
+    },
+    ACTIONFAIL_GENERIC = "我似乎做不到。",
+    DESCRIBE_TOODARK = "黑暗裡我什麼都看不見。",
+    DESCRIBE_SMOLDERING = "看樣子快要因為溫度過高而著火了。",
+    DESCRIBE_GENERIC = "稀罕的事物。我不知道那是什麼。",
+    ANNOUNCE_MAGIC_FAIL = "恐怕它不適應這個世界。",
+    BATTLECRY =
+    {
+        GENERIC = "戰鬥！",
+        PIG = "令人作嘔的無賴！",
+        PREY = "放棄吧。",
+        SPIDER = "規矩點！",
+        SPIDER_WARRIOR = "要尊敬老人！",
+    },
+
+    COMBAT_QUIT =
+    {
+        GENERIC = "好吧，結束了。",
+        PIG = "噢，不好。",
+        PREY = "我必須重新評估形勢。",
+        SPIDER = "我必須仔細研究一下這個！",
+        SPIDER_WARRIOR = "從頭再來！",
+    },
+    ANNOUNCE_EAT =
+    {
+        GENERIC = "好吃！",
+        SPOILED = "它已經部分腐爛了。", 
+        STALE = "那已經不是最新鮮的狀態了。",
+        PAINFUL = "我真不應該吃那個的。",
+        INVALID = "這東西不能吃。",
+        YUCKY = "吃下這個是不明智的。",
+    },
+    ANNOUNCE_NOWARDROBEONFIRE = "你可以清楚看到，它著火了。",
+    ANNOUNCE_WORMS = "某種陰險的生物要出現了。",
+    ANNOUNCE_CANFIX = "\n我相信我能修好這個。",
+    ANNOUNCE_ADVENTUREFAIL = "我們必須從失敗中總結教訓。",
+    ANNOUNCE_COLD = "周圍溫度好低。",
+    ANNOUNCE_HOT = "周圍溫度好高。",
+    ANNOUNCE_HUNGRY = "圖書管理員需要食物。",
+    ANNOUNCE_TORCH_OUT = "我需要另一根火把。",
+    ANNOUNCE_FAN_OUT = "這個脆弱的裝置爛掉了。",
+    ANNOUNCE_COMPASS_OUT = "我的指南針消磁了。",
+    ANNOUNCE_DUSK = "很快就要天黑了。",
+
+    ANNOUNCE_CHARLIE_ATTACK = "哎喲！誰這麼大膽？！",
+    ANNOUNCE_CHARLIE = "你聽到了嗎？",
+    ANNOUNCE_BOOMERANG = "我錯估了它飛回來的時間。",
+    ANNOUNCE_HOUNDS = "有東西在接近。",
+
+    ANNOUNCE_NOSLEEPONFIRE = "即使我能夠睡著，這麼高的溫度也是極不安全的。",
+    ANNOUNCE_NODANGERSIESTA = "身處危險的時候，我不敢躺下來！",
+    ANNOUNCE_NONIGHTSIESTA = "無論躺在哪兒，我就是睡不著。",
+    ANNOUNCE_NONIGHTSIESTA_CAVE = "在這些洞穴中，我完全無法放鬆。",
+    ANNOUNCE_NOHUNGERSIESTA = "好餓啊，這下更放鬆不了了！",
+    ANNOUNCE_SHELTER = "啊，終於可以喘息一下了。",
+    ANNOUNCE_BURNT = "至少是一級燃燒！",
+    ANNOUNCE_TOOL_SLIP = "我的工具！",
+    ANNOUNCE_DAMP = "開始有積水了。",
+    ANNOUNCE_WET = "我很好奇我身體的極限點是什麼...",
+    ANNOUNCE_WETTER = "好濕啊！",
+    ANNOUNCE_SOAKED = "已經完全濕透了。",
+    ANNOUNCE_OTHER_WORLD_PLANT = "這個環境未滿足這株植物生長的基本條件。",
+
+    ANNOUNCE_PECKED = "立刻給我安靜下來！",
+
+    ANNOUNCE_ENTER_LIGHT = "這亮度足以看見東西了。",
+    ANNOUNCE_ENTER_DARK = "這裡漆黑一片。",
+    ANNOUNCE_INV_FULL = "我拿不了更多的東西了。",
+    ANNOUNCE_CRAFTING_FAIL = "現在我無法製作那個。",
+
+    ANNOUNCE_WORMHOLE = "一堂內容翔實的生物課！",
+
+    ANNOUNCE_HUNT_LOST_TRAIL = "蹤跡已經變得難以識別。",
+    ANNOUNCE_HUNT_LOST_TRAIL_SPRING = "蹤跡已經被雨水沖沒了。",
+    ANNOUNCE_HUNT_BEAST_NEARBY = "出現這個蹤跡表明動物最近出來活動過。",
+    ANNOUNCE_ACCOMPLISHMENT= "還沒完成呢！",
+    ANNOUNCE_ACCOMPLISHMENT_DONE = "完成了！",
+
+    ANNOUNCE_TRAP_WENT_OFF = "哎呀！",
+    ANNOUNCE_QUAKE = "是地震！震級至少達到了芮氏七級。",
+    ANNOUNCE_NODANGERSLEEP = "即使周圍沒有危險，我也幾乎睡不著覺！",
+    ANNOUNCE_UNIMPLEMENTED = "嘖嘖，我覺得它應該還沒有完全弄好。",
+    ANNOUNCE_NOHUNGERSLEEP = "即使一點都不餓，我也幾乎睡不著覺！",
+    ANNOUNCE_FREEDOM = "自由！我要找一本好書，然後在書裡盡情地徜徉。",
+    ANNOUNCE_RESEARCH = "任何資訊都不該被浪費，無論是多麼微不足道。",
+    ANNOUNCE_NO_TRAP = "小事一樁！",
+    ANNOUNCE_HIGHRESEARCH = "天啊，這真是太有意思了！",
+    ANNOUNCE_THORNS = "真是見鬼，居然有刺！",
+    ANNOUNCE_NODAYSLEEP_CAVE = "在這些洞穴裡面睡覺可真不是一件容易的事。",
+    ANNOUNCE_BEES = "去刺那些討厭的傢伙！",
+    ANNOUNCE_KNOCKEDOUT = "這下好了，我想這也是獲得休息的一種方法吧。",
+    ANNOUNCE_LOWRESEARCH = "雖然不是什麼很好的資源，但好歹是些有用的小東西。",
+    ANNOUNCE_DEERCLOPS = "聽起來似乎來了個巨人！",
+    ANNOUNCE_MOSQUITOS = "該死的吸血鬼！",
+    ANNOUNCE_NODAYSLEEP = "即使是晚上我都很難入睡，更不用說在白天了。", 
+    ANNOUNCE_INSUFFICIENTFERTILIZER = "要我說，只需要再多施一點肥就可以了。",
+    ANNOUNCE_LIGHTNING_DAMAGE_AVOIDED = "謝天謝地，這件衣服不導電！",
+    ANNOUNCE_TOOMANYBIRDS = "地上鳥太多了，魔法沒那麼有效。",
+    ANNOUNCE_WAYTOOMANYBIRDS = "現在天上一隻鳥都沒有了。",
+    ANNOUNCE_MESSAGEBOTTLE =
+    {
+        "難以辨認的潦草字跡。",
+    },
+    ANNOUNCE_BOAT_DAMAGED = "我的船破損了！",
+    ANNOUNCE_BOAT_SINKING = "我相信這艘船正在下沉。",
+    ANNOUNCE_BOAT_SINKING_IMMINENT = "我最好駛向岸邊！一秒鐘也不能耽誤！",
+    ANNOUNCE_CRAB_ESCAPE = "好聰明的甲殼類動物！",
+    ANNOUNCE_MAPWRAP_LOSECONTROL = "我對這次冒險的後果不太確定。",
+    ANNOUNCE_MAPWRAP_RETURN = "這證實了世界確實是圓的！",
+    ANNOUNCE_MAPWRAP_WARN = "迷霧中的居民仍然被神秘的薄霧籠罩著。呵呵！",
+    ANNOUNCE_MORETREASURE = "哎呀，又是這麼多寶藏！",
+    ANNOUNCE_OTHER_WORLD_TREASURE = "這些坐標不屬於這個世界。",
+    ANNOUNCE_SHARX = "鯊目獵犬！多麼迷人的麻煩東西。",
+    ANNOUNCE_TRAWL_FULL = "這張網裝不下更多東西了。",
+    ANNOUNCE_TREASURE = "看哪！是黃金。",
+    ANNOUNCE_VOLCANO_ERUPT = "地幔在翻騰！",
+    ANNOUNCE_WAVE_BOOST = "一流的海洋濤動！",
+    ANNOUNCE_WHALE_HUNT_BEAST_NEARBY = "什麼東西經過時留下了那些氣泡？！",
+    ANNOUNCE_WHALE_HUNT_LOST_TRAIL = "唔，這個生物撤入了深海之中。",
+    ANNOUNCE_WHALE_HUNT_LOST_TRAIL_SPRING = "我在湍急的水中失去了它的蹤跡！",
+
+    DESCRIBE=
+    {
+        BABYOX = "The young's odor wards off predators. And myself.",
+        GLOMMER = "昆蟲綱中長相怪異的傢伙。",
+        GLOMMERFLOWER = 
+        {
+            GENERIC = "它一直在滴黏液。",
+            DEAD = "雖然變成了灰色，但它還在不停地滴。",
+        },
+        GLOMMERWINGS = "那個奇怪生物的翅膀。",
+        GLOMMERFUEL = "它好像很不穩定。",
+        BELL = "安靜！這裡是圖書館！",
+        STATUEGLOMMER = 
+        {   
+            GENERIC = "它是被石化了嗎？",
+            EMPTY = "不是，只是一座雕像而已。",
+        },
+        WEBBERSKULL = "那是最不同尋常的頭骨。",
+        
+        MOONROCKNUGGET = "暗示著月球天體？有趣。",
+        ROCK_MOON = "暗示著月球天體？有趣。",
+        MOLE =
+        {
+            HELD = "我覺得我的口袋不能成為它的自然棲息地。",
+            UNDERGROUND = "那下面有東西正在挖地道。",
+            ABOVEGROUND = "啊，是鼴鼠科動物！",
+        },
+        MOLEHILL = "它的洞穴通道一定四通八達！",
+        MOLEHAT = "啊，透過另一種生物的，呃，透過它們的鼻子看世界！",
+        NIGHTSTICK = "我懷疑它是不是以金星命名的？",
+        RABBITHOUSE=
+        {
+            GENERIC = "真可悲，它只是被漆得像一根胡蘿蔔。",
+            BURNT = "它連燒起來都不像是胡蘿蔔。",
+        },
+        TURF_DECIDUOUS = "地面。你正踩在它上面。",
+        TURF_SANDY = "The ground. You step on it.",
+        TURF_BADLANDS = "地面。你正踩在它上面。",
+        BEARGER = "它是一種犬型亞目動物...除此之外，我一無所知。",
+        BEARGERVEST = "不管它以前是什麼動物，它的毛皮倒是一件很不錯的衣服。",
+        ICEPACK = "完美的隔熱。",
+        BEARGER_FUR = "天啊！那東西好厚。",
+        FURTUFT = "狂暴熊獾的毛皮。",
+        BIGFOOT = "史前怪物！",
+        BONESHARD = "某個生命的殘留物。",
+        BUZZARD = "是美洲鷲，毫無疑問。",
+        CACTUS = 
+        {
+            GENERIC = "還沒完全成熟的桶形仙人掌。",
+            PICKED = "艱難的時期就需要採取極端措施。",
+        },
+        CACTUS_MEAT_COOKED = "沒有刺，真是太好了。",
+        CACTUS_MEAT = "我不確定我處理得對不對。",
+        CACTUS_FLOWER = "讓我想起了布若斯寫的《仙人掌花》。那可是我在圖書館的最愛。",
+        COLDFIRE =
+        {
+            GENERIC = "相當古怪而神奇的火堆。",
+            OUT = "我可以重新點燃它。",
+            EMBERS = "火焰快要自動熄滅了。",
+            LOW = "應該再加一些燃料。",
+            NORMAL = "相當奇異的火。",
+            HIGH = "營火正在以驚人的速度燃燒。",
+        },
+        CATCOON = "一種野貓。帥氣的傢伙。",
+        CATCOONDEN = 
+        {
+            GENERIC = "適合做窩的中空樹樁。",
+            EMPTY = "看來是耗竭了。",
+        },
+        CATCOONHAT = "雖然不太像大衛·克洛科特的浣熊皮帽，但也不錯了。",
+        COONTAIL = "柔軟靈活的軀幹附屬物。",
+        LAVA_POND_ROCK = "冷卻不久的火成岩。危險。",
+        LAVA_POND_ROCK2 = "冷卻不久的火成岩。危險。",
+        LAVA_POND_ROCK3 = "冷卻不久的火成岩。危險。",
+        LAVA_POND_ROCK4 = "冷卻不久的火成岩。危險。",
+        LAVA_POND_ROCK5 = "冷卻不久的火成岩。危險。",
+        LAVA_POND_ROCK6 = "冷卻不久的火成岩。危險。",
+        LAVA_POND_ROCK7 = "冷卻不久的火成岩。危險。",
+        COOKPOT =
+        {
+            COOKING_LONG = "還要等一會兒才能煮好。",
+            COOKING_SHORT = "快好了！",
+            DONE = "晚餐時間到！",
+            EMPTY = "沒有烹飪東西的時候，它看起來就像是廢棄了一樣。",
+            BURNT = "現在它是真正的廢棄了。",
+        },
+        EYEBRELLAHAT =  "眼角膜一定很防水。",
+        ARMORDRAGONFLY = "真是令人眼花繚亂的護甲！",
+        DRAGON_SCALES = "昆蟲身上的鱗片？真是前所未聞！",
+        DRAGONFLYCHEST = "鱗片！鱗片才是最終的勝利者！",
+        DECIDUOUSTREE = 
+        {
+            GENERIC = "某種山毛櫸目植物。長大後會結出果實。",
+            CHOPPED = "它已經被砍伐了。",
+            BURNING = "樹在燃燒。",
+            BURNT = "完全被碳化了的樹。",
+            POISON = "我以前從沒見過這種樹！",
+        },
+        ACORN_COOKED = "我已經成功把它的毒性煮沒了。",
+        BIRCHNUTDRAKE = "快跑——！",
+        FARMPLOT =
+        {
+            GENERIC = "一小片耕地。",
+            GROWING = "植物正在從地裡吸取礦物養分。",
+            NEEDSFERTILIZER = "它已經因為缺乏養分而變成了貧瘠之地。",
+            BURNT = "它再也長不出農作物了。",
+        },
+        COLDFIREPIT =
+        {
+            GENERIC = "一處石頭營火。冒著寒氣。",
+            OUT = "我可以重新點燃它。",
+            EMBERS = "火焰快要自動熄滅了。",
+            LOW = "應該再加一些燃料，無論燃料是什麼。",
+            NORMAL = "一處營火。對，某種形式的營火。",
+            HIGH = "營火正在以驚人的速度燃燒。",
+        },
+        FIRESUPPRESSOR = 
+        {   
+            ON = "雪球發射！",
+            OFF = "這裡什麼也沒有。",
+            LOWFUEL = "燃料不足。",
+        },
+        ICEHAT = "完美的冰塊帽。",
+        LIGHTNINGGOAT = 
+        {
+            GENERIC = "一種喜歡電的野山羊變種。",
+            CHARGED = "簡直是閃電的忠實粉絲。",
+        },
+        LIGHTNINGGOATHORN = "羊角裡面肯定有某種非自然的東西。",
+        GOATMILK = "好誘人！",
+        MEATRACK =
+        {
+            GENERIC = "它可以使肉脫水。",
+            DRYING = "脫水是一個緩慢的過程。",
+            DRYINGINRAIN = "下雨讓脫水過程暫停了。",
+            DONE = "這個過程已經完成了。",
+            BURNT = "它似乎並不是很牢固。",
+        },
+        MERMHEAD = 
+        {
+            GENERIC = "我不確定它是腐爛了還是發酵了。",
+            BURNT = "這下它既不會腐爛也不會發酵了。",
+        },
+        MERMHOUSE = 
+        {
+            GENERIC = "很明顯已經殘破了。",
+            BURNT = "比殘破還要慘。",
+        },
+        FLOWERSALAD = "好營養！",
+        ICECREAM = "沒有比書籍和一碗冰淇淋更好的東西了。",
+        WATERMELONICLE = "西瓜完全包裹在了冰格裡面。",
+        TRAILMIX = "嗯，天然的美味！",
+        HOTCHILI = "辣椒讓我消化不良。",
+        GUACAMOLE = "在圖書館搞研究的日子裡，我經常做酪梨醬。",
+        MOOSE = "我稱它為駝鹿屬加拿大黑雁。",
+        MOOSEEGG = "太不可思議了！",
+        BANANAPOP = "嗯，這難道不提神嗎？",
+        BISQUE = "正是我需要的。",
+        CEVICHE = "可以再加一點調味汁。",
+        SEAFOODGUMBO = "我已經感覺到了胃灼熱！",
+        SURFNTURF = "完美佳餚。",
+        SHARKFINSOUP = "我做這道菜可能破壞了脆弱的生態系統。",
+        LOBSTERDINNER = "太墮落了。",
+        LOBSTERBISQUE = "我幾乎忘記了真正的食物是什麼味道。",
+        JELLYOPOP = "讓我有幾分想起年輕的時候。",
+        MOSSLING = "我想那應該和我預期的差不多。",
+        FEATHERFAN = "它會帶來很強的氣流！",
+        TROPICALFAN = "它的空氣動力學原理令人不可思議。",
+        MINIFAN = "它的空氣動力學原理令人不可思議。",
+        GOOSE_FEATHER = "好柔軟的羽毛！真希望我能夠睡覺。",
+        STAFF_TORNADO = "沒見過把風向標當成武器的。",
+        PIGHEAD = 
+        {   
+            GENERIC = "咳，這是棍子上插著的豬頭。",
+            BURNT = "棍子上插著的豬頭被燒燬後的餘燼。嘖嘖！",
+        },
+        PIGHOUSE =
+        {
+            GENERIC = "這些豬人在建築方面的品味真不咋地。",
+            FULL = "我很好奇他們在裡面都幹些什麼。",
+            LIGHTSOUT = "真是太沒禮貌了。",
+            BURNT = "房子沒有建造防火系統。",
+        },
+        FERTILIZER = "一桶動物糞便。好刺鼻。",
+        RAINOMETER = 
+        {   
+            GENERIC = "行動前先測量一下。",
+            BURNT = "已經燒得只剩外殼了，再也不能測量了。",
+        },
+        RAINCOAT = "完全不會滲水。",
+        RAINHAT = "我討厭髮髻濕漉漉的。",
+        RESEARCHLAB = 
+        {   
+            GENERIC = "是個研究站。我可以用它來學習新東西。",
+            BURNT = "我無法用已經碳化了的研究站來學習東西。",
+        },
+        RESEARCHLAB2 = 
+        {
+            GENERIC = "是個研究站。我可以用它來學習新東西。",
+            BURNT = "我無法用已經碳化了的研究站來學習東西。",
+        },
+        RESEARCHLAB3 = 
+        {
+            GENERIC = "也許我玩的太過火了。",
+            BURNT = "這是某種徵兆。",
+        },
+        RESEARCHLAB4 = 
+        {
+            GENERIC = "我猜那頂帽子是用來從空氣中收集能量的。",
+            BURNT = "它再也無法收集能量了。",
+        },
+        RESURRECTIONSTATUE = 
+        {
+            GENERIC = "真是異教徒的作風。",
+            BURNT = "它已經被毀滅了。",
+        },
+        ROCK_ICE = 
+        {
+            GENERIC = "一小塊高密度的冰礦。",
+            MELTED = "一定是因為它體積太小了，所以才會融化。",
+        },
+        ROCK_ICE_MELTED = "一定是因為它體積太小了，所以才會融化。",
+        ICE = "固態的水。",
+        REFLECTIVEVEST = "它會給我適當降溫。",
+        HAWAIIANSHIRT = "我更喜歡粗花呢衣服。",
+        TENT = 
+        {
+            GENERIC = "睡在那裡面會讓我落枕。",
+            BURNT = "反正它對我來說也沒什麼用。",
+        },
+        SIESTAHUT = 
+        {
+            GENERIC = "即使在床上我都很難睡著，更不用說在地上了。",
+            BURNT = "反正它對我來說也沒什麼用。",
+        },
+        TRANSISTOR = "這是非常先進的技術。",
+        TREASURECHEST = 
+        {
+            GENERIC = "一個儲物箱。",
+            BURNT = "儲存箱的碳化骨架。",
+        },
+        TUMBLEWEED = "一些植物物質的乾料。",
+        GRASS_UMBRELLA = "可以提供一定程度保護的美麗陽傘。",
+        PALMLEAF_UMBRELLA = "可以提供一定程度保護的樹葉陽傘。",
+        UNIMPLEMENTED = "還在建設中。",
+        WALL_HAY = 
+        {   
+            GENERIC = "我不相信那堵牆能保證我的安全。",
+            BURNT = "看來不相信它是正確的。",
+        },
+        WALL_WOOD = 
+        {
+            GENERIC = "這能提供一定程度的保護。",
+            BURNT = "它的致命弱點就是火。",
+        },
+        WARDROBE = 
+        {
+            GENERIC = "這個讓我想起了一本名著。",
+            BURNING = "唔，現在它讓我想起了另一本很不同的名著。",
+            BURNT = "它曾經是個衣櫃。",
+        },
+        WARG = "That Canis will never be domesticated.",
+        WATERMELON = "西瓜。",
+        WATERMELON_COOKED = "烤得真好。",
+        WATERMELONHAT = "這無疑是一種你可以用西瓜做出來的東西。",
+        WINTEROMETER = 
+        {
+            GENERIC = "行動前先測量一下。",
+            BURNT = "已經燒得只剩外殼了，再也不能測量了。",
+        },
+        HOMESIGN =
+        {
+            GENERIC = "導航輔助標誌，指示「你在這裡」。",
+            UNWRITTEN = "提供指示方向的機會。",
+            BURNT = "現在可沒有太大的幫助了。",
+        },
+        BEEBOX =
+        {
+            READY = "我可以從裡面收穫蜂蜜。",
+            GENERIC = "簡陋的蜂房。",
+            FULLHONEY = "我可以從裡面收穫蜂蜜。",
+            NOHONEY = "裡面沒有蜂蜜。",
+            SOMEHONEY = "還沒到收穫蜂蜜的時候。",
+            BURNT = "可憐的蜜蜂！",
+        },
+        LIVINGTREE = "這棵樹好特別。",
+        ICESTAFF = "某種能產生冰凍效果的奇妙裝置。",
+        WORMLIGHT = "比我想像中的要柔軟。",
+        WORMLIGHT_LESSER = "這東西是純素食。",
+        WORM =
+        {
+            PLANT = "讓我想起了琵琶魚。",
+            DIRT = "最好是離那個東西遠點。",
+            WORM = "蠕蟲攻擊！",
+        },
+        WORMLIGHT_PLANT = "讓我想起了琵琶魚。",
+        EEL = "是鰻魚。",
+        EEL_COOKED = "這條鰻魚已經被烤了。",
+        UNAGI = "一種常見的製作鰻魚料理的方法。",
+        EYETURRET = "那兩種野獸的能量已經被銩礦石聚集起來了。",
+        EYETURRET_ITEM = "我得把這個放置好。",
+        MINOTAURHORN = "它的角也太大了吧。真有點懷疑是不是借助噩夢燃料才長這麼大的。",
+        MINOTAURCHEST = "那個箱子絕對豪華。",
+        THULECITE_PIECES = "這些碎片可以合成更大的一塊。",
+        POND_ALGAE = "還好這種藻類不需要進行光合作用。",
+        GREENSTAFF = "它似乎是用來讓物體回到過去的樣子。",
+        POTTEDFERN = "盆栽植物。",
+
+        BOOK_BIRDS = "雖然是刪節版本，但它裡面有我的最愛：西美角鴞。",
+        BOOK_TENTACLES = "真是難以釋手。坦白講，它真的很吸引人。",
+        BOOK_GARDENING = "用死去的植物來為活著的植物謀福利。",
+        BOOK_SLEEP = "好溫馨安寧的一本書，就像睡前的一杯熱牛奶一樣。",
+        BOOK_BRIMSTONE = "總感覺有什麼不對勁呢？",
+
+        SLURPER = "典型的共生關係範例。",
+		SLURPER_PELT = "這東西肯定有些用處。",
+        SLURPERPELT = "這東西肯定有些用處。",
+		ARMORSLURPER = "噁心但又很神奇的衣服。",
+        ORANGEAMULET = "這塊寶石每使用一次就會逝去一點。",
+        YELLOWSTAFF = "還好這顆矮人星不是特別大，可以掌控。",
+        YELLOWGEM = "也許它和黃水晶類似。",
+        ORANGEGEM = "看起來像錳鋁石榴石。",
+        TELEBASE = 
+        {
+            VALID = "它看起來已經準備好了。",
+            GEMS = "我覺得它還欠缺用於啟動的能量。",
+        },
+        GEMSOCKET = 
+        {
+            VALID = "好奇妙的反應。",
+            GEMS = "放寶石的地方。",
+        },
+        STAFFLIGHT = "也許法杖再大點，就可以召喚更大的星星了。",
+
+        ANCIENT_ALTAR = "某位死去很久的神的紀念碑。",
+        ANCIENT_ALTAR_BROKEN = "它少了些東西。",
+        ANCIENT_STATUE = "它似乎與現實世界存在某種神秘的聯繫。",
+        LICHEN = "一種共生生物！一種菌類加上一種共生藻菌。",
+		CUTLICHEN = "這不會保鮮很久的。",
+
+        CAVE_BANANA = "它們的基因全都是相同的。",
+        CAVE_BANANA_COOKED = "比之前要好些。",
+        CAVE_BANANA_BURNT = "我不相信這東西能復原。",
+        CAVE_BANANA_TREE = "以前一定有種子掉進陷洞。",
+        ROCKY = "它們的甲殼是岩石做的。",
+
+        BLUEAMULET = "這個寶石無論接觸到什麼東西，似乎都會把它們的能量吸走。",
+        PURPLEAMULET = "我幾乎可以感覺到它在召喚什麼東西。",
+        TELESTAFF = "寶石似乎將噩夢燃料的能量聚集了起來。",
+        MONKEY = "它們身上的味道真難聞。",
+        MONKEYBARREL = "這似乎是某些靈長類動物的家。",
+
+        HOUNDSTOOTH="成分是鈣和硫磺。",
+        ARMORSNURTLESHELL="這裡面很寬敞。",
+        BAT="會飛的哺乳動物。",
+        BATWING="理論上是可以食用的。",
+        BATWING_COOKED="理論上是可以食用的。",
+        BATCAVE = "這個隱蔽的地方實際上是一處居所。",
+        BEDROLL_FURRY="我不要睡在地上。",
+        BUNNYMAN="一種有感情的兔類動物。",
+        FLOWER_CAVE="你可以借助那個光來看書。",
+        FLOWER_CAVE_DOUBLE="你可以借助那個光來看書。",
+        FLOWER_CAVE_TRIPLE="你可以借助那個光來看書。",
+        GUANO="更多的代謝副產物。",
+        LANTERN="一種可重複加燃料的光源。",
+        LIGHTBULB="它是動物還是蔬菜？",
+        MANRABBIT_TAIL="它們利用尾巴保持平衡。",
+        MUSHTREE_TALL=
+        {
+            GENERIC = "A tree with a fungal parasite.",
+            BLOOM = "Apparently it's the breeding season for this species.",
+        },
+        MUSHTREE_MEDIUM=
+        {
+            GENERIC = "A red variety of Mycena luxaeterna.",
+            BLOOM = "The smell is used to ward off predators.",
+        },
+        MUSHTREE_SMALL=
+        {
+            GENERIC = "My word! A huge Mycena silvaelucens.",
+            BLOOM = "The light is caused by a chemical reaction.",
+        },
+        MUSHTREE_TALL_WEBBED = "這個似乎是共生關係。",
+        SPORE_TALL = "遺傳資訊的攜帶者。",
+        SPORE_MEDIUM = "遺傳資訊的攜帶者。",
+        SPORE_SMALL = "遺傳資訊的攜帶者。",
+        SPORE_TALL_INV = "我是遺傳資訊攜帶者的攜帶者。",
+        SPORE_MEDIUM_INV = "我是遺傳資訊攜帶者的攜帶者。",
+        SPORE_SMALL_INV = "我是遺傳資訊攜帶者的攜帶者。",
+        MUSHTREE_TALL  ="一棵寄生著菌類的樹。",
+        MUSHTREE_MEDIUM="紅色品種的發光蘑菇。",
+        MUSHTREE_SMALL ="哎呀！好巨大的發光蘑菇。",
+        SLURTLE= "吞食礦物的腹足類動物。",
+        SLURTLE_SHELLPIECES= "一堆碎片。",
+        SLURTLEHAT= "它能提供保護。",
+        SLURTLEHOLE= "腹足類動物的巢穴。",
+        SLURTLESLIME= "它們的黏液由於某種原因會發生爆炸。",
+        SNURTLE= "腹足類動物的罕見變種。",
+        SPIDER_HIDER= "長著厚甲殼的蛛形綱動物。",
+        SPIDER_SPITTER= "會吐出拋射物的蛛形綱動物。",
+        SPIDERHOLE= "這就是蜘蛛肆虐的源頭。",
+        SPIDERHOLE_ROCK ="這就是蜘蛛肆虐的源頭。",
+        STALAGMITE= "奇怪的岩層。",
+        STALAGMITE_FULL= "奇怪的岩層。",
+        STALAGMITE_LOW= "奇怪的岩層。",
+        STALAGMITE_MED= "奇怪的岩層。",
+		STALAGMITE_TALL= "又一塊石筍。",
+		STALAGMITE_TALL_FULL= "又一塊石筍。",
+		STALAGMITE_TALL_LOW= "又一塊石筍。",
+		STALAGMITE_TALL_MED= "又一塊石筍。",
+
+        TURF_DESERTDIRT = "The ground. You step on it.",
+        TURF_FUNGUS_GREEN = "The ground. You step on it.",
+        TURF_FUNGUS_RED = "The ground. You step on it.",
+        TURF_CARPETFLOOR = "地面。你正踩在它上面。",
+        TURF_CHECKERFLOOR = "地面。你正踩在它上面。",
+        TURF_DIRT = "地面。你正踩在它上面。",
+        TURF_FOREST = "地面。你正踩在它上面。",
+        TURF_GRASS = "地面。你正踩在它上面。",
+        TURF_MARSH = "地面。你正踩在它上面。",
+        TURF_ROAD = "地面。你正踩在它上面。",
+        TURF_ROCKY = "地面。你正踩在它上面。",
+        TURF_SAVANNA = "地面。你正踩在它上面。",
+        TURF_WOODFLOOR = "地面。你正踩在它上面。",
+
+        TURF_CAVE="地面。你正踩在它上面。",
+        TURF_FUNGUS="地面。你正踩在它上面。",
+        TURF_SINKHOLE="地面。你正踩在它上面。",
+        TURF_UNDERROCK="地面。你正踩在它上面。",
+        TURF_MUD="地面。你正踩在它上面。",
+        TURF_DRAGONFLY = "這種物質充滿了某種天然的阻燃劑。",
+
+        BATBAT = "有意思。這件武器好像是活的。",
+        LUREPLANT = "一個具有攻擊性的物種。",
+        LUREPLANTBULB = "現在我可以隨心所欲地移栽這種植物了。",
+        EYEPLANT = "我相信它們肯定被更大的植物控制著。",
+        PLANTMEAT = "這種植物會產生一種口感像肉的物質。",
+        PLANTMEAT_COOKED = "現在沒有這麼難以下嚥了。",
+        CAVE_FERN = "令人心情愉悅的觀賞植物。",
+        FOLIAGE = "這些東西也許有點營養價值。",
+        FOOTBALLHAT = "近身戰鬥時使用的保護裝備。",
+
+        POWCAKE = "農業與工業結合所產生的最偉大成就。",
+        CAVE_ENTRANCE = "似乎是有人故意把這塊岩石放在這裡的。",
+        CAVE_ENTRANCE_RUINS = "通道被堵塞了。",
+
+        CAVE_ENTRANCE_OPEN = 
+        {
+            GENERIC = "也許我得準備得更充分點。",
+            OPEN = "地下世界正等著我。",
+        },
+        CAVE_EXIT = 
+        {
+            GENERIC = "可能要過會兒。",
+            OPEN = "也許我應該上去呼吸一點新鮮空氣。",
+        },
+
+		BOOMERANG = "它就是一個扁平的翼片。",
+		SPOILED_FOOD = "裡面積聚了大量的細菌。",
+		ICEBOX = "簡陋的熱交換機。",
+		MAXWELLPHONOGRAPH = "它好像沒有電源。",
+		PIGGUARD = "一位武士。",
+		
+		DIVININGROD = 
+		{
+		    GENERIC = "這是一種採用魔法技術的探測裝置。",
+		    COLD = "上面的圓盤只是微微在動。",
+		    WARM = "我的方向肯定是對的。",
+		    WARMER = "越來越近了。",
+		    HOT = "就是這裡！",
+		},
+		DIVININGRODSTART = "這個法杖可能會很有用！",
+        DRAGONFLY = "它是雙翅目昆蟲的某種神秘變異體。",
+        
+        LAVASPIT = 
+        {
+            HOT = "它噴出的火很像熔岩。",
+            COOL = "它已經冷卻下來了，就跟玄武岩一樣。",
+        },
+        LAVA_POND = "熔化的石頭。最好不要靠得太近。",
+        LAVAE = "我相信它是一隻火蜻蜓幼蟲。",
+        LAVAE_PET = 
+        {
+            STARVING = "這個生物需要立即進食！",
+            HUNGRY = "這個生物餓了。",
+            CONTENT = "我得承認它相當迷人。",
+            GENERIC = "一隻健康的幼小岩漿蟲。",
+        },
+        LAVAE_EGG = 
+        {
+            GENERIC = "一個大的多黃蛋。",
+        },
+        LAVAE_EGG_CRACKED =
+        {
+            COLD = "這個蛋的溫度低於理想溫度。",
+            COMFY = "這個蛋處於合適的孵化溫度。",
+        },
+        LAVAE_TOOTH = "爬蟲寶寶為了從蛋中破殼而出而使用的牙齒。",
+
+        DRAGONFRUIT = "量天尺屬火龍果。",
+        DRAGONFRUIT_COOKED = "精心製作的量天尺屬火龍果。",
+        DRAGONFRUIT_SEEDS = "能夠長出味道很清甜的量天尺屬火龍果的種子。",
+        DRAGONPIE = "我喜歡不錯的水果派。",
+        DRUMSTICK = "禽類的腿。",
+        DRUMSTICK_COOKED = "雖然不是特別健康，但它真的是太美味了！",
+        DURIAN = "啊哈，榴槤。它聞起來真的很臭。",
+        DURIAN_COOKED = "烤熟之後的氣味顯然也不好聞。",
+        DURIAN_SEEDS = "就連榴槤的種子也有點難聞。",
+        EARMUFFSHAT = "可憐的小兔子。但至少我的耳朵會很暖和。",
+        EGGPLANT = "一種茄屬植物，具體來說就是茄子。",
+        EGGPLANT_COOKED = "我出品的烤茄子。",
+        EGGPLANT_SEEDS = "茄子的種子。",
+        WAFFLES = "你好啊，鬆餅。",
+		
+		WALL_WOOD_ITEM = "可安放的尖木樁。",
+		WALL_STONE_ITEM = "真不知道自己為什麼能帶這麼多這個東西。",
+		WALL_RUINS_ITEM = "我的口袋比從外面看起來能裝。",
+		WALL_HAY_ITEM = "乾草垛。",
+		WALL_STONE = "很安全。",
+		WALL_RUINS = "非常牢固的牆。",
+        WALL_MOONROCK = "出色的工作。",
+        WALL_MOONROCK_ITEM = "裝在我的口袋裡剛剛好。",
+        ADVENTURE_PORTAL = "那違反了一些最基本的物理定律。",
+		
+        BIRDCAGE = 
+        {
+			GENERIC = "這能安全地關住一隻鳥。",
+            OCCUPIED = "關住他了。",
+            SLEEPING = "噓！",
+            HUNGRY = "他餓了！",
+            STARVING = "它看上去有點營養不良。",
+            DEAD = "我真的認為它是餓死的。",
+            SKELETON = "我猜我可以研究這些骨骼。",
+        },
+        MEAT = "通常我是不會吃這種生的東西的。",
+        SMALLMEAT = "是一小塊生肉。",
+        COOKEDSMALLMEAT = "烤熟後味道會更好一點。",
+        MONSTERMEAT = "吃這個是有害的。",
+        MONSTERLASAGNA = "無論是不是千層餅，吃它都是有害處的。",
+        COOKEDMEAT = "烤熟後味道會更好一點。",
+        MEATBALLS = "一堆經過加工的肉。天曉得裡面放了什麼東西。",
+        UMBRELLA = "用來保持乾燥的簡易裝備。",
+        PERD = "討厭的火雞，離我的漿果遠點！",
+        TURKEYDINNER = "多好的烤肉。",
+        COOKEDMONSTERMEAT = "還是會有一點毒性。",
+        MAXWELL = "真是位粗魯的先生。",
+        TENTACLE = "埋伏在淤泥裡的怪物。",
+        TENTACLESPIKE = "千萬不要握尖的那端。",
+        TENTACLESPOTS = "嗯，可不斷繁殖的器官。",
+        TENTACLE_PILLAR = "下面的部分比露出的部分更多！",
+        TENTACLE_PILLAR_HOLE = "它看上去以某種方式互相連通。",
+        TENTACLE_PILLAR_ARM = "埋伏在淤泥裡的小怪物。",
+        TENTACLE_GARDEN = "它們究竟是如何繁殖的？",
+        BEEFALO =
+        {
+            GENERIC = "它看起來和家牛好像。",
+            FOLLOWER = "它似乎一直在跟著我。",
+            NAKED = "它看起來好冷。",
+            SLEEPING = "它在睡覺。",
+        },
+        BABYBEEFALO = "看他的臉好可愛！（嗯哼！）",
+        MANDRAKE =
+        {
+			GENERIC = "曼德拉草。",
+			PICKED = "曼德拉草。但是長著一張臉。",
+			DEAD = "曼德拉草。已經死了。",
+        },
+        COOKEDMANDRAKE = "本著探索精神而做成的烤曼德拉草。",
+        MANDRAKESOUP = "本著探索精神而做成的曼德拉草湯。",
+		KRAMPUS = "它是神話中的聖誕怪物。",
+		KRAMPUS_SACK = "它似乎比看起來能裝。",
+        PINECONE = 
+        {
+            GENERIC = "包裹在成熟毬果中的針葉樹種子。",
+            PLANTED = "快要成熟的針葉樹種子。",
+        },
+        ARMORWOOD = "由一段段木頭拼湊而成的粗糙鎧甲。",
+		ARMOR_SANITY = "通過將敵人的攻擊轉移到另一個次元來提供保護的護甲。",
+        ASH =
+        {
+            GENERIC = "大火之後剩下的一些非水相殘留物。",
+            REMAINS_GLOMMERFLOWER = "這花似乎已經完全被燒燬了。",
+            REMAINS_EYE_BONE = "眼骨似乎已經完全被燒燬了。",
+            REMAINS_THINGIE = "這過去應該是個有用的東西，但現在化成了一堆灰燼。",
+        },
+        SPAT = "鋼鐵羊，看看它就知道這是什麼意思了。",
+        SPEAR = "遠古的武器技術。",
+        STRAWHAT = "這東西能防曬。",
+        STUFFEDEGGPLANT = "我已經把茄子煮熟了，並且在它裡面塞滿了其他食物。",
+        BEEFALOHAT = "這帽子醜死了。",
+        TOPHAT = "一看就是資產階級的東西。",
+        FLOWERHAT = "好歡樂。",
+        BUSHHAT = "完美的偽裝",
+        ROPE = "一根短而結實的麻繩。",
+        LOG = "An axial section of tree trunk.",
+        LOG =
+        {
+            BURNING = "An axial section of tree trunk. On fire.",
+            GENERIC = "An axial section of tree trunk.",
+        },
+        LIVINGLOG = "這塊木頭很特別。",
+        LOCKEDWES = "可憐的人兒，被那些雕像困在這裡。",
+        TWIGS = "一些小樹枝。",
+        CARROT = "胡蘿蔔。不僅可以吃，而且很美味。",
+        CARROT_COOKED = "烤得恰到好處的胡蘿蔔。",
+        CARROT_PLANTED = "胡蘿蔔是一種根用蔬菜。",
+        CARROT_SEEDS = "胡蘿蔔的種子。",
+        BERRIES = "我想這是一些硃砂根漿果。",
+        BERRIES_COOKED = "烤硃砂根漿果，只是為了以防萬一。",
+        CUTSTONE = "一些磨得非常光滑的石頭方塊。",
+        SEEDS = "一把不知道是什麼的種子。",
+        SEEDS_COOKED = "烤植物胚胎！",
+        SILK = "蛛形綱動物吐出的蛋白質纖維。",
+		SPIDERGLAND = "這個腺體會分泌出一種低毒性的毒液。",
+        BOARDS = "經過粗刨的木板。",
+        BONESTEW = "雖然和媽媽以前做的不太一樣，但聞起來很香！",
+        MAXWELLTHRONE = "一張令人生畏的椅子。",
+        MAXWELLLOCK = "現在我只需要一把鑰匙。",
+        MAXWELLLIGHT = "太神奇了！",
+        FEM_PUPPET = "可憐的丫頭。",
+        MALE_PUPPET = "可憐的孩子。",
+        ROBOT_PUPPET = "可憐的孩子。",
+        
+		NITRE = "又稱為硝酸鉀。",
+		GUNPOWDER = "知識就是力量！",
+		BIRD_EGG = "它還沒有孵化。",
+		BIRD_EGG_COOKED = "要是有些吐司就好了。",
+		ROTTENEGG = "真倒胃口。",
+		HAMBAT = "我不確定這是不是最有效的資源利用方式。",
+
+        TRAP_TEETH = "它覆蓋著一層薄薄的犬科動物消化液。",
+        TRAP_TEETH_MAXWELL = "想騙我，你還太嫩了。",
+        RABBIT = 
+        {
+            GENERIC = "它是某種兔類動物。帶角的那種。",
+            HELD = "擁有可愛小角的兔類動物。",
+        },
+		ROCK_LIGHT =
+		{
+			GENERIC = "上面被封住的熔岩坑。",
+            OUT = "現在只是一座火成岩而已。",
+            LOW = "冷卻過程開始了。",
+            NORMAL = "太燙了，不能摸。",
+		},
+        ROCK = "一塊巨大的沉積岩。",
+        PIGKING = "他好像是這個村莊的老大。",
+        RATATOUILLE = "尼斯沙拉，好營養！",
+        RESURRECTIONSTONE = "那塊石頭具有復活的力量。",
+        ROBIN =
+        {
+            GENERIC = "北美紅雀！好漂亮的羽毛。",
+            HELD = "這個小傢伙將是我的朋友。",
+        },
+        ROBIN_WINTER =
+        {
+            GENERIC = "北美紅雀的冬衣？好奇特！",
+            HELD = "真是楚楚可憐。",
+        },
+        AXE = "一根桿上連著兩個斜面。",
+		HAMMER = "工人用的工具。",
+        PHLEGM = "那團凝固的黏液仍保持著黏黏的質地。",
+        PICKAXE = "專門用來鑿岩石的斧頭。",
+        SEWING_KIT = "家務活中要用到的小工具。",
+        SHOVEL = "這是一把鏟子。你以前肯定見過吧？",
+		PITCHFORK = "它的設計很適合用來鬆土。",
+        ROCKS = "一把雜七雜八的石頭。",
+        FIRESTAFF = "某種能投擲火焰的奇妙裝置。",
+        FISH = "我猜應該是某種白鮭魚。",
+        FISHINGROD = "我已經讀過了所有關於釣魚的知識。這對我來說應該是小菜一碟。",
+        FISHSTICKS = "給我一點塔塔醬，那我簡直可以說是身在天堂。",
+        FISHTACOS = "嗯，我確實喜歡在魚肉上加點香料。",
+        FISH_COOKED = "烤得真好。",
+        FISH_MED = "令人遺憾。",
+        FISH_MED_COOKED = "烤得真好。",
+        FLINT = "一塊堅硬的石英礦石。",
+        AMULET = "來自另一個時代的遺留物。",
+        RAZOR = "個人衛生用品。",
+        POMEGRANATE = "是石榴。水分足又酸酸甜甜的石榴。",
+        POMEGRANATE_COOKED = "烤熟了的石榴真好吃。",
+        POMEGRANATE_SEEDS = "與假種皮分離的石榴籽。",
+		POND = "小而深的淡水池塘。",
+        LEIF = "我...甚至不知道有這種東西存在。",
+        LEIF_SPARSE = "我...甚至不知道有這種東西存在。",
+        SPIDERQUEEN = "那肯定就是蜘蛛們的首腦了吧。",
+        PIGGYBACK = "只有在需要它時才會愛上的一張臉。",
+        BLOWDART_FIRE = "簡易的燃燒裝置。",
+        BLOWDART_SLEEP = "簡易的鎮定裝置。",
+        BLOWDART_PIPE = "簡易的發射裝置。",
+        SPIDERHAT = "有了這個，我就能對那些蜘蛛進行心靈控制了。",
+		EARMUFFHAT = "只使用了最保暖的部分。",
+        WETGOOP = "哦，不，不，不。這根本不行。",
+        WHIP = "利用對方的疼痛達到馴服目的的武器。",
+        WINTERHAT = "我自己織的。",
+        NIGHTMAREFUEL = "靈質殘渣。",
+        NIGHTLIGHT = "發出奇異的冷光。",
+        NIGHTSWORD = "可穿越不同次元的武器。",
+        ARMORMARBLE = "選這種材料來做護甲，有意思。",
+        ARMORGRASS = "足夠多的層數可以帶來驚人的效果。",
+        BLUEPRINT = "詳細的技術藍圖。",
+        BELL_BLUEPRINT = "詳細的技術藍圖。",
+        MAXWELLHEAD = "我希望他不會那樣做。",
+
+		WALRUSHAT = "怎麼能忘記老朋友？",
+        WALRUS = "海象；蓋爾種。",
+        WALRUS_CAMP = 
+        {
+            GENERIC = "某種臨時居所。",
+            EMPTY = "現在它已經被遺棄了。",
+        },
+        LITTLE_WALRUS = "小傢伙沒有那麼強的攻擊性。",
+        WALRUS_TUSK = "這可以用於製作骨雕品。",
+
+        WARG = "那個犬屬動物永遠不可能被馴服。",
+
+        SPIDERDEN = "很有意思。這些蜘蛛的巢穴是共用的。",
+        RABBITHOLE = 
+        {
+            GENERIC = "看起來像小動物的窩。",
+            SPRING = "希望那下面的小動物安然無恙！",
+        },
+        FIREFLIES = 
+        {
+            GENERIC = "每當我走近時它們就會散開。",
+            HELD = "它們那會發光的身體也許會有用。",
+        },
+        CORN = "玉米，一種很好的主食。",
+        CORN_COOKED = "爆開了的玉米！",
+        CORN_SEEDS = "這些玉米種子可以在多種氣候條件下種植。",
+        CROW = 
+        {
+            GENERIC = "短嘴鴉。",
+            HELD = "非常帥氣的標本。",
+        },
+        GHOST = "肯定是假的。我才不相信呢。",
+        CUTGRASS = "一些割下來的草。",
+        CUTREEDS = "一些割下來的燈芯草屬植物。",
+        PEROGIES = "很好吃的餃子，口味很溫和。",
+        PETALS = "我調了點令人愉悅的百花香。",
+        PETALS_EVIL = "有意思，這些花瓣似乎有自己的思想。",        
+        FLOWER = "是一種野花。我不太熟悉這個物種。",
+        FLOWER_EVIL = "像這樣擁有強大靈氣的花可不是很常見。",
+        FLOWER_WITHERED = "這朵花缺乏生長所需的養分。",
+        GOLDENAXE = "黃金是最具可塑性的金屬，不過我們還是先看看它怎麼砍樹吧。",
+        GOLDENPICKAXE = "黃金是最具可塑性的金屬，不過我們還是先看看它怎麼挖礦吧。",
+        GOLDENPITCHFORK = "黃金是最具可塑性的金屬，不過我們還是先看看它怎麼鬆土吧。",
+        GOLDENSHOVEL = "黃金是最具可塑性的金屬，不過我們還是先看看它怎麼挖東西吧。",
+        GOLDNUGGET = "一小塊金子。原子序數79。",
+        POOP = "一些動物糞便。臭死了。",
+        PUMPKIN = "美洲南瓜。",
+        PUMPKINCOOKIE = "南瓜餅乾，太好了！",
+        PUMPKIN_COOKED = "烤南瓜。又軟又甜，很好吃。",
+        PUMPKIN_LANTERN = "雕刻南瓜燈真是個不錯的消遣方式。",
+        PUMPKIN_SEEDS = "南瓜子。",
+        TORCH = "簡易的手持光源。",
+        TRAP = "簡單的支點-捕罩陷阱。",
+        BEEFALOWOOL = "從犛牛身上收穫的長毛。",
+        BUGNET = "昆蟲學者的工具",
+        PANFLUTE = "可以產生諧波共振的中空蘆葦。",
+        ONEMANBAND = "對傳統管樂器和小鼓的很好改進。",
+        BIRDTRAP = "一種簡單的捕鳥拍網。",
+        GEARS = "各種齒輪和輪子。",
+        STATUEHARP = "普通的雕像。",
+        STATUEMAXWELL = "它的原型是那個把我困在這裡的男人。",
+        SKELETON = "一具保存得相當好的骷髏。",
+        SKELETON_PLAYER = "天啊，我做了個什麼標本啊！",
+
+
+        RED_MUSHROOM =
+        {
+            GENERIC = "它是一種菌類植物。",
+            PICKED = "它需要經過水合作用才能再次長出來。",
+            INGROUND = "每天這個時候它會休眠。",
+        },
+        GREEN_MUSHROOM = 
+        {
+            GENERIC = "它是一種菌類植物。",
+            PICKED = "它需要經過水合作用才能再次長出來。",
+            INGROUND = "每天這個時候它會休眠。",
+        },
+
+        BLUE_MUSHROOM = 
+        {
+            GENERIC = "它是一種菌類植物。",
+            PICKED = "它需要經過水合作用才能再次長出來。",
+            INGROUND = "每天這個時候它會休眠。",
+        },
+
+        RED_CAP = "紅色通常表示有毒。",
+        GREEN_CAP = "看上去可以吃，儘管吃掉它可能不是很理智的做法。",
+        BLUE_CAP = "它似乎有藥用價值",
+        RED_CAP_COOKED = "化學改變了它。",
+        GREEN_CAP_COOKED = "化學改變了它。",
+        BLUE_CAP_COOKED = "化學改變了它。",
+
+        MOOSE_NESTING_GROUND = "有一天，我可能會想要研究它的求偶習慣。",
+
+        BEE = 
+        {
+            GENERIC = "西方蜜蜂。長得好大！",
+            HELD = "它看起來不高興。",
+        },
+        KILLERBEE = 
+        {
+            GENERIC = "它的毒性尤其高。",
+            HELD = "它看起來不高興。",
+        },
+		MOSQUITO = 
+		{
+			GENERIC = "一隻飢渴難耐的雌性吸血蚊。",
+			HELD = "它被安全儲存起來了。",
+		},
+        MOSQUITOSACK = "蚊子的胃，裡面裝滿了血。",
+        BEEHAT = "適當的保護裝備是必須的！",
+        BEEHIVE = "蜜蜂的天然家園。",
+        BEEMINE = "用蜜蜂填裝的危險地雷。",
+        BEEMINE_MAXWELL = "用蚊子填裝的危險地雷。",
+        HONEY = "甜甜的植物花蜜。",
+        HONEYCOMB = "用來保存蜂蜜的蜂蠟。",
+        HONEYHAM = "蜂蜜是我在做這個美味火腿時唯一用到的甜味劑。",
+        HONEYNUGGETS = "一口一塊的甜肉！",
+        HORN = "好棒的標本！我幾乎可以聽到犛牛在叫。",
+        STINGER = "它逐漸變細，最後成為一個尖刺。",
+
+        SPIDER = 
+        {
+            GENERIC = "一種大型的食肉蛛形綱動物。",
+            SLEEPING = "它們好像是夜行性動物。",
+            DEAD = "它死了。",
+        },
+
+        SPIDER_WARRIOR = 
+        {
+            GENERIC = "它似乎是族群裡的戰士。",
+            SLEEPING = "它應該好好休息下，這一點毫無疑問。",
+            DEAD = "他為女王奉獻出了自己的生命。",
+        },
+        BISHOP_CHARGE_HIT = "嗷！",
+        BERRYBUSH = 
+        {
+            GENERIC = "是硃砂根漿果叢。",
+            PICKED = "漿果會慢慢再長出來的。",
+            BARREN = "需要給它施點肥。",
+            WITHERED = "硃砂根漿果不是特別耐熱。",
+        },
+
+		DUG_GRASS = "它需要土壤才能生長。",
+		DUG_SAPLING = "它需要土壤才能生長。",
+		DUG_BERRYBUSH = "它需要土壤才能生長。",
+        DUG_MARSH_BUSH = "它需要土壤才能生長。",
+
+        SAPLING = 
+        {
+            GENERIC = "是一棵小樹。",
+            WITHERED = "高溫已經讓它快不行了。",
+            PICKED = "真奇怪。我本來以為那會殺死它的。",
+            BURNING = "燒起來了！",
+        },
+        GRASS = 
+        {
+            GENERIC = "一叢禾草莖稈。",
+            PICKED = "我想它會重新長出來的。",
+            BARREN = "它需要施肥。",
+            WITHERED = "天氣太炎熱了，它會死的。",
+            BURNING = "燒起來了！",
+        },
+        REEDS = 
+        {
+            GENERIC = "一簇燈芯草科禾草。",
+            PICKED = "我相信它們會重新長出來的。",
+            BURNING = "燒起來了！",
+        },
+        RELIC = 
+        {
+            GENERIC = "An artifact of this extinct civilization.",
+            BROKEN = "Just broken stone.",
+        },
+        RUBBLE = "看來要使用圖書館裡用的厚漿糊！",
+
+        PLANT_NORMAL = 
+        {
+            GENERIC = "這是...植物。對，某種植物。",
+            READY = "它看起來已經成熟了。",
+            GROWING = "還沒到收穫的時候。",
+            WITHERED = "它沒能耐住高溫。",
+        },
+
+        MOUND = 
+        {
+            GENERIC ="一座墓塚。",
+            DUG = "一座被褻瀆的墓塚。",
+        },
+        PIGMAN =
+        {
+            GENERIC = "它是半傻的兩足豬。",
+            FOLLOWER = "他似乎和我有密不可分的關係。",
+            DEAD = "別擔心，豬村裡面還有很多。",
+			WEREPIG = "它是有變獸妄想症的豬人。",
+            GUARD = "它好像是個守衛。",
+        },
+
+        SPIDEREGGSACK = "非常容易攜帶的蜘蛛卵袋。",
+		TELEPORTATO_RING = "由合金和電線構成的圓環。",
+		TELEPORTATO_BOX = "電荷調節器。",
+		TELEPORTATO_CRANK = "它運用了基本的機械原理。",
+		TELEPORTATO_POTATO = "既不是完全有機的也不是無機的！",
+		TELEPORTATO_BASE =
+        {
+			GENERIC = "這塊符文石有獨特的幾何性質！",
+			PARTIAL = "這個機器還沒有全部完成。",
+			LOCKED = "這個機器需要啟動才能用。",
+			ACTIVE = "這個機器可以用來在不同世界之間傳送。",
+		},
+        BEARDHAIR = "這是人類的臉部毛髮。",
+        BUTTERFLY = 
+        {
+            GENERIC = "五顏六色的鱗翅目昆蟲。",
+            HELD = "抓住它了。",
+        },
+        BUTTERFLYWINGS = "從被抓蝴蝶身上獲得的翅膀。",
+        BUTTERFLYMUFFIN = "用蝴蝶居然可以做出這麼好的烘焙食品，誰知道呢？",
+        BUTTER = "鱗翅目昆蟲的脂肪？",
+
+        ACORN = 
+        {
+            GENERIC = "包裹在果皮裡的落葉植物種子。",
+            PLANTED = "快要成熟的落葉植物種子。",
+        },
+        EVERGREEN = 
+        {
+            GENERIC = "一棵普通的針葉樹。",
+            CHOPPED = "它已經被砍伐了。",
+            BURNING = "樹在燃燒。",
+            BURNT = "完全被碳化了的樹。",
+        },
+
+        EVERGREEN_SPARSE = 
+        {
+            GENERIC = "這個物種似乎缺乏繁殖能力。",
+            CHOPPED = "它已經被砍伐了。",
+            BURNING = "樹在燃燒。",
+            BURNT = "完全被碳化了的樹。",
+        },
+
+        FIREPIT = 
+        {
+            GENERIC = "一處石頭營火。",
+            OUT = "我可以重新點燃它。",
+            EMBERS = "火焰快要自動熄滅了。",
+            LOW = "應該再加一些燃料。",
+            NORMAL = "相當普通的火。",
+            HIGH = "營火正在以驚人的速度燃燒。",
+        },
+		HEATROCK = 
+        {
+            FROZEN = "它的溫度已經降到冰點以下了。",
+			COLD = "它變得有點冷了。",
+			GENERIC = "它的溫度完全不起眼。",
+            WARM = "它還有熱量，但只有一點點。",
+            HOT = "它已經足夠暖和，能發出光和熱！",
+		},
+
+        CAMPFIRE = 
+        {
+            GENERIC = "一處營火。",
+            OUT = "我可以重新點燃它。",
+            EMBERS = "火焰快要自動熄滅了。",
+            LOW = "應該再加一些燃料。",
+            NORMAL = "相當普通的火。",
+            HIGH = "營火正在以驚人的速度燃燒。",
+        },
+
+        FEATHERHAT = "雖然不是真正的鳥，但我也許能夠以假亂真。",
+        FEATHER_CROW = "烏鴉的羽毛。",
+        FEATHER_ROBIN = "北美紅雀的羽毛。",
+        FEATHER_ROBIN_WINTER = "它看起來像北美紅雀的羽毛，只是它是白色的。",
+
+        TRINKET_1 = "好可愛的飲料瓶封口玻璃珠！可惜全部融化了。",
+        TRINKET_10 = "暫時不需要這個。我的牙齒還沒有掉光。",
+        TRINKET_11 = "啊，它是那個淘氣機器人的等比例複製品。",
+        TRINKET_12 = "位於吸水物質附近的肌肉性靜水骨骼。",
+        TRINKET_2 = "假的膜鳴樂器。",
+        TRINKET_3 = "哦，我真是太喜歡莎士比亞了。",
+        TRINKET_4 = "樂觀快樂但又古里古怪的小傢伙。",
+        TRINKET_5 = "這個迷你火箭飛船看起來沒有足夠的熱控制。",
+        TRINKET_6 = "一堆又亂又爛的電線，沒什麼用。",
+        TRINKET_7 = "我寧願用雙手來讀書。",
+        TRINKET_8 = "它讓我想起了我的浴缸。我可以在浴缸裡想泡多久就泡多久。",
+        TRINKET_9 = "嗯，我應該沒有漏掉任何鈕釦吧。",
+		SKULLCHEST = "一種像頭蓋骨的容器。",
+		PANDORASCHEST = "可以裝其他人工製品的人工製品。",
+
+        BEDROLL_STRAW = "我不要睡在地上。",
+        CHARCOAL = "主要是碳和灰。",
+        MARSH_PLANT = "扎根在沼澤中的地下莖植物。",
+        MARSH_BUSH = 
+        {
+            GENERIC = "一簇荊棘。",
+            PICKED = "採摘荊棘是很危險的。",
+            BURNING = "燒起來了！",
+        },
+        PAPYRUS = "由纖維素和木質素構成的薄片製品。",
+        MARSH_TREE = 
+        {
+            GENERIC = "一棵美洲紅樹。",
+            CHOPPED = "它已經被砍倒了。",
+            BURNING = "燒起來了！",
+            BURNT = "一棵碳化了的紅樹。"
+        },
+        FROG = 
+        {
+            SLEEPING = "它在睡覺。",
+            DEAD = "這在某些國家可是一道上品佳餚。",
+            GENERIC = "一種兩棲四足動物。",
+        },
+        FROGGLEBUNWICH = "雖然通常不是用來做三明治的，但我還是要嘗試一下！",
+        FROGLEGS = "它們還在抽搐。",
+        FROGLEGS_COOKED = "就像雞翅一樣。",
+        FRUITMEDLEY = "水果搭配得真好！",
+		WORMHOLE = 
+        {
+			GENERIC = "睡著的擁有兩張嘴的蚯蚓。",
+			OPEN = "一圈圈的牙齒是為了幫助下嚥的。",
+		},
+        WORMHOLE_LIMITED = "It will only last a few trips.",
+
+        CHESSJUNK1 = "上發條的垃圾。",
+        CHESSJUNK2 = "上發條的垃圾。",
+        CHESSJUNK3 = "上發條的垃圾。",
+
+        CHESTER = "一個能到處跑的儲物箱。",
+        CHESTER_EYEBONE = 
+        {
+            GENERIC = "神秘的眼睛。",
+            WAITING = "這個眼睛毫無生氣。",
+        },
+
+        TALLBIRD = "發育完全的巨型鳥。",
+        SMALLBIRD = 
+        {
+            GENERIC = "鳥類中身材矮小的品種。",
+            HUNGRY = "它需要食物。",
+            STARVING = "沒有食物，它肯定會死的。",
+        },
+
+        TEENBIRD = 
+        {
+            GENERIC = "還處於青少年階段的鳥。",
+            HUNGRY = "請把你的聲音壓到最低。",
+            STARVING = "一隻非常淘氣的鳥！",
+        },
+
+        TALLBIRDEGG = "它需要孵化。",
+        TALLBIRDEGG_COOKED = "全是膽固醇。",
+        TALLBIRDEGG_CRACKED = 
+        {
+            GENERIC = "似乎正在發育。",
+            HOT = "曝露在極端溫度下可能會讓它死掉。",
+            COLD = "你會被凍死的！",
+            SHORT = "很快我們就可以收穫自己的勞動果實了。",
+            LONG = "欲速則不達。",
+        },
+        TALLBIRDNEST =
+        {
+            GENERIC = "好大的巨型鳥蛋！",
+            PICKED = "巢是空的。很快就會開始一個新的生命週期。",
+        },
+
+        ANIMAL_TRACK = "動物活動的指示器。它指向某個方向。",
+        DIRTPILE = "太不衛生了！",
+        KOALEFANT_SUMMER = "長鼻目考拉象。",
+        KOALEFANT_WINTER = "頂著厚厚的禦寒毛皮的長鼻目考拉象。",
+        TRUNK_SUMMER = "實用的鼻子。",
+		TRUNK_WINTER = "一個皮毛標本。",
+        TRUNK_COOKED = "雖然不好吃，但蛋白質含量高。",
+        TRUNKVEST_SUMMER = "耐用的外套。",
+		TRUNKVEST_WINTER = "在寒冷環境中提供足夠保護。",
+        
+        DEADLYFEAST = "我不確定那東西吃了好不好。",
+        DEERCLOPS = "勞亞獸！",
+        REDGEM = "很暖和。",
+        BLUEGEM = "冰冷的。",
+        PURPLEGEM = "它發出的光有點奇怪。",
+        HOUND = "那隻獵犬沒有被馴服。",
+        FIREHOUND = "那隻獵犬比其他的都危險。",
+        ICEHOUND = "好奇怪的寒冰野獸。",
+        HOUNDBONE = "是灰狼的內骨骼，絕對不是家犬的。",
+        PENGUIN = "好紳士的鳥。",
+        DEERCLOPS_EYEBALL = "我有一種難以名狀的成就感。",
+        DEPLETED_GRASS =
+        {
+            GENERIC = "一叢禾草。",
+        },
+        BASALT = "高密度材料！",
+        HOUNDMOUND = "那些骨頭是不祥之兆。",
+        MERM = "一隻雙魚座的兩足動物！",
+        MINERHAT = "這會成為一個很好的閱讀燈。",
+        KNIGHT = "一匹自動馬。",
+        BISHOP = "一位上了發條的神職人員。",
+        ROOK = "一座上了發條的城堡。",
+        JAMMYPRESERVES = "我希望能有點吐司，然後把果醬塗在上面吃。哦，想想就好美味。",
+        KABOBS = "串在一根棒子上的肉，接下來我要發明點什麼呢？",
+
+        INSANITYROCK = 
+        {
+            INACTIVE = "它看起來像個小金字塔。",
+            ACTIVE = "這肯定是幻覺。",
+        },
+        SANITYROCK = 
+        {
+            INACTIVE = "它似乎陷到土裡去了。",
+            ACTIVE = "很有意思。以後我得研究一下這些標記。",
+        },
+        PIGTORCH = "我很好奇它是靠什麼提供燃料的。",
+        PIGSKIN = "半傻的兩足豬的臀部。",
+        WASPHIVE = "我最好保持點距離。",
+        MARBLEPILLAR = "它是羅馬工匠的傑作。太了不起了。",
+        MARBLETREE = "不可思議。一棵完全由大理石做成的樹。",
+        MARBLE = "一塊雕像般的石頭。",
+        SUNKBOAT = "一艘沉船，看起來沒什麼用。",
+        SWEATERVEST = "這件背心尖聲說「時尚，但又能顯示主人博學多才。」",
+        TAFFY = "我不太喜歡吃甜食，但...絕望之下也沒得選了。",
+        SMALLMEAT_DRIED = "很高的鈉含量。",
+        MEAT_DRIED = "雖然有點鹹，但還是很滿足。",
+        MONSTERMEAT_DRIED = "雖然有點鹹，但還是很滿足。",
+        BACKPACK = "我可以放好多書進去。",
+        BACONEGGS = "我胃疼。藍色的蛋加培根！",
+        BANDAGE = "醫用敷料。",
+		HEALINGSALVE = "天然消毒劑。",
+		CANE = "我不是手杖收藏家。",
+		LIGHTNING_ROD = 
+		{
+		    GENERIC = "高度導電的！",
+		    CHARGED = "輻射電能！",
+		},
+ 
+        ARMORRUINS = "堅固耐用的銩礦護甲。",
+        BISHOP_NIGHTMARE = "好複雜的技術，太令人興奮了。",
+        GREENAMULET = "我不知道那是什麼。",
+        GREENGEM = "因為含鉻雜質而呈現綠色。",
+        KNIGHT_NIGHTMARE = "周圍噩夢燃料的使用破壞了它的程式設計。",
+        MINOTAUR = "走遠點，你這個野獸！",
+        MULTITOOL_AXE_PICKAXE = "功能很強大，既能當斧頭用又能當鶴嘴鋤用。",
+        NIGHTMARELIGHT = "古人似乎曾用噩夢燃料來為一切事物提供能量。",
+        NIGHTMARE_TIMEPIECE =
+        {
+            WARN = "雖然靈質殘渣的能量等級現在很低，但它正在不斷升高。",  --Before nightmare
+            WAXING = "靈質殘渣的能量水平似乎越來越高了。", --Nightmare Phase first 33%
+            STEADY = "靈質殘渣的能量水平似乎已經達到了峰值。", --Nightmare 33% - 66%
+            WANING = "靈質殘渣的能量水平很高，但似乎在逐漸降低。", --Nightmare 66% +
+            DAWN = "靈質殘渣的能量水平微乎其微。", --After nightmare
+            CALM = "靈質殘渣的能量水平似乎已經達到了最低。",  --calm phase
+            NOMAGIC = "這附近似乎沒有任何靈質的東西。", --Place with no nightmare cycle.
+        },
+        ORANGESTAFF = "很方便在短距離範圍內使用。",   --Teleports player.
+        ROOK_NIGHTMARE = "看起來它隨時都可能分崩離析。",
+        RELIC = "A relic of an ancient civilization long dead the the ravages of time.",  --Fixed relic
+        RUINS_RUBBLE = "只需要下一點點功夫，就可以把它弄得井井有條。",   --Broken relic
+        RUINS_BAT = "我可以用它來擊打其他東西。",
+        RUINSHAT = "對我來說有點過於俗麗，但似乎還挺有用的。",
+        SPIDER_DROPPER = "啊，這種蛛形綱動物已經適應了懸掛在洞穴頂上的生活。", --White spider that comes from the roof
+        THULECITE = "這似乎是一種有趣的、含雜質的靈質黝簾石品種。",
+        YELLOWAMULET = "這個護符的發光波長為530奈米左右。",    --Emits light, player walks faster.
+        ACCOMPLISHMENT_SHRINE = "我總是忍不住一次又一次地啟動它。",        
+
+        WHALE_WHITE = "白鯨！如果有本關於它的書該有多好！",
+
+        AERODYNAMICHAT = "看起來有點史前風格。",
+        ANTIVENOM = "這些物質應該能做成最有用的解毒劑。",
+        ARMORCACTUS = "穿上這個可以融入仙人掌之中。",
+        ARMORLIMESTONE = "用來自大洋底下的骸骨碎片做成的盔甲。",
+        ARMOROBSIDIAN = "小心，它很鋒利！",
+        ARMORSEASHELL = "預防有毒叮咬造成的疾病。",
+        ARMOR_LIFEJACKET = "安全第一！",
+        ARMOR_SNAKESKIN = "這件雨衣的設計靈感來自動物群。",
+        ARMOR_WINDBREAKER = "我不太喜歡粉色。",
+        ARMOUREDBOAT = "一艘很結實的船。",
+        BALLPHIN = "好可愛的鯨目哺乳動物！",
+        BAMBOO = "一種拉伸強度高的有用材料。",
+        BAMBOOTREE =
+        {
+            BURNT = "真可惜。",
+            CHOPPED = "我們該看看它多快會重新長出來嗎？",
+            GENERIC = "竹子是世界上長得最快的植物之一。",
+        },
+        BERMUDATRIANGLE = "我不相信神秘的力量。",
+        BIGFISHINGROD = "獲取水生食物鏈的工具。",
+        BIOLUMINESCENCE = "迷人、美麗的海洋生物學。",
+        BLOWDART_FLUP = "我更喜歡這種形式的射擊。",
+        BLOWDART_POISON = "由內而外摧毀我的敵人。",
+        BLUBBER = "能浮起來且富含脂肪的物質。",
+        BLUBBERSUIT = "我在自己的骨頭上放了這麼多肉，我的母親會為此自豪的！",
+        BOAT = "這艘船是哪兒來的？",
+        BOATCANNON = "我猜應該是用於海上戰鬥的。",
+        BOATREPAIRKIT = "延長水上交通工具的壽命。",
+        BOAT_LANTERN = "夜晚為我照亮海洋的燈光。",
+        BOAT_TORCH = "可以更清楚地看到夜間的海洋生物。",
+        BOOK_METEOR = "為我們降下地獄炎魔吧！",
+        BOTTLELANTERN = "可攜式光源。",
+        BRAINJELLYHAT = "創意和想法改變未來！",
+        BUOY = "在海上提供一點安慰，不是嗎？",
+        BURIEDTREASURE = "我克制不住自己的好奇心！",
+        BUSH_VINE =
+        {
+            BURNT = "燒焦的物質。",
+            CHOPPED = "莖幹會隨著時間生長的。",
+            GENERIC = "一種攀緣植物。",
+        },
+        CAPTAINHAT = "一位真正的女船員的帽子。",
+        CARGOBOAT = "我可以在船上多放一些書。",
+        CHIMINEA = "一個聰明的氣象學家的發明！",
+        CLOTHSAIL = "一種有機的運輸形式。",
+        COCONADE =
+        {
+            BURNING = "爆炸倒數計時！",
+            GENERIC = "爆炸讓我有少許不安。",
+        },
+        COCONUT = 
+        {
+            GENERIC = "棕櫚樹的種子。巨大！",
+            PLANTED = "棕櫚樹已經紮根。",
+        },
+        COCONUT_COOKED = "椰子肉，很美味。",
+        COCONUT_HALVED = "我想辦法撬開了它外層的防禦。",
+        COFFEE = "我喜歡一邊喝咖啡一邊看書。",
+        COFFEEBEANS = "富含咖啡因。",
+        COFFEEBEANS_COOKED = "啊，烤過的味道聞起來好香。",
+        COFFEEBOT = "它可以產咖啡。",
+        COFFEEBUSH =
+        {
+            BARREN = "這下它不會開花了。",
+            GENERIC = "咖啡屬。",
+            PICKED = "要過一陣子才會長出咖啡豆了。",
+            WITHERED = "對咖啡樹來說太熱了。",
+        },
+        COMPASS =
+        {
+            E = "東。",
+            GENERIC = "我的坐標仍然未知。",
+            N = "北。",
+            NE = "東北。",
+            NW = "西北。",
+            S = "南。",
+            SE = "東南。",
+            SW = "西南。",
+            W = "西。",
+        },
+        CORAL = "一大塊碳酸鈣。",
+        CORALREEF = "我喜歡海洋中的無脊椎動物！",
+        CORAL_BRAIN = "充滿智慧！",
+        CORAL_BRAIN_ROCK = "珊瑚腦。",
+        CRAB =
+        {
+            GENERIC = "螃蟹具有超厚的外骨骼。",
+            HIDDEN = "請注意，螃蟹！",
+        },
+        CRABHOLE = "這裡住著一種穴居動物。",
+        CRATE = "裡面有什麼？",
+        CUTLASS = "小心，它很鋒利。",
+        DEAD_SWORDFISH = "現在看起來沒之前那麼兇惡了。",
+        DEPLETED_BAMBOOTREE = "將來不可能再長出來了。",
+        DEPLETED_BUSH_VINE = "將來不可能再長出來了。",
+        DEPLETED_GRASS_WATER = "將來不可能再長出來了。",
+        DEVTOOL = "太不符合自然規律了！",
+        DEVTOOL_NODEV = "無稽之談。",
+        DIVININGRODBASE =
+        {
+            GENERIC = "它有什麼功能？",
+            READY = "它似乎是個鑰匙孔...",
+            UNLOCKED = "有志者事竟成！",
+        },
+        DOUBLE_UMBRELLAHAT = "雙層晴雨傘！",
+        DOYDOY = "好迷人的物種！",
+        DOYDOYBABY = "複製品誕生了。",
+        DOYDOYEGG = "大自然總是能找到出路。",
+        DOYDOYEGG_COOKED = "綠雞蛋和火腿。",
+        DOYDOYEGG_CRACKED = "我很好奇...",
+        DOYDOYFEATHER = "一根鳥類羽毛。",
+        DOYDOYNEST = "是一種誘餌裝置嗎？",
+        DRAGOON = "這些爬行動物可以經受最嚴酷的高溫。",
+        DRAGOONDEN = "需要有人去整理一下。",
+        DRAGOONEGG = "什麼東西能在這堆火成岩裡面生存？",
+        DRAGOONHEART = "解剖完成。",
+        DRAGOONSPIT = "小心那個東西！",
+        DUBLOON = "啊哈！海盜們用的貨幣。",
+        DUG_BAMBOOTREE = "它需要土壤才能生長。",
+        DUG_BUSH_VINE = "它需要土壤才能生長。",
+        DUG_COFFEEBUSH = "它需要土壤才能生長。",
+        DUG_ELEPHANTCACTUS = "它需要土壤才能生長。",
+        EARRING = "不是我的風格。",
+        ELEPHANTCACTUS = "火山上長著一株肉質植物！太有趣了。",
+        ELEPHANTCACTUS_ACTIVE = "它的防禦系統已啟用！",
+		ELEPHANTCACTUS_STUMP = "這株植物在蟄伏。",
+        FABRIC = "非常精細的織物。",
+        FEATHERSAIL = "羽毛帆。",
+        FISHINHOLE = "我發現下面有一群水生變溫動物！",
+        FISH_RAW = "一塊有氣味的魚肉。",
+        FISH_RAW_SMALL = "水生動物的肉。",
+        FISH_RAW_SMALL_COOKED = "最有營養。",
+        FLAMEGEYSER = "好炫目的景象！",
+        FLOTSAM = "我怎樣才能得到那個？",
+        FLUP = "對著你自己伸出舌頭！",
+        FRESHFRUITCREPES = "吃完手會黏黏的。",
+        FROG_POISON = "當心！",
+        GASHAT = "碳酸鈣可以淨化周圍的空氣微粒。",
+        GOLDENMACHETE = "黃金是最具可塑性的金屬，不過還是先看看它砍東西的效果吧。",
+        GRASS_WATER = "我可以看到水下的根。",
+        HAIL_ICE = "有一些暴風雨會產生哈密瓜大小的冰雹。",
+        HOME = "那是什麼樣的棲息地？",
+        HOUNDFIRE = "高溫！小心！",
+        ICEMAKER =
+        {
+            HIGH = "不停地製冰！",
+            LOW = "它的製冰速度在下降。",
+            NORMAL = "輸出很穩定。",
+            OUT = "能量耗盡了。",
+            VERYLOW = "燃料箱快空了。",
+        },
+        INVENTORYGRAVE = "探險家去世後的歸宿。",
+        INVENTORYMOUND = "探險家去世後的歸宿。",
+        IRONWIND = "現在這才稱得上開船！",
+        JELLYFISH = "水母是最古老的多器官生物。",
+        JELLYFISH_COOKED = "經過我的受控化學反應後，現在它已經可以食用了。",
+        JELLYFISH_DEAD = "小心不要碰到它。",
+        JELLYFISH_PLANTED = "水螅體。",
+        JELLYJERKY = "獨出心裁的食物保存方法。",
+        JUNGLETREE =
+        {
+            BURNING = "它著火了。",
+            BURNT = "完全被碳化了的樹。",
+            CHOPPED = "它已經被砍伐了。",
+            GENERIC = "這個物種可以長得很高！",
+        },
+        JUNGLETREESEED =
+        {
+            GENERIC = "這確實是一顆種子。",
+            PLANTED = "它在旺盛地生長。",
+        },
+        KNIGHTBOAT = "多麼令人迷惑的機械海馬！",
+        KRAKEN = "章魚屬動物有很多防守策略。",
+        KRAKENCHEST = "我可以通過計算猜猜裡面裝著什麼。但也僅僅是猜想。",
+        KRAKEN_TENTACLE = "小心它的肌肉性靜水構造！",
+        LAVAPOOL = "我不會蹚過那個池子。",
+        LIMESTONE = "常用於建築中。",
+        LIMPETROCK =
+        {
+            GENERIC = "這塊岩石是各種腹足類動物的家。",
+            PICKED = "蝸牛已經被採光了。",
+        },
+        LIMPETS = "歐洲帽貝。",
+		LIMPETS_COOKED = "烤熟的歐洲帽貝。",
+        TREEGUARD = "太不可思議了...它變成了兩足生物！",
+        LIVINGJUNGLETREE = "最神奇的魔法植物。",
+        LOBSTER = "非常有趣的無脊椎動物。",
+        LOBSTERHOLE = "節肢動物的家。",
+        LOBSTER_DEAD = "我也可能現在就吃掉它。",
+        LOBSTER_DEAD_COOKED = "晚餐準備好了！",
+        LOG =
+        {
+            BURNING = "砍下的一段樹幹。燒著了。",
+            GENERIC = "砍下的一段樹幹。",
+        },
+        LOGRAFT = "原始的海上運輸方式。",
+        LUGGAGECHEST = "有人遺失了他們的行李。",
+        MACHETE = "用於在灌木叢中開路。",
+        MAGIC_SEAL = "小海豹留下了一個禮物！",
+        MAGMAROCK = "下面有什麼？",
+        MAGMAROCK_FULL = "下面有什麼？",
+        MAGMAROCK_GOLD = "這種構造體含有黃金礦脈。",
+        MAGMAROCK_GOLD_FULL = "這種構造體含有黃金礦脈。",
+        MANDRAKE_COOKED = "本著探索精神而做成的烤曼德拉草。",
+        MANGROVETREE = "這個樹種具有耐鹽特性！",
+        MANGROVETREE_BURNT = "在這個階段，它不會再重新生長了。",
+        MARSH_PLANT_TROPICAL = "熱帶植物。",
+        MERMFISHER = "這傢伙有成熟的捕魚技能。",
+        MERMHOUSE_FISHER = "兩棲動物的棚屋。",
+        MESSAGEBOTTLE = "我很好奇！",
+        MESSAGEBOTTLEEMPTY = "我確實希望裡面有手稿。",
+        MONKEYBALL = "引誘靈長類動物的玩具。",
+        MONSTERTARTARE = "盛裝打扮的怪物肉。",
+        MOSQUITOSACK_YELLOW = "治癒物質。",
+        MOSQUITO_POISON = "那種昆蟲的叮咬會注入討厭的毒素。",
+        MUSSEL = "貽貝。非常有營養。",
+        MUSSELBOUILLABAISE = "蛤蜊湯。",
+        MUSSEL_COOKED = "別把殼吃下，親愛的。",
+        MUSSEL_FARM =
+        {
+            GENERIC = "我從這裡搆不著它們。",
+            STICKPLANTED = "現在我們等著！順其自然就好。",
+        },
+        MUSSEL_STICK = "用於捕獲軟體動物。",
+        MYSTERYMEAT = "令人反胃的海洋食物。不用留給我，多謝了。",
+        NEEDLESPEAR = "像仙人掌一樣思考。",
+        OBSIDIAN = "火山岩漿的衍生物。",
+        OBSIDIANAXE = "這個工具自己會發熱。",
+        OBSIDIANCOCONADE = "威力相當大的爆炸彈。",
+        OBSIDIANFIREPIT =
+        {
+            GENERIC = "用於保持相當暖和的溫度。",
+            OUT = "我可以重新點燃它。",
+            EMBERS = "火焰快要自動熄滅了。",
+            LOW = "應該再加一些燃料。",
+            NORMAL = "非常適合看書的光線。",
+            HIGH = "營火正在以驚人的速度燃燒。",
+        },
+        OBSIDIANMACHETE = "這個工具自己會發熱。",
+        OBSIDIANSPEARGUN = "這個工具自己會發熱。",
+        OBSIDIAN_WORKBENCH = "學習火山工藝的好地方。",
+        OCTOPUSCHEST = "看起來它似乎位於珊瑚礁的底部。",
+        OCTOPUSKING = "他是這個生態系統的核心。",
+        OX = "它們淋濕後確實聞起來有點臭。",
+        OXHAT = "一頂結實的帽子。",
+        OX_FLUTE = "它的音樂激起了大自然的力量。",
+        OX_HORN = "笨拙的哺乳動物掉落了這支角。",
+        PACKIM = "你好，長羽毛的跟隨者！",
+        PACKIM_FISHBONE = "這是哪種魚？",
+        PALMLEAF = "它從椰樹上掉下來了。",
+        PALMLEAF_HUT = "遮蔭避暑的好地方。",
+        PALMTREE =
+		{
+		    CHOPPED = "它已經被砍伐了。",
+            BURNING = "樹在燃燒。",
+            BURNT = "完全被碳化了的樹。",
+			GENERIC = "我喜歡捧著一本好書坐在它下面。",
+		},
+        PARROT = "這是一隻顏色鮮艷的熱帶鳥。",
+        PARROT_PIRATE = "我想知道它是否識字？",
+        PEACOCK = "藍孔雀。",
+        PEG_LEG = "將這東西用作武器真是太古怪了！",
+        PIGTENT = "真髒。",
+        PIKE_SKULL = "骨骼殘骸。",
+        PIRATEGHOST = "超自然的海盜活動。",
+        PIRATEHAT = "入鄉隨俗！",
+        PIRATEPACK = "裝有寶藏的箱子。",
+        PIRATIHATITATOR =
+        {
+            BURNT = "現在沒那麼有用了，不是嗎？",
+            GENERIC = "這是一台用航海科技驅動的研究機器。",
+        },
+        POISONHOLE = "保持距離。它會定期噴出毒氣。",
+        PORTAL_SHIPWRECKED = "我感應到這裡有魔力。",
+        PRIMEAPE = "這些小猿猴非常狡猾。",
+        PRIMEAPEBARREL = "猴子的棲息地。",
+        RAFT = "竹子入門指南。",
+		RAWLING = "饒舌先生。",
+        REDBARREL = "一旦觸發，將發生爆炸性化學反應。",
+        RELIC =
+        {
+            BROKEN = "古代手工藝品。",
+            GENERIC = "被暗影摧毀了，毫無疑問。",
+        },
+        ROCK_CHARCOAL = "富含碳的資源。",
+        ROCK_OBSIDIAN = "它硬得像難以砸開的堅果。",
+        ROWBOAT = "我用於進行海洋研究的交通工具。",
+        SAIL = "借助風力航行。",
+        SAIL_STICK = "在遇到風暴的時候可以好好利用它。",
+        SAND = "沙子似乎總能想方設法跑到我的書裡。",
+        SANDBAG = "吸水效果最好。",
+        SANDBAGSMALL = "吸水效果最好。",
+        SANDBAGSMALL_ITEM = "一種防洪策略。",
+        SANDBAG_ITEM = "一種防洪策略。",
+        SANDHILL = "這種標誌性的沙丘形狀是由風吹而形成的。",
+        SAND_CASTLE =
+        {
+            GENERIC = "我仿照經典的歐式城堡建造的。",
+            SAND = "我仿照經典的歐式城堡建造的。",
+        },
+        SEAGULL = "鷗科鳥類中的食腐動物。",
+        SEAGULL_WATER = "鷗科鳥類中的食腐動物。",
+        SEASACK = "使我的書籍和補給品保持涼爽！",
+        SEASHELL = "這曾經是海洋無脊椎動物的殼。",
+        SEASHELL_BEACHED = "看看潮汐帶來了什麼好東西！",
+        SEATRAP = "將它放在生物巢穴的附近。",
+        SEAWEED = "我承認，我算不上是一個藻類學家。",
+        SEAWEED_COOKED = "富含蛋白質。",
+        SEAWEED_DRIED = "這株海藻已經被我晾乾了。",
+        SEAWEED_PLANTED = "海藻。",
+        SHADOWSKITTISH_WATER = "超自然的幻影開始成形...",
+        SHARKITTEN = "虎鯊的後代看起來相當無害，而且很萌。",
+        SHARKITTENSPAWNER =
+        {
+            GENERIC = "我想知道這個巢穴有多深。",
+            INACTIVE = "冬眠季節。",
+        },
+        SHARK_FIN = "背鰭的作用相當於一個水中穩定器。",
+        SHARK_GILLS = "腮可以吸收水中的氧氣。偉大的生物力學！",
+        SHARK_TEETHHAT = "牙齒做的王冠。",
+        SHARX = "小點聲！",
+        SHIPWRECKED_ENTRANCE = "一艘特別的船，可穿越不同世界。",
+        SHIPWRECKED_EXIT = "是時候離開這個熱帶天堂了嗎？",
+        SLOTMACHINE = "我打賭，結果是要看運氣的。",
+        SNAKE = "退後，大蛇！",
+        SNAKEDEN =
+        {
+            BURNT = "燒焦的物質。",
+            CHOPPED = "莖幹會隨著時間生長的。",
+            GENERIC = "一種攀緣植物。",
+        },
+        SNAKEOIL = "這個東西的作用還不確定。",
+        SNAKESKIN = "蛇的一層皮。",
+        SNAKESKINHAT = "防水的帽子！",
+        SNAKESKINSAIL = "蛇皮帆。",
+        SNAKE_FIRE = "真熱！",
+        SNAKE_POISON = "小心它的毒牙。",
+        SOLOFISH = "犬屬魚類。",
+        SPEARGUN = "我很欣賞遠距離武器的優點。",
+        SPEARGUN_POISON = "我很欣賞淬毒的遠距離武器的優點。",
+        SPEAR_LAUNCHER = "我很欣賞遠距離武器的優點。",
+        SPEAR_OBSIDIAN = "這個工具自己會發熱。",
+        SPEAR_POISON = "現在我可以用毒矛刺穿敵人了！",
+        SPOILED_FISH = "那塊魚肉已經變成了生物危害物。",
+        STUNGRAY = "看看它的翼展！",
+        SUNKEN_BOAT =
+        {
+            ABANDONED = "看起來這艘船命運多舛。",
+            GENERIC = "鳥兒，你在說什麼？",
+        },
+        SUNKEN_BOAT_BURNT = "只留下變黑的物質。",
+        SUNKEN_BOAT_TRINKET_1 = "測量儀器。",
+        SUNKEN_BOAT_TRINKET_2 = "一艘可愛的小船。",
+        SUNKEN_BOAT_TRINKET_3 = "看起來是用過的。",
+        SUNKEN_BOAT_TRINKET_4 = "看起來像是一種有用的機械裝置。",
+        SUNKEN_BOAT_TRINKET_5 = "這是一隻舊靴子。我想知道另一隻在哪裡？",
+        SUPERTELESCOPE = "發現新的地平線！",
+        SWEETPOTATOSOUFFLE = "很美味。",
+        SWEET_POTATO = "甘薯！",
+        SWEET_POTATO_COOKED = "烤蕃薯。",
+        SWEET_POTATO_PLANTED = "一種根用蔬菜。",
+        SWEET_POTATO_SEEDS = "可用來培育另一種根用蔬菜。",
+        SWIMMINGHORROR = "天哪，我看到一些東西...",
+        SWORDFISH = "不要打擾劍魚！",
+        TELEPORTATO_SW_BASE = "它簡直在邀請我復原它！",
+        TELEPORTATO_SW_BOX = "它應該連在什麼東西上？",
+        TELEPORTATO_SW_CRANK = "一根稻草桿。",
+        TELEPORTATO_SW_POTATO = "複雜的硬體...",
+        TELEPORTATO_SW_RING = "一個用來與螺栓擰在一起的有機螺母？",
+        TELESCOPE = "它可以收集可見光，提高我的視力。",
+        THATCHPACK = "我可以放些書進去。",
+        TIDALPOOL = "潮汐池是迷人的微生態系統！",
+        TIDAL_PLANT = "一種多細胞真核生物。",
+        TIGEREYE = "大型生物的眼睛。",
+        TIGERSHARK = "好大一隻鯊目貓科動物！",
+        TOUCAN = "因為顏色鮮艷的嘴而聞名的物種。",
+        TRAWLNET = "用於打撈海洋中的物品。",
+        TRAWLNETDROPPED =
+        {
+            GENERIC = "打開漁網，收穫戰利品！",
+            SOON = "它看起來就要下沉了。",
+            SOONISH = "這張網很快就會下沉。",
+        },
+        TREASURECHEST_TRAP = "看上去很可疑...",
+        TREECLUMP = "這裡是茂密的植物群。",
+        TRIDENT = "古代傳說中的神器。",
+        TRINKET_13 = "汽水飲料罐。",
+        TRINKET_14 = "部落手工藝品。",
+        TRINKET_15 = "好有旋律。",
+        TRINKET_16 = "上面的文字是什麼意思？",
+        TRINKET_17 = "這是一隻舊靴子。我想知道另一隻在哪裡？",
+        TRINKET_18 = "它上面有雕花裝飾。",
+        TRINKET_19 = "好古怪...",
+        TRINKET_20 = "測量儀器。",
+        TRINKET_21 = "一艘可愛的小船。",
+        TRINKET_22 = "看起來是用過的。",
+        TRINKET_23 = "別踩它！",
+        TROPICAL_FISH = "顏色真鮮艷。",
+        TUNACAN = "防腐的魚。",
+        TURBINE_BLADES = "我得研究一下它們的用處！",
+        TURF_SANDY = "地面。你正踩在它上面。",
+        TURF_ASH = "地面。你正踩在它上面。",
+        TURF_BEACH = "地面。你正踩在它上面。",
+        TURF_DESERTDIRT = "地面。你正踩在它上面。",
+        TURF_FUNGUS_GREEN = "地面。你正踩在它上面。",
+        TURF_FUNGUS_RED = "地面。你正踩在它上面。",
+        TURF_JUNGLE = "地面。你正踩在它上面。",
+        TURF_MAGMAFIELD = "地面。你正踩在它上面。",
+        TURF_MEADOW = "地面。你正踩在它上面。",
+        TURF_SNAKESKINFLOOR = "地面。你正踩在它上面。",
+        TURF_SWAMP = "地面。你正踩在它上面。",
+        TURF_TIDALMARSH = "地面。你正踩在它上面。",
+        TURF_VOLCANO = "地面。你正踩在它上面。",
+        TWISTER = "旋轉的強大能量！",
+        TWISTER_SEAL = "你是如何引起所有這些麻煩的？",
+        VENOMGLAND = "一種可以防止中毒的有用物質。",
+        VINE = "一簇普通的叢林籐蔓。",
+        VOLCANO = "地殼運動的最高境界！",
+        VOLCANOSTAFF = "我能感覺到它在火山的壓力下隆隆作響。",
+        VOLCANO_ALTAR =
+        {
+            GENERIC = "通往火山核心的紐帶。",
+            OPEN = "我應該獻上什麼供品？",
+        },
+        VOLCANO_ALTAR_BROKEN = "它看上去永久失效了。",
+        VOLCANO_ALTAR_TOWER = "宏偉的建築結構。",
+        VOLCANO_EXIT = "回到更舒適的溫度！",
+        VOLCANO_SHRUB = "這棵樹被熱量燒焦了。",
+        WALLYINTRO_DEBRIS = "海上船隻的殘骸。",
+        WALL_LIMESTONE = "可以提供少許保護。",
+        WALL_LIMESTONE_ITEM = "用於石灰岩建築。",
+        WATERMELON_SEEDS = "種下它們可以長出西瓜。",
+        WATERYGRAVE = "我想知道它在海上漂了多久？",
+        WHALE_BLUE = "我好喜歡海洋哺乳動物！",
+        WHALE_BUBBLES = "下面潛伏著一個大傢伙。",
+        WHALE_CARCASS_BLUE = "分解開始了。",
+        WHALE_CARCASS_WHITE = "有一個魚叉仍然卡在它的身體裡。",
+        WHALE_TRACK = "追隨著這頭鯨的蹤跡！",
+        WILBUR_CROWN = "誰有可能是它的主人？",
+        WILBUR_UNLOCK = "打擾一下，猴子先生，你需要幫助嗎？",
+        WILDBORE = "看上去很冷酷的野豬。",
+        WILDBOREHEAD = "看起來這裡曾進行過一場解剖。",
+        WILDBOREHOUSE = "野豬的庇護所。",
+        WIND_CONCH = "用一首曲子來驅動大氣壓力。",
+        WOODLEGSBOAT = "海盜船。",
+        WOODLEGSHAT = "比起我，它更適合戴在海盜頭上。",
+        WOODLEGSSAIL = "海盜帆。",
+        WOODLEGS_CAGE = "這位衣衫不整的先生，你是如何進去的？",
+        WOODLEGS_KEY1 = "一把骷髏鑰匙...",
+        WOODLEGS_KEY2 = "它可以打開哪把鎖？",
+        WOODLEGS_KEY3 = "一把激發極大好奇心的鑰匙。",
+        WORMHOLE_LIMITED = "我並不想接觸這個生物。",
+        WRECK = "這艘船遭遇了暴風雨。現在它屬於大海了。",
+		CALIFORNIAROLL = "美味的壽司捲。",
+    },
+    EAT_FOOD = 
+    {
+        TALLBIRDEGG_CRACKED = "很有嚼勁。",
+    },
+}

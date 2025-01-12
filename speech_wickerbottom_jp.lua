@@ -1,0 +1,1800 @@
+return 
+{
+    ACTIONFAIL =
+    {
+        SHAVE =
+        {
+            GENERIC = "本当に、遠慮しておきたい。",
+            NOBITS = "もうすでに滑らかだよ、君。",
+            AWAKEBEEFALO = "彼はそれに反対するんじゃないかな。",
+        },
+        READ =
+        {
+            GENERIC = "他にすべきことがあります",
+            NOBIRDS = "この天候では、鳥は呼べそうにありません",
+        },
+        REPAIRBOAT =
+        {
+            GENERIC = "修理の必要はないようです",
+        },
+        STORE =
+        {
+            GENERIC = "これ以上は収容できないようですね",
+            NOTALLOWED = "ふざけている場合ではありませんね",
+        },
+        COOK =
+        {
+            GENERIC = "あとにしましょう…料理好きでもないので…",
+            TOOFAR = "手が届きませんね",
+        },
+        WRITE =
+        {
+            GENERIC = "書くなら、自著にしたいですね",
+        },
+        RUMMAGE =
+        {   
+            GENERIC = "今は他にすべきことがあります",  
+        },
+        CHANGEIN =
+        {
+            GENERIC = "この服に不満はありません",
+            BURNING = "着替えはすべて燃えてしまいました…",
+        },
+        GIVE =
+        {
+            DEAD = "むだになるだけですね",
+            SLEEPING = "眠っているようですね",
+            BUSY = "終わるまで待ちましょう",
+        },
+        TEACH =
+        {
+            KNOWN = "あまりに初歩的すぎます",
+            CANTLEARN = "私にも習得できない知識があったとは…！",
+        },
+    },
+    ACTIONFAIL_GENERIC = "どうやら、不可能なようです",
+    DESCRIBE_TOODARK = "暗闇では見えないよ。",
+    DESCRIBE_SMOLDERING = "熱から今にも発火しそうだけれど。",
+    DESCRIBE_GENERIC = "これは…私にもよくわからないものです",
+    ANNOUNCE_MAGIC_FAIL = "この世界では波長が合わないようですね",
+    BATTLECRY =
+    {
+        GENERIC = "戦闘だ！",
+        PIG = "覚悟なさい！",
+        PREY = "抵抗はおやめなさい",
+        SPIDER = "おとなしくなさい！",
+        SPIDER_WARRIOR = "お行儀よくなさい！",
+    },
+
+    COMBAT_QUIT =
+    {
+        GENERIC = "もう、終わった。",
+        PIG = "まったく…",
+        PREY = "作戦を練りなおしましょう",
+        SPIDER = "リサーチが必要ですね…",
+        SPIDER_WARRIOR = "作戦を見直しましょう",
+    },
+    ANNOUNCE_EAT =
+    {
+        GENERIC = "美味しい！",
+        SPOILED = "半分腐ってた。", 
+        STALE = "最も新鮮な状態だったとは言えないな。",
+        PAINFUL = "食べるんじゃなかった。",
+        INVALID = "これは食べ物ではありません",
+        YUCKY = "これを摂取するのは危険です",
+    },
+    ANNOUNCE_NOWARDROBEONFIRE = "見ておわかりのとおり、燃えています",
+    ANNOUNCE_WORMS = "何か、恐ろしいものが迫っているようです",
+    ANNOUNCE_CANFIX = "\n僕がきっと修理できるはずさ。",
+    ANNOUNCE_ADVENTUREFAIL = "失敗から学ばなければ。",
+    ANNOUNCE_COLD = "周辺の温度が低い。",
+    ANNOUNCE_HOT = "周辺気温は高い。",
+    ANNOUNCE_HUNGRY = "図書館の司書にもお食事が必要。",
+    ANNOUNCE_TORCH_OUT = "もう一つ明かりが必要。",
+    ANNOUNCE_FAN_OUT = "もろい装置ですね…壊れてしまいました",
+    ANNOUNCE_COMPASS_OUT = "磁気が弱まってしまったようです",
+    ANNOUNCE_DUSK = "もうすぐ夜がやってくる。",
+
+    ANNOUNCE_CHARLIE_ATTACK = "痛いっ…！どなたですか！？",
+    ANNOUNCE_CHARLIE = "あの音聞いたか？",
+    ANNOUNCE_BOOMERANG = "あれの帰ってくるタイミングを読み間違えた。",
+    ANNOUNCE_HOUNDS = "何かが近づいて来る。",
+
+    ANNOUNCE_NOSLEEPONFIRE = "たとえ眠れたとしても、気温として非常に危険。",
+    ANNOUNCE_NODANGERSIESTA = "寝ている場合ですか！危険が迫っています！",
+    ANNOUNCE_NONIGHTSIESTA = "どの場所に寝ようが、眠れない。",
+    ANNOUNCE_NONIGHTSIESTA_CAVE = "こんな洞窟の中で、リラックスするのはとても無理。",
+    ANNOUNCE_NOHUNGERSIESTA = "腹ペコなのは、全然リラックスする助けにならない。",
+    ANNOUNCE_SHELTER = "あぁ、嬉しい一休み。",
+    ANNOUNCE_BURNT = "少なくとも、第一度！",
+    ANNOUNCE_TOOL_SLIP = "私のグリップが！",
+    ANNOUNCE_DAMP = "水の層がだんだんと溜まっていく。",
+    ANNOUNCE_WET = "私の体の飽和点って何だろう…。",
+    ANNOUNCE_WETTER = "ビショ、ビショ、ビショ！",
+    ANNOUNCE_SOAKED = "完全にびしょ濡れ。",
+    ANNOUNCE_OTHER_WORLD_PLANT = "この世界は、生息条件を満たしていません",
+
+    ANNOUNCE_PECKED = "今すぐ落ち着いて！",
+
+    ANNOUNCE_ENTER_LIGHT = "見えるのに十分明るい。",
+    ANNOUNCE_ENTER_DARK = "暗闇にいるよ。",
+    ANNOUNCE_INV_FULL = "もう何も持てないよ。",
+    ANNOUNCE_CRAFTING_FAIL = "今はそれを作れない。",
+
+    ANNOUNCE_WORMHOLE = "詳しい生物学の授業！",
+
+    ANNOUNCE_HUNT_LOST_TRAIL = "道がもはや、わからなくなってる。",
+    ANNOUNCE_HUNT_LOST_TRAIL_SPRING = "小道は降水により流失した。",
+    ANNOUNCE_HUNT_BEAST_NEARBY = "この形跡をみれば、最近活動していたことがわかる。",
+    ANNOUNCE_ACCOMPLISHMENT= "まだ着いてないよ！",
+    ANNOUNCE_ACCOMPLISHMENT_DONE = "完了した項目にいれていいよ！",
+
+    ANNOUNCE_TRAP_WENT_OFF = "うわぁ！",
+    ANNOUNCE_QUAKE = "これは…マグニチュード7はありそうです！",
+    ANNOUNCE_NODANGERSLEEP = "危険に晒されていないときでも、あんまり眠れない！",
+    ANNOUNCE_UNIMPLEMENTED = "ちぇっ、まだ準備ができてないみたい。",
+    ANNOUNCE_NOHUNGERSLEEP = "お腹が減っていないときでも、あんまり眠れない！",
+    ANNOUNCE_FREEDOM = "自由だ！!面白い本をみつけてお布団に入ろう。",
+    ANNOUNCE_RESEARCH = "些末な情報でも、知識の糧になります",
+    ANNOUNCE_NO_TRAP = "簡単さ！",
+    ANNOUNCE_HIGHRESEARCH = "おやおや、今のは非常に興味深かったね。",
+    ANNOUNCE_THORNS = "げっ、このトゲトゲ構造め！",
+    ANNOUNCE_NODAYSLEEP_CAVE = "この洞窟はちっとも眠りやすくない。",
+    ANNOUNCE_BEES = "刺すなんてイヤなやつ！",
+    ANNOUNCE_KNOCKEDOUT = "うーん、それもまた休憩の方法だと言えないことはないか。",
+    ANNOUNCE_LOWRESEARCH = "最高の資源ではないけれど、使えるところもあった。",
+    ANNOUNCE_DEERCLOPS = "大きそうな音がしてる！",
+    ANNOUNCE_MOSQUITOS = "いまいましい吸血鬼め！",
+    ANNOUNCE_NODAYSLEEP = "夜でさえあまり眠れないんだから、日中は論外。", 
+    ANNOUNCE_INSUFFICIENTFERTILIZER = "肥料が足りていないようですね",
+    ANNOUNCE_LIGHTNING_DAMAGE_AVOIDED = "この電気を通さない服があって良かった！",
+    ANNOUNCE_TOOMANYBIRDS = "こんなにたくさん鳥がいちゃ、うまくいかない。",
+    ANNOUNCE_WAYTOOMANYBIRDS = "今のところは空に鳥がいない。",
+    ANNOUNCE_MESSAGEBOTTLE =
+    {
+        "ミミズのはったような字です",
+    },
+    ANNOUNCE_BOAT_DAMAGED = "船が損傷を受けています！",
+    ANNOUNCE_BOAT_SINKING = "このままでは沈んでしまいます！",
+    ANNOUNCE_BOAT_SINKING_IMMINENT = "すぐに陸地に引き上げなくては！",
+    ANNOUNCE_CRAB_ESCAPE = "なんてすばしっこい甲殻類でしょう！",
+    ANNOUNCE_MAPWRAP_LOSECONTROL = "このまま進むと、どうなるかわかりません…",
+    ANNOUNCE_MAPWRAP_RETURN = "やはり、地球は丸いのですね！",
+    ANNOUNCE_MAPWRAP_WARN = "霧に何が潜むか…考え出すと“キリ”がありません",
+    ANNOUNCE_MORETREASURE = "なんと！また、宝です！",
+    ANNOUNCE_OTHER_WORLD_TREASURE = "この位置座標は、別世界のもののようです",
+    ANNOUNCE_SHARX = "サメ目のハウンド！これはやっかいですね…",
+    ANNOUNCE_TRAWL_FULL = "そろそろ引き揚げたほうがよさそうです",
+    ANNOUNCE_TREASURE = "宝が見つかりました！",
+    ANNOUNCE_VOLCANO_ERUPT = "マントルの活動が活発化しています！",
+    ANNOUNCE_WAVE_BOOST = "海洋性振動が最高潮に達しました！",
+    ANNOUNCE_WHALE_HUNT_BEAST_NEARBY = "この泡は…どこから出ているのでしょう！？",
+    ANNOUNCE_WHALE_HUNT_LOST_TRAIL = "獲物は深海に潜ってしまったようです",
+    ANNOUNCE_WHALE_HUNT_LOST_TRAIL_SPRING = "このシケでは、獲物を追うのは無理ですね",
+
+    DESCRIBE=
+    {
+        BABYOX = "まあ、なんてかわいらしい！",
+        GLOMMER = "昆虫網の中でも奇妙な例。",
+        GLOMMERFLOWER = 
+        {
+            GENERIC = "ベタベタであふれている。",
+            DEAD = "灰色になったが、まだ滴ってくる。",
+        },
+        GLOMMERWINGS = "珍しい昆虫の翼です",
+        GLOMMERFUEL = "非常に不安定に見受けられる。",
+        BELL = "静かに！ここは図書館ですよ！",
+        STATUEGLOMMER = 
+        {   
+            GENERIC = "それは石化している？",
+            EMPTY = "いいえ、ただの石像。",
+        },
+        WEBBERSKULL = "それは極めて珍しい頭蓋骨。",
+        
+        MOONROCKNUGGET = "月面より飛来したのでしょうか…？興味深い…",
+        ROCK_MOON = "月面より飛来したのでしょうか…？興味深い…",
+        MOLE =
+        {
+            HELD = "私のポケットは、これの自然な生息地じゃないと思う。",
+            UNDERGROUND = "下に何かがトンネルを掘っている。",
+            ABOVEGROUND = "そうか、モグラ科だ！",
+        },
+        MOLEHILL = "トンネル網は広大に違いない！",
+        MOLEHAT = "あぁ、違う生き物の、鼻を通して見るなんて！",
+        NIGHTSTICK = "ヴィーナスにあやかって名付けられたのかな？",
+        RABBITHOUSE=
+        {
+            GENERIC = "悲しいことに、ニンジンに見えるように絵が描いてあるだけ。",
+            BURNT = "しかもニンジンぽく燃えもしなかった。",
+        },
+        TURF_DECIDUOUS = "大地。踏みしめるもの。",
+        TURF_SANDY = "The ground. You step on it.",
+        TURF_BADLANDS = "大地。踏みしめるもの。",
+        BEARGER = "それは、Caniformia亜目… それ以上は、はっきり言えない。",
+        BEARGERVEST = "何であったにしろ、毛皮は素晴らしい衣服になったね。",
+        ICEPACK = "完璧に保冷。",
+        BEARGER_FUR = "まあ、まあ！それは分厚い。",
+        FURTUFT = "アナグマグマの毛です",
+        BIGFOOT = "有史以前！",
+        BONESHARD = "古き良き生活のおもかげ。",
+        BUZZARD = "コンドルだね、当然。",
+        CACTUS = 
+        {
+            GENERIC = "若いタマサボテン。",
+            PICKED = "非常時には、荒療治も必要。",
+        },
+        CACTUS_MEAT_COOKED = "愉快なことに、脊柱を欠いている。",
+        CACTUS_MEAT = "それが適切に調理されていたか、疑わしい。",
+        CACTUS_FLOWER = "バロウズを思い出させるね。図書館では常に人気の。",
+        COLDFIRE =
+        {
+            GENERIC = "実に不思議なたき火です",
+            OUT = "もう一度火をつけられる。",
+            EMBERS = "火がほとんど自然に消えた。",
+            LOW = "あの火はもうちょっと燃料が必要だな。",
+            NORMAL = "完璧な、尋常でない火。",
+            HIGH = "あの炎は危険な勢いで燃えている。",
+        },
+        CATCOON = "ヤマネコの一種でしょう…美猫ですね！",
+        CATCOONDEN = 
+        {
+            GENERIC = "巣にするにはうってつけのくぼみ。",
+            EMPTY = "使い切られた感じ。",
+        },
+        CATCOONHAT = "デヴィー・クロケットの帽子には及ばないけど、まあいいでしょう。",
+        COONTAIL = "柔軟な胴の付属器官。",
+        LAVA_POND_ROCK = "冷え固まったばかりの火成岩です",
+        LAVA_POND_ROCK2 = "冷え固まったばかりの火成岩です",
+        LAVA_POND_ROCK3 = "冷え固まったばかりの火成岩です",
+        LAVA_POND_ROCK4 = "冷え固まったばかりの火成岩です",
+        LAVA_POND_ROCK5 = "冷え固まったばかりの火成岩です",
+        LAVA_POND_ROCK6 = "冷え固まったばかりの火成岩です",
+        LAVA_POND_ROCK7 = "冷え固まったばかりの火成岩です",
+        COOKPOT =
+        {
+            COOKING_LONG = "まだできるまで少し時間がある。",
+            COOKING_SHORT = "あともう少し！",
+            DONE = "夕食の時間！",
+            EMPTY = "何も調理していない時は、遺棄物っぽく見える。",
+            BURNT = "今では完全に遺棄されている。",
+        },
+        EYEBRELLAHAT =  "角膜は、かなり撥水性があるに違いない。",
+        ARMORDRAGONFLY = "花火の出る鎧！",
+        DRAGON_SCALES = "昆虫から採ったウロコ？前代未聞！",
+        DRAGONFLYCHEST = "ウロコ！ウロコの勝ち！",
+        DECIDUOUSTREE = 
+        {
+            GENERIC = "何かブナ目の一種。成熟すると実を結ぶ。",
+            CHOPPED = "収穫された。",
+            BURNING = "木が燃えている。",
+            BURNT = "炭化した木。",
+            POISON = "この木に関しては、お目にかかったことがない！",
+        },
+        ACORN_COOKED = "加熱したので、食べても安全です",
+        BIRCHNUTDRAKE = "逃げろぉぉーー！",
+        FARMPLOT =
+        {
+            GENERIC = "小さな耕作された土地。",
+            GROWING = "植物が大地からミネラルを搾取している。",
+            NEEDSFERTILIZER = "栄養素の欠如から不毛だとされた。",
+            BURNT = "もう作物を育むことはないだろう。",
+        },
+        COLDFIREPIT =
+        {
+            GENERIC = "炉。寒い。",
+            OUT = "もう一度火をつけられる。",
+            EMBERS = "火がほとんど自然に消えた。",
+            LOW = "もっと燃料を足した方がいい、使えるものならどんな燃料でも。",
+            NORMAL = "炎。何らかの。",
+            HIGH = "あの炎は危険な勢いで燃えている。",
+        },
+        FIRESUPPRESSOR = 
+        {   
+            ON = "氷を投げろ！",
+            OFF = "ここに見るものは何もないから。",
+            LOWFUEL = "燃料が少なくなってきてる。",
+        },
+        ICEHAT = "完璧な角氷一個。",
+        LIGHTNINGGOAT = 
+        {
+            GENERIC = "パサンの一種で電気が好き。",
+            CHARGED = "非常に好き。",
+        },
+        LIGHTNINGGOATHORN = "角の中に、何か不自然なものが入っているに違いない。",
+        GOATMILK = "たまらない！",
+        MEATRACK =
+        {
+            GENERIC = "肉だって脱水状態になることもある。",
+            DRYING = "乾燥には時間がかかる。",
+            DRYINGINRAIN = "雨で、乾燥処理に遅延が生じています",
+            DONE = "プロセスは完了した。",
+            BURNT = "安定しているようには見えない。",
+        },
+        MERMHEAD = 
+        {
+            GENERIC = "腐っているのか発酵しているのか、私にはわからない。",
+            BURNT = "今では腐っても発酵してもいない。",
+        },
+        MERMHOUSE = 
+        {
+            GENERIC = "明らかに荒れ果てている。",
+            BURNT = "荒廃を通り越している。",
+        },
+        FLOWERSALAD = "豊富な栄養分！",
+        ICECREAM = "一冊の本とボウル一杯のアイスクリームに勝るものはない。",
+        WATERMELONICLE = "スイカが氷の格子の中に入っている。",
+        TRAILMIX = "ふうむ、ナチュラル！",
+        HOTCHILI = "チリを食べると、消化不良になるんだよね。",
+        GUACAMOLE = "図書館恒例の科学デーには、いつもワカモーレを作り持って行く。",
+        MOOSE = "私はそれを、ヘラジカ・ワピチと呼ぶ。",
+        MOOSEEGG = "なんという驚異！",
+        BANANAPOP = "冷たくておいしいおやつです",
+        BISQUE = "おいしそう…言うことナシです",
+        CEVICHE = "ソースをかけたほうが美味なのですが…",
+        SEAFOODGUMBO = "見ているだけで胸焼けしてきました…",
+        SURFNTURF = "申し分ない料理です",
+        SHARKFINSOUP = "生態系が崩れなければいいのですが…",
+        LOBSTERDINNER = "ぜいたくな食事です",
+        LOBSTERBISQUE = "食物の本来の味など、忘れかけていました",
+        JELLYOPOP = "子どもの頃を…なんとなく思い出します",
+        MOSSLING = "まあだいたい予想通りのものだった。",
+        FEATHERFAN = "これは相当な気流を引き起こすだろう！",
+        TROPICALFAN = "空気力学の原理を応用した装置ですね",
+        MINIFAN = "空気力学の原理を応用した装置ですね",
+        GOOSE_FEATHER = "柔らかいダウン！自分が眠れたら良かったのにと思うね。",
+        STAFF_TORNADO = "風見鶏が武器として使われているのを見たのは、初めて。",
+        PIGHEAD = 
+        {   
+            GENERIC = "いわゆる、さらし首ですね…",
+            BURNT = "さらし首でしょうが…黒焦げですね…",
+        },
+        PIGHOUSE =
+        {
+            GENERIC = "ブタという生き物は建築に対する美学をもたない。",
+            FULL = "中で何をしてるんだろう。",
+            LIGHTSOUT = "いまのは失礼だったな。",
+            BURNT = "その家には防火装置がなかった。",
+        },
+        FERTILIZER = "バケツ一杯の動物の排泄物。強烈な臭い。",
+        RAINOMETER = 
+        {   
+            GENERIC = "行動する前に、計測するべし。",
+            BURNT = "その外皮からは測定値を読み取れない。",
+        },
+        RAINCOAT = "完全に無孔。",
+        RAINHAT = "髪がぬれると不快ですからね",
+        RESEARCHLAB = 
+        {   
+            GENERIC = "研究ステーション。私はここから新しいことを学べる。",
+            BURNT = "炭化した研究ステーションからは、何も学べない。",
+        },
+        RESEARCHLAB2 = 
+        {
+            GENERIC = "研究ステーション。私はここから新しいことを学べる。",
+            BURNT = "炭化した研究ステーションからは、何も学べない。",
+        },
+        RESEARCHLAB3 = 
+        {
+            GENERIC = "もしかしたら行き過ぎたかも知れない。",
+            BURNT = "前兆。",
+        },
+        RESEARCHLAB4 = 
+        {
+            GENERIC = "この帽子は空気中からエネルギーを集めるようだ。",
+            BURNT = "もうエネルギーを集めることはないだろう。",
+        },
+        RESURRECTIONSTATUE = 
+        {
+            GENERIC = "なんと異教徒的だこと。",
+            BURNT = "ことごとく打ち負かされた。",
+        },
+        ROCK_ICE = 
+        {
+            GENERIC = "非常に濃度の高い氷の小さなかけら。",
+            MELTED = "その小さいサイズゆえに、溶けてしまったのだろう。",
+        },
+        ROCK_ICE_MELTED = "その小さいサイズゆえに、溶けてしまったのだろう。",
+        ICE = "水が固体になったものです",
+        REFLECTIVEVEST = "私を適度に涼しい温度に保つ。",
+        HAWAIIANSHIRT = "個人的にはツィードの方が好み。",
+        TENT = 
+        {
+            GENERIC = "その中で寝たら、首が痛くなってしまう。",
+            BURNT = "どちらにしろ、そんなに役に立っていなかった。",
+        },
+        SIESTAHUT = 
+        {
+            GENERIC = "ベッドでもろくに眠れないのに、地面はとても無理。",
+            BURNT = "どちらにしろあんまり役立ってなかったから。",
+        },
+        TRANSISTOR = "これはかなり発達したテクノロジーだね。",
+        TREASURECHEST = 
+        {
+            GENERIC = "収納チェスト。",
+            BURNT = "収納用の箱…でしたが、今は燃えがらです",
+        },
+        TUMBLEWEED = "植物物質が乾燥してまとまった物体。",
+        GRASS_UMBRELLA = "降水から、ある程度、身を守れるでしょう",
+        PALMLEAF_UMBRELLA = "ある程度、降水から身を守れるでしょう",
+        UNIMPLEMENTED = "建設工事中。",
+        WALL_HAY = 
+        {   
+            GENERIC = "その壁は信用できない。",
+            BURNT = "信用しないのは正しかった。",
+        },
+        WALL_WOOD = 
+        {
+            GENERIC = "ある程度の防御にはなる。",
+            BURNT = "炎がこれの弱味だった。",
+        },
+        WARDROBE = 
+        {
+            GENERIC = "洋服ダンスですね…中は異世界でしょうか",
+            BURNING = "中の異世界も、燃えているのでしょうか…",
+            BURNT = "洋服ダンス…だったのですが…",
+        },
+        WARG = "That Canis will never be domesticated.",
+        WATERMELON = "スイカ。",
+        WATERMELON_COOKED = "見事にグリルされてる。",
+        WATERMELONHAT = "確かに、スイカで出来ることの一つではある。",
+        WINTEROMETER = 
+        {
+            GENERIC = "行動する前に、計測するべし。",
+            BURNT = "その外皮からは測定値を読み取れない。",
+        },
+        HOMESIGN =
+        {
+            GENERIC = "位置情報表示装置…「現在地」と書いてあります",
+            UNWRITTEN = "道順を書き込むことができます",
+            BURNT = "今はもう助けになっていない。",
+        },
+        BEEBOX =
+        {
+            READY = "これからハチミツがとれる。",
+            GENERIC = "自然のままの養蜂場。",
+            FULLHONEY = "これからハチミツがとれる。",
+            NOHONEY = "中にはちみつがない。",
+            SOMEHONEY = "まだ収穫できる状態じゃない。",
+            BURNT = "かわいそうな蜂たち！",
+        },
+        LIVINGTREE = "この木は特別。",
+        ICESTAFF = "何らかの氷発射仕掛け。",
+        WORMLIGHT = "思ったよりも柔らかい。",
+        WORMLIGHT_LESSER = "どこからどう見ても、植物です",
+        WORM =
+        {
+            PLANT = "アンコウみたい。",
+            DIRT = "近寄らない方がいい。",
+            WORM = "ミミズアタック！",
+        },
+        WORMLIGHT_PLANT = "チョウチンアンコウの突起に似ています…",
+        EEL = "ウナギだよ。",
+        EEL_COOKED = "このウナギは料理されている。",
+        UNAGI = "ウナギの一般的な調理法。",
+        EYETURRET = "二匹の獣の魔術がスーラサイトによって凝縮された。",
+        EYETURRET_ITEM = "これをセットしなくちゃ。",
+        MINOTAURHORN = "驚くべき大きさの角だ。悪夢でさらに大きくなったのかな。",
+        MINOTAURCHEST = "あのチェストはやっぱり素晴らしい。",
+        THULECITE_PIECES = "つなぎ合わせれば使えそうです",
+        POND_ALGAE = "この藻が光合成を必要としていなくてよかった。",
+        GREENSTAFF = "物体の時間を逆戻しさせるみたいだ。",
+        POTTEDFERN = "鉢植えの植物。",
+
+        BOOK_BIRDS = "削除修正バージョンだけど、私のお気に入り：ミミズク。",
+        BOOK_TENTACLES = "これは放っておけないな。けっこう面白い。",
+        BOOK_GARDENING = "死んだ植物たちは僕が生きた植物を助けるために互いに結びついた。",
+        BOOK_SLEEP = "本の形の温かいミルク。",
+        BOOK_BRIMSTONE = "何がどう間違うっていうの？",
+
+        SLURPER = "典型的な共生者の例。",
+		SLURPER_PELT = "これは何かに使えそうだ。",
+        SLURPERPELT = "なんらかの使い道がありそうです",
+		ARMORSLURPER = "気色悪くて不思議な服。",
+        ORANGEAMULET = "ジェムは使用するたびに衰える。",
+        YELLOWSTAFF = "ラッキーなことに、この星の大きさならなんとか扱える。",
+        YELLOWGEM = "黄水晶に似ているかも。",
+        ORANGEGEM = "スペサルタイトガーネットのようだ。",
+        TELEBASE = 
+        {
+            VALID = "準備ができたみたい。",
+            GEMS = "まだ電源が入っていないと思う。",
+        },
+        GEMSOCKET = 
+        {
+            VALID = "なんて奇妙な効果だろう。",
+            GEMS = "これにジェムを入れられる。",
+        },
+        STAFFLIGHT = "もしかして大きな杖ならもっとすごい英雄が召還できるかも。",
+
+        ANCIENT_ALTAR = "昔々に死んだ神の記念碑。",
+        ANCIENT_ALTAR_BROKEN = "このパーツがいくつか欠けている。",
+        ANCIENT_STATUE = "これは神秘的なくらいに、世界と位置を合わせてあるようだ。",
+        LICHEN = "共生生物だ！カビと共生藻体のバクテリアだ。",
+		CUTLICHEN = "これは長くはもたない。",
+
+        CAVE_BANANA = "全て遺伝子的に同一だ。",
+        CAVE_BANANA_COOKED = "まぁちょっと良くなった。",
+        CAVE_BANANA_BURNT = "修復は不可能ですね",
+        CAVE_BANANA_TREE = "種がくぼみに落ちたんだろう。",
+        ROCKY = "彼らの甲皮は岩でできている。",
+
+        BLUEAMULET = "ジェムが触れるもの全てからエネルギーを吸い出しているようだ。",
+        PURPLEAMULET = "何かに手招きしているのが、もう少しで感じとれる。",
+        TELESTAFF = "宝石が悪夢の燃料を集中させているみたい。",
+        MONKEY = "けっこう臭いにおいを醸し出す。",
+        MONKEYBARREL = "ここは霊長類の住処のようだ。",
+
+        HOUNDSTOOTH="カルシウムと硫黄でできている。",
+        ARMORSNURTLESHELL="けっこうたくさん入りそう。",
+        BAT="空飛ぶ哺乳類。",
+        BATWING="論理的には食べられる。",
+        BATWING_COOKED="論理的には食べられる。",
+        BATCAVE = "これは、住居のようです",
+        BEDROLL_FURRY="土の上では寝ないよ。",
+        BUNNYMAN="知覚を持ったウサギ。",
+        FLOWER_CAVE="その明かりで文字が読めるね。",
+        FLOWER_CAVE_DOUBLE="その明かりで文字が読めるね。",
+        FLOWER_CAVE_TRIPLE="その明かりで文字が読めるね。",
+        GUANO="もっとたくさんの代謝副産物。",
+        LANTERN="燃料補給可能な光源。",
+        LIGHTBULB="これは動物、それとも野菜？",
+        MANRABBIT_TAIL="彼らはシッポを使ってバランスをとる。",
+        MUSHTREE_TALL=
+        {
+            GENERIC = "A tree with a fungal parasite.",
+            BLOOM = "Apparently it's the breeding season for this species.",
+        },
+        MUSHTREE_MEDIUM=
+        {
+            GENERIC = "A red variety of Mycena luxaeterna.",
+            BLOOM = "The smell is used to ward off predators.",
+        },
+        MUSHTREE_SMALL=
+        {
+            GENERIC = "My word! A huge Mycena silvaelucens.",
+            BLOOM = "The light is caused by a chemical reaction.",
+        },
+        MUSHTREE_TALL_WEBBED = "これは、共生のようにも見えますね",
+        SPORE_TALL = "この中に、遺伝情報が格納されています",
+        SPORE_MEDIUM = "この中に、遺伝情報が格納されています",
+        SPORE_SMALL = "この中に、遺伝情報が格納されています",
+        SPORE_TALL_INV = "遺伝情報の格納された胞子を格納しました",
+        SPORE_MEDIUM_INV = "遺伝情報の格納された胞子を格納しました",
+        SPORE_SMALL_INV = "遺伝情報の格納された胞子を格納しました",
+        MUSHTREE_TALL  ="カビが寄生している木。",
+        MUSHTREE_MEDIUM="赤い品種の夜光キノコ。",
+        MUSHTREE_SMALL ="おやおや！巨大な夜光キノコだ。",
+        SLURTLE= "鉱物を喰らう腹足類。",
+        SLURTLE_SHELLPIECES= "壊れたものの欠片。",
+        SLURTLEHAT= "防御を施してくれる。",
+        SLURTLEHOLE= "腹足類の群れ。",
+        SLURTLESLIME= "彼らの粘液はなぜか爆発するんだ。",
+        SNURTLE= "珍しい腹足類の異種だ。",
+        SPIDER_HIDER= "分厚い甲皮をもったクモ。",
+        SPIDER_SPITTER= "ミサイルを吐き出すクモ。",
+        SPIDERHOLE= "これが蔓延していたクモの根源だ。",
+        SPIDERHOLE_ROCK ="クモは、ここから湧いてくるのですね…",
+        STALAGMITE= "奇妙な石のフォーメーション。",
+        STALAGMITE_FULL= "奇妙な石のフォーメーション。",
+        STALAGMITE_LOW= "奇妙な石のフォーメーション。",
+        STALAGMITE_MED= "奇妙な石のフォーメーション。",
+		STALAGMITE_TALL= "また石筍だ。",
+		STALAGMITE_TALL_FULL= "また石筍だ。",
+		STALAGMITE_TALL_LOW= "また石筍だ。",
+		STALAGMITE_TALL_MED= "また石筍だ。",
+
+        TURF_DESERTDIRT = "The ground. You step on it.",
+        TURF_FUNGUS_GREEN = "The ground. You step on it.",
+        TURF_FUNGUS_RED = "The ground. You step on it.",
+        TURF_CARPETFLOOR = "大地。踏みしめるもの。",
+        TURF_CHECKERFLOOR = "大地。踏みしめるもの。",
+        TURF_DIRT = "大地。踏みしめるもの。",
+        TURF_FOREST = "大地。踏みしめるもの。",
+        TURF_GRASS = "大地。踏みしめるもの。",
+        TURF_MARSH = "大地。踏みしめるもの。",
+        TURF_ROAD = "大地。踏みしめるもの。",
+        TURF_ROCKY = "大地。踏みしめるもの。",
+        TURF_SAVANNA = "大地。踏みしめるもの。",
+        TURF_WOODFLOOR = "大地。踏みしめるもの。",
+
+        TURF_CAVE="大地。踏みしめるもの。",
+        TURF_FUNGUS="大地。踏みしめるもの。",
+        TURF_SINKHOLE="大地。踏みしめるもの。",
+        TURF_UNDERROCK="大地。踏みしめるもの。",
+        TURF_MUD="大地。踏みしめるもの。",
+        TURF_DRAGONFLY = "いわば天然の防火素材といったところです",
+
+        BATBAT = "おもしろい。この武器は生きているみたいだ。",
+        LUREPLANT = "侵略的な植物種。",
+        LUREPLANTBULB = "これで好きに植木を動かせる。",
+        EYEPLANT = "たぶん大きな植物に操られているんだ。",
+        PLANTMEAT = "植物が肉のような物質を実らせた。",
+        PLANTMEAT_COOKED = "これを食べても良いように思えてきた。",
+        CAVE_FERN = "素敵な飾り用の植物。",
+        FOLIAGE = "栄養分があるかもしれない。",
+        FOOTBALLHAT = "直接対決には防護ギアを。",
+
+        POWCAKE = "農産業複合体の最大の功績。",
+        CAVE_ENTRANCE = "あの岩は、わざと置かれたように見えます",
+        CAVE_ENTRANCE_RUINS = "通路がふさがっていますね",
+
+        CAVE_ENTRANCE_OPEN = 
+        {
+            GENERIC = "しっかり準備をしてからにしましょう",
+            OPEN = "この下に、地底の世界が広がっています…",
+        },
+        CAVE_EXIT = 
+        {
+            GENERIC = "また今度にいたしましょう",
+            OPEN = "一度出て、外の空気を吸いましょう",
+        },
+
+		BOOMERANG = "平たい翼だ。",
+		SPOILED_FOOD = "バクテリアがぎっしり。",
+		ICEBOX = "未熟な熱交換器。",
+		MAXWELLPHONOGRAPH = "電源がないみたいだ。",
+		PIGGUARD = "戦士の階級の一つ。",
+		
+		DIVININGROD = 
+		{
+		    GENERIC = "魔法技術的な自動誘導装置だ。",
+		    COLD = "ダイヤルがかすかに動いている。",
+		    WARM = "確かに僕は正しい軌道に乗ってるな。",
+		    WARMER = "近づいているはずだ。",
+		    HOT = "着いたよ！",
+		},
+		DIVININGRODSTART = "このロッドは役に立つかも！",
+        DRAGONFLY = "それは、何らかの神話に出てくる双翅目の変種。",
+        
+        LAVASPIT = 
+        {
+            HOT = "その唾液はまるで、溶岩のようだ。",
+            COOL = "温度が下がり冷えて、まるで玄武岩のよう。",
+        },
+        LAVA_POND = "溶岩です…近づくと危険ですよ",
+        LAVAE = "ドラゴンフライの幼虫と思われます",
+        LAVAE_PET = 
+        {
+            STARVING = "エサをやらなければ死んでしまいます！",
+            HUNGRY = "空腹なようですね",
+            CONTENT = "なかなか、かわいらしいものですね",
+            GENERIC = "ドラゴンフライの幼虫…健康状態は良好です",
+        },
+        LAVAE_EGG = 
+        {
+            GENERIC = "多卵黄性の巨大な卵です",
+        },
+        LAVAE_EGG_CRACKED =
+        {
+            COLD = "ふ化させるには、気温が低すぎるようです",
+            COMFY = "ふ化するのにちょうどよい気温です",
+        },
+        LAVAE_TOOTH = "ヒナが殻を破るのに使う歯です",
+
+        DRAGONFRUIT = "ホワイトドラゴンフルーツ。",
+        DRAGONFRUIT_COOKED = "きれいに調理されたドラゴンフルーツ。",
+        DRAGONFRUIT_SEEDS = "とてもマイルドなドラゴンフルーツの種。",
+        DRAGONPIE = "美味しいフルーツパイは好きさ。",
+        DRUMSTICK = "鶏の足。",
+        DRUMSTICK_COOKED = "あんまりヘルシーじゃないけれど、すごく美味しい！",
+        DURIAN = "あぁ、ドリアンだ。本当に臭そう。",
+        DURIAN_COOKED = "料理してもこの臭さはどうにもならなかった。",
+        DURIAN_SEEDS = "ドリアンって種まで臭い。",
+        EARMUFFSHAT = "哀れなウサギちゃん。でもこれで私の耳はぽかぽか暖かい。",
+        EGGPLANT = "ナス科の植物、特にナスビ。",
+        EGGPLANT_COOKED = "ご紹介します：ナスの蒸し煮。",
+        EGGPLANT_SEEDS = "ナスの種。",
+        WAFFLES = "ごきげんよう、ワッフルよ。",
+		
+		WALL_WOOD_ITEM = "配置可能な哨兵。",
+		WALL_STONE_ITEM = "なんでこれをこんなにたくさん持てるのか僕にもわからない。",
+		WALL_RUINS_ITEM = "私のポケットは内側の方が大きくなってるんだ。",
+		WALL_HAY_ITEM = "干し草の俵。",
+		WALL_STONE = "けっこう安定している。",
+		WALL_RUINS = "とても頑丈な壁。",
+        WALL_MOONROCK = "とても上質なかべです",
+        WALL_MOONROCK_ITEM = "ポケットに収まっているのが不思議です…",
+        ADVENTURE_PORTAL = "それは基本的な物理の法則に反しているね。",
+		
+        BIRDCAGE = 
+        {
+			GENERIC = "ここに鳥の標本がちょうど一つ分収まる。",
+            OCCUPIED = "彼は落ちついた。",
+            SLEEPING = "シーッ！",
+            HUNGRY = "空腹なようです",
+            STARVING = "栄養失調気味のようですね",
+            DEAD = "餓死してしまったようです",
+            SKELETON = "骨格の研究に活用できそうです",
+        },
+        MEAT = "普段は生では食べないんだけど。",
+        SMALLMEAT = "小さな、生の肉のかたまり。",
+        COOKEDSMALLMEAT = "料理された後の方が、もうちょっと美味しそう。",
+        MONSTERMEAT = "食べれば健康を害するリスクがあります",
+        MONSTERLASAGNA = "ラザニアにしても、毒素は消えません",
+        COOKEDMEAT = "料理された後の方が、もうちょっと美味しそう。",
+        MEATBALLS = "加工肉の山。何が入っているのかわからない。",
+        UMBRELLA = "乾いた状態を保つための簡単な器具。",
+        PERD = "汚らしい七面鳥め、私のベリーから離れなさい！",
+        TURKEYDINNER = "いい感じのロースト。",
+        COOKEDMONSTERMEAT = "まだ少し毒をもっている。",
+        MAXWELL = "なんて無礼な紳士だろう。",
+        TENTACLE = "泥の中で待ち受ける恐怖。",
+        TENTACLESPIKE = "尖った方を握っちゃいけない。",
+        TENTACLESPOTS = "ふうむ。生殖器か。",
+        TENTACLE_PILLAR = "地上よりも地下にたくさんある！",
+        TENTACLE_PILLAR_HOLE = "すべての穴は、つながっているようです",
+        TENTACLE_PILLAR_ARM = "小さな恐怖が泥の中で待ち構えてる。",
+        TENTACLE_GARDEN = "どうやって交配しているんだろう？",
+        BEEFALO =
+        {
+            GENERIC = "ウシみたい。",
+            FOLLOWER = "僕のあとをつけてくるみたいだ。",
+            NAKED = "冷たそう。",
+            SLEEPING = "寝ている。",
+        },
+        BABYBEEFALO = "んまー！なんてかわい…オホン…",
+        MANDRAKE =
+        {
+			GENERIC = "マンドラゴラ。",
+			PICKED = "マンドラゴラ。でも顔がついてる。",
+			DEAD = "マンドラゴラ。死んだ人",
+        },
+        COOKEDMANDRAKE = "マンドラゴラ、発見という名目で調理された。",
+        MANDRAKESOUP = "マンドラゴラ、発見という名目でスープに仕立てられた。",
+		KRAMPUS = "神話のホリデーモンスターだ。",
+		KRAMPUS_SACK = "外側よりも内側の方が広く見える。",
+        PINECONE = 
+        {
+            GENERIC = "成熟した松かさの中の、針葉樹の種。",
+            PLANTED = "成熟しかけている針葉樹の種。",
+        },
+        ARMORWOOD = "丸太をつぎはぎして作られた、雑な板金甲冑。",
+		ARMOR_SANITY = "衝撃を別の次元へ転送する仕組みですね",
+        ASH =
+        {
+            GENERIC = "炎のあとに残った、水溶性ではない残留物。",
+            REMAINS_GLOMMERFLOWER = "花は完全に焼き尽くされたようだね。",
+            REMAINS_EYE_BONE = "目玉の骨は完全燃焼されたみたいだ。",
+            REMAINS_THINGIE = "以前は何か意味のあるものだったんだろうけれど、今じゃただの灰。",
+        },
+        SPAT = "鋼鉄羊です…ずいぶん機嫌が悪そうですね",
+        SPEAR = "古代の武器技術。",
+        STRAWHAT = "これでいくらか日差しを防げる。",
+        STUFFEDEGGPLANT = "このナスは調理して他の食べ物と詰め合わせた。",
+        BEEFALOHAT = "この帽子はかっこわるい。",
+        TOPHAT = "なんてブルジョワな。",
+        FLOWERHAT = "お祝い気分。",
+        BUSHHAT = "カモフラージュ",
+        ROPE = "短く、丈夫な麻のロープ。",
+        LOG = "An axial section of tree trunk.",
+        LOG =
+        {
+            BURNING = "An axial section of tree trunk. On fire.",
+            GENERIC = "An axial section of tree trunk.",
+        },
+        LIVINGLOG = "この丸太は特別。",
+        LOCKEDWES = "哀れなやつはここで彫像に囚われの身だ。",
+        TWIGS = "小さな小枝。",
+        CARROT = "ニンジン。食べられるし、美味しい。",
+        CARROT_COOKED = "完璧に調理されたニンジン。",
+        CARROT_PLANTED = "ニンジンは根菜。",
+        CARROT_SEEDS = "ニンジンの種。",
+        BERRIES = "マンリョウの実、かな。",
+        BERRIES_COOKED = "焼いたマンリョウ、万が一のために。",
+        CUTSTONE = "滑らかにした平石。",
+        SEEDS = "一握りの、正体不明の種。",
+        SEEDS_COOKED = "焦げた胚芽植物のおやつ！",
+        SILK = "クモから絞り出されたプロテインファイバー。",
+		SPIDERGLAND = "この分泌腺からはゆるい毒素が出てる。",
+        BOARDS = "荒く削った木の板。",
+        BONESTEW = "母の手作りには負けますが…おいしそう！",
+        MAXWELLTHRONE = "なんて怖い椅子だろう。",
+        MAXWELLLOCK = "あとは鍵が必要なだけ。",
+        MAXWELLLIGHT = "魔法みたいだ！",
+        FEM_PUPPET = "かわいそうな女の子。",
+        MALE_PUPPET = "かわいそうな男の子。",
+        ROBOT_PUPPET = "かわいそうに。",
+        
+		NITRE = "硝酸ナトリウムとも言うね。",
+		GUNPOWDER = "知識は力なり。",
+		BIRD_EGG = "肥料を与えていない。",
+		BIRD_EGG_COOKED = "トーストがあったらいいのに。",
+		ROTTENEGG = "食欲をそそらないな。",
+		HAMBAT = "資源の最も友好的な使い方だったかどうかはわからない。",
+
+        TRAP_TEETH = "イヌの消化液の薄い膜で覆われている。",
+        TRAP_TEETH_MAXWELL = "私をだまそうという、浅はかな企みさ。",
+        RABBIT = 
+        {
+            GENERIC = "ウサギ系の動物だ。角があるけれど。",
+            HELD = "かわいい角を持つウサギだ。",
+        },
+		ROCK_LIGHT =
+		{
+			GENERIC = "覆われた溶岩ピット。",
+            OUT = "火成岩の外殻だけが残っていますね",
+            LOW = "冷却プロセスに入ったようです",
+            NORMAL = "高温ですね。触れると危険です",
+		},
+        ROCK = "大きな堆積岩。",
+        PIGKING = "彼がこの村のリーダーみたいだ。",
+        RATATOUILLE = "栄養満点の二ソワーズ！",
+        RESURRECTIONSTONE = "この石には、再生の力があるようです",
+        ROBIN =
+        {
+            GENERIC = "ショウジョウコウカンチョウ！素敵な羽飾り。",
+            HELD = "まあ、かわいらしい…ペットにしましょう",
+        },
+        ROBIN_WINTER =
+        {
+            GENERIC = "カーディナルに冬のコート？なんて風変わりだろう！",
+            HELD = "とてももろい。",
+        },
+        AXE = "レバーに取り付けられたデュアル傾斜の飛行機。",
+		HAMMER = "働き者のツール。",
+        PHLEGM = "粘着力の高い粘液の塊です",
+        PICKAXE = "岩を切り倒すための特別な斧。",
+        SEWING_KIT = "家事のためのシンプルな器具。",
+        SHOVEL = "シャベルだ。見たことあるだろう？",
+		PITCHFORK = "このデザインは大地を弛緩させるのに効果的。",
+        ROCKS = "一握りの、色々な小石。",
+        FIRESTAFF = "火を投げる仕掛け。",
+        FISH = "白身魚の一種、だったかしらね。",
+        FISHINGROD = "釣りの仕方は、本で読んだことがあります",
+        FISHSTICKS = "タルタルソースがあれば、気分は天国。",
+        FISHTACOS = "あぁ、魚にはスパイスがきいてると嬉しいな。",
+        FISH_COOKED = "見事にグリルされてる。",
+        FISH_MED = "残念だ",
+        FISH_MED_COOKED = "見事にグリルされてる。",
+        FLINT = "クオーツの硬い団塊。",
+        AMULET = "過去の遺物。",
+        RAZOR = "衛生管理用品。",
+        POMEGRANATE = "ザクロ。水っぽくて、甘くて、ちょっと酸っぱい。",
+        POMEGRANATE_COOKED = "ザクロって温めるととても美味しい。",
+        POMEGRANATE_SEEDS = "ザクロ。仮種皮と分別済み。",
+		POND = "小さいけれど、深い淡水湖。",
+        LEIF = "私には…さっぱりわからない。",
+        LEIF_SPARSE = "私には…さっぱりわからない。",
+        SPIDERQUEEN = "あれがきっと巣の黒幕の中心だ。",
+        PIGGYBACK = "圧倒的な必要性がなければ、愛せない顔だ。",
+        BLOWDART_FIRE = "簡易炎症装置。",
+        BLOWDART_SLEEP = "即興の鎮静装置。",
+        BLOWDART_PIPE = "簡易ミサイル装置。",
+        SPIDERHAT = "これでクモたちに対して超常現象を発揮することができる。",
+		EARMUFFHAT = "もっとも絶縁されたパーツだけが使われた。",
+        WETGOOP = "なんてことだ！いやいやいや。これじゃダメだ。",
+        WHIP = "苦痛を与えて服従させる道具です",
+        WINTERHAT = "私が自分で編んだんだ。",
+        NIGHTMAREFUEL = "エクトプラズマ残留物。",
+        NIGHTLIGHT = "奇妙に発光している。",
+        NIGHTSWORD = "次元転送武器。",
+        ARMORMARBLE = "面白い素材の選び方。",
+        ARMORGRASS = "十分な重ね着でびっくりするくらい効果的。",
+        BLUEPRINT = "詳細を含んだ技術的な図。",
+        BELL_BLUEPRINT = "詳細を含んだ技術的な図。",
+        MAXWELLHEAD = "そんなことしないでほしいな。",
+
+		WALRUSHAT = "古い知人は忘れるべき？",
+        WALRUS = "セイウチ；ゲール系だ。",
+        WALRUS_CAMP = 
+        {
+            GENERIC = "ある種の一時的な住まい。",
+            EMPTY = "今は見捨てられている。",
+        },
+        LITTLE_WALRUS = "未成熟のうちはあまり攻撃的じゃない。",
+        WALRUS_TUSK = "手工品を作るのに使える。",
+
+        WARG = "そのイヌ属が飼いならされることは、まずないね。",
+
+        SPIDERDEN = "うっとりしてしまう。このクモたちは巣を共用している。",
+        RABBITHOLE = 
+        {
+            GENERIC = "小動物の巣穴のようだね。",
+            SPRING = "この下で、小動物がまだ大丈夫だといいけれど！",
+        },
+        FIREFLIES = 
+        {
+            GENERIC = "私が近づくと散り散りになる。",
+            HELD = "彼らの生物発光の特性が役に立つかも。",
+        },
+        CORN = "トウモロコシはいい主食。",
+        CORN_COOKED = "ポップコーンだ！",
+        CORN_SEEDS = "このトウモロコシの種は色々な気候で育つことができる。",
+        CROW = 
+        {
+            GENERIC = "アメリカガラス。",
+            HELD = "大変美しい標本が手に入りました",
+        },
+        GHOST = "偽物に違いない。私は信じないよ。",
+        CUTGRASS = "超低空飛行。",
+        CUTREEDS = "急いで切った。",
+        PEROGIES = "素晴らしく味気のない餃子。",
+        PETALS = "すてきなポプリができあがりました",
+        PETALS_EVIL = "おもしろい。この花びらには意思があるようだ。",        
+        FLOWER = "野生の花だ。この種属には詳しくない。",
+        FLOWER_EVIL = "ここまで強力なオーラの花を見ることはめったにない。",
+        FLOWER_WITHERED = "成長に必要な条件が欠けているのかと",
+        GOLDENAXE = "もっとも可鍛性のある金属だけど、まずは切りやすさをみてみよう。",
+        GOLDENPICKAXE = "もっとも可鍛性のある金属だけど、まずは採掘しやすいかみてみましょ。",
+        GOLDENPITCHFORK = "もっとも可鍛性のある金属だけど、まずは耕しやすさをみてみよう。",
+        GOLDENSHOVEL = "もっとも可鍛性のある金属だけど、まずは掘りやすさをみてみよう。",
+        GOLDNUGGET = "小さな金の塊。原子番号79。",
+        POOP = "大量の動物の排泄物。なんてすごい香り。",
+        PUMPKIN = "ペポカボチャ。",
+        PUMPKINCOOKIE = "カボチャのビスケット。やったぁ！",
+        PUMPKIN_COOKED = "料理されたペポカボチャ。ドロドロしてて美味しい。",
+        PUMPKIN_LANTERN = "ペポカボチャを掘るのってなんて楽しいんだろう。",
+        PUMPKIN_SEEDS = "カボチャの種。",
+        TORCH = "即席で作った懐中電灯。",
+        TRAP = "簡単な「棒とカゴ」の仕掛け。",
+        BEEFALOWOOL = "ビーファロから摘出した長い卵胞。",
+        BUGNET = "昆虫学者のツール。",
+        PANFLUTE = "共鳴している空洞のリード。",
+        ONEMANBAND = "伝統的な笛と小太鼓に、あっと驚く改良。",
+        BIRDTRAP = "鳥を捕まえる単純な罠。",
+        GEARS = "色んな歯車や車輪。",
+        STATUEHARP = "ただの彫像。",
+        STATUEMAXWELL = "私をこの世界に閉じ込めた男の像です…",
+        SKELETON = "とてもきれいに保存された人間の骸骨。",
+        SKELETON_PLAYER = "まあ、私はなんて見本を作るんだろう！",
+
+
+        RED_MUSHROOM =
+        {
+            GENERIC = "カビだ。",
+            PICKED = "再び実をつける前に、水分が必要。",
+            INGROUND = "この時間帯は活動休止中だ。",
+        },
+        GREEN_MUSHROOM = 
+        {
+            GENERIC = "カビだ。",
+            PICKED = "再び実をつける前に、水分が必要。",
+            INGROUND = "この時間帯は活動休止中だ。",
+        },
+
+        BLUE_MUSHROOM = 
+        {
+            GENERIC = "カビだ。",
+            PICKED = "再び実をつける前に、水分が必要。",
+            INGROUND = "この時間帯は活動休止中だ。",
+        },
+
+        RED_CAP = "赤色は毒をもった印。",
+        GREEN_CAP = "食用でしょうが…まともな人は食べません",
+        BLUE_CAP = "医薬特質を持ち合わせてるみたいだ。",
+        RED_CAP_COOKED = "化学変化が起きたようです",
+        GREEN_CAP_COOKED = "化学変化が起きたようです",
+        BLUE_CAP_COOKED = "化学変化が起きたようです",
+
+        MOOSE_NESTING_GROUND = "いつか、繁殖行動を調査したいものです",
+
+        BEE = 
+        {
+            GENERIC = "セイヨウミツバチ。けっこう大きい！",
+            HELD = "嬉しくなさそう。",
+        },
+        KILLERBEE = 
+        {
+            GENERIC = "これは特に毒が危ない。",
+            HELD = "嬉しくなさそう。",
+        },
+		MOSQUITO = 
+		{
+			GENERIC = "飢えたメスの蚊。",
+			HELD = "安全に保管されている。",
+		},
+        MOSQUITOSACK = "血であふれんばかりの蚊のお腹。",
+        BEEHAT = "ちゃんとした防具が絶対必要！",
+        BEEHIVE = "蜂の自然なおうち。",
+        BEEMINE = "奇妙なアリでいっぱいの危険な鉱山。",
+        BEEMINE_MAXWELL = "蚊でいっぱいの危険な鉱山。",
+        HONEY = "甘い植物のネクター。",
+        HONEYCOMB = "蜜蝋を使ってハチミツを貯蔵している。",
+        HONEYHAM = "このハムの甘さの秘密はハチミツだけだよ。",
+        HONEYNUGGETS = "一口サイズの甘口お肉！",
+        HORN = "なんて素晴らしい標本だろう！もう少しでビーファロの声が聞こえてくるようだ。",
+        STINGER = "鋭くなるまで細くなる。",
+
+        SPIDER = 
+        {
+            GENERIC = "大きな、肉食のクモの種属。",
+            SLEEPING = "夜行性のようだ。",
+            DEAD = "死んでる。",
+        },
+
+        SPIDER_WARRIOR = 
+        {
+            GENERIC = "戦士の階級制度らしい。",
+            SLEEPING = "当然休む権利がある。",
+            DEAD = "彼は女王のために命を捧げた。",
+        },
+        BISHOP_CHARGE_HIT = "痛い！",
+        BERRYBUSH = 
+        {
+            GENERIC = "マンリョウの茂み。",
+            PICKED = "木の実がまた少しずつ生えてきている。",
+            BARREN = "介入が必要だ。",
+            WITHERED = "マンリョウは極度の暑さに堪えられない。",
+        },
+
+		DUG_GRASS = "伸びるには土が必要だ。",
+		DUG_SAPLING = "伸びるには土が必要だ。",
+		DUG_BERRYBUSH = "伸びるには土が必要だ。",
+        DUG_MARSH_BUSH = "伸びるには土が必要だ。",
+
+        SAPLING = 
+        {
+            GENERIC = "小さい木だ。",
+            WITHERED = "暑さでダメになってしまった。",
+            PICKED = "変だな。あれで死んだかと思ったのに。",
+            BURNING = "燃焼！",
+        },
+        GRASS = 
+        {
+            GENERIC = "イネの束の群れ。",
+            PICKED = "きっとまた生えてくると思うわ。",
+            BARREN = "船尾が必要。",
+            WITHERED = "この暑い気候じゃ、私はとても生きていけない。",
+            BURNING = "燃焼！",
+        },
+        REEDS = 
+        {
+            GENERIC = "イグサ科のイネの集まり。",
+            PICKED = "きっとまた生えてくると思うよ。",
+            BURNING = "燃焼！",
+        },
+        RELIC = 
+        {
+            GENERIC = "An artifact of this extinct civilization.",
+            BROKEN = "Just broken stone.",
+        },
+        RUBBLE = "紙用糊の出番かな！",
+
+        PLANT_NORMAL = 
+        {
+            GENERIC = "それって…植物。の一種だと思う。",
+            READY = "完熟したかな。",
+            GROWING = "まだ収穫できそうにない。",
+            WITHERED = "暑さに耐えることができなかった。",
+        },
+
+        MOUND = 
+        {
+            GENERIC ="墓場。",
+            DUG = "冒涜された墓場。",
+        },
+        PIGMAN =
+        {
+            GENERIC = "いくらかの知性を持った、二足歩行のブタ。",
+            FOLLOWER = "彼は私と親しくなったみたいだね。",
+            DEAD = "心配しないで、まだまだたっぷりあるから。",
+			WEREPIG = "オオカミ男ならぬオオカミブタ。",
+            GUARD = "守護者のようだ。",
+        },
+
+        SPIDEREGGSACK = "持ち運び可能なクモの卵の袋。",
+		TELEPORTATO_RING = "合金と配線のトーラス。",
+		TELEPORTATO_BOX = "充電レギュレーター。",
+		TELEPORTATO_CRANK = "基本的な機械の原理を利用している。",
+		TELEPORTATO_POTATO = "全て有機でもないし、無機でもない！",
+		TELEPORTATO_BASE =
+        {
+			GENERIC = "ルーン文字の刻まれた石碑はとてもユニークな特性をもっている！",
+			PARTIAL = "装置は未完成だ。",
+			LOCKED = "装置を稼動しないといけない。",
+			ACTIVE = "この機械で世界間を移動できる。",
+		},
+        BEARDHAIR = "これは人間のヒゲだ。",
+        BUTTERFLY = 
+        {
+            GENERIC = "カラフルなチョウチョ。",
+            HELD = "捕まえた。",
+        },
+        BUTTERFLYWINGS = "捕えられたチョウチョの羽。",
+        BUTTERFLYMUFFIN = "チョウがケーキの材料になるとは…",
+        BUTTER = "チョウチョの脂質？",
+
+        ACORN = 
+        {
+            GENERIC = "果皮に包まれている脱落性の種。",
+            PLANTED = "成熟しかけている脱落性の種。",
+        },
+        EVERGREEN = 
+        {
+            GENERIC = "一般的な針葉樹。",
+            CHOPPED = "収穫された。",
+            BURNING = "木が燃えている。",
+            BURNT = "炭化した木。",
+        },
+
+        EVERGREEN_SPARSE = 
+        {
+            GENERIC = "この種族は生殖能力に欠けているようだね。",
+            CHOPPED = "収穫された。",
+            BURNING = "木が燃えている。",
+            BURNT = "炭化した木。",
+        },
+
+        FIREPIT = 
+        {
+            GENERIC = "炉。",
+            OUT = "もう一度火をつけよう。",
+            EMBERS = "火がほとんど自然に消えた。",
+            LOW = "あの火はもうちょっと燃料が必要だな。",
+            NORMAL = "完璧な、普通の大きさの火。",
+            HIGH = "あの炎は危険な勢いで燃えている。",
+        },
+		HEATROCK = 
+        {
+            FROZEN = "その温度は氷点下。",
+			COLD = "冷たくなってきた。",
+			GENERIC = "その温度は全く注意に値しないもの。",
+            WARM = "熱エネルギーを保持している。ほんの少しだけ。",
+            HOT = "熱と光を放射するほど温かい！",
+		},
+
+        CAMPFIRE = 
+        {
+            GENERIC = "キャンプファイヤー。",
+            OUT = "もう一度火をつけよう。",
+            EMBERS = "火がほとんど自然に消えた。",
+            LOW = "あの火はもうちょっと燃料が必要だな。",
+            NORMAL = "完璧な、普通の大きさの火。",
+            HIGH = "あの炎は危険な勢いで燃えている。",
+        },
+
+        FEATHERHAT = "本物ではないけれど、鳥はだませるかもしれない。",
+        FEATHER_CROW = "Corvusの羽。",
+        FEATHER_ROBIN = "ショウジョウコウカンチョウの羽。",
+        FEATHER_ROBIN_WINTER = "ショウジョウコウカンチョウの羽のようだけれど、これは白い。",
+
+        TRINKET_1 = "下働きの人がいっぱい！みんな溶けちゃって残念。",
+        TRINKET_10 = "まだ、自分の歯が何本か残っていますので…",
+        TRINKET_11 = "あぁ、あのいたずらロボットの等身大レプリカだ。",
+        TRINKET_12 = "流体の近くに置かれた、がっしりした漏水検出器。",
+        TRINKET_2 = "偽物の膜鳴楽器。",
+        TRINKET_3 = "吟遊詩人って大好き。",
+        TRINKET_4 = "なんて愉快でへんてこな小さな生き物だろう。",
+        TRINKET_5 = "この宇宙船は温度調節が不十分みたいだ。",
+        TRINKET_6 = "絡まったワイヤーは何の役にも立たない。",
+        TRINKET_7 = "本を読むのには自分の手を使いたいな。",
+        TRINKET_8 = "私の湯船を思い出すな。ゆっくり浸かりたい。",
+        TRINKET_9 = "ふうむ。今の所ボタンは全部ついてるみたいだね。",
+		SKULLCHEST = "頭蓋骨のような容器。",
+		PANDORASCHEST = "他の芸術品を含んでいるかもしれない工芸品。",
+
+        BEDROLL_STRAW = "土の上では寝ないよ。",
+        CHARCOAL = "ほとんど炭と灰だ。",
+        MARSH_PLANT = "沼地に生息する根茎。",
+        MARSH_BUSH = 
+        {
+            GENERIC = "キイチゴのかたまり。",
+            PICKED = "キイチゴ集めは危ない。",
+            BURNING = "燃焼！",
+        },
+        PAPYRUS = "セルロースとリグニンの薄い層。",
+        MARSH_TREE = 
+        {
+            GENERIC = "赤いマングローブ。",
+            CHOPPED = "切り倒された",
+            BURNING = "燃焼！",
+            BURNT = "炭化したマングローブ"
+        },
+        FROG = 
+        {
+            SLEEPING = "寝ている。",
+            DEAD = "国によってはご馳走だとされてる。",
+            GENERIC = "四足の両生類。",
+        },
+        FROGGLEBUNWICH = "あんまりサンドイッチの具っぽくないけれど、試してみるよ！",
+        FROGLEGS = "まだちょっとピクピク動いてる。",
+        FROGLEGS_COOKED = "手羽先っぽくなくはない。",
+        FRUITMEDLEY = "なんていいフルーツを取り揃えているんだろう！",
+		WORMHOLE = 
+        {
+			GENERIC = "眠れるメガドリラセア・オラドゥオス。",
+			OPEN = "急いで食べるための、同心円状の歯。",
+		},
+        WORMHOLE_LIMITED = "It will only last a few trips.",
+
+        CHESSJUNK1 = "時計仕掛けのゴミ",
+        CHESSJUNK2 = "時計仕掛けのガラクタ",
+        CHESSJUNK3 = "時計仕掛けのゴミ",
+
+        CHESTER = "動く収納チェスト。",
+        CHESTER_EYEBONE = 
+        {
+            GENERIC = "ミステリアスな門。",
+            WAITING = "門から入れない。",
+        },
+
+        TALLBIRD = "成熟したマグナス・エービス。",
+        SMALLBIRD = 
+        {
+            GENERIC = "鳥類の中でもわりと小さい種類。",
+            HUNGRY = "栄養が必要。",
+            STARVING = "栄養がなければすぐに死ぬだろう。",
+        },
+
+        TEENBIRD = 
+        {
+            GENERIC = "若い鳥。",
+            HUNGRY = "ご静粛に願います。",
+            STARVING = "なんて行儀の悪い鳥だろう！",
+        },
+
+        TALLBIRDEGG = "培養が必要。",
+        TALLBIRDEGG_COOKED = "コレステロールたっぷり。",
+        TALLBIRDEGG_CRACKED = 
+        {
+            GENERIC = "開発が進んでいるようだ。",
+            HOT = "極端な温度環境への露出は死に至る可能性がある。",
+            COLD = "死の風邪をひくかもしれない！",
+            SHORT = "もうすぐ一生懸命育てた果物を収穫できる。",
+            LONG = "待てば待つほど、長く感じられる。",
+        },
+        TALLBIRDNEST =
+        {
+            GENERIC = "なんてすごいマグナス・エービスの卵だろう！",
+            PICKED = "その巣は空っぽだ。すぐにまたサイクルが再開する。",
+        },
+
+        ANIMAL_TRACK = "動物の足跡…遠方まで続いているようです",
+        DIRTPILE = "非衛生的！",
+        KOALEFANT_SUMMER = "長鼻のコアラゾウ",
+        KOALEFANT_WINTER = "長鼻のコアラぞうは分厚い冬毛に包まれてる。",
+        TRUNK_SUMMER = "実用的な長い鼻。",
+		TRUNK_WINTER = "革と毛皮の標本。",
+        TRUNK_COOKED = "まずいけれど、プロテインたっぷり。",
+        TRUNKVEST_SUMMER = "耐久性のある上着。",
+		TRUNKVEST_WINTER = "対抗するための十分な防御。",
+        
+        DEADLYFEAST = "それは食べない方がいいかも。",
+        DEERCLOPS = "ローラシアテリア！",
+        REDGEM = "暖かい。",
+        BLUEGEM = "寒いな。",
+        PURPLEGEM = "不思議なオーラを醸し出している。",
+        HOUND = "あの猟犬はまだ飼いならされていないな。",
+        FIREHOUND = "あの猟犬は他のものよりも危険だ。",
+        ICEHOUND = "なんて奇妙で冷たい獣だろう。",
+        HOUNDBONE = "ハイイロオオカミの内骨格だ。けっしてイヌじゃない。",
+        PENGUIN = "なんてお洒落な鳥だろう",
+        DEERCLOPS_EYEBALL = "少し達成感がある。",
+        DEPLETED_GRASS =
+        {
+            GENERIC = "イネの茂み。",
+        },
+        BASALT = "濃い密度の資材！",
+        HOUNDMOUND = "不吉な骨だね。",
+        MERM = "二足歩行の魚！",
+        MINERHAT = "これはいい本読み用のライトになるな。",
+        KNIGHT = "機械式のウマ。",
+        BISHOP = "時計仕掛けの聖職者。",
+        ROOK = "時計仕掛けの城。",
+        JAMMYPRESERVES = "このジャムをのせるトーストがあったらいいな。しょうがないか。",
+        KABOBS = "棒刺し肉。次はどんなアイデアが出るかな？",
+
+        INSANITYROCK = 
+        {
+            INACTIVE = "小さなピラミッドのようだ。",
+            ACTIVE = "きっと錯覚だろう。",
+        },
+        SANITYROCK = 
+        {
+            INACTIVE = "土壌に沈みこんでしまったようだ。",
+            ACTIVE = "うっとりしてしまう。このマーキングはあとで研究してみよう。",
+        },
+        PIGTORCH = "どうやって燃料を供給しているのだろう。",
+        PIGSKIN = "いくらかの知性を持った二足歩行のブタのお尻。",
+        WASPHIVE = "距離を置いておいた方がよさそう。",
+        MARBLEPILLAR = "ローマの職人の技術がみられるね。素晴らしいな。",
+        MARBLETREE = "素晴らしい。大理石でできた木。",
+        MARBLE = "彫像のような石。",
+        SUNKBOAT = "難破した船だ。使えないね。",
+        SWEATERVEST = "このベストを着ると\"スタイリッシュな読書家\"に見える。",
+        TAFFY = "甘いものは得意じゃないんだけど…非常時だしね。",
+        SMALLMEAT_DRIED = "ナトリウム含有量が高い。",
+        MEAT_DRIED = "しょっぱいけれど、満足できる。",
+        MONSTERMEAT_DRIED = "しょっぱいけれど、満足できる。",
+        BACKPACK = "ここにたくさん本が入れられるな。",
+        BACONEGGS = "お腹が痛い。青い卵とベーコン！",
+        BANDAGE = "薬効のあるドレッシング。",
+		HEALINGSALVE = "自然の殺菌剤。",
+		CANE = "杖を集める趣味はないよ。",
+		LIGHTNING_ROD = 
+		{
+		    GENERIC = "高い伝導率！",
+		    CHARGED = "放射電気エネルギー！",
+		},
+ 
+        ARMORRUINS = "丈夫なスーラサイトの鎧。",
+        BISHOP_NIGHTMARE = "爽快なほど複雑な技術。",
+        GREENAMULET = "それが何だかわからない。",
+        GREENGEM = "クロムの不純物がこのジェムを緑色にした。",
+        KNIGHT_NIGHTMARE = "空気中の悪夢成分で、故障したようです",
+        MINOTAUR = "あっちへ行け、獣よ！",
+        MULTITOOL_AXE_PICKAXE = "なかなか実用的。斧としても、つるはしとしても使える。",
+        NIGHTMARELIGHT = "古代の人々は何にでも悪夢を燃料として使ってきたみたいだ。",
+        NIGHTMARE_TIMEPIECE =
+        {
+            WARN = "今は低いけれど、エクトプラズマ残留物を含んだガスのレベルが上昇中。",  --Before nightmare
+            WAXING = "エクトプラズマ残留物のレベルが増加中。", --Nightmare Phase first 33%
+            STEADY = "エクトプラズマ残留物のレベルが最大値。", --Nightmare 33% - 66%
+            WANING = "エクトプラズマ残留物のレベルは高いけれど、減少中みたいだ。", --Nightmare 66% +
+            DAWN = "エクトプラズマ残留ガスがとても少ない。", --After nightmare
+            CALM = "エクトプラズマ残留物のレベルが最低値。",  --calm phase
+            NOMAGIC = "この辺りにはエクトプラズマガスは取り巻いていないみたいだ。", --Place with no nightmare cycle.
+        },
+        ORANGESTAFF = "短い距離で役に立つ。",   --Teleports player.
+        ROOK_NIGHTMARE = "今にも壊れそうだ。",
+        RELIC = "A relic of an ancient civilization long dead the the ravages of time.",  --Fixed relic
+        RUINS_RUBBLE = "一生懸命やれば、これもちゃんと使える状態にできる。",   --Broken relic
+        RUINS_BAT = "これで色々殴れるな。",
+        RUINSHAT = "私にはちょっと派手だけれど、役に立ちそうだねえ。",
+        SPIDER_DROPPER = "あぁ、この種のクモは洞窟の天井での生活に順応したようだねえ。", --White spider that comes from the roof
+        THULECITE = "これはとても興味深い、エクトプラズマ残留物を含んだ種類のタンザナイトみたいだ。",
+        YELLOWAMULET = "このお守りは530ナノメートルぐらいの波長で発光してる。",    --Emits light, player walks faster.
+        ACCOMPLISHMENT_SHRINE = "何度も何度も、どうしても稼動させたいという衝動に駆られる。",        
+
+        WHALE_WHITE = "白鯨！この種に関する本は、あるのでしょうか？",
+
+        AERODYNAMICHAT = "やや古風なデザインですね",
+        ANTIVENOM = "薬効の高い解毒剤のようですね",
+        ARMORCACTUS = "着れば、サボテン社会に溶け込めます",
+        ARMORLIMESTONE = "海洋生物の死骸で製作した防具です",
+        ARMOROBSIDIAN = "切り口が鋭いので、気をつけて",
+        ARMORSEASHELL = "毒を持つ動物にかまれても安心です",
+        ARMOR_LIFEJACKET = "安全第一！",
+        ARMOR_SNAKESKIN = "動物の皮を利用した雨具です",
+        ARMOR_WINDBREAKER = "私には、少し派手すぎる気がします…",
+        ARMOUREDBOAT = "頑丈な船です",
+        BALLPHIN = "クジラ目のほ乳類ですね！かわいらしいこと！",
+        BAMBOO = "抗張力に優れた、有用な素材です",
+        BAMBOOTREE =
+        {
+            BURNT = "黒焦げですね…",
+            CHOPPED = "どのくらい待てば、生えてくるでしょうか",
+            GENERIC = "成長の速度が極めて速い植物です",
+        },
+        BERMUDATRIANGLE = "私、超常現象の類いは信じませんので",
+        BIGFISHINGROD = "これで、水生生物を食料に活用できます",
+        BIOLUMINESCENCE = "実に美しい海洋生物ですね…",
+        BLOWDART_FLUP = "この姿のほうが、実用的でよいですね",
+        BLOWDART_POISON = "敵を内部から攻撃できます",
+        BLUBBER = "水に浮きやすく、脂質に富んだ物質です",
+        BLUBBERSUIT = "これでもう、やせすぎだと言われませんね！",
+        BOAT = "この船は、どこから来たのでしょう？",
+        BOATCANNON = "海上での戦闘用と思われます",
+        BOATREPAIRKIT = "船舶の寿命を延ばす道具です",
+        BOAT_LANTERN = "夜の海で使用する、照明器具です",
+        BOAT_TORCH = "これで、夜行性の海洋生物を観察できます",
+        BOOK_METEOR = "天よ、降らせよ！炎の雨を！",
+        BOTTLELANTERN = "携帯用の照明器具です",
+        BRAINJELLYHAT = "優れたアイデアが、未来をつくるのです！",
+        BUOY = "海上に目印があると、多少は安心ですね",
+        BURIEDTREASURE = "好奇心には抗えませんね…！",
+        BUSH_VINE =
+        {
+            BURNT = "すっかり炭化しています",
+            CHOPPED = "じきに再生するかと",
+            GENERIC = "はん縁性の植物です",
+        },
+        CAPTAINHAT = "海の女にふさわしい帽子です",
+        CARGOBOAT = "これで、航海中もたくさん本が読めます",
+        CHIMINEA = "聡明な気象学者が発明したものです",
+        CLOTHSAIL = "有機性の運送設備です",
+        COCONADE =
+        {
+            BURNING = "数秒後には爆発します！",
+            GENERIC = "爆発物を見ると、不安を覚えます…",
+        },
+        COCONUT = 
+        {
+            GENERIC = "ヤシ科植物の種…巨大ですね！",
+            PLANTED = "ヤシ科植物が根づいたようです",
+        },
+        COCONUT_COOKED = "ココナッツの果肉は、なかなか美味です",
+        COCONUT_HALVED = "外殻を破ることに成功しました",
+        COFFEE = "コーヒーを飲みながらの読書は格別です",
+        COFFEEBEANS = "カフェインを多量に含んでいます",
+        COFFEEBEANS_COOKED = "焙煎された豆の、かぐわしい香り…",
+        COFFEEBOT = "コーヒーを製造する装置です",
+        COFFEEBUSH =
+        {
+            BARREN = "今は花の時期ではないようですね",
+            GENERIC = "コーヒーノキ属の植物です",
+            PICKED = "再び豆がなるまで、少しかかるでしょう",
+            WITHERED = "気温が高すぎるようですね",
+        },
+        COMPASS =
+        {
+            E = "東です",
+            GENERIC = "方角が読めません…",
+            N = "北",
+            NE = "北東です",
+            NW = "北西です",
+            S = "南です",
+            SE = "南東です",
+            SW = "南西です",
+            W = "西です",
+        },
+        CORAL = "炭酸カルシウムの塊です",
+        CORALREEF = "海洋性の無脊椎動物は、愛らしいですね！",
+        CORAL_BRAIN = "天才的です！",
+        CORAL_BRAIN_ROCK = "オオトゲサンゴ科ノウ属のサンゴです",
+        CRAB =
+        {
+            GENERIC = "とりわけ硬い外骨格を持つ生物です",
+            HIDDEN = "出てきなさい！出欠を取りますよ！",
+        },
+        CRABHOLE = "地中で生活する生物の巣です",
+        CRATE = "何か入っているのでしょうか？",
+        CUTLASS = "先が尖っていますので、気をつけて",
+        DEAD_SWORDFISH = "こうなると、さほど恐ろしくありませんね",
+        DEPLETED_BAMBOOTREE = "じきに再生する可能性もあります",
+        DEPLETED_BUSH_VINE = "じきに再生する可能性もあります",
+        DEPLETED_GRASS_WATER = "じきに再生する可能性もあります",
+        DEVTOOL = "これは…！怪しいですね…",
+        DEVTOOL_NODEV = "実にばかげています",
+        DIVININGRODBASE =
+        {
+            GENERIC = "これは、なんの装置でしょうか？",
+            READY = "カギ穴のようですが…",
+            UNLOCKED = "何事も、なせばなるのです！",
+        },
+        DOUBLE_UMBRELLAHAT = "二重の安全装置です",
+        DOYDOY = "なんと興味深い鳥でしょう！",
+        DOYDOYBABY = "繁殖に成功したようです",
+        DOYDOYEGG = "底知れぬ生命力を秘めています",
+        DOYDOYEGG_COOKED = "緑の卵とハムを料理したものです",
+        DOYDOYEGG_CRACKED = "興味をそそられます…",
+        DOYDOYFEATHER = "鳥の羽根です",
+        DOYDOYNEST = "これは…敵を欺くおとりでしょうか？",
+        DRAGOON = "高温の環境にも耐えられる種のようです",
+        DRAGOONDEN = "すいぶんと散らかっていますね",
+        DRAGOONEGG = "この火成岩の中に、生き物が…？",
+        DRAGOONHEART = "うまく解剖できました",
+        DRAGOONSPIT = "踏むと危険です！",
+        DUBLOON = "海賊が用いる通貨ですね！",
+        DUG_BAMBOOTREE = "伸びるには土が必要だ。",
+        DUG_BUSH_VINE = "伸びるには土が必要だ。",
+        DUG_COFFEEBUSH = "伸びるには土が必要だ。",
+        DUG_ELEPHANTCACTUS = "伸びるには土が必要だ。",
+        EARRING = "私の趣味ではありませんね",
+        ELEPHANTCACTUS = "火山に生息する多肉植物…興味深いですね",
+        ELEPHANTCACTUS_ACTIVE = "身を守ろうとしているようです！",
+		ELEPHANTCACTUS_STUMP = "休眠中のようですね",
+        FABRIC = "上質な織物です",
+        FEATHERSAIL = "材料に羽毛を用いた帆です",
+        FISHINHOLE = "水生の変温動物が生息しています",
+        FISH_RAW = "切り身にした魚です…生臭いですね",
+        FISH_RAW_SMALL = "魚の切り身です",
+        FISH_RAW_SMALL_COOKED = "栄養満点です",
+        FLAMEGEYSER = "これぞまさに、自然の驚異ですね！",
+        FLOTSAM = "なんとか回収できないでしょうか…？",
+        FLUP = "なんとお行儀の悪い！",
+        FRESHFRUITCREPES = "手がベタベタになりそうですね",
+        FROG_POISON = "むやみに近づくと危険です！",
+        GASHAT = "炭酸カルシウムで、空気を清浄化できます",
+        GOLDENMACHETE = "刃に、可鍛性の高い金属を用いています",
+        GRASS_WATER = "水中に根を張っていますね",
+        HAIL_ICE = "直径20センチほどになることもあります",
+        HOME = "居住地のようですが…",
+        HOUNDFIRE = "極めて高温です！近づくと危険ですよ！",
+        ICEMAKER =
+        {
+            HIGH = "好調のようですね！",
+            LOW = "ペースダウンしているようです",
+            NORMAL = "正常に出力しています",
+            OUT = "燃料切れです",
+            VERYLOW = "燃料が切れかけています",
+        },
+        INVENTORYGRAVE = "冒険者たちの思い出の品が眠っています",
+        INVENTORYMOUND = "冒険者たちの思い出の品が眠っています",
+        IRONWIND = "やはり、船にはこれがなくては！",
+        JELLYFISH = "古代より存在する、多細胞生物です",
+        JELLYFISH_COOKED = "化学変化を利用して、食用に加工しました",
+        JELLYFISH_DEAD = "踏まないように気をつけましょう",
+        JELLYFISH_PLANTED = "ポリプの状態ですね",
+        JELLYJERKY = "創意に富んだ保存食です",
+        JUNGLETREE =
+        {
+            BURNING = "燃えていますね",
+            BURNT = "炭化しています",
+            CHOPPED = "収穫された。",
+            GENERIC = "すいぶん大きく成長するのですね！",
+        },
+        JUNGLETREESEED =
+        {
+            GENERIC = "木の種子です",
+            PLANTED = "すくすくと育っています",
+        },
+        KNIGHTBOAT = "海洋性の、機械仕掛けの馬…でしょうか",
+        KRAKEN = "軟体動物は、様々な方法で身を守ります",
+        KRAKENCHEST = "計算をもとに、内容物を推測しましょうか？",
+        KRAKEN_TENTACLE = "触手で攻撃してきます！",
+        LAVAPOOL = "水遊びには適さないようです",
+        LIMESTONE = "建築材に広く利用される素材です",
+        LIMPETROCK =
+        {
+            GENERIC = "多様な腹足類のすみかになっていますね",
+            PICKED = "腹足類は、すべて採取してしまいました",
+        },
+        LIMPETS = "カサガイ目の貝です",
+		LIMPETS_COOKED = "カサガイ目の貝を焼いたものです",
+        TREEGUARD = "二足歩行する樹木とは！驚きました…",
+        LIVINGJUNGLETREE = "実に見事な、魔法性植物です",
+        LOBSTER = "無脊椎動物ですね…興味深い…",
+        LOBSTERHOLE = "節足動物の巣です",
+        LOBSTER_DEAD = "いただいてみましょうか…",
+        LOBSTER_DEAD_COOKED = "お食事の用意ができました",
+        LOG =
+        {
+            BURNING = "樹木を切り出したものが、燃えていますね",
+            GENERIC = "樹木の、軸状の部分を切り出したものです",
+        },
+        LOGRAFT = "急ごしらえの海上移動手段です",
+        LUGGAGECHEST = "荷物を紛失した方がいるようですね",
+        MACHETE = "生い茂った草木を刈る道具です",
+        MAGIC_SEAL = "トドの子どもが、何か落としたようです！",
+        MAGMAROCK = "その下には何が隠されているのか？",
+        MAGMAROCK_FULL = "その下には何が隠されているのか？",
+        MAGMAROCK_GOLD = "この岩石は、金脈を含むようです",
+        MAGMAROCK_GOLD_FULL = "この岩石は、金脈を含むようです",
+        MANDRAKE_COOKED = "焼いてみました。これも研究のためです",
+        MANGROVETREE = "海水でも育つ、特殊な樹木のようです",
+        MANGROVETREE_BURNT = "これではもう、再生は望めません",
+        MARSH_PLANT_TROPICAL = "南国の沼地のみに生息する草です",
+        MERMFISHER = "高度な採集スキルを身につけていますね",
+        MERMHOUSE_FISHER = "水陸両用の小屋のようです",
+        MESSAGEBOTTLE = "とても興味を引かれます！",
+        MESSAGEBOTTLEEMPTY = "書簡は入っていません…残念です",
+        MONKEYBALL = "霊長目の顔を模した、おとり用装置です",
+        MONSTERTARTARE = "魔物肉をエレガントに調理したものです",
+        MOSQUITOSACK_YELLOW = "治癒効果があるようです",
+        MOSQUITO_POISON = "あの昆虫に刺されると、毒に侵されます",
+        MUSSEL = "とても栄養価の高い貝です",
+        MUSSELBOUILLABAISE = "二枚貝を使ったスープです",
+        MUSSEL_COOKED = "殻は食べられませんよ",
+        MUSSEL_FARM =
+        {
+            GENERIC = "ここからでは、手が届きませんね",
+            STICKPLANTED = "あとは、自然の力に任せて待つだけです",
+        },
+        MUSSEL_STICK = "貝類の採取に適した棒です",
+        MYSTERYMEAT = "吐き戻された魚ですね…",
+        NEEDLESPEAR = "サボテンの気分を味わえます",
+        OBSIDIAN = "火山活動の派生物です",
+        OBSIDIANAXE = "みずから発熱していますね",
+        OBSIDIANCOCONADE = "きわめて爆発力の高い、投てき兵器です",
+        OBSIDIANFIREPIT =
+        {
+            GENERIC = "長時間にわたり、暖を取ることができます",
+            OUT = "もう一度火をつけよう。",
+            EMBERS = "火がほとんど自然に消えた。",
+            LOW = "あの火はもうちょっと燃料が必要だな。",
+            NORMAL = "読書灯にぴったりです",
+            HIGH = "あの炎は危険な勢いで燃えている。",
+        },
+        OBSIDIANMACHETE = "みずから発熱していますね",
+        OBSIDIANSPEARGUN = "みずから発熱していますね",
+        OBSIDIAN_WORKBENCH = "火山性の工芸技術を学べそうです",
+        OCTOPUSCHEST = "長期間、浅瀬に沈んでいたようです",
+        OCTOPUSKING = "生態系の中心に位置する生物のようです",
+        OX = "毛がぬれると、ニオイがきつくなりますね…",
+        OXHAT = "頭部をしっかり保護できそうです",
+        OX_FLUTE = "母なる自然を刺激する調べです",
+        OX_HORN = "動作の遅い大型ほ乳類のツノですね",
+        PACKIM = "翼の生えた実習生ですか！どうぞよろしく",
+        PACKIM_FISHBONE = "なんの魚の骨でしょうか？",
+        PALMLEAF = "大きな手のひらのような葉です",
+        PALMLEAF_HUT = "焼けつく日差しをしのげますね",
+        PALMTREE =
+		{
+		    CHOPPED = "収穫された。",
+            BURNING = "木が燃えていますね…",
+            BURNT = "炭化しています",
+			GENERIC = "この木の下で、読書をしたいものです",
+		},
+        PARROT = "南国原産の、色彩豊かな鳥です",
+        PARROT_PIRATE = "文字も読めるのでしょうか？",
+        PEACOCK = "学名は、パヴォ・クリスタトスです",
+        PEG_LEG = "なかなか斬新な武器になりそうですね…",
+        PIGTENT = "なんとも汚らしい…",
+        PIKE_SKULL = "白骨化しています",
+        PIRATEGHOST = "超常海賊現象のようです",
+        PIRATEHAT = "郷に入っては郷に従えといいますしね",
+        PIRATEPACK = "宝物を収めるのに、うってつけです",
+        PIRATIHATITATOR =
+        {
+            BURNT = "これではもう、ただのゴミですね",
+            GENERIC = "海洋科学を研究する装置でしょう",
+        },
+        POISONHOLE = "定期的に毒素が噴出するようです",
+        PORTAL_SHIPWRECKED = "魔力を感じます…",
+        PRIMEAPE = "とてもずる賢い類人猿です",
+        PRIMEAPEBARREL = "類人猿の巣のようですね",
+        RAFT = "竹をつなぎ合わせて製作したものです",
+		RAWLING = "よくしゃべるボールですこと",
+        REDBARREL = "化学反応によって、爆発します",
+        RELIC =
+        {
+            BROKEN = "古代の遺物のようですね",
+            GENERIC = "闇の存在に破壊されたのでしょう",
+        },
+        ROCK_CHARCOAL = "炭素を多量に含みます",
+        ROCK_OBSIDIAN = "通常の方法では、割れそうにありません",
+        ROWBOAT = "これで、海洋調査に出かけられますね",
+        SAIL = "風力を移動手段に活用できます",
+        SAIL_STICK = "嵐の日には、重宝しそうです",
+        SAND = "本のページの間に挟まると、やっかいです",
+        SANDBAG = "吸収性は抜群です",
+        SANDBAGSMALL = "吸収性は抜群です",
+        SANDBAGSMALL_ITEM = "洪水対策です",
+        SANDBAG_ITEM = "洪水対策です",
+        SANDHILL = "この特徴的な形状は、風が形成したものです",
+        SAND_CASTLE =
+        {
+            GENERIC = "ヨーロッパの要塞をイメージしました",
+            SAND = "ヨーロッパの要塞をイメージしました",
+        },
+        SEAGULL = "チドリ目カモメ科の鳥です",
+        SEAGULL_WATER = "チドリ目カモメ科の鳥です",
+        SEASACK = "これなら、食料も本も傷みませんね！",
+        SEASHELL = "海に生息する無脊椎動物の外殻ですね",
+        SEASHELL_BEACHED = "満ち潮が運んできてくれました",
+        SEATRAP = "海洋生物の巣のそばに仕かけましょう",
+        SEAWEED = "藻類には、あまり詳しくないのです…",
+        SEAWEED_COOKED = "タンパク質が豊富です",
+        SEAWEED_DRIED = "藻類を乾燥させたものです",
+        SEAWEED_PLANTED = "海洋性の藻類ですね",
+        SHADOWSKITTISH_WATER = "超自然現象でしょうか…",
+        SHARKITTEN = "かわいらしい…人に危害は加えなそうです",
+        SHARKITTENSPAWNER =
+        {
+            GENERIC = "内部は、どのくらいの深さでしょう？",
+            INACTIVE = "冬でなくても、冬眠するのでしょうか？",
+        },
+        SHARK_FIN = "体勢を安定させる機能を果たすヒレです",
+        SHARK_GILLS = "水中の酸素を取り込む器官です",
+        SHARK_TEETHHAT = "サメの歯で作った冠です",
+        SHARX = "静かに…！見つかってしまいます…！",
+        SHIPWRECKED_ENTRANCE = "別の世界へ移動する、特殊な船のようです",
+        SHIPWRECKED_EXIT = "南園でのバカンスを、切り上げますか？",
+        SLOTMACHINE = "勝敗の確率は不明…それだけは確かです",
+        SNAKE = "ヘビ…！シッシッ！",
+        SNAKEDEN =
+        {
+            BURNT = "すっかり炭化しています",
+            CHOPPED = "じきに再生するでしょう",
+            GENERIC = "はん縁性の植物です",
+        },
+        SNAKEOIL = "これは、何かに効くのでしょうか…？",
+        SNAKESKIN = "ヘビの表皮です",
+        SNAKESKINHAT = "防水性の高い帽子です",
+        SNAKESKINSAIL = "ヘビ皮で製作した帆です",
+        SNAKE_FIRE = "このヘビの体温は、極めて高温です！",
+        SNAKE_POISON = "キバに毒があるので、気をつけましょう",
+        SOLOFISH = "イヌザメ科イヌ属の生物です",
+        SPEARGUN = "離れた場所から攻撃できますね",
+        SPEARGUN_POISON = "離れた場所から毒攻撃ができますね",
+        SPEAR_LAUNCHER = "離れた場所から攻撃できますね",
+        SPEAR_OBSIDIAN = "みずから発熱しています",
+        SPEAR_POISON = "獲物を毒牙にかけることができます",
+        SPOILED_FISH = "魚肉質の部分に毒素が生じ始めています",
+        STUNGRAY = "ずいぶんと翼幅がありますね！",
+        SUNKEN_BOAT =
+        {
+            ABANDONED = "この船は災難に見舞われたようです",
+            GENERIC = "あの鳥は、人の言葉を話すようですね",
+        },
+        SUNKEN_BOAT_BURNT = "すっかり炭化していますね",
+        SUNKEN_BOAT_TRINKET_1 = "なんらかの測定機器でしょう",
+        SUNKEN_BOAT_TRINKET_2 = "かわいらしい船ですね",
+        SUNKEN_BOAT_TRINKET_3 = "かなり使い込まれています",
+        SUNKEN_BOAT_TRINKET_4 = "便利そうな機械ですね",
+        SUNKEN_BOAT_TRINKET_5 = "もう片方は、どこへいったのでしょう？",
+        SUPERTELESCOPE = "水平線の向こうまで見渡せますね！",
+        SWEETPOTATOSOUFFLE = "なかなか美味です",
+        SWEET_POTATO = "クマラとも呼ばれるイモですね",
+        SWEET_POTATO_COOKED = "クマラをグリルしたものです",
+        SWEET_POTATO_PLANTED = "根菜ですね",
+        SWEET_POTATO_SEEDS = "植えれば根菜が育つでしょう",
+        SWIMMINGHORROR = "ついに幻覚が見え始めました…",
+        SWORDFISH = "メカジキです！刺激してはいけません…",
+        TELEPORTATO_SW_BASE = "修理するしかありませんね！",
+        TELEPORTATO_SW_BOX = "なんの部品でしょうか？",
+        TELEPORTATO_SW_CRANK = "干し草でできたレバーのようですね",
+        TELEPORTATO_SW_POTATO = "これは…なんでしょう？",
+        TELEPORTATO_SW_RING = "有機物製のボルトでしょうか？",
+        TELESCOPE = "可視光を集めて遠方を眺望できる装置です",
+        THATCHPACK = "本が2、3冊ほど入りそうです",
+        TIDALPOOL = "生態系の縮図！見ていて飽きませんね",
+        TIDAL_PLANT = "多細胞性の真核生物です",
+        TIGEREYE = "巨大生物用の接眼レンズのようです",
+        TIGERSHARK = "サメ目ネコ科の生物です。大きいですね！",
+        TOUCAN = "鮮やかな色のくちばしが特徴です",
+        TRAWLNET = "海中に沈んだガラクタを回収できます",
+        TRAWLNETDROPPED =
+        {
+            GENERIC = "何がかかったか、確認してみましょう！",
+            SOON = "沈み始めているようです",
+            SOONISH = "じきに沈んでしまうでしょう",
+        },
+        TREASURECHEST_TRAP = "どうにも嫌な予感がしますね…",
+        TREECLUMP = "ずいぶんと草木が生い茂っていますね",
+        TRIDENT = "いにしえの伝説に伝わる武器です",
+        TRINKET_13 = "缶入りの炭酸飲料ですね",
+        TRINKET_14 = "宗教的な呪術に用いる道具でしょうか…",
+        TRINKET_15 = "美しい音色を奏でることができます",
+        TRINKET_16 = "この刻印には、どんな意味が…？",
+        TRINKET_17 = "もう片方は、どこへいったのでしょう？",
+        TRINKET_18 = "美しい文様が入っていますね",
+        TRINKET_19 = "これはいったい…",
+        TRINKET_20 = "なんらかの測定機器でしょう",
+        TRINKET_21 = "かわいらしい船ですね",
+        TRINKET_22 = "かなり使い込まれています",
+        TRINKET_23 = "誰ですか、踏んだのは！？",
+        TROPICAL_FISH = "なんてカラフルな。",
+        TUNACAN = "魚を保存食にしたものです",
+        TURBINE_BLADES = "なんの装置か、調べてみましょう！",
+        TURF_SANDY = "大地。踏みしめるもの。",
+        TURF_ASH = "大地。踏みしめるもの。",
+        TURF_BEACH = "大地。踏みしめるもの。",
+        TURF_DESERTDIRT = "地表をはがしたものです",
+        TURF_FUNGUS_GREEN = "地表をはがしたものです",
+        TURF_FUNGUS_RED = "地表をはがしたものです",
+        TURF_JUNGLE = "大地。踏みしめるもの。",
+        TURF_MAGMAFIELD = "大地。踏みしめるもの。",
+        TURF_MEADOW = "大地。踏みしめるもの。",
+        TURF_SNAKESKINFLOOR = "大地。踏みしめるもの。",
+        TURF_SWAMP = "大地。踏みしめるもの。",
+        TURF_TIDALMARSH = "大地。踏みしめるもの。",
+        TURF_VOLCANO = "大地。踏みしめるもの。",
+        TWISTER = "つむじ風！すさまじい勢いです！",
+        TWISTER_SEAL = "…全部、あなたの仕業だったのですか？",
+        VENOMGLAND = "防毒効果があり、極めて有用です",
+        VINE = "密林でよく見られる、ツル性植物ですね",
+        VOLCANO = "火山活動が活発化しています！",
+        VOLCANOSTAFF = "火山性の圧力で振動しています",
+        VOLCANO_ALTAR =
+        {
+            GENERIC = "火山の内部と、つながっているようです",
+            OPEN = "何をささげるべきでしょうか？",
+        },
+        VOLCANO_ALTAR_BROKEN = "機能は永久に停止したようです",
+        VOLCANO_ALTAR_TOWER = "見事な建造物です",
+        VOLCANO_EXIT = "ここは気温が高すぎます…脱出しましょう！",
+        VOLCANO_SHRUB = "暑さで黒焦げになっています",
+        WALLYINTRO_DEBRIS = "船舶の残骸です",
+        WALL_LIMESTONE = "これでいくぶん、安心ですね",
+        WALL_LIMESTONE_ITEM = "石灰岩の壁を築くことができます",
+        WATERMELON_SEEDS = "植えれば、ラナツスが生えるはずです",
+        WATERYGRAVE = "長期間、海をただよっていたようです",
+        WHALE_BLUE = "海洋性ほ乳類！かわいらしいですね",
+        WHALE_BUBBLES = "海中に巨大生物がいるようです",
+        WHALE_CARCASS_BLUE = "分解が始まっています",
+        WHALE_CARCASS_WHITE = "モリが刺さったままですね",
+        WHALE_TRACK = "近くにクジラ目のほ乳類がいるようです！",
+        WILBUR_CROWN = "これは、どなたの持ち物でしょう？",
+        WILBUR_UNLOCK = "もしもし？助けが必要ですか？",
+        WILDBORE = "イノシシ科の動物…険しい表情ですね",
+        WILDBOREHEAD = "ここで解剖が行なわれたようです",
+        WILDBOREHOUSE = "イノシシたちのすみかのようです",
+        WIND_CONCH = "吹くと、気圧を変化させる音を発します",
+        WOODLEGSBOAT = "海賊船ですね",
+        WOODLEGSHAT = "私より、海賊の方に似合いそうな帽子です",
+        WOODLEGSSAIL = "海賊船の帆です",
+        WOODLEGS_CAGE = "あなたは、なぜそんなところに…？",
+        WOODLEGS_KEY1 = "骨でできたカギですね…",
+        WOODLEGS_KEY2 = "何のカギでしょうか？",
+        WOODLEGS_KEY3 = "実に興味をそそられます",
+        WORMHOLE_LIMITED = "あの生物には、近づきたくありません…",
+        WRECK = "嵐に遭遇し、海に屈した船です",
+		CALIFORNIAROLL = "これは、「巻き寿司」という食べ物ですね",
+    },
+    EAT_FOOD = 
+    {
+        TALLBIRDEGG_CRACKED = "アルデンテ。",
+    },
+}
